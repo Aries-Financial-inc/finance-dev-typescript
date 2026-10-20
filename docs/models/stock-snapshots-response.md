@@ -1,0 +1,19 @@
+# StockSnapshotsResponse
+
+Market snapshots for a set of stock tickers, including the current day aggregate, last quote, last trade, latest minute aggregate and previous day aggregate.
+
+## Example Usage
+
+```typescript
+import { StockSnapshotsResponse } from "finance-dev/models";
+
+let value: StockSnapshotsResponse = {};
+```
+
+## Fields
+
+| Field                                                                                                                                                                 | Type                                                                                                                                                                  | Required                                                                                                                                                              | Description                                                                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `count`                                                                                                                                                               | *number*                                                                                                                                                              | :heavy_minus_sign:                                                                                                                                                    | Number of tickers returned                                                                                                                                            |
+| `status`                                                                                                                                                              | *string*                                                                                                                                                              | :heavy_minus_sign:                                                                                                                                                    | Status string from the upstream data provider — typically `OK` for a successful response. Treat any other value as an error indicator alongside the HTTP status code. |
+| `tickers`                                                                                                                                                             | [models.Ticker](../models/ticker.md)[]                                                                                                                                | :heavy_minus_sign:                                                                                                                                                    | Array of ticker snapshots                                                                                                                                             |

@@ -1,22 +1,17 @@
 <!-- Start SDK Example Usage [usage] -->
 ```typescript
-import { Petstore } from "finance-dev";
+import { FinanceDev } from "finance-dev";
 
-const petstore = new Petstore({
-  apiKey: process.env["PETSTORE_API_KEY"] ?? "",
+const financeDev = new FinanceDev({
+  security: {
+    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
+    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+  },
 });
 
 async function run() {
-  const result = await petstore.pet.updatePet({
-    id: 10,
-    name: "doggie",
-    category: {
-      id: 1,
-      name: "Dogs",
-    },
-    photoUrls: [
-      "<value 1>",
-    ],
+  const result = await financeDev.accounts.getAccountPositions({
+    id: "TEST-ACCOUNT-001",
   });
 
   console.log(result);

@@ -19,32 +19,27 @@ specific category of applications.
 ## Example
 
 ```typescript
-import { PetstoreCore } from "finance-dev/core.js";
-import { petUpdatePet } from "finance-dev/funcs/pet-update-pet.js";
+import { FinanceDevCore } from "finance-dev/core.js";
+import { accountsGetAccountPositions } from "finance-dev/funcs/accounts-get-account-positions.js";
 
-// Use `PetstoreCore` for best tree-shaking performance.
+// Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const petstore = new PetstoreCore({
-  apiKey: process.env["PETSTORE_API_KEY"] ?? "",
+const financeDev = new FinanceDevCore({
+  security: {
+    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
+    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+  },
 });
 
 async function run() {
-  const res = await petUpdatePet(petstore, {
-    id: 10,
-    name: "doggie",
-    category: {
-      id: 1,
-      name: "Dogs",
-    },
-    photoUrls: [
-      "<value 1>",
-    ],
+  const res = await accountsGetAccountPositions(financeDev, {
+    id: "TEST-ACCOUNT-001",
   });
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("petUpdatePet failed:", res.error);
+    console.log("accountsGetAccountPositions failed:", res.error);
   }
 }
 

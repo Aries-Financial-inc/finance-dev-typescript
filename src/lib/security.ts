@@ -250,9 +250,14 @@ export function resolveGlobalSecurity(
   let inputs: SecurityInput[][] = [
     [
       {
-        fieldName: "api_key",
-        type: "apiKey:header",
-        value: security?.apiKey ?? env().PETSTORE_API_KEY,
+        fieldName: "clientID",
+        type: "oauth2:client_credentials",
+        value: security?.clientID ?? env().PETSTORE_CLIENT_ID,
+      },
+      {
+        fieldName: "clientSecret",
+        type: "oauth2:client_credentials",
+        value: security?.clientSecret ?? env().PETSTORE_CLIENT_SECRET,
       },
     ],
   ];

@@ -1,0 +1,48 @@
+# CashFlowStatement
+
+Single SEC cash flow statement row.
+
+## Example Usage
+
+```typescript
+import { CashFlowStatement } from "finance-dev/models";
+
+let value: CashFlowStatement = {};
+```
+
+## Fields
+
+| Field                                                              | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `cashFromOperatingActivitiesContinuingOperations`                  | *number*                                                           | :heavy_minus_sign:                                                 | Cash from operating activities of continuing operations.           |
+| `changeInCashAndEquivalents`                                       | *number*                                                           | :heavy_minus_sign:                                                 | Net change in cash and cash equivalents for the period.            |
+| `changeInOtherOperatingAssetsAndLiabilitiesNet`                    | *number*                                                           | :heavy_minus_sign:                                                 | Net change in other operating assets and liabilities.              |
+| `cik`                                                              | *string*                                                           | :heavy_minus_sign:                                                 | SEC Central Index Key of the company.                              |
+| `depreciationDepletionAndAmortization`                             | *number*                                                           | :heavy_minus_sign:                                                 | Depreciation, depletion and amortization expense.                  |
+| `dividends`                                                        | *number*                                                           | :heavy_minus_sign:                                                 | Dividends paid.                                                    |
+| `effectOfCurrencyExchangeRate`                                     | *number*                                                           | :heavy_minus_sign:                                                 | Effect of exchange rate changes on cash.                           |
+| `filingDate`                                                       | *string*                                                           | :heavy_minus_sign:                                                 | Date the filing was submitted to the SEC.                          |
+| `fiscalQuarter`                                                    | *number*                                                           | :heavy_minus_sign:                                                 | Fiscal quarter of the reporting period.                            |
+| `fiscalYear`                                                       | *number*                                                           | :heavy_minus_sign:                                                 | Fiscal year of the reporting period.                               |
+| `incomeLossFromDiscontinuedOperations`                             | *number*                                                           | :heavy_minus_sign:                                                 | Income or loss from discontinued operations.                       |
+| `longTermDebtIssuancesRepayments`                                  | *number*                                                           | :heavy_minus_sign:                                                 | Net issuances or repayments of long-term debt.                     |
+| `netCashFromFinancingActivities`                                   | *number*                                                           | :heavy_minus_sign:                                                 | Net cash from financing activities.                                |
+| `netCashFromFinancingActivitiesContinuingOperations`               | *number*                                                           | :heavy_minus_sign:                                                 | Net cash from financing activities of continuing operations.       |
+| `netCashFromFinancingActivitiesDiscontinuedOperations`             | *number*                                                           | :heavy_minus_sign:                                                 | Net cash from financing activities of discontinued operations.     |
+| `netCashFromInvestingActivities`                                   | *number*                                                           | :heavy_minus_sign:                                                 | Net cash from investing activities.                                |
+| `netCashFromInvestingActivitiesContinuingOperations`               | *number*                                                           | :heavy_minus_sign:                                                 | Net cash from investing activities of continuing operations.       |
+| `netCashFromInvestingActivitiesDiscontinuedOperations`             | *number*                                                           | :heavy_minus_sign:                                                 | Net cash from investing activities of discontinued operations.     |
+| `netCashFromOperatingActivities`                                   | *number*                                                           | :heavy_minus_sign:                                                 | Net cash from operating activities.                                |
+| `netCashFromOperatingActivitiesDiscontinuedOperations`             | *number*                                                           | :heavy_minus_sign:                                                 | Net cash from operating activities of discontinued operations.     |
+| `netIncome`                                                        | *number*                                                           | :heavy_minus_sign:                                                 | Net income for the period.                                         |
+| `noncontrollingInterests`                                          | *number*                                                           | :heavy_minus_sign:                                                 | Net income attributable to noncontrolling interests.               |
+| `otherCashAdjustments`                                             | *number*                                                           | :heavy_minus_sign:                                                 | Other adjustments to cash.                                         |
+| `otherFinancingActivities`                                         | *number*                                                           | :heavy_minus_sign:                                                 | Other financing activities.                                        |
+| `otherInvestingActivities`                                         | *number*                                                           | :heavy_minus_sign:                                                 | Other investing activities.                                        |
+| `otherOperatingActivities`                                         | *number*                                                           | :heavy_minus_sign:                                                 | Other operating activities.                                        |
+| `periodEnd`                                                        | *string*                                                           | :heavy_minus_sign:                                                 | End date of the reporting period.                                  |
+| `purchaseOfPropertyPlantAndEquipment`                              | *number*                                                           | :heavy_minus_sign:                                                 | Cash spent on purchases of property, plant and equipment.          |
+| `saleOfPropertyPlantAndEquipment`                                  | *number*                                                           | :heavy_minus_sign:                                                 | Cash received from sales of property, plant and equipment.         |
+| `shortTermDebtIssuancesRepayments`                                 | *number*                                                           | :heavy_minus_sign:                                                 | Net issuances or repayments of short-term debt.                    |
+| `tickers`                                                          | *string*[]                                                         | :heavy_minus_sign:                                                 | Ticker symbols associated with the company.                        |
+| `timeframe`                                                        | *string*                                                           | :heavy_minus_sign:                                                 | Reporting timeframe of the statement, as supplied by the provider. |

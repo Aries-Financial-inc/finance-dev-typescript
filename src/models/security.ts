@@ -3,31 +3,29 @@
  */
 
 import * as z from "zod/v4-mini";
-import { remap as remap$ } from "../lib/primitives.js";
 
 export type Security = {
-  apiKey?: string | undefined;
+  clientID?: string | undefined;
+  clientSecret?: string | undefined;
+  tokenURL?: string | undefined;
 };
 
 /** @internal */
 export type Security$Outbound = {
-  api_key?: string | undefined;
+  clientID?: string | undefined;
+  clientSecret?: string | undefined;
+  tokenURL: string;
 };
 
 /** @internal */
 export const Security$outboundSchema: z.ZodMiniType<
   Security$Outbound,
   Security
-> = z.pipe(
-  z.object({
-    apiKey: z.optional(z.string()),
-  }),
-  z.transform((v) => {
-    return remap$(v, {
-      apiKey: "api_key",
-    });
-  }),
-);
+> = z.object({
+  clientID: z.optional(z.string()),
+  clientSecret: z.optional(z.string()),
+  tokenURL: z._default(z.string(), "https://api.aries.com/v1/oauth2/token"),
+});
 
 export function securityToJSON(security: Security): string {
   return JSON.stringify(Security$outboundSchema.parse(security));

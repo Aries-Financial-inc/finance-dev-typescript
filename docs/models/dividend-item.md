@@ -1,0 +1,28 @@
+# DividendItem
+
+A single dividend event for a ticker.
+
+## Example Usage
+
+```typescript
+import { DividendItem } from "finance-dev/models";
+
+let value: DividendItem = {};
+```
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `cashAmount`                                                                                 | *number*                                                                                     | :heavy_minus_sign:                                                                           | Original cash dividend amount per share.                                                     |
+| `currency`                                                                                   | *string*                                                                                     | :heavy_minus_sign:                                                                           | Currency code for the cash amount, such as USD.                                              |
+| `declarationDate`                                                                            | *string*                                                                                     | :heavy_minus_sign:                                                                           | Date when the dividend was announced.                                                        |
+| `distributionType`                                                                           | *string*                                                                                     | :heavy_minus_sign:                                                                           | Distribution classification such as recurring, special, supplemental, irregular, or unknown. |
+| `exDividendDate`                                                                             | *string*                                                                                     | :heavy_minus_sign:                                                                           | Date when the stock begins trading without the dividend.                                     |
+| `frequency`                                                                                  | *number*                                                                                     | :heavy_minus_sign:                                                                           | Times per year the dividend is paid, such as 0, 1, 4, or 12.                                 |
+| `historicalAdjustmentFactor`                                                                 | *number*                                                                                     | :heavy_minus_sign:                                                                           | Adjustment factor used for historical-price normalization.                                   |
+| `id`                                                                                         | *string*                                                                                     | :heavy_minus_sign:                                                                           | Unique identifier for the dividend event.                                                    |
+| `payDate`                                                                                    | *string*                                                                                     | :heavy_minus_sign:                                                                           | Date when the dividend payment is distributed.                                               |
+| `recordDate`                                                                                 | *string*                                                                                     | :heavy_minus_sign:                                                                           | Record date used to determine shareholder eligibility.                                       |
+| `splitAdjustedCashAmount`                                                                    | *number*                                                                                     | :heavy_minus_sign:                                                                           | Dividend cash amount adjusted for stock splits.                                              |
+| `ticker`                                                                                     | *string*                                                                                     | :heavy_minus_sign:                                                                           | Stock ticker symbol                                                                          |

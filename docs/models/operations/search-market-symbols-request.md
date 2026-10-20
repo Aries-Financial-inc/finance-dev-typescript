@@ -1,0 +1,18 @@
+# SearchMarketSymbolsRequest
+
+## Example Usage
+
+```typescript
+import { SearchMarketSymbolsRequest } from "finance-dev/models/operations";
+
+let value: SearchMarketSymbolsRequest = {
+  query: "<value>",
+};
+```
+
+## Fields
+
+| Field                                                                                                                                                                                                         | Type                                                                                                                                                                                                          | Required                                                                                                                                                                                                      | Description                                                                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `query`                                                                                                                                                                                                       | *string*                                                                                                                                                                                                      | :heavy_check_mark:                                                                                                                                                                                            | Text the user entered in symbol search. Use `AAPL` for stocks and indices, `.AAPL` for option-chain style searches, and `/ES` for futures. Do not use `!` as a special prefix; it is treated as literal text. |
+| `limit`                                                                                                                                                                                                       | *number*                                                                                                                                                                                                      | :heavy_minus_sign:                                                                                                                                                                                            | Maximum number of matches to return. Use a small number for autocomplete and a larger number for full search pages. Default is 20; minimum is 1; maximum is 100.                                              |

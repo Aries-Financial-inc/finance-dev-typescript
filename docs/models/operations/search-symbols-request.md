@@ -1,0 +1,18 @@
+# SearchSymbolsRequest
+
+## Example Usage
+
+```typescript
+import { SearchSymbolsRequest } from "finance-dev/models/operations";
+
+let value: SearchSymbolsRequest = {
+  query: "Apple",
+};
+```
+
+## Fields
+
+| Field                                                                                                                                              | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        | Example                                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `query`                                                                                                                                            | *string*                                                                                                                                           | :heavy_check_mark:                                                                                                                                 | Text to search. Use plain text for stocks and indices, `.` prefix for options such as `.AAPL`, and `/` prefix for futures such as `/ES`.           | Apple                                                                                                                                              |
+| `limit`                                                                                                                                            | *number*                                                                                                                                           | :heavy_minus_sign:                                                                                                                                 | Maximum number of results to return. Use smaller values for autocomplete and larger values for search result pages. Default is 20; maximum is 100. |                                                                                                                                                    |

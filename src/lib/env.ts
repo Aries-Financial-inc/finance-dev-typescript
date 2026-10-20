@@ -5,13 +5,20 @@
 import * as z from "zod/v4-mini";
 
 export interface Env {
-  PETSTORE_API_KEY?: string | undefined;
+  PETSTORE_CLIENT_ID?: string | undefined;
+  PETSTORE_CLIENT_SECRET?: string | undefined;
+  PETSTORE_TOKEN_URL: string;
 
   PETSTORE_DEBUG?: boolean | undefined;
 }
 
 export const envSchema: z.ZodMiniType<Env, unknown> = z.object({
-  PETSTORE_API_KEY: z.optional(z.string()),
+  PETSTORE_CLIENT_ID: z.optional(z.string()),
+  PETSTORE_CLIENT_SECRET: z.optional(z.string()),
+  PETSTORE_TOKEN_URL: z._default(
+    z.string(),
+    "https://api.aries.com/v1/oauth2/token",
+  ),
 
   PETSTORE_DEBUG: z.optional(z.coerce.boolean()),
 });
