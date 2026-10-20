@@ -44,14 +44,15 @@
   },
   "sideEffects": false,
   "scripts": {
-    "test": "npm run build && npm run test:websocket && npm run test:generated",
+    "test": "npm run build && npm run test:types && npm run test:websocket && npm run test:generated",
     "check": "npm run test && npm run lint",
     "lint": "oxlint --max-warnings=0 --deny-warnings --no-error-on-unmatched-pattern src",
     "build": "tsgo",
     "prepublishOnly": "npm run build",
     "test:contract": "speakeasy test",
-    "test:generated": "vitest run src/__tests__",
-    "test:websocket": "node --test tests/websocket/*.test.mjs"
+    "test:generated": "vitest run",
+    "test:websocket": "node --test tests/websocket/*.test.mjs",
+    "test:types": "tsgo --project tests/types/tsconfig.json"
   },
   "peerDependencies": {
     

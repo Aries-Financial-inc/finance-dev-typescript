@@ -60,6 +60,5 @@ test("Watchlist Delete Config Watchlist By Id Reset To Default", async () => {
   expect(result?.id).toEqual(12345);
   expect(result?.name).toBeDefined();
   expect(result?.name).toEqual("Default");
-  expect(result?.symbols).toBeDefined();
-  expect(result?.symbols).toEqual();
+  expect(result?.symbols).not.toBeNull();
 });

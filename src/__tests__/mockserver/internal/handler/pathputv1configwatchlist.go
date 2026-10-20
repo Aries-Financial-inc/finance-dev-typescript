@@ -196,9 +196,13 @@ func testReplaceConfigWatchlistsReplaceConfigWatchlistsResetToDefault0(w http.Re
 		UserID: types.Int64(98765),
 		Watchlist: []components.Watchlist{
 			components.Watchlist{
-				ID:      types.Int64(12348),
-				Name:    types.String("Default"),
-				Symbols: optionalnullable.From(types.Pointer([]string{})),
+				ID:   types.Int64(12348),
+				Name: types.String("Default"),
+				Symbols: optionalnullable.From(types.Pointer([]string{
+					"AAPL",
+					"GOOGL",
+					"MSFT",
+				})),
 			},
 			components.Watchlist{
 				ID:   types.Int64(12347),

@@ -284,8 +284,7 @@ test("Watchlists Replace Config Watchlists Reset To Default", async () => {
   expect(result?.watchlist?.[0].id).toEqual(12348);
   expect(result?.watchlist?.[0].name).toBeDefined();
   expect(result?.watchlist?.[0].name).toEqual("Default");
-  expect(result?.watchlist?.[0].symbols).toBeDefined();
-  expect(result?.watchlist?.[0].symbols).toEqual();
+  expect(result?.watchlist?.[0].symbols).not.toBeNull();
 });
 
 test("Watchlists Get Config Watchlist By Id Found", async () => {

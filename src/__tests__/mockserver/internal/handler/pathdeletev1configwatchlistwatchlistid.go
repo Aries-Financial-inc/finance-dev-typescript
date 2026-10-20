@@ -91,9 +91,13 @@ func testDeleteConfigWatchlistByIDDeleteConfigWatchlistByIDResetToDefault0(w htt
 		return
 	}
 	var respBody *components.Watchlist = &components.Watchlist{
-		ID:      types.Int64(12345),
-		Name:    types.String("Default"),
-		Symbols: optionalnullable.From(types.Pointer([]string{})),
+		ID:   types.Int64(12345),
+		Name: types.String("Default"),
+		Symbols: optionalnullable.From(types.Pointer([]string{
+			"AAPL",
+			"GOOGL",
+			"MSFT",
+		})),
 	}
 	respBodyBytes, err := utils.MarshalJSON(respBody, "", true)
 
