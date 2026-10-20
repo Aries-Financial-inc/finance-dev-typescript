@@ -1,0 +1,31 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    aries-prod-spec:
+        inputs:
+            - location: registry.speakeasyapi.dev/aries/aries/aries-prod-spec:latest
+        overlays:
+            - location: .speakeasy/speakeasy-modifications-overlay.yaml
+        transformations:
+            - filterOperations:
+                operations: createOAuth2Token
+                exclude: true
+            - removeUnused: true
+        output: .speakeasy/out.openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/aries/aries/aries-prod-spec
+targets:
+    finance-dev:
+        target: typescript
+        source: aries-prod-spec
+        publish:
+            npm:
+                token: $npm_token
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/aries/aries/aries-prod-spec-typescript-code-samples
+            labelOverride:
+                fixedValue: Typescript (SDK)
+            blocking: false
+        testing:
+            enabled: true

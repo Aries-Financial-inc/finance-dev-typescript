@@ -1,0 +1,34 @@
+# UsaSpendingResponseData
+
+## Example Usage
+
+```typescript
+import { UsaSpendingResponseData } from "finance-dev/models";
+
+let value: UsaSpendingResponseData = {};
+```
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `actionDate`                                                             | *string*                                                                 | :heavy_minus_sign:                                                       | Date of the award action, as returned by the provider.                   |
+| `awardDescription`                                                       | *string*                                                                 | :heavy_minus_sign:                                                       | Description of the award.                                                |
+| `awardingAgencyName`                                                     | *string*                                                                 | :heavy_minus_sign:                                                       | Name of the awarding agency.                                             |
+| `awardingOfficeName`                                                     | *string*                                                                 | :heavy_minus_sign:                                                       | Name of the awarding office.                                             |
+| `awardingSubAgencyName`                                                  | *string*                                                                 | :heavy_minus_sign:                                                       | Name of the awarding sub-agency.                                         |
+| `country`                                                                | *string*                                                                 | :heavy_minus_sign:                                                       | Recipient's country.                                                     |
+| `naicsCode`                                                              | *string*                                                                 | :heavy_minus_sign:                                                       | North American Industry Classification System (NAICS) code of the award. |
+| `performanceCity`                                                        | *string*                                                                 | :heavy_minus_sign:                                                       | City where the work is performed.                                        |
+| `performanceCongressionalDistrict`                                       | *string*                                                                 | :heavy_minus_sign:                                                       | Congressional district where the work is performed.                      |
+| `performanceCountry`                                                     | *string*                                                                 | :heavy_minus_sign:                                                       | Country where the work is performed.                                     |
+| `performanceCounty`                                                      | *string*                                                                 | :heavy_minus_sign:                                                       | County where the work is performed.                                      |
+| `performanceEndDate`                                                     | *string*                                                                 | :heavy_minus_sign:                                                       | End date of the performance period, as returned by the provider.         |
+| `performanceStartDate`                                                   | *string*                                                                 | :heavy_minus_sign:                                                       | Start date of the performance period, as returned by the provider.       |
+| `performanceState`                                                       | *string*                                                                 | :heavy_minus_sign:                                                       | State where the work is performed.                                       |
+| `performanceZipCode`                                                     | *string*                                                                 | :heavy_minus_sign:                                                       | Zip code where the work is performed.                                    |
+| `permalink`                                                              | *string*                                                                 | :heavy_minus_sign:                                                       | Permalink to the award record.                                           |
+| `recipientName`                                                          | *string*                                                                 | :heavy_minus_sign:                                                       | Name of the award recipient company.                                     |
+| `recipientParentName`                                                    | *string*                                                                 | :heavy_minus_sign:                                                       | Name of the recipient's parent company.                                  |
+| `symbol`                                                                 | *string*                                                                 | :heavy_minus_sign:                                                       | Company ticker symbol.                                                   |
+| `totalValue`                                                             | *number*                                                                 | :heavy_minus_sign:                                                       | Total value of the award.                                                |

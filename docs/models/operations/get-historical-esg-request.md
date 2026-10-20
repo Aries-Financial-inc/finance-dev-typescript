@@ -1,0 +1,17 @@
+# GetHistoricalEsgRequest
+
+## Example Usage
+
+```typescript
+import { GetHistoricalEsgRequest } from "finance-dev/models/operations";
+
+let value: GetHistoricalEsgRequest = {
+  symbol: "AAPL",
+};
+```
+
+## Fields
+
+| Field                                                                                                                       | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 | Example                                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `symbol`                                                                                                                    | *string*                                                                                                                    | :heavy_check_mark:                                                                                                          | Stock ticker to query. Send the plain uppercase symbol exactly as you'd type it on a brokerage screen, e.g. `AAPL`, `MSFT`. | AAPL                                                                                                                        |

@@ -1,0 +1,77 @@
+{
+  "name": "finance-dev",
+  "version": "0.0.1",
+  "author": "Speakeasy",
+  "type": "module",
+  "main": "./esm/index.js",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./esm/index.d.ts",
+      "default": "./esm/index.js"
+    },
+    "./package.json": "./package.json",
+    "./websocket": {
+      "source": "./src/websocket/index.ts",
+      "types": "./esm/websocket/index.d.ts",
+      "default": "./esm/websocket/index.js"
+    },
+    "./types": {
+      "source": "./src/types/index.ts",
+      "types": "./esm/types/index.d.ts",
+      "default": "./esm/types/index.js"
+    },
+    "./models/errors": {
+      "source": "./src/models/errors/index.ts",
+      "types": "./esm/models/errors/index.d.ts",
+      "default": "./esm/models/errors/index.js"
+    },
+    "./models": {
+      "source": "./src/models/index.ts",
+      "types": "./esm/models/index.d.ts",
+      "default": "./esm/models/index.js"
+    },
+    "./models/operations": {
+      "source": "./src/models/operations/index.ts",
+      "types": "./esm/models/operations/index.d.ts",
+      "default": "./esm/models/operations/index.js"
+    },
+    "./*.js": {
+      "source": "./src/*.ts",
+      "types": "./esm/*.d.ts",
+      "default": "./esm/*.js"
+    },
+    "./*": {
+      "source": "./src/*.ts",
+      "types": "./esm/*.d.ts",
+      "default": "./esm/*.js"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "test": "npm run build && npm run test:types && npm run test:websocket && npm run test:generated",
+    "check": "npm run test && npm run lint",
+    "lint": "oxlint --max-warnings=0 --deny-warnings --no-error-on-unmatched-pattern src",
+    "build": "tsgo",
+    "prepublishOnly": "npm run build",
+    "test:types": "tsgo --project tests/types/tsconfig.json",
+    "test:websocket": "node --test tests/websocket/*.test.mjs",
+    "test:contract": "speakeasy test",
+    "test:generated": "vitest run"
+  },
+  "peerDependencies": {
+    
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@typescript/native-preview": "7.0.0-dev.20260302.1",
+    "oxlint": "^1.60.0",
+    "typescript": "~5.8.3",
+    "vitest": "^5.0.5",
+    "ws": "^8.18.0"
+  },
+  "dependencies": {
+    "decimal.js": "^10.4.3",
+    "zod": "^3.25.65 || ^4.0.0"
+  }
+}

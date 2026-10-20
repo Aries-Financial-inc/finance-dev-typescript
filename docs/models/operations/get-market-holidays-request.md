@@ -1,0 +1,15 @@
+# GetMarketHolidaysRequest
+
+## Example Usage
+
+```typescript
+import { GetMarketHolidaysRequest } from "finance-dev/models/operations";
+
+let value: GetMarketHolidaysRequest = {};
+```
+
+## Fields
+
+| Field                                                                                                                                          | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    | Example                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `exchange`                                                                                                                                     | [models.ExchangeCode](../../models/exchange-code.md)                                                                                           | :heavy_check_mark:                                                                                                                             | exchange code (case-insensitive). Select from the Try it dropdown or use any value from the supported exchange list in the API reference page. | US                                                                                                                                             |

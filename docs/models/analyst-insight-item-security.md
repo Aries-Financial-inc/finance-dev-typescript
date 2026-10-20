@@ -1,0 +1,21 @@
+# AnalystInsightItemSecurity
+
+Security metadata for the company or instrument this analyst insight covers.
+
+## Example Usage
+
+```typescript
+import { AnalystInsightItemSecurity } from "finance-dev/models";
+
+let value: AnalystInsightItemSecurity = {};
+```
+
+## Fields
+
+| Field                                                                                                                                      | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `cik`                                                                                                                                      | *string*                                                                                                                                   | :heavy_minus_sign:                                                                                                                         | SEC Central Index Key of the covered company.                                                                                              |
+| `exchange`                                                                                                                                 | *string*                                                                                                                                   | :heavy_minus_sign:                                                                                                                         | Exchange code where the data originates. Format depends on the upstream data source and may use MIC, ISO 10383, or a vendor-specific code. |
+| `isin`                                                                                                                                     | *string*                                                                                                                                   | :heavy_minus_sign:                                                                                                                         | ISIN of the covered security.                                                                                                              |
+| `name`                                                                                                                                     | *string*                                                                                                                                   | :heavy_minus_sign:                                                                                                                         | Name of the covered company or instrument.                                                                                                 |
+| `symbol`                                                                                                                                   | *string*                                                                                                                                   | :heavy_minus_sign:                                                                                                                         | Ticker symbol of the covered security.                                                                                                     |

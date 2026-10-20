@@ -1,0 +1,60 @@
+speakeasyVersion: 1.803.0
+sources:
+    aries-prod-spec:
+        sourceNamespace: aries-prod-spec
+        sourceRevisionDigest: sha256:2c5667e8e20fa98aef73dedfd63b57f540346274cb2dee7cbcaa76a6125a3f27
+        sourceBlobDigest: sha256:b35614ab0956090979306b3cac25b6ee814276b894505aca7bbf35c159b48762
+        tags:
+            - latest
+            - 1.0.0
+    petstore-oas:
+        sourceNamespace: petstore-oas
+        sourceRevisionDigest: sha256:79b05b3c903377383b1ffff975c77201c984df00c5ebe24c3c0f20580776f8e1
+        sourceBlobDigest: sha256:0a88ef48bace41abce14841a48ce1fbe15c0cc00ca41940d9c774db73a27211f
+        tags:
+            - latest
+            - 1.0.0
+targets:
+    finance-dev:
+        source: aries-prod-spec
+        sourceNamespace: aries-prod-spec
+        sourceRevisionDigest: sha256:2c5667e8e20fa98aef73dedfd63b57f540346274cb2dee7cbcaa76a6125a3f27
+        sourceBlobDigest: sha256:b35614ab0956090979306b3cac25b6ee814276b894505aca7bbf35c159b48762
+        codeSamplesNamespace: aries-prod-spec-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:5b8b9950decfbdfd89185744254850e658ef87014996da65f54a733ba4bdea09
+    petstore:
+        source: petstore-oas
+        sourceNamespace: petstore-oas
+        sourceRevisionDigest: sha256:79b05b3c903377383b1ffff975c77201c984df00c5ebe24c3c0f20580776f8e1
+        sourceBlobDigest: sha256:0a88ef48bace41abce14841a48ce1fbe15c0cc00ca41940d9c774db73a27211f
+        codeSamplesNamespace: petstore-oas-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:952951b212aa818bb54522fe6c2b27352447c53ebb5a1c0a736848e1731bb3dd
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        aries-prod-spec:
+            inputs:
+                - location: registry.speakeasyapi.dev/aries/aries/aries-prod-spec:latest
+            overlays:
+                - location: .speakeasy/speakeasy-modifications-overlay.yaml
+            transformations:
+                - filterOperations:
+                    operations: createOAuth2Token
+                    exclude: true
+                - removeUnused: true
+            output: .speakeasy/out.openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/aries/aries/aries-prod-spec
+    targets:
+        finance-dev:
+            target: typescript
+            source: aries-prod-spec
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/aries/aries/aries-prod-spec-typescript-code-samples
+                labelOverride:
+                    fixedValue: Typescript (SDK)
+                blocking: false
+            testing:
+                enabled: true
