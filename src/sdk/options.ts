@@ -3,14 +3,14 @@
  */
 
 import { optionsGetActivity } from "../funcs/options-get-activity.js";
+import { optionsGetChainSnapshot } from "../funcs/options-get-chain-snapshot.js";
 import { optionsGetContracts } from "../funcs/options-get-contracts.js";
 import { optionsGetExpiryDates } from "../funcs/options-get-expiry-dates.js";
 import { optionsGetLastTrade } from "../funcs/options-get-last-trade.js";
 import { optionsGetOpenCloseData } from "../funcs/options-get-open-close-data.js";
-import { optionsGetOptionChainSnapshot } from "../funcs/options-get-option-chain-snapshot.js";
-import { optionsGetOptionContractSnapshot } from "../funcs/options-get-option-contract-snapshot.js";
 import { optionsGetPreviousDay } from "../funcs/options-get-previous-day.js";
 import { optionsGetQuotes } from "../funcs/options-get-quotes.js";
+import { optionsGetSnapshot } from "../funcs/options-get-snapshot.js";
 import { optionsGetTrades } from "../funcs/options-get-trades.js";
 import { optionsGetUnusualActivity } from "../funcs/options-get-unusual-activity.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
@@ -115,13 +115,13 @@ export class Options extends ClientSDK {
    * @remarks
    * Returns a paginated snapshot of option contracts for an underlying equity. Supports optional filters on strike, expiration, and contract type. Query parameters use camelCase; pagination uses `nextUrl` in the response body. Uses the upstream chain snapshot data source.
    */
-  async getOptionChainSnapshot(
+  async getChainSnapshot(
     request: operations.GetOptionChainSnapshotRequest,
     options?: RequestOptions,
   ): Promise<
     PageIterator<operations.GetOptionChainSnapshotResponse, { url: string }>
   > {
-    return unwrapResultIterator(optionsGetOptionChainSnapshot(
+    return unwrapResultIterator(optionsGetChainSnapshot(
       this,
       request,
       options,
@@ -134,11 +134,11 @@ export class Options extends ClientSDK {
    * @remarks
    * Returns a point-in-time snapshot for a single option contract: details, day bar, last quote, last trade, Greeks, implied volatility, and underlying context when available. Responses may be cached for approximately five minutes. Uses the upstream contract snapshot data source.
    */
-  async getOptionContractSnapshot(
+  async getSnapshot(
     request: operations.GetOptionContractSnapshotRequest,
     options?: RequestOptions,
   ): Promise<models.OptionContractSnapshotResponse> {
-    return unwrapAsync(optionsGetOptionContractSnapshot(
+    return unwrapAsync(optionsGetSnapshot(
       this,
       request,
       options,

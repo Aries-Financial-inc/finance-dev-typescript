@@ -22,6 +22,8 @@ import { News } from "./news.js";
 import { Options } from "./options.js";
 import { Orders } from "./orders.js";
 import { Ownership } from "./ownership.js";
+import { PredictionMarketCategories } from "./prediction-market-categories.js";
+import { PredictionOrders } from "./prediction-orders.js";
 import { Predictions } from "./predictions.js";
 import { Signals } from "./signals.js";
 import { StockAlternative } from "./stock-alternative.js";
@@ -29,7 +31,9 @@ import { StockAlternatives } from "./stock-alternatives.js";
 import { StockEstimates } from "./stock-estimates.js";
 import { Stocks } from "./stocks.js";
 import { TechnicalAnalysis } from "./technical-analysis.js";
+import { Users } from "./users.js";
 import { Watchlist } from "./watchlist.js";
+import { Watchlists } from "./watchlists.js";
 
 export class FinanceDev extends ClientSDK {
   private _accounts?: Accounts;
@@ -55,6 +59,11 @@ export class FinanceDev extends ClientSDK {
   private _company?: Company;
   get company(): Company {
     return (this._company ??= new Company(this._options));
+  }
+
+  private _watchlists?: Watchlists;
+  get watchlists(): Watchlists {
+    return (this._watchlists ??= new Watchlists(this._options));
   }
 
   private _watchlist?: Watchlist;
@@ -142,6 +151,18 @@ export class FinanceDev extends ClientSDK {
     return (this._predictions ??= new Predictions(this._options));
   }
 
+  private _predictionMarketCategories?: PredictionMarketCategories;
+  get predictionMarketCategories(): PredictionMarketCategories {
+    return (this._predictionMarketCategories ??= new PredictionMarketCategories(
+      this._options,
+    ));
+  }
+
+  private _predictionOrders?: PredictionOrders;
+  get predictionOrders(): PredictionOrders {
+    return (this._predictionOrders ??= new PredictionOrders(this._options));
+  }
+
   private _signals?: Signals;
   get signals(): Signals {
     return (this._signals ??= new Signals(this._options));
@@ -165,5 +186,10 @@ export class FinanceDev extends ClientSDK {
   private _stocks?: Stocks;
   get stocks(): Stocks {
     return (this._stocks ??= new Stocks(this._options));
+  }
+
+  private _users?: Users;
+  get users(): Users {
+    return (this._users ??= new Users(this._options));
   }
 }

@@ -5,8 +5,8 @@
 ### Available Operations
 
 * [getConferenceCalls](#getconferencecalls) - Get Conference Calls
-* [getEarningsCalendar](#getearningscalendar) - Get Earnings Calendar
-* [getEconomicsCalendar](#geteconomicscalendar) - Get Economics Calendar
+* [getEarnings](#getearnings) - Get Earnings Calendar
+* [getEconomics](#geteconomics) - Get Economics Calendar
 * [getHistoricalData](#gethistoricaldata) - Get Historical Economic Data
 * [getMergersAndAcquisitions](#getmergersandacquisitions) - Get Mergers & Acquisitions
 
@@ -22,8 +22,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -56,8 +56,8 @@ import { calendarGetConferenceCalls } from "finance-dev/funcs/calendar-get-confe
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -111,7 +111,7 @@ run();
 | errors.AuthenticationErrorEnvelope | 500                                | application/json                   |
 | errors.PetstoreDefaultError        | 4XX, 5XX                           | \*/\*                              |
 
-## getEarningsCalendar
+## getEarnings
 
 Retrieve upcoming earnings release dates and historical earnings announcement schedules for earnings season planning.
 
@@ -123,13 +123,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.calendar.getEarningsCalendar({
+  const result = await financeDev.calendar.getEarnings({
     from: new Date("2024-01-01"),
     to: new Date("2024-01-31"),
     symbol: "AAPL",
@@ -147,19 +147,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { calendarGetEarningsCalendar } from "finance-dev/funcs/calendar-get-earnings-calendar.js";
+import { calendarGetEarnings } from "finance-dev/funcs/calendar-get-earnings.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await calendarGetEarningsCalendar(financeDev, {
+  const res = await calendarGetEarnings(financeDev, {
     from: new Date("2024-01-01"),
     to: new Date("2024-01-31"),
     symbol: "AAPL",
@@ -168,7 +168,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("calendarGetEarningsCalendar failed:", res.error);
+    console.log("calendarGetEarnings failed:", res.error);
   }
 }
 
@@ -204,7 +204,7 @@ run();
 | errors.AuthenticationErrorEnvelope | 500                                | application/json                   |
 | errors.PetstoreDefaultError        | 4XX, 5XX                           | \*/\*                              |
 
-## getEconomicsCalendar
+## getEconomics
 
 Retrieve scheduled economic data releases including employment reports, GDP announcements, inflation data, and central bank decisions. Supports two independent query modes: (1) single date, or (2) explicit date range. Use only one mode per request.
 
@@ -218,13 +218,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.calendar.getEconomicsCalendar({
+  const result = await financeDev.calendar.getEconomics({
     date: new Date("2024-01-15"),
     from: new Date("2024-01-15"),
     to: new Date("2024-03-15"),
@@ -242,19 +242,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { calendarGetEconomicsCalendar } from "finance-dev/funcs/calendar-get-economics-calendar.js";
+import { calendarGetEconomics } from "finance-dev/funcs/calendar-get-economics.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await calendarGetEconomicsCalendar(financeDev, {
+  const res = await calendarGetEconomics(financeDev, {
     date: new Date("2024-01-15"),
     from: new Date("2024-01-15"),
     to: new Date("2024-03-15"),
@@ -263,7 +263,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("calendarGetEconomicsCalendar failed:", res.error);
+    console.log("calendarGetEconomics failed:", res.error);
   }
 }
 
@@ -311,8 +311,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -339,8 +339,8 @@ import { calendarGetHistoricalData } from "finance-dev/funcs/calendar-get-histor
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -400,8 +400,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -434,8 +434,8 @@ import { calendarGetMergersAndAcquisitions } from "finance-dev/funcs/calendar-ge
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 

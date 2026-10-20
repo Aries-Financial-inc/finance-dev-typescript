@@ -12,8 +12,7 @@
 * [getSectorWiseChange](#getsectorwisechange) - Get Sector-wise Change
 * [getTopGainers](#gettopgainers) - Get Top Gaining Stocks
 * [getTopLosers](#gettoplosers) - Get Top Losing Stocks
-* [getTopMostActive](#gettopmostactive) - Get Most Active Stocks
-* [getOptionsETFsTopVolume](#getoptionsetfstopvolume) - Get Top ETF Options by Volume
+* [getOptionsEtfsTopVolume](#getoptionsetfstopvolume) - Get Top ETF Options by Volume
 * [getOptionsStocksTopGainers](#getoptionsstockstopgainers) - Get Top Stock Options by Gains
 * [getOptionsStocksTopVolume](#getoptionsstockstopvolume) - Get Top Stock Options by Volume
 * [stockScreener](#stockscreener) - Stock Screener
@@ -30,8 +29,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -58,8 +57,8 @@ import { analyticsGetInsights } from "finance-dev/funcs/analytics-get-insights.j
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -119,8 +118,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -145,8 +144,8 @@ import { analyticsGetMarketBreadth } from "finance-dev/funcs/analytics-get-marke
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -203,8 +202,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -229,8 +228,8 @@ import { analyticsGetNetInflow } from "finance-dev/funcs/analytics-get-net-inflo
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -287,8 +286,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -317,8 +316,8 @@ import { analyticsGet } from "finance-dev/funcs/analytics-get.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -380,8 +379,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -408,8 +407,8 @@ import { analyticsGetSectorTickers } from "finance-dev/funcs/analytics-get-secto
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -469,8 +468,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -498,8 +497,8 @@ import { analyticsGetSectorWiseChange } from "finance-dev/funcs/analytics-get-se
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -560,8 +559,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -586,8 +585,8 @@ import { analyticsGetTopGainers } from "finance-dev/funcs/analytics-get-top-gain
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -645,8 +644,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -671,8 +670,8 @@ import { analyticsGetTopLosers } from "finance-dev/funcs/analytics-get-top-loser
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -718,92 +717,7 @@ run();
 | errors.AuthenticationErrorEnvelope | 500                                | application/json                   |
 | errors.PetstoreDefaultError        | 4XX, 5XX                           | \*/\*                              |
 
-## getTopMostActive
-
-Retrieves stocks sorted by trading volume in descending order.
-
-### Example Usage
-
-<!-- UsageSnippet language="typescript" operationID="getTopMostActive" method="get" path="/v1/equity/top-most-active" -->
-```typescript
-import { FinanceDev } from "finance-dev";
-
-const financeDev = new FinanceDev({
-  security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
-  },
-});
-
-async function run() {
-  const result = await financeDev.analytics.getTopMostActive({});
-
-  console.log(result);
-}
-
-run();
-```
-
-### Standalone function
-
-The standalone function version of this method:
-
-```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGetTopMostActive } from "finance-dev/funcs/analytics-get-top-most-active.js";
-
-// Use `FinanceDevCore` for best tree-shaking performance.
-// You can create one instance of it to use across an application.
-const financeDev = new FinanceDevCore({
-  security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
-  },
-});
-
-async function run() {
-  const res = await analyticsGetTopMostActive(financeDev, {});
-  if (res.ok) {
-    const { value: result } = res;
-    console.log(result);
-  } else {
-    console.log("analyticsGetTopMostActive failed:", res.error);
-  }
-}
-
-run();
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.GetTopMostActiveRequest](../../models/operations/get-top-most-active-request.md)                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
-| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
-
-### Response
-
-**Promise\<[models.SymbolDetails[]](../../models/.md)\>**
-
-### Errors
-
-| Error Type                         | Status Code                        | Content Type                       |
-| ---------------------------------- | ---------------------------------- | ---------------------------------- |
-| errors.AuthenticationErrorEnvelope | 400                                | application/json                   |
-| errors.ErrorResponse               | 400                                | application/json                   |
-| errors.ErrorResponse               | 401                                | application/json                   |
-| errors.AuthenticationErrorEnvelope | 401                                | application/json                   |
-| errors.ErrorResponse               | 403                                | application/json                   |
-| errors.AuthenticationErrorEnvelope | 403                                | application/json                   |
-| errors.ErrorResponse               | 404                                | application/json                   |
-| errors.AuthenticationErrorEnvelope | 404                                | application/json                   |
-| errors.ErrorResponse               | 500                                | application/json                   |
-| errors.AuthenticationErrorEnvelope | 500                                | application/json                   |
-| errors.PetstoreDefaultError        | 4XX, 5XX                           | \*/\*                              |
-
-## getOptionsETFsTopVolume
+## getOptionsEtfsTopVolume
 
 Retrieve ETF options with the highest trading volume showing the most actively traded contracts across all ETFs.
 
@@ -815,13 +729,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.analytics.getOptionsETFsTopVolume({});
+  const result = await financeDev.analytics.getOptionsEtfsTopVolume({});
 
   console.log(result);
 }
@@ -835,24 +749,24 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGetOptionsETFsTopVolume } from "finance-dev/funcs/analytics-get-options-et-fs-top-volume.js";
+import { analyticsGetOptionsEtfsTopVolume } from "finance-dev/funcs/analytics-get-options-etfs-top-volume.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await analyticsGetOptionsETFsTopVolume(financeDev, {});
+  const res = await analyticsGetOptionsEtfsTopVolume(financeDev, {});
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("analyticsGetOptionsETFsTopVolume failed:", res.error);
+    console.log("analyticsGetOptionsEtfsTopVolume failed:", res.error);
   }
 }
 
@@ -900,8 +814,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -926,8 +840,8 @@ import { analyticsGetOptionsStocksTopGainers } from "finance-dev/funcs/analytics
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -985,8 +899,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1011,8 +925,8 @@ import { analyticsGetOptionsStocksTopVolume } from "finance-dev/funcs/analytics-
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1070,8 +984,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1102,8 +1016,8 @@ import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screen
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1133,8 +1047,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1165,8 +1079,8 @@ import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screen
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1196,8 +1110,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1228,8 +1142,8 @@ import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screen
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1259,8 +1173,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1291,8 +1205,8 @@ import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screen
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1322,8 +1236,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1370,8 +1284,8 @@ import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screen
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1417,8 +1331,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1449,8 +1363,8 @@ import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screen
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1480,8 +1394,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1512,8 +1426,8 @@ import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screen
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1543,8 +1457,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1575,8 +1489,8 @@ import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screen
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1606,8 +1520,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1638,8 +1552,8 @@ import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screen
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1669,8 +1583,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1712,8 +1626,8 @@ import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screen
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 

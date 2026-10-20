@@ -5,14 +5,13 @@
 import { analyticsGetInsights } from "../funcs/analytics-get-insights.js";
 import { analyticsGetMarketBreadth } from "../funcs/analytics-get-market-breadth.js";
 import { analyticsGetNetInflow } from "../funcs/analytics-get-net-inflow.js";
-import { analyticsGetOptionsETFsTopVolume } from "../funcs/analytics-get-options-et-fs-top-volume.js";
+import { analyticsGetOptionsEtfsTopVolume } from "../funcs/analytics-get-options-etfs-top-volume.js";
 import { analyticsGetOptionsStocksTopGainers } from "../funcs/analytics-get-options-stocks-top-gainers.js";
 import { analyticsGetOptionsStocksTopVolume } from "../funcs/analytics-get-options-stocks-top-volume.js";
 import { analyticsGetSectorTickers } from "../funcs/analytics-get-sector-tickers.js";
 import { analyticsGetSectorWiseChange } from "../funcs/analytics-get-sector-wise-change.js";
 import { analyticsGetTopGainers } from "../funcs/analytics-get-top-gainers.js";
 import { analyticsGetTopLosers } from "../funcs/analytics-get-top-losers.js";
-import { analyticsGetTopMostActive } from "../funcs/analytics-get-top-most-active.js";
 import { analyticsGet } from "../funcs/analytics-get.js";
 import { analyticsStockScreener } from "../funcs/analytics-stock-screener.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
@@ -20,8 +19,14 @@ import * as models from "../models/index.js";
 import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 import { PageIterator, unwrapResultIterator } from "../types/operations.js";
+import { TopMostActive } from "./top-most-active.js";
 
 export class Analytics extends ClientSDK {
+  private _topMostActive?: TopMostActive;
+  get topMostActive(): TopMostActive {
+    return (this._topMostActive ??= new TopMostActive(this._options));
+  }
+
   /**
    * Get Analyst Insights
    *
@@ -157,33 +162,16 @@ export class Analytics extends ClientSDK {
   }
 
   /**
-   * Get Most Active Stocks
-   *
-   * @remarks
-   * Retrieves stocks sorted by trading volume in descending order.
-   */
-  async getTopMostActive(
-    request?: operations.GetTopMostActiveRequest | undefined,
-    options?: RequestOptions,
-  ): Promise<Array<models.SymbolDetails>> {
-    return unwrapAsync(analyticsGetTopMostActive(
-      this,
-      request,
-      options,
-    ));
-  }
-
-  /**
    * Get Top ETF Options by Volume
    *
    * @remarks
    * Retrieve ETF options with the highest trading volume showing the most actively traded contracts across all ETFs.
    */
-  async getOptionsETFsTopVolume(
+  async getOptionsEtfsTopVolume(
     request?: operations.GetOptionsETFsTopVolumeRequest | undefined,
     options?: RequestOptions,
   ): Promise<Array<models.OptionsScreenerItem>> {
-    return unwrapAsync(analyticsGetOptionsETFsTopVolume(
+    return unwrapAsync(analyticsGetOptionsEtfsTopVolume(
       this,
       request,
       options,

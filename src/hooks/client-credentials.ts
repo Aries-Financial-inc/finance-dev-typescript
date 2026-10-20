@@ -5,7 +5,6 @@
 import * as z from "zod/v4-mini";
 import { stringToBase64 } from "../lib/base64.js";
 import { SDKOptions } from "../lib/config.js";
-import { env } from "../lib/env.js";
 import { HTTPClient } from "../lib/http.js";
 import { OAuth2Session, OAuth2SessionStore } from "../lib/oauth2-sessions.js";
 import { parse } from "../lib/schemas.js";
@@ -211,9 +210,6 @@ export class ClientCredentialsHook
       "unexpected security type",
     );
 
-    const DEFAULT_TOKEN_URL = "https://api.aries.com/v1/oauth2/token";
-    const envTokenURL = env().PETSTORE_TOKEN_URL ?? DEFAULT_TOKEN_URL;
-
     const additionalProperties: Record<string, string> = {};
     for (const [key, value] of Object.entries(out ?? {})) {
       if (
@@ -225,11 +221,9 @@ export class ClientCredentialsHook
     }
 
     return {
-      clientID: out?.clientID ?? env().PETSTORE_CLIENT_ID ?? "",
-      clientSecret: out?.clientSecret ?? env().PETSTORE_CLIENT_SECRET ?? "",
-      tokenURL: out?.tokenURL !== DEFAULT_TOKEN_URL
-        ? out?.tokenURL
-        : envTokenURL,
+      clientID: out?.clientID ?? "",
+      clientSecret: out?.clientSecret ?? "",
+      tokenURL: out?.tokenURL ?? "",
       scopes: undefined,
       additionalProperties,
     };

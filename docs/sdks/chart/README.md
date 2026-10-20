@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [getChartConfig](#getchartconfig) - Get Chart Configuration
-* [getChartHistory](#getcharthistory) - Get Historical Chart Data
+* [getConfig](#getconfig) - Get Chart Configuration
+* [getHistory](#gethistory) - Get Historical Chart Data
 * [getQuotes](#getquotes) - Get Real-Time Quotes
 * [searchSymbols](#searchsymbols) - Search Symbols
-* [getSymbolInfo](#getsymbolinfo) - Get Symbol Information
+* [getSymbols](#getsymbols) - Get Symbol Information
 * [getTickHistory](#gettickhistory) - Get Tick-Based Chart Data
-* [getChartTime](#getcharttime) - Get Server Time
+* [getTime](#gettime) - Get Server Time
 
-## getChartConfig
+## getConfig
 
 Returns the chart configuration including supported resolutions and charting capabilities. The response includes tick-based resolutions with a `T` suffix, minute-based resolutions, and daily, weekly, and monthly multipliers used by charting clients. It also indicates whether intraday, daily, weekly, and monthly data are available, plus search and time endpoint support.
 
@@ -24,13 +24,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.chart.getChartConfig();
+  const result = await financeDev.chart.getConfig();
 
   console.log(result);
 }
@@ -44,24 +44,24 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { chartGetChartConfig } from "finance-dev/funcs/chart-get-chart-config.js";
+import { chartGetConfig } from "finance-dev/funcs/chart-get-config.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await chartGetChartConfig(financeDev);
+  const res = await chartGetConfig(financeDev);
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("chartGetChartConfig failed:", res.error);
+    console.log("chartGetConfig failed:", res.error);
   }
 }
 
@@ -96,7 +96,7 @@ run();
 | errors.AuthenticationErrorEnvelope | 500                                | application/json                   |
 | errors.PetstoreDefaultError        | 4XX, 5XX                           | \*/\*                              |
 
-## getChartHistory
+## getHistory
 
 Retrieves historical price bars (OHLCV - Open, High, Low, Close, Volume) for a specific symbol within a date range. This endpoint supports various time resolutions from seconds to months. The data is returned in arrays format optimized for charting libraries, with timestamps in Unix format (seconds).
 
@@ -108,13 +108,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.chart.getChartHistory({
+  const result = await financeDev.chart.getHistory({
     symbol: "AAPL",
     resolution: "D",
     from: 1672531200,
@@ -133,19 +133,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { chartGetChartHistory } from "finance-dev/funcs/chart-get-chart-history.js";
+import { chartGetHistory } from "finance-dev/funcs/chart-get-history.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await chartGetChartHistory(financeDev, {
+  const res = await chartGetHistory(financeDev, {
     symbol: "AAPL",
     resolution: "D",
     from: 1672531200,
@@ -155,7 +155,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("chartGetChartHistory failed:", res.error);
+    console.log("chartGetHistory failed:", res.error);
   }
 }
 
@@ -203,8 +203,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -231,8 +231,8 @@ import { chartGetQuotes } from "finance-dev/funcs/chart-get-quotes.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -292,8 +292,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -320,8 +320,8 @@ import { chartSearchSymbols } from "finance-dev/funcs/chart-search-symbols.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -369,7 +369,7 @@ run();
 | errors.AuthenticationErrorEnvelope | 500                                | application/json                   |
 | errors.PetstoreDefaultError        | 4XX, 5XX                           | \*/\*                              |
 
-## getSymbolInfo
+## getSymbols
 
 Retrieves detailed symbol information for charting: exchange, timezone, session, supported resolutions, price scale, format. Required for TradingView-style chart setup. For **futures**, symbol must start with '/' (e.g., /ES, /NQ).
 
@@ -381,13 +381,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.chart.getSymbolInfo({
+  const result = await financeDev.chart.getSymbols({
     symbol: "AAPL",
   });
 
@@ -403,26 +403,26 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { chartGetSymbolInfo } from "finance-dev/funcs/chart-get-symbol-info.js";
+import { chartGetSymbols } from "finance-dev/funcs/chart-get-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await chartGetSymbolInfo(financeDev, {
+  const res = await chartGetSymbols(financeDev, {
     symbol: "AAPL",
   });
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("chartGetSymbolInfo failed:", res.error);
+    console.log("chartGetSymbols failed:", res.error);
   }
 }
 
@@ -470,8 +470,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -500,8 +500,8 @@ import { chartGetTickHistory } from "finance-dev/funcs/chart-get-tick-history.js
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -551,7 +551,7 @@ run();
 | errors.AuthenticationErrorEnvelope | 500                                | application/json                   |
 | errors.PetstoreDefaultError        | 4XX, 5XX                           | \*/\*                              |
 
-## getChartTime
+## getTime
 
 Returns the current server time as a Unix timestamp in **seconds**. Response is plain text containing only the timestamp number (e.g., 1704067200). Useful for synchronizing client time with the server for charting.
 
@@ -563,13 +563,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.chart.getChartTime();
+  const result = await financeDev.chart.getTime();
 
   console.log(result);
 }
@@ -583,24 +583,24 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { chartGetChartTime } from "finance-dev/funcs/chart-get-chart-time.js";
+import { chartGetTime } from "finance-dev/funcs/chart-get-time.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await chartGetChartTime(financeDev);
+  const res = await chartGetTime(financeDev);
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("chartGetChartTime failed:", res.error);
+    console.log("chartGetTime failed:", res.error);
   }
 }
 

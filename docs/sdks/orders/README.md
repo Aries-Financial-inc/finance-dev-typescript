@@ -4,14 +4,13 @@
 
 ### Available Operations
 
-* [placeOrder](#placeorder) - Place an order
+* [create](#create) - Place an order
 * [cancel](#cancel) - Cancel an order
-* [previewOrder](#previeworder) - Preview order
+* [preview](#preview) - Preview order
 * [replace](#replace) - Replace an order
-* [listActiveOrders](#listactiveorders) - List active orders (v2)
-* [listOrderHistory](#listorderhistory) - List order history (v2)
+* [getHistory](#gethistory) - List order history (v2)
 
-## placeOrder
+## create
 
 Place an equity or option order. The order type is automatically determined:
 - No `legs` array = Equity order
@@ -36,13 +35,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     price: "150.00",
     qty: "10",
     side: "BUY",
@@ -64,19 +63,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     price: "150.00",
     qty: "10",
     side: "BUY",
@@ -89,7 +88,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -103,13 +102,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     qty: "10",
     side: "BUY",
     symbol: "AAPL",
@@ -130,19 +129,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     qty: "10",
     side: "BUY",
     symbol: "AAPL",
@@ -154,7 +153,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -168,13 +167,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -211,19 +210,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -251,7 +250,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -265,13 +264,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -308,19 +307,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -348,7 +347,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -362,13 +361,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -406,19 +405,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -447,7 +446,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -461,13 +460,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -505,19 +504,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -546,7 +545,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -560,13 +559,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -604,19 +603,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -645,7 +644,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -659,13 +658,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -703,19 +702,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -744,7 +743,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -758,13 +757,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -801,19 +800,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -841,7 +840,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -855,13 +854,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -899,19 +898,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -940,7 +939,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -954,13 +953,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -998,19 +997,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -1039,7 +1038,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -1053,13 +1052,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     legs: [
       {
         maturity: new Date("2025-01-17"),
@@ -1092,19 +1091,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     legs: [
       {
         maturity: new Date("2025-01-17"),
@@ -1128,7 +1127,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -1142,13 +1141,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.placeOrder({
+  const result = await financeDev.orders.create({
     legs: [
       {
         maturity: new Date("2025-01-17"),
@@ -1190,19 +1189,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPlaceOrder } from "finance-dev/funcs/orders-place-order.js";
+import { ordersCreate } from "finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPlaceOrder(financeDev, {
+  const res = await ordersCreate(financeDev, {
     legs: [
       {
         maturity: new Date("2025-01-17"),
@@ -1235,7 +1234,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPlaceOrder failed:", res.error);
+    console.log("ordersCreate failed:", res.error);
   }
 }
 
@@ -1284,8 +1283,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1316,8 +1315,8 @@ import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1347,8 +1346,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1382,8 +1381,8 @@ import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1416,8 +1415,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1451,8 +1450,8 @@ import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1485,8 +1484,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1521,8 +1520,8 @@ import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1556,8 +1555,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1592,8 +1591,8 @@ import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1627,8 +1626,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1662,8 +1661,8 @@ import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1696,8 +1695,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1731,8 +1730,8 @@ import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1765,8 +1764,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1801,8 +1800,8 @@ import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1836,8 +1835,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1871,8 +1870,8 @@ import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1905,8 +1904,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1941,8 +1940,8 @@ import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -1976,8 +1975,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -2012,8 +2011,8 @@ import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -2070,7 +2069,7 @@ run();
 | errors.AuthenticationErrorEnvelope | 503, 504                           | application/json                   |
 | errors.PetstoreDefaultError        | 4XX, 5XX                           | \*/\*                              |
 
-## previewOrder
+## preview
 
 Preview an order to calculate estimated cost, fees, buying power impact, and option requirements before placing. Uses the same request body as Place Order (PlaceOrdRequest), including the same option `timeInForce` restrictions, OSI-symbol support, and price-precision validation.
 
@@ -2082,13 +2081,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     price: "150.00",
     qty: "10",
     side: "BUY",
@@ -2110,19 +2109,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     price: "150.00",
     qty: "10",
     side: "BUY",
@@ -2135,7 +2134,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -2149,13 +2148,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     qty: "10",
     side: "BUY",
     symbol: "AAPL",
@@ -2176,19 +2175,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     qty: "10",
     side: "BUY",
     symbol: "AAPL",
@@ -2200,7 +2199,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -2214,13 +2213,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -2257,19 +2256,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -2297,7 +2296,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -2311,13 +2310,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -2354,19 +2353,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -2394,7 +2393,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -2408,13 +2407,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -2451,19 +2450,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -2491,7 +2490,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -2505,13 +2504,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -2548,19 +2547,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -2588,7 +2587,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -2602,13 +2601,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -2646,19 +2645,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -2687,7 +2686,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -2701,13 +2700,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     legs: [
       {
         maturity: new Date("2025-01-17"),
@@ -2749,19 +2748,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     legs: [
       {
         maturity: new Date("2025-01-17"),
@@ -2794,7 +2793,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -2808,13 +2807,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -2852,19 +2851,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -2893,7 +2892,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -2907,13 +2906,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -2951,19 +2950,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -2992,7 +2991,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -3006,13 +3005,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -3049,19 +3048,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     clientId: "CLIENT-001",
     currency: "USD",
     legs: [
@@ -3089,7 +3088,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -3103,13 +3102,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -3147,19 +3146,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -3188,7 +3187,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -3202,13 +3201,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     legs: [
       {
         maturity: new Date("2025-01-17"),
@@ -3241,19 +3240,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     legs: [
       {
         maturity: new Date("2025-01-17"),
@@ -3277,7 +3276,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -3291,13 +3290,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -3335,19 +3334,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -3376,7 +3375,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -3390,13 +3389,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.previewOrder({
+  const result = await financeDev.orders.preview({
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -3434,19 +3433,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreviewOrder } from "finance-dev/funcs/orders-preview-order.js";
+import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersPreviewOrder(financeDev, {
+  const res = await ordersPreview(financeDev, {
     accountId: "<id>",
     clientId: "CLIENT-001",
     currency: "USD",
@@ -3475,7 +3474,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("ordersPreviewOrder failed:", res.error);
+    console.log("ordersPreview failed:", res.error);
   }
 }
 
@@ -3532,8 +3531,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -3567,8 +3566,8 @@ import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -3601,8 +3600,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -3636,8 +3635,8 @@ import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -3670,8 +3669,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -3720,8 +3719,8 @@ import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -3769,8 +3768,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -3818,8 +3817,8 @@ import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -3866,8 +3865,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -3916,8 +3915,8 @@ import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -3965,8 +3964,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -4015,8 +4014,8 @@ import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -4064,8 +4063,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -4113,8 +4112,8 @@ import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -4161,8 +4160,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -4211,8 +4210,8 @@ import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -4260,8 +4259,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -4310,8 +4309,8 @@ import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -4359,8 +4358,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -4408,8 +4407,8 @@ import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -4456,8 +4455,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -4506,8 +4505,8 @@ import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -4578,102 +4577,7 @@ run();
 | errors.AuthenticationErrorEnvelope | 503, 504                           | application/json                   |
 | errors.PetstoreDefaultError        | 4XX, 5XX                           | \*/\*                              |
 
-## listActiveOrders
-
-Returns active orders (open orders plus today's terminal activity) from the orders v2 cache only. There is no database fallback.
-
-Pagination uses an opaque int64 cursor: omit cursor or send 0 for the first page, then send nextCursor; 0 means exhausted. Each order uses the same domain shape as WebSocket account updates.
-
-### Example Usage
-
-<!-- UsageSnippet language="typescript" operationID="listActiveOrders" method="get" path="/v2/accounts/{id}/orders" -->
-```typescript
-import { FinanceDev } from "finance-dev";
-
-const financeDev = new FinanceDev({
-  security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
-  },
-});
-
-async function run() {
-  const result = await financeDev.orders.listActiveOrders({
-    id: "TEST-ACCOUNT-001",
-  });
-
-  for await (const page of result) {
-    console.log(page);
-  }
-}
-
-run();
-```
-
-### Standalone function
-
-The standalone function version of this method:
-
-```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersListActiveOrders } from "finance-dev/funcs/orders-list-active-orders.js";
-
-// Use `FinanceDevCore` for best tree-shaking performance.
-// You can create one instance of it to use across an application.
-const financeDev = new FinanceDevCore({
-  security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
-  },
-});
-
-async function run() {
-  const res = await ordersListActiveOrders(financeDev, {
-    id: "TEST-ACCOUNT-001",
-  });
-  if (res.ok) {
-    const { value: result } = res;
-    for await (const page of result) {
-    console.log(page);
-  }
-  } else {
-    console.log("ordersListActiveOrders failed:", res.error);
-  }
-}
-
-run();
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.ListActiveOrdersRequest](../../models/operations/list-active-orders-request.md)                                                                                    | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
-| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
-
-### Response
-
-**Promise\<[operations.ListActiveOrdersResponse](../../models/operations/list-active-orders-response.md)\>**
-
-### Errors
-
-| Error Type                         | Status Code                        | Content Type                       |
-| ---------------------------------- | ---------------------------------- | ---------------------------------- |
-| errors.AuthenticationErrorEnvelope | 400                                | application/json                   |
-| errors.ErrorResponse               | 400                                | application/json                   |
-| errors.ErrorResponse               | 401                                | application/json                   |
-| errors.AuthenticationErrorEnvelope | 401                                | application/json                   |
-| errors.ErrorResponse               | 403                                | application/json                   |
-| errors.AuthenticationErrorEnvelope | 403                                | application/json                   |
-| errors.ErrorResponse               | 404                                | application/json                   |
-| errors.AuthenticationErrorEnvelope | 404                                | application/json                   |
-| errors.ErrorResponse               | 500                                | application/json                   |
-| errors.AuthenticationErrorEnvelope | 500                                | application/json                   |
-| errors.PetstoreDefaultError        | 4XX, 5XX                           | \*/\*                              |
-
-## listOrderHistory
+## getHistory
 
 Date-range query against **PostgreSQL** only (no `source` parameter). `from` is required; `to` defaults to the current time truncated to the minute (UTC). The server caps the window at **90 days**.
 
@@ -4691,13 +4595,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.orders.listOrderHistory({
+  const result = await financeDev.orders.getHistory({
     id: "TEST-ACCOUNT-001",
     from: new Date("2026-01-01T00:00:00Z"),
     to: new Date("2026-01-31T00:00:00Z"),
@@ -4717,19 +4621,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersListOrderHistory } from "finance-dev/funcs/orders-list-order-history.js";
+import { ordersGetHistory } from "finance-dev/funcs/orders-get-history.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await ordersListOrderHistory(financeDev, {
+  const res = await ordersGetHistory(financeDev, {
     id: "TEST-ACCOUNT-001",
     from: new Date("2026-01-01T00:00:00Z"),
     to: new Date("2026-01-31T00:00:00Z"),
@@ -4740,7 +4644,7 @@ async function run() {
     console.log(page);
   }
   } else {
-    console.log("ordersListOrderHistory failed:", res.error);
+    console.log("ordersGetHistory failed:", res.error);
   }
 }
 

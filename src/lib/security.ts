@@ -3,7 +3,6 @@
  */
 
 import * as models from "../models/index.js";
-import { env } from "./env.js";
 
 type OAuth2PasswordFlow = {
   username: string;
@@ -252,12 +251,12 @@ export function resolveGlobalSecurity(
       {
         fieldName: "clientID",
         type: "oauth2:client_credentials",
-        value: security?.clientID ?? env().PETSTORE_CLIENT_ID,
+        value: security?.clientID,
       },
       {
         fieldName: "clientSecret",
         type: "oauth2:client_credentials",
-        value: security?.clientSecret ?? env().PETSTORE_CLIENT_SECRET,
+        value: security?.clientSecret,
       },
     ],
   ];

@@ -3,10 +3,9 @@
  */
 
 import { ordersCancel } from "../funcs/orders-cancel.js";
-import { ordersListActiveOrders } from "../funcs/orders-list-active-orders.js";
-import { ordersListOrderHistory } from "../funcs/orders-list-order-history.js";
-import { ordersPlaceOrder } from "../funcs/orders-place-order.js";
-import { ordersPreviewOrder } from "../funcs/orders-preview-order.js";
+import { ordersCreate } from "../funcs/orders-create.js";
+import { ordersGetHistory } from "../funcs/orders-get-history.js";
+import { ordersPreview } from "../funcs/orders-preview.js";
 import { ordersReplace } from "../funcs/orders-replace.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as models from "../models/index.js";
@@ -34,11 +33,11 @@ export class Orders extends ClientSDK {
    * - `STOP_LIMIT` validates both
    * - Decimal inputs support up to 5 digits after the decimal point.
    */
-  async placeOrder(
+  async create(
     request: models.PlaceOrdRequestUnion,
     options?: RequestOptions,
   ): Promise<models.OrdResponse> {
-    return unwrapAsync(ordersPlaceOrder(
+    return unwrapAsync(ordersCreate(
       this,
       request,
       options,
@@ -68,11 +67,11 @@ export class Orders extends ClientSDK {
    * @remarks
    * Preview an order to calculate estimated cost, fees, buying power impact, and option requirements before placing. Uses the same request body as Place Order (PlaceOrdRequest), including the same option `timeInForce` restrictions, OSI-symbol support, and price-precision validation.
    */
-  async previewOrder(
+  async preview(
     request: models.PlaceOrdRequestUnion,
     options?: RequestOptions,
   ): Promise<models.PreviewOrderResponse> {
-    return unwrapAsync(ordersPreviewOrder(
+    return unwrapAsync(ordersPreview(
       this,
       request,
       options,
@@ -105,27 +104,6 @@ export class Orders extends ClientSDK {
   }
 
   /**
-   * List active orders (v2)
-   *
-   * @remarks
-   * Returns active orders (open orders plus today's terminal activity) from the orders v2 cache only. There is no database fallback.
-   *
-   * Pagination uses an opaque int64 cursor: omit cursor or send 0 for the first page, then send nextCursor; 0 means exhausted. Each order uses the same domain shape as WebSocket account updates.
-   */
-  async listActiveOrders(
-    request: operations.ListActiveOrdersRequest,
-    options?: RequestOptions,
-  ): Promise<
-    PageIterator<operations.ListActiveOrdersResponse, { cursor: number }>
-  > {
-    return unwrapResultIterator(ordersListActiveOrders(
-      this,
-      request,
-      options,
-    ));
-  }
-
-  /**
    * List order history (v2)
    *
    * @remarks
@@ -137,13 +115,13 @@ export class Orders extends ClientSDK {
    *
    * **Pagination:** Same opaque `int64` cursor contract as active orders when reading from DB — `cursor=0` first, then `nextCursor`; `0` means exhausted.
    */
-  async listOrderHistory(
+  async getHistory(
     request: operations.ListOrderHistoryRequest,
     options?: RequestOptions,
   ): Promise<
     PageIterator<operations.ListOrderHistoryResponse, { cursor: number }>
   > {
-    return unwrapResultIterator(ordersListOrderHistory(
+    return unwrapResultIterator(ordersGetHistory(
       this,
       request,
       options,

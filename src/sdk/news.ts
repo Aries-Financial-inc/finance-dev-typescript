@@ -3,8 +3,8 @@
  */
 
 import { newsGetById } from "../funcs/news-get-by-id.js";
-import { newsGetNews } from "../funcs/news-get-news.js";
 import { newsGetSentiment } from "../funcs/news-get-sentiment.js";
+import { newsList } from "../funcs/news-list.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as models from "../models/index.js";
 import * as operations from "../models/operations/index.js";
@@ -17,11 +17,11 @@ export class News extends ClientSDK {
    * @remarks
    * Retrieve real-time market news articles and press releases. Returns combined results from both news and press releases, sorted by timestamp (newest first). Default returns news for SPY if no symbols are specified.
    */
-  async getNews(
+  async list(
     request?: operations.GetNewsRequest | undefined,
     options?: RequestOptions,
   ): Promise<models.NewsListResponse> {
-    return unwrapAsync(newsGetNews(
+    return unwrapAsync(newsList(
       this,
       request,
       options,

@@ -4,7 +4,6 @@
 
 import { predictionsMarketsGetBaseEvent } from "../funcs/predictions-markets-get-base-event.js";
 import { predictionsMarketsGetEventContracts } from "../funcs/predictions-markets-get-event-contracts.js";
-import { predictionsMarketsListCategories } from "../funcs/predictions-markets-list-categories.js";
 import { predictionsMarketsSearch } from "../funcs/predictions-markets-search.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as operations from "../models/operations/index.js";
@@ -22,21 +21,6 @@ export class Markets extends ClientSDK {
     return unwrapAsync(predictionsMarketsGetBaseEvent(
       this,
       request,
-      options,
-    ));
-  }
-
-  /**
-   * List prediction market categories
-   *
-   * @remarks
-   * The category tree of every category with at least one ACTIVE contract, so each one finds something when passed to search as category. Each level is ordered by name. Read from the search index, which trails the catalogue by seconds.
-   */
-  async listCategories(
-    options?: RequestOptions,
-  ): Promise<operations.ListCategoriesResponse> {
-    return unwrapAsync(predictionsMarketsListCategories(
-      this,
       options,
     ));
   }

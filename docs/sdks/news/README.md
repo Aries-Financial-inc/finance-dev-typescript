@@ -4,11 +4,11 @@
 
 ### Available Operations
 
-* [getNews](#getnews) - Get Market News
+* [list](#list) - Get Market News
 * [getSentiment](#getsentiment) - Get News Sentiment
 * [getById](#getbyid) - Get News by ID
 
-## getNews
+## list
 
 Retrieve real-time market news articles and press releases. Returns combined results from both news and press releases, sorted by timestamp (newest first). Default returns news for SPY if no symbols are specified.
 
@@ -20,13 +20,13 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const result = await financeDev.news.getNews({
+  const result = await financeDev.news.list({
     symbols: "AAPL,GOOGL,MSFT",
     topics: "earnings,guidance",
   });
@@ -43,19 +43,19 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { newsGetNews } from "finance-dev/funcs/news-get-news.js";
+import { newsList } from "finance-dev/funcs/news-list.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await newsGetNews(financeDev, {
+  const res = await newsList(financeDev, {
     symbols: "AAPL,GOOGL,MSFT",
     topics: "earnings,guidance",
   });
@@ -63,7 +63,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("newsGetNews failed:", res.error);
+    console.log("newsList failed:", res.error);
   }
 }
 
@@ -111,8 +111,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -139,8 +139,8 @@ import { newsGetSentiment } from "finance-dev/funcs/news-get-sentiment.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -200,8 +200,8 @@ import { FinanceDev } from "finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
@@ -229,8 +229,8 @@ import { newsGetById } from "finance-dev/funcs/news-get-by-id.js";
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 

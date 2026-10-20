@@ -3,8 +3,8 @@
  */
 
 import { calendarGetConferenceCalls } from "../funcs/calendar-get-conference-calls.js";
-import { calendarGetEarningsCalendar } from "../funcs/calendar-get-earnings-calendar.js";
-import { calendarGetEconomicsCalendar } from "../funcs/calendar-get-economics-calendar.js";
+import { calendarGetEarnings } from "../funcs/calendar-get-earnings.js";
+import { calendarGetEconomics } from "../funcs/calendar-get-economics.js";
 import { calendarGetHistoricalData } from "../funcs/calendar-get-historical-data.js";
 import { calendarGetMergersAndAcquisitions } from "../funcs/calendar-get-mergers-and-acquisitions.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
@@ -39,11 +39,11 @@ export class Calendar extends ClientSDK {
    * @remarks
    * Retrieve upcoming earnings release dates and historical earnings announcement schedules for earnings season planning.
    */
-  async getEarningsCalendar(
+  async getEarnings(
     request: operations.GetEarningsCalendarRequest,
     options?: RequestOptions,
   ): Promise<Array<models.EarningRelease>> {
-    return unwrapAsync(calendarGetEarningsCalendar(
+    return unwrapAsync(calendarGetEarnings(
       this,
       request,
       options,
@@ -58,11 +58,11 @@ export class Calendar extends ClientSDK {
    *
    * Supply date, or supply both from and to. A complete from/to range takes precedence when date is also supplied.
    */
-  async getEconomicsCalendar(
+  async getEconomics(
     request?: operations.GetEconomicsCalendarRequest | undefined,
     options?: RequestOptions,
   ): Promise<models.GetEconomicsCalendarResponse> {
-    return unwrapAsync(calendarGetEconomicsCalendar(
+    return unwrapAsync(calendarGetEconomics(
       this,
       request,
       options,

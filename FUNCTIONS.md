@@ -20,26 +20,26 @@ specific category of applications.
 
 ```typescript
 import { FinanceDevCore } from "finance-dev/core.js";
-import { accountsGetAccountPositions } from "finance-dev/funcs/accounts-get-account-positions.js";
+import { accountsGetPositions } from "finance-dev/funcs/accounts-get-positions.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore({
   security: {
-    clientID: process.env["PETSTORE_CLIENT_ID"] ?? "",
-    clientSecret: process.env["PETSTORE_CLIENT_SECRET"] ?? "",
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
   },
 });
 
 async function run() {
-  const res = await accountsGetAccountPositions(financeDev, {
+  const res = await accountsGetPositions(financeDev, {
     id: "TEST-ACCOUNT-001",
   });
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("accountsGetAccountPositions failed:", res.error);
+    console.log("accountsGetPositions failed:", res.error);
   }
 }
 
