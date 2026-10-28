@@ -5,7 +5,7 @@ A single news item or press release.
 ## Example Usage
 
 ```typescript
-import { NewsItem } from "finance-dev/models";
+import { NewsItem } from "@ariesdotcom/finance-dev/models";
 
 let value: NewsItem = {
   newsType: "news",

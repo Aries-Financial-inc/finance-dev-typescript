@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ListIndicesRequest } from "finance-dev/models/operations";
+import { ListIndicesRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: ListIndicesRequest = {
   indexGroup: "IND_CBOM",

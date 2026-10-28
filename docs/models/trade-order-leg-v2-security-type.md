@@ -5,7 +5,7 @@ Instrument type for this leg. EQUITY is stock or ETF; OPTION is an options contr
 ## Example Usage
 
 ```typescript
-import { TradeOrderLegV2SecurityType } from "finance-dev/models";
+import { TradeOrderLegV2SecurityType } from "@ariesdotcom/finance-dev/models";
 
 let value: TradeOrderLegV2SecurityType = "OPTION";
 

@@ -5,7 +5,7 @@ Response containing chart bars for an index along with the index metadata.
 ## Example Usage
 
 ```typescript
-import { IndexChartBarsResponse } from "finance-dev/models";
+import { IndexChartBarsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: IndexChartBarsResponse = {};
 ```

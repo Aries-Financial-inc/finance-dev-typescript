@@ -5,7 +5,7 @@ One page of events. found, page and perPage count events.
 ## Example Usage
 
 ```typescript
-import { PredMdEventSearchResult } from "finance-dev/models";
+import { PredMdEventSearchResult } from "@ariesdotcom/finance-dev/models";
 
 let value: PredMdEventSearchResult = {
   found: 835913,

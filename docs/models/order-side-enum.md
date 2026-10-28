@@ -9,7 +9,7 @@ Which direction to trade in. Pick one:
 ## Example Usage
 
 ```typescript
-import { OrderSideEnum } from "finance-dev/models";
+import { OrderSideEnum } from "@ariesdotcom/finance-dev/models";
 
 let value: OrderSideEnum = "BUY";
 

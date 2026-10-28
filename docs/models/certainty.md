@@ -5,7 +5,7 @@ How sure order entry is of `state`. Anything other than `certain` means the orde
 ## Example Usage
 
 ```typescript
-import { Certainty } from "finance-dev/models";
+import { Certainty } from "@ariesdotcom/finance-dev/models";
 
 let value: Certainty = "unknown_unacked";
 

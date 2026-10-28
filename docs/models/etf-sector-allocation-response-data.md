@@ -5,7 +5,7 @@ ETF sector exposure payload.
 ## Example Usage
 
 ```typescript
-import { EtfSectorAllocationResponseData } from "finance-dev/models";
+import { EtfSectorAllocationResponseData } from "@ariesdotcom/finance-dev/models";
 
 let value: EtfSectorAllocationResponseData = {};
 ```

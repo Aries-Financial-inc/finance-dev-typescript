@@ -5,7 +5,7 @@ Paginated response containing logo records for bulk sync.
 ## Example Usage
 
 ```typescript
-import { LogoSyncResponse } from "finance-dev/models";
+import { LogoSyncResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: LogoSyncResponse = {};
 ```

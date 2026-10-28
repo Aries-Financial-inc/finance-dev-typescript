@@ -5,7 +5,7 @@ Historical ESG (environmental, social, governance) scores and disclosures for a 
 ## Example Usage
 
 ```typescript
-import { HistoricalEsgResponse } from "finance-dev/models";
+import { HistoricalEsgResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: HistoricalEsgResponse = {};
 ```

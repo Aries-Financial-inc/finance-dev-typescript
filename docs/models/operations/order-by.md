@@ -5,7 +5,7 @@ Sort direction by `order_created_at`. Defaults to `desc` (newest first). Use `as
 ## Example Usage
 
 ```typescript
-import { OrderBy } from "finance-dev/models/operations";
+import { OrderBy } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: OrderBy = "desc";
 

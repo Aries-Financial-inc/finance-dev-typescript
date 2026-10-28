@@ -5,7 +5,7 @@ One page of base events. found, page and perPage count base events.
 ## Example Usage
 
 ```typescript
-import { PredMdBaseEventSearchResult } from "finance-dev/models";
+import { PredMdBaseEventSearchResult } from "@ariesdotcom/finance-dev/models";
 
 let value: PredMdBaseEventSearchResult = {
   found: 681760,

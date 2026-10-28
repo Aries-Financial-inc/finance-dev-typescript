@@ -5,7 +5,7 @@ Analyst price target consensus for a stock (high, low, mean, median and analyst 
 ## Example Usage
 
 ```typescript
-import { PriceTargetResponse } from "finance-dev/models";
+import { PriceTargetResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: PriceTargetResponse = {};
 ```

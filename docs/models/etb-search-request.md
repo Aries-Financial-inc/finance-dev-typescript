@@ -5,7 +5,7 @@ Batch borrowability query. Symbols are uppercased and trimmed before the lookup,
 ## Example Usage
 
 ```typescript
-import { EtbSearchRequest } from "finance-dev/models";
+import { EtbSearchRequest } from "@ariesdotcom/finance-dev/models";
 
 let value: EtbSearchRequest = {
   symbols: [

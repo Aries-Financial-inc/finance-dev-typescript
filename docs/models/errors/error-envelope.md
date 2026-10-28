@@ -5,7 +5,7 @@ Prediction-market error envelope. Returned by historical-data and prediction-mar
 ## Example Usage
 
 ```typescript
-import { ErrorEnvelope } from "finance-dev/models/errors";
+import { ErrorEnvelope } from "@ariesdotcom/finance-dev/models/errors";
 
 // No examples available for this model
 ```

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetPredictionOrderRequest } from "finance-dev/models/operations";
+import { GetPredictionOrderRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetPredictionOrderRequest = {
   orderId: "d149e539-20c7-46c4-b31e-9e8fe27fb67e",

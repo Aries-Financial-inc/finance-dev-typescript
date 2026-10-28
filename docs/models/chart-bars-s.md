@@ -5,7 +5,7 @@ Response status. `ok` means chart arrays are usable; `no_data` means the symbol 
 ## Example Usage
 
 ```typescript
-import { ChartBarsS } from "finance-dev/models";
+import { ChartBarsS } from "@ariesdotcom/finance-dev/models";
 
 let value: ChartBarsS = "error";
 

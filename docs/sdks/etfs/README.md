@@ -14,7 +14,7 @@ Retrieve ETF geographic allocation showing percentage exposure to different coun
 
 <!-- UsageSnippet language="typescript" operationID="getEtfCountryAllocation" method="get" path="/v1/etf/country" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -39,8 +39,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { etfsGetCountryAllocation } from "finance-dev/funcs/etfs-get-country-allocation.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { etfsGetCountryAllocation } from "@ariesdotcom/finance-dev/funcs/etfs-get-country-allocation.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -5,7 +5,7 @@ Paginated list of historical tick-level trades for a stock ticker.
 ## Example Usage
 
 ```typescript
-import { StockTradesResponse } from "finance-dev/models";
+import { StockTradesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: StockTradesResponse = {};
 ```

@@ -5,7 +5,7 @@ Saved list of symbols a user wants to monitor. Watchlists are read-only from a t
 ## Example Usage
 
 ```typescript
-import { Watchlist } from "finance-dev/models";
+import { Watchlist } from "@ariesdotcom/finance-dev/models";
 
 let value: Watchlist = {};
 ```

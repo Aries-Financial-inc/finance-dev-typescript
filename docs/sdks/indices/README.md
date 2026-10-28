@@ -21,7 +21,7 @@ Retrieve OHLC (Open, High, Low, Close) bar data for indices across various timef
 
 <!-- UsageSnippet language="typescript" operationID="getIndexBar" method="get" path="/v1/indices/bar" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -49,8 +49,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { indicesGetBar } from "finance-dev/funcs/indices-get-bar.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { indicesGetBar } from "@ariesdotcom/finance-dev/funcs/indices-get-bar.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -116,7 +116,7 @@ Retrieve OHLC (Open, High, Low, Close) bar data for multiple market indices in a
 
 <!-- UsageSnippet language="typescript" operationID="getIndexBars" method="get" path="/v1/indices/bars" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -144,8 +144,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { indicesGetBars } from "finance-dev/funcs/indices-get-bars.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { indicesGetBars } from "@ariesdotcom/finance-dev/funcs/indices-get-bars.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -211,7 +211,7 @@ Retrieve all market indices belonging to a specific group category. Returns deta
 
 <!-- UsageSnippet language="typescript" operationID="listIndicesByGroup" method="get" path="/v1/indices/by-group" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -236,8 +236,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { indicesGetByGroup } from "finance-dev/funcs/indices-get-by-group.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { indicesGetByGroup } from "@ariesdotcom/finance-dev/funcs/indices-get-by-group.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -300,7 +300,7 @@ Retrieve historical chart data for indices including price history, volume, and 
 
 <!-- UsageSnippet language="typescript" operationID="getIndexChartBars" method="get" path="/v1/indices/chart-bars" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -329,8 +329,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { indicesGetChartBars } from "finance-dev/funcs/indices-get-chart-bars.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { indicesGetChartBars } from "@ariesdotcom/finance-dev/funcs/indices-get-chart-bars.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -397,7 +397,7 @@ List all index groups (publishers / index families) currently available. The res
 
 <!-- UsageSnippet language="typescript" operationID="listIndexGroups" method="get" path="/v1/indices/groups" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -420,8 +420,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { indicesGetGroups } from "finance-dev/funcs/indices-get-groups.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { indicesGetGroups } from "@ariesdotcom/finance-dev/funcs/indices-get-groups.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -481,7 +481,7 @@ Retrieve comprehensive list of available indices including major market indices,
 
 <!-- UsageSnippet language="typescript" operationID="listIndices" method="get" path="/v1/indices/list" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -509,8 +509,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { indicesList } from "finance-dev/funcs/indices-list.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { indicesList } from "@ariesdotcom/finance-dev/funcs/indices-list.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -576,7 +576,7 @@ Retrieve real-time values for multiple market indices simultaneously. Returns cu
 
 <!-- UsageSnippet language="typescript" operationID="getIndexRealtimeValues" method="get" path="/v1/indices/realtime/values" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -601,8 +601,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { indicesGetRealtimeValues } from "finance-dev/funcs/indices-get-realtime-values.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { indicesGetRealtimeValues } from "@ariesdotcom/finance-dev/funcs/indices-get-realtime-values.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -665,7 +665,7 @@ Search for market indices by name, symbol, or keyword to find specific benchmark
 
 <!-- UsageSnippet language="typescript" operationID="searchIndices" method="get" path="/v1/indices/search" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -690,8 +690,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { indicesSearch } from "finance-dev/funcs/indices-search.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { indicesSearch } from "@ariesdotcom/finance-dev/funcs/indices-search.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

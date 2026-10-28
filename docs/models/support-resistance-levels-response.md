@@ -5,7 +5,7 @@ Support and resistance price levels for a symbol and resolution from Finnhub.
 ## Example Usage
 
 ```typescript
-import { SupportResistanceLevelsResponse } from "finance-dev/models";
+import { SupportResistanceLevelsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: SupportResistanceLevelsResponse = {};
 ```

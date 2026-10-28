@@ -5,7 +5,7 @@ Annual financial metrics organized by type
 ## Example Usage
 
 ```typescript
-import { Annual } from "finance-dev/models";
+import { Annual } from "@ariesdotcom/finance-dev/models";
 
 let value: Annual = {};
 ```

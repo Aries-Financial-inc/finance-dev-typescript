@@ -5,7 +5,7 @@ One event with at least one matching contract.
 ## Example Usage
 
 ```typescript
-import { PredMdEventHit } from "finance-dev/models";
+import { PredMdEventHit } from "@ariesdotcom/finance-dev/models";
 
 let value: PredMdEventHit = {
   baseEventId: "<id>",

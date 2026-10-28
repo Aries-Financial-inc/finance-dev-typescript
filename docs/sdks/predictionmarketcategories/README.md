@@ -14,7 +14,7 @@ The category tree of every category with at least one ACTIVE contract, so each o
 
 <!-- UsageSnippet language="typescript" operationID="listCategories" method="get" path="/v1/predictions/categories" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev();
 
@@ -32,8 +32,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { predictionMarketCategoriesList } from "finance-dev/funcs/prediction-market-categories-list.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { predictionMarketCategoriesList } from "@ariesdotcom/finance-dev/funcs/prediction-market-categories-list.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

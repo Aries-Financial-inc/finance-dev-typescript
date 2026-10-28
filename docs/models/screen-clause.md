@@ -5,7 +5,7 @@ One filter condition: field name, comparison operator, and value (string).
 ## Example Usage
 
 ```typescript
-import { ScreenClause } from "finance-dev/models";
+import { ScreenClause } from "@ariesdotcom/finance-dev/models";
 
 let value: ScreenClause = {};
 ```

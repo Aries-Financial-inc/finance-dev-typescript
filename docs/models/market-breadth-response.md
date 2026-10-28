@@ -5,7 +5,7 @@ Response envelope for the market breadth endpoint.
 ## Example Usage
 
 ```typescript
-import { MarketBreadthResponse } from "finance-dev/models";
+import { MarketBreadthResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: MarketBreadthResponse = {
   data: {

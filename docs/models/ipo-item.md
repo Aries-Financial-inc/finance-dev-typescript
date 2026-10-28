@@ -5,7 +5,7 @@ A single IPO calendar entry.
 ## Example Usage
 
 ```typescript
-import { IpoItem } from "finance-dev/models";
+import { IpoItem } from "@ariesdotcom/finance-dev/models";
 
 let value: IpoItem = {};
 ```

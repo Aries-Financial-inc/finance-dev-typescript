@@ -5,7 +5,7 @@ Daily open, high, low, close and volume for an option contract on a given date, 
 ## Example Usage
 
 ```typescript
-import { OptionOpenCloseResponse } from "finance-dev/models";
+import { OptionOpenCloseResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionOpenCloseResponse = {};
 ```

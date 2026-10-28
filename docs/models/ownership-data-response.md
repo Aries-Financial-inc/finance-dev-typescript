@@ -5,7 +5,7 @@ Response containing institutional ownership records.
 ## Example Usage
 
 ```typescript
-import { OwnershipDataResponse } from "finance-dev/models";
+import { OwnershipDataResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OwnershipDataResponse = {};
 ```

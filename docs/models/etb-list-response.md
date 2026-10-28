@@ -5,7 +5,7 @@ The complete set of easy-to-borrow symbols in effect for the current trading day
 ## Example Usage
 
 ```typescript
-import { EtbListResponse } from "finance-dev/models";
+import { EtbListResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: EtbListResponse = {
   symbols: [

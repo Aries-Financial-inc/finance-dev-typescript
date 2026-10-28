@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PredMdBaseEventWithEvents } from "finance-dev/models";
+import { PredMdBaseEventWithEvents } from "@ariesdotcom/finance-dev/models";
 
 let value: PredMdBaseEventWithEvents = {
   baseEvent: {

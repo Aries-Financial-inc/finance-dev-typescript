@@ -5,7 +5,7 @@ Structured error returned by the prediction-market order endpoints.
 ## Example Usage
 
 ```typescript
-import { PredOrdersAppError } from "finance-dev/models";
+import { PredOrdersAppError } from "@ariesdotcom/finance-dev/models";
 
 let value: PredOrdersAppError = {
   code: "INVALID_ORDER",

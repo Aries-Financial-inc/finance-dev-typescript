@@ -5,7 +5,7 @@ Market quote values for a symbol. Use bid/ask for trading decisions and last pri
 ## Example Usage
 
 ```typescript
-import { QuoteValues } from "finance-dev/models";
+import { QuoteValues } from "@ariesdotcom/finance-dev/models";
 
 let value: QuoteValues = {};
 ```

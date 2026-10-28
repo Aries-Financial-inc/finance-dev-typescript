@@ -16,7 +16,7 @@ Retrieve real-time market news articles and press releases. Returns combined res
 
 <!-- UsageSnippet language="typescript" operationID="getNews" method="get" path="/v1/news" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -42,8 +42,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { newsList } from "finance-dev/funcs/news-list.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { newsList } from "@ariesdotcom/finance-dev/funcs/news-list.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -107,7 +107,7 @@ Retrieve news sentiment analysis including bullish/bearish indicators, sentiment
 
 <!-- UsageSnippet language="typescript" operationID="getNewsSentiment" method="get" path="/v1/news-sentiment" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -132,8 +132,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { newsGetSentiment } from "finance-dev/funcs/news-get-sentiment.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { newsGetSentiment } from "@ariesdotcom/finance-dev/funcs/news-get-sentiment.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -196,7 +196,7 @@ Retrieve a specific news article or press release by its unique ID. Returns deta
 
 <!-- UsageSnippet language="typescript" operationID="getNewsById" method="get" path="/v1/news/{id}" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -222,8 +222,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { newsGetById } from "finance-dev/funcs/news-get-by-id.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { newsGetById } from "@ariesdotcom/finance-dev/funcs/news-get-by-id.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

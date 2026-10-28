@@ -14,7 +14,7 @@ Retrieve SEC cash flow statement rows per filing period. Filter by CIK, tickers,
 
 <!-- UsageSnippet language="typescript" operationID="getCashFlowStatements" method="get" path="/v1/financials/cash-flow-statements" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -39,8 +39,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { financialsCashFlowStatementsGet } from "finance-dev/funcs/financials-cash-flow-statements-get.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { financialsCashFlowStatementsGet } from "@ariesdotcom/finance-dev/funcs/financials-cash-flow-statements-get.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

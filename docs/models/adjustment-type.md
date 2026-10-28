@@ -5,7 +5,7 @@ Type of stock split adjustment
 ## Example Usage
 
 ```typescript
-import { AdjustmentType } from "finance-dev/models";
+import { AdjustmentType } from "@ariesdotcom/finance-dev/models";
 
 let value: AdjustmentType = "stock_dividend";
 

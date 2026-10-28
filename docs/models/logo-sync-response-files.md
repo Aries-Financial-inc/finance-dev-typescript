@@ -5,7 +5,7 @@ Available logo file variants
 ## Example Usage
 
 ```typescript
-import { LogoSyncResponseFiles } from "finance-dev/models";
+import { LogoSyncResponseFiles } from "@ariesdotcom/finance-dev/models";
 
 let value: LogoSyncResponseFiles = {};
 ```

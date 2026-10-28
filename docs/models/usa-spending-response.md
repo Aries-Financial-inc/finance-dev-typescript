@@ -5,7 +5,7 @@ US government contract awards to a company, as provided by Finnhub.
 ## Example Usage
 
 ```typescript
-import { UsaSpendingResponse } from "finance-dev/models";
+import { UsaSpendingResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: UsaSpendingResponse = {};
 ```

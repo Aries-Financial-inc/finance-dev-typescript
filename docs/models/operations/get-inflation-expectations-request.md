@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetInflationExpectationsRequest } from "finance-dev/models/operations";
+import { GetInflationExpectationsRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetInflationExpectationsRequest = {
   date: new Date("2024-01-15"),

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SearchRequest } from "finance-dev/models/operations";
+import { SearchRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: SearchRequest = {
   q: "unemployment june",

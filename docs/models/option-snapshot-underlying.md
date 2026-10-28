@@ -5,7 +5,7 @@ Underlying equity snapshot (`OptionSnapshotUnderlyingDTO`).
 ## Example Usage
 
 ```typescript
-import { OptionSnapshotUnderlying } from "finance-dev/models";
+import { OptionSnapshotUnderlying } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionSnapshotUnderlying = {};
 ```

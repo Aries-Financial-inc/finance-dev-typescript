@@ -5,7 +5,7 @@ Response containing a list of news items.
 ## Example Usage
 
 ```typescript
-import { NewsListResponse } from "finance-dev/models";
+import { NewsListResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: NewsListResponse = {
   news: [

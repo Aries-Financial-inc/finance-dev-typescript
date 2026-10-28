@@ -5,7 +5,7 @@ Greeks when available (`OptionSnapshotGreeksDTO`).
 ## Example Usage
 
 ```typescript
-import { OptionSnapshotGreeks } from "finance-dev/models";
+import { OptionSnapshotGreeks } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionSnapshotGreeks = {};
 ```

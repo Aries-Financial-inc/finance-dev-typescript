@@ -15,7 +15,7 @@ Returns historical ticks for multiple symbols in one request. Each query may car
 
 <!-- UsageSnippet language="typescript" operationID="getHistoryBatch" method="post" path="/v1/predictions/historical-data/batch" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev();
 
@@ -42,8 +42,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { predictionsGetHistoryBatch } from "finance-dev/funcs/predictions-get-history-batch.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { predictionsGetHistoryBatch } from "@ariesdotcom/finance-dev/funcs/predictions-get-history-batch.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -100,7 +100,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="listPredictionOrders" method="get" path="/v1/predictions/orders" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -125,8 +125,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { predictionsListOrders } from "finance-dev/funcs/predictions-list-orders.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { predictionsListOrders } from "@ariesdotcom/finance-dev/funcs/predictions-list-orders.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

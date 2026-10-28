@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetStockAggregatesRequest } from "finance-dev/models/operations";
+import { GetStockAggregatesRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetStockAggregatesRequest = {
   ticker: "AAPL",

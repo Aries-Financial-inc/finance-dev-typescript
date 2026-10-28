@@ -31,7 +31,7 @@ Price precision validation:
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="equityLimit" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -62,8 +62,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -98,7 +98,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="equityMarket" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -128,8 +128,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -163,7 +163,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="flat" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -209,8 +209,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -260,7 +260,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="flat_message" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -306,8 +306,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -357,7 +357,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="flat_string" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -404,8 +404,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -456,7 +456,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="flat_with_codes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -503,8 +503,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -555,7 +555,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="nested" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -602,8 +602,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -654,7 +654,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="nested_bad_request" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -701,8 +701,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -753,7 +753,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="nested_error_object" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -799,8 +799,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -850,7 +850,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="nested_shared_http_error" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -897,8 +897,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -949,7 +949,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="service_unavailable" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -996,8 +996,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1048,7 +1048,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="singleLegCall" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1090,8 +1090,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1137,7 +1137,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/v1/orders" example="verticalSpread" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1188,8 +1188,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCreate } from "finance-dev/funcs/orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCreate } from "@ariesdotcom/finance-dev/funcs/orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1279,7 +1279,7 @@ Cancel an existing order by original client order ID. For option cancels, you ca
 
 <!-- UsageSnippet language="typescript" operationID="cancelOrder" method="post" path="/v1/orders/cancel" example="cancelEquity" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1308,8 +1308,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCancel } from "@ariesdotcom/finance-dev/funcs/orders-cancel.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1342,7 +1342,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="cancelOrder" method="post" path="/v1/orders/cancel" example="cancelOption" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1374,8 +1374,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCancel } from "@ariesdotcom/finance-dev/funcs/orders-cancel.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1411,7 +1411,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="cancelOrder" method="post" path="/v1/orders/cancel" example="flat" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1443,8 +1443,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCancel } from "@ariesdotcom/finance-dev/funcs/orders-cancel.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1480,7 +1480,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="cancelOrder" method="post" path="/v1/orders/cancel" example="flat_message" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1513,8 +1513,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCancel } from "@ariesdotcom/finance-dev/funcs/orders-cancel.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1551,7 +1551,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="cancelOrder" method="post" path="/v1/orders/cancel" example="flat_string" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1584,8 +1584,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCancel } from "@ariesdotcom/finance-dev/funcs/orders-cancel.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1622,7 +1622,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="cancelOrder" method="post" path="/v1/orders/cancel" example="flat_with_codes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1654,8 +1654,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCancel } from "@ariesdotcom/finance-dev/funcs/orders-cancel.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1691,7 +1691,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="cancelOrder" method="post" path="/v1/orders/cancel" example="nested" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1723,8 +1723,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCancel } from "@ariesdotcom/finance-dev/funcs/orders-cancel.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1760,7 +1760,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="cancelOrder" method="post" path="/v1/orders/cancel" example="nested_bad_request" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1793,8 +1793,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCancel } from "@ariesdotcom/finance-dev/funcs/orders-cancel.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1831,7 +1831,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="cancelOrder" method="post" path="/v1/orders/cancel" example="nested_error_object" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1863,8 +1863,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCancel } from "@ariesdotcom/finance-dev/funcs/orders-cancel.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1900,7 +1900,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="cancelOrder" method="post" path="/v1/orders/cancel" example="nested_shared_http_error" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1933,8 +1933,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCancel } from "@ariesdotcom/finance-dev/funcs/orders-cancel.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1971,7 +1971,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="cancelOrder" method="post" path="/v1/orders/cancel" example="service_unavailable" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2004,8 +2004,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersCancel } from "finance-dev/funcs/orders-cancel.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersCancel } from "@ariesdotcom/finance-dev/funcs/orders-cancel.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2077,7 +2077,7 @@ Preview an order to calculate estimated cost, fees, buying power impact, and opt
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="equityLimit" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2108,8 +2108,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2144,7 +2144,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="equityMarket" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2174,8 +2174,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2209,7 +2209,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="equityPreview" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2255,8 +2255,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2306,7 +2306,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="flat" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2352,8 +2352,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2403,7 +2403,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="flat_message" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2449,8 +2449,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2500,7 +2500,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="flat_string" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2546,8 +2546,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2597,7 +2597,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="flat_with_codes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2644,8 +2644,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2696,7 +2696,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="multiLegSpread" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2747,8 +2747,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2803,7 +2803,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="nested" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2850,8 +2850,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2902,7 +2902,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="nested_bad_request" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2949,8 +2949,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -3001,7 +3001,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="nested_error_object" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -3047,8 +3047,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -3098,7 +3098,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="nested_shared_http_error" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -3145,8 +3145,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -3197,7 +3197,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="optionOrder" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -3239,8 +3239,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -3286,7 +3286,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="optionPreview" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -3333,8 +3333,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -3385,7 +3385,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="previewOrder" method="post" path="/v1/orders/preview" example="service_unavailable" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -3432,8 +3432,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersPreview } from "finance-dev/funcs/orders-preview.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersPreview } from "@ariesdotcom/finance-dev/funcs/orders-preview.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -3527,7 +3527,7 @@ Price precision validation:
 
 <!-- UsageSnippet language="typescript" operationID="replaceOrder" method="post" path="/v1/orders/replace" example="changePrice" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -3559,8 +3559,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersReplace } from "@ariesdotcom/finance-dev/funcs/orders-replace.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -3596,7 +3596,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceOrder" method="post" path="/v1/orders/replace" example="changeQuantity" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -3628,8 +3628,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersReplace } from "@ariesdotcom/finance-dev/funcs/orders-replace.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -3665,7 +3665,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceOrder" method="post" path="/v1/orders/replace" example="flat" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -3712,8 +3712,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersReplace } from "@ariesdotcom/finance-dev/funcs/orders-replace.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -3764,7 +3764,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceOrder" method="post" path="/v1/orders/replace" example="flat_message" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -3810,8 +3810,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersReplace } from "@ariesdotcom/finance-dev/funcs/orders-replace.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -3861,7 +3861,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceOrder" method="post" path="/v1/orders/replace" example="flat_string" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -3908,8 +3908,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersReplace } from "@ariesdotcom/finance-dev/funcs/orders-replace.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -3960,7 +3960,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceOrder" method="post" path="/v1/orders/replace" example="flat_with_codes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -4007,8 +4007,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersReplace } from "@ariesdotcom/finance-dev/funcs/orders-replace.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -4059,7 +4059,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceOrder" method="post" path="/v1/orders/replace" example="nested" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -4105,8 +4105,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersReplace } from "@ariesdotcom/finance-dev/funcs/orders-replace.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -4156,7 +4156,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceOrder" method="post" path="/v1/orders/replace" example="nested_bad_request" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -4203,8 +4203,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersReplace } from "@ariesdotcom/finance-dev/funcs/orders-replace.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -4255,7 +4255,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceOrder" method="post" path="/v1/orders/replace" example="nested_error_object" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -4302,8 +4302,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersReplace } from "@ariesdotcom/finance-dev/funcs/orders-replace.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -4354,7 +4354,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceOrder" method="post" path="/v1/orders/replace" example="nested_shared_http_error" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -4400,8 +4400,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersReplace } from "@ariesdotcom/finance-dev/funcs/orders-replace.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -4451,7 +4451,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceOrder" method="post" path="/v1/orders/replace" example="service_unavailable" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -4498,8 +4498,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersReplace } from "finance-dev/funcs/orders-replace.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersReplace } from "@ariesdotcom/finance-dev/funcs/orders-replace.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -4591,7 +4591,7 @@ Set `exclude_today=true` to narrow `to` to just before midnight **America/New_Yo
 
 <!-- UsageSnippet language="typescript" operationID="listOrderHistory" method="get" path="/v2/accounts/{id}/orders/history" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -4620,8 +4620,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ordersGetHistory } from "finance-dev/funcs/orders-get-history.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ordersGetHistory } from "@ariesdotcom/finance-dev/funcs/orders-get-history.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

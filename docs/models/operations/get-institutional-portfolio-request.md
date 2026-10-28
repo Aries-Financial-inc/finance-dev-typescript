@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetInstitutionalPortfolioRequest } from "finance-dev/models/operations";
+import { GetInstitutionalPortfolioRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetInstitutionalPortfolioRequest = {
   cik: "0001067983",

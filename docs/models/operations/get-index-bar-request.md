@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetIndexBarRequest } from "finance-dev/models/operations";
+import { GetIndexBarRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetIndexBarRequest = {
   identifier: "SPX.IND_CBOM",

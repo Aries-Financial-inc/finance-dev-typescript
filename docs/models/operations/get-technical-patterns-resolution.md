@@ -5,7 +5,7 @@ How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `6
 ## Example Usage
 
 ```typescript
-import { GetTechnicalPatternsResolution } from "finance-dev/models/operations";
+import { GetTechnicalPatternsResolution } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetTechnicalPatternsResolution = "W";
 

@@ -5,7 +5,7 @@ Batch realtime index quotes returned by GET /v1/indices/realtime/values.
 ## Example Usage
 
 ```typescript
-import { IndicesRealtimeValuesResponse } from "finance-dev/models";
+import { IndicesRealtimeValuesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: IndicesRealtimeValuesResponse = {
   items: [

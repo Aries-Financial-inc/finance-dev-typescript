@@ -7,7 +7,7 @@ Whether this leg opens a new position or closes an existing one:
 ## Example Usage
 
 ```typescript
-import { TradeOrderLegV2PositionEffect } from "finance-dev/models";
+import { TradeOrderLegV2PositionEffect } from "@ariesdotcom/finance-dev/models";
 
 let value: TradeOrderLegV2PositionEffect = "CLOSE";
 

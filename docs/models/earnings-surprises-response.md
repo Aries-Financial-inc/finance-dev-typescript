@@ -5,7 +5,7 @@ Historical quarterly earnings results versus analyst estimates for a stock, sour
 ## Example Usage
 
 ```typescript
-import { EarningsSurprisesResponse } from "finance-dev/models";
+import { EarningsSurprisesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: EarningsSurprisesResponse = {};
 ```

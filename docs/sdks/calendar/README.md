@@ -18,7 +18,7 @@ Retrieve upcoming and past earnings conference call schedules including dates, t
 
 <!-- UsageSnippet language="typescript" operationID="getConferenceCalls" method="get" path="/v1/calendars/conference-calls" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -49,8 +49,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { calendarGetConferenceCalls } from "finance-dev/funcs/calendar-get-conference-calls.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { calendarGetConferenceCalls } from "@ariesdotcom/finance-dev/funcs/calendar-get-conference-calls.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -119,7 +119,7 @@ Retrieve upcoming earnings release dates and historical earnings announcement sc
 
 <!-- UsageSnippet language="typescript" operationID="getEarningsCalendar" method="get" path="/v1/calendars/earnings" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -146,8 +146,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { calendarGetEarnings } from "finance-dev/funcs/calendar-get-earnings.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { calendarGetEarnings } from "@ariesdotcom/finance-dev/funcs/calendar-get-earnings.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -214,7 +214,7 @@ Supply date, or supply both from and to. A complete from/to range takes preceden
 
 <!-- UsageSnippet language="typescript" operationID="getEconomicsCalendar" method="get" path="/v1/calendars/economics" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -241,8 +241,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { calendarGetEconomics } from "finance-dev/funcs/calendar-get-economics.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { calendarGetEconomics } from "@ariesdotcom/finance-dev/funcs/calendar-get-economics.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -307,7 +307,7 @@ Retrieve historical time series data for an economic indicator. Returns a direct
 
 <!-- UsageSnippet language="typescript" operationID="getHistoricalData" method="get" path="/v1/calendars/historical/{symbol}" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -332,8 +332,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { calendarGetHistoricalData } from "finance-dev/funcs/calendar-get-historical-data.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { calendarGetHistoricalData } from "@ariesdotcom/finance-dev/funcs/calendar-get-historical-data.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -396,7 +396,7 @@ Retrieve M&A activity including announced deals, merger terms, acquisition price
 
 <!-- UsageSnippet language="typescript" operationID="getMergersAndAcquisitions" method="get" path="/v1/calendars/mergers-acquisitions" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -427,8 +427,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { calendarGetMergersAndAcquisitions } from "finance-dev/funcs/calendar-get-mergers-and-acquisitions.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { calendarGetMergersAndAcquisitions } from "@ariesdotcom/finance-dev/funcs/calendar-get-mergers-and-acquisitions.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

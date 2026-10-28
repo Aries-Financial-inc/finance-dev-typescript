@@ -5,7 +5,7 @@ Paginated response containing inflation data (CPI and PCE) from the upstream dat
 ## Example Usage
 
 ```typescript
-import { InflationResponse } from "finance-dev/models";
+import { InflationResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: InflationResponse = {};
 ```

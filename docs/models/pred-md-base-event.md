@@ -5,7 +5,7 @@ Top-level 4castex base event (e.g. UNR, HORC).
 ## Example Usage
 
 ```typescript
-import { PredMdBaseEvent } from "finance-dev/models";
+import { PredMdBaseEvent } from "@ariesdotcom/finance-dev/models";
 
 let value: PredMdBaseEvent = {
   baseEventId: "<id>",

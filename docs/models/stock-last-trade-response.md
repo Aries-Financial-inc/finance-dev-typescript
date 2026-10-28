@@ -5,7 +5,7 @@ Most recent trade for a stock ticker.
 ## Example Usage
 
 ```typescript
-import { StockLastTradeResponse } from "finance-dev/models";
+import { StockLastTradeResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: StockLastTradeResponse = {};
 ```

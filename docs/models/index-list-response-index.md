@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { IndexListResponseIndex } from "finance-dev/models";
+import { IndexListResponseIndex } from "@ariesdotcom/finance-dev/models";
 
 let value: IndexListResponseIndex = {
   currency: "USD",

@@ -18,7 +18,7 @@ Which industry sector to list tickers for. Use the exact uppercase value (includ
 ## Example Usage
 
 ```typescript
-import { Sector } from "finance-dev/models/operations";
+import { Sector } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: Sector = "TECHNOLOGY";
 

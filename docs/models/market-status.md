@@ -5,7 +5,7 @@ Current trading status of a market.
 ## Example Usage
 
 ```typescript
-import { MarketStatus } from "finance-dev/models";
+import { MarketStatus } from "@ariesdotcom/finance-dev/models";
 
 let value: MarketStatus = {};
 ```

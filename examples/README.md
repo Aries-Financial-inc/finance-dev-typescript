@@ -1,6 +1,6 @@
-# finance-dev Examples
+# @ariesdotcom/finance-dev Examples
 
-This directory contains example scripts demonstrating how to use the finance-dev SDK.
+This directory contains example scripts demonstrating how to use the @ariesdotcom/finance-dev SDK.
 
 ## Prerequisites
 

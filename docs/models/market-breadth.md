@@ -5,7 +5,7 @@ Market breadth snapshot showing how many symbols are rising, falling, or unchang
 ## Example Usage
 
 ```typescript
-import { MarketBreadth } from "finance-dev/models";
+import { MarketBreadth } from "@ariesdotcom/finance-dev/models";
 
 let value: MarketBreadth = {
   advanceDeclineRatio: 1.85,

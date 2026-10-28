@@ -5,7 +5,7 @@ Revenue breakdown along a single dimension such as product or geography.
 ## Example Usage
 
 ```typescript
-import { RevenueBreakdownAxis } from "finance-dev/models";
+import { RevenueBreakdownAxis } from "@ariesdotcom/finance-dev/models";
 
 let value: RevenueBreakdownAxis = {};
 ```

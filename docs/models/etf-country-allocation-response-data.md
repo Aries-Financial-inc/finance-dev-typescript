@@ -5,7 +5,7 @@ ETF country exposure payload.
 ## Example Usage
 
 ```typescript
-import { EtfCountryAllocationResponseData } from "finance-dev/models";
+import { EtfCountryAllocationResponseData } from "@ariesdotcom/finance-dev/models";
 
 let value: EtfCountryAllocationResponseData = {};
 ```

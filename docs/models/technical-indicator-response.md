@@ -5,7 +5,7 @@ Technical indicator values for a symbol over a time range, as returned by Finnhu
 ## Example Usage
 
 ```typescript
-import { TechnicalIndicatorResponse } from "finance-dev/models";
+import { TechnicalIndicatorResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: TechnicalIndicatorResponse = {};
 ```

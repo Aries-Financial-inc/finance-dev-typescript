@@ -5,7 +5,7 @@ Security metadata for the company or instrument this analyst insight covers.
 ## Example Usage
 
 ```typescript
-import { AnalystInsightItemSecurity } from "finance-dev/models";
+import { AnalystInsightItemSecurity } from "@ariesdotcom/finance-dev/models";
 
 let value: AnalystInsightItemSecurity = {};
 ```

@@ -5,7 +5,7 @@ Latest trade when included (`OptionSnapshotLastTradeDTO`).
 ## Example Usage
 
 ```typescript
-import { OptionSnapshotLastTrade } from "finance-dev/models";
+import { OptionSnapshotLastTrade } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionSnapshotLastTrade = {};
 ```

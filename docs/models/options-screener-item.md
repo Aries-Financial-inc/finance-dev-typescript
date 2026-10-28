@@ -5,7 +5,7 @@ Option contract details returned by options top-volume and top-gainers endpoints
 ## Example Usage
 
 ```typescript
-import { OptionsScreenerItem } from "finance-dev/models";
+import { OptionsScreenerItem } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionsScreenerItem = {
   ask: 3.5,

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ListOptionExpiryDatesRequest } from "finance-dev/models/operations";
+import { ListOptionExpiryDatesRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: ListOptionExpiryDatesRequest = {
   symbol: "<value>",

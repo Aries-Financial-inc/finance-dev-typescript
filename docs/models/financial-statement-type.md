@@ -5,7 +5,7 @@ Statement: bs (balance sheet), ic (income), cf (cash flow).
 ## Example Usage
 
 ```typescript
-import { FinancialStatementType } from "finance-dev/models";
+import { FinancialStatementType } from "@ariesdotcom/finance-dev/models";
 
 let value: FinancialStatementType = "ic";
 

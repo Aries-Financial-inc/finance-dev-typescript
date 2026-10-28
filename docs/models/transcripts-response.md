@@ -5,7 +5,7 @@ List of available earnings call transcripts for a company.
 ## Example Usage
 
 ```typescript
-import { TranscriptsResponse } from "finance-dev/models";
+import { TranscriptsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: TranscriptsResponse = {};
 ```

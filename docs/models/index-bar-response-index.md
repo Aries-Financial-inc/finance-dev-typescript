@@ -5,7 +5,7 @@ Index metadata and identification
 ## Example Usage
 
 ```typescript
-import { IndexBarResponseIndex } from "finance-dev/models";
+import { IndexBarResponseIndex } from "@ariesdotcom/finance-dev/models";
 
 let value: IndexBarResponseIndex = {};
 ```

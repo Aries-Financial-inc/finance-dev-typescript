@@ -5,7 +5,7 @@ Order lifecycle state. `unknown` means order entry lost track of the order and s
 ## Example Usage
 
 ```typescript
-import { State } from "finance-dev/models";
+import { State } from "@ariesdotcom/finance-dev/models";
 
 let value: State = "pending_new";
 

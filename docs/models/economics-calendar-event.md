@@ -5,7 +5,7 @@ Economic calendar event with its schedule, reported and forecast values.
 ## Example Usage
 
 ```typescript
-import { EconomicsCalendarEvent } from "finance-dev/models";
+import { EconomicsCalendarEvent } from "@ariesdotcom/finance-dev/models";
 
 let value: EconomicsCalendarEvent = {
   calendarID: "te_395222",

@@ -5,7 +5,7 @@ Valuation, profitability, liquidity and leverage ratios for a company, sourced f
 ## Example Usage
 
 ```typescript
-import { FinancialRatiosResponse } from "finance-dev/models";
+import { FinancialRatiosResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: FinancialRatiosResponse = {};
 ```

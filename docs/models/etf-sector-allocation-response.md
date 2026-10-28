@@ -5,7 +5,7 @@ Sector exposure breakdown of an ETF from Finnhub.
 ## Example Usage
 
 ```typescript
-import { EtfSectorAllocationResponse } from "finance-dev/models";
+import { EtfSectorAllocationResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: EtfSectorAllocationResponse = {};
 ```

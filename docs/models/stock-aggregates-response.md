@@ -5,7 +5,7 @@ Aggregate OHLC bars for a stock over a requested range and timespan, as returned
 ## Example Usage
 
 ```typescript
-import { StockAggregatesResponse } from "finance-dev/models";
+import { StockAggregatesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: StockAggregatesResponse = {};
 ```

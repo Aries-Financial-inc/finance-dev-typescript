@@ -5,7 +5,7 @@ Response containing conference call calendar events.
 ## Example Usage
 
 ```typescript
-import { ConferenceCallsResponse } from "finance-dev/models";
+import { ConferenceCallsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: ConferenceCallsResponse = {};
 ```

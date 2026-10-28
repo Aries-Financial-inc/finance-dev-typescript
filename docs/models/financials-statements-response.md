@@ -5,7 +5,7 @@ Response containing standardized financial statements.
 ## Example Usage
 
 ```typescript
-import { FinancialsStatementsResponse } from "finance-dev/models";
+import { FinancialsStatementsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: FinancialsStatementsResponse = {};
 ```

@@ -15,7 +15,7 @@ Retrieve lobbying data for a symbol within a date range.
 
 <!-- UsageSnippet language="typescript" operationID="getLobbying" method="get" path="/v1/stock/lobbying" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -42,8 +42,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativesGetLobbying } from "finance-dev/funcs/stock-alternatives-get-lobbying.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativesGetLobbying } from "@ariesdotcom/finance-dev/funcs/stock-alternatives-get-lobbying.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -108,7 +108,7 @@ Retrieve a single earnings call transcript by ID.
 
 <!-- UsageSnippet language="typescript" operationID="getTranscript" method="get" path="/v1/stock/transcripts" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -133,8 +133,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativesGetTranscripts } from "finance-dev/funcs/stock-alternatives-get-transcripts.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativesGetTranscripts } from "@ariesdotcom/finance-dev/funcs/stock-alternatives-get-transcripts.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

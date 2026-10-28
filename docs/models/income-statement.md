@@ -5,7 +5,7 @@ Single SEC income statement row.
 ## Example Usage
 
 ```typescript
-import { IncomeStatement } from "finance-dev/models";
+import { IncomeStatement } from "@ariesdotcom/finance-dev/models";
 
 let value: IncomeStatement = {};
 ```

@@ -18,7 +18,7 @@ Returns every symbol on today's easy-to-borrow (ETB) list: the complete set of U
 
 <!-- UsageSnippet language="typescript" operationID="getEtbList" method="get" path="/v1/etb" example="not_loaded" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -41,8 +41,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketGetEtbList } from "finance-dev/funcs/market-get-etb-list.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketGetEtbList } from "@ariesdotcom/finance-dev/funcs/market-get-etb-list.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -69,7 +69,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="getEtbList" method="get" path="/v1/etb" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -92,8 +92,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketGetEtbList } from "finance-dev/funcs/market-get-etb-list.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketGetEtbList } from "@ariesdotcom/finance-dev/funcs/market-get-etb-list.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -149,7 +149,7 @@ Answers borrowability for a batch of symbols. Use this instead of fetching the w
 
 <!-- UsageSnippet language="typescript" operationID="searchEtbSymbols" method="post" path="/v1/etb/search" example="duplicatesCollapse" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -178,8 +178,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketSearchEtbSymbols } from "finance-dev/funcs/market-search-etb-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketSearchEtbSymbols } from "@ariesdotcom/finance-dev/funcs/market-search-etb-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -212,7 +212,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchEtbSymbols" method="post" path="/v1/etb/search" example="flat" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -241,8 +241,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketSearchEtbSymbols } from "finance-dev/funcs/market-search-etb-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketSearchEtbSymbols } from "@ariesdotcom/finance-dev/funcs/market-search-etb-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -275,7 +275,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchEtbSymbols" method="post" path="/v1/etb/search" example="flat_message" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -304,8 +304,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketSearchEtbSymbols } from "finance-dev/funcs/market-search-etb-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketSearchEtbSymbols } from "@ariesdotcom/finance-dev/funcs/market-search-etb-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -338,7 +338,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchEtbSymbols" method="post" path="/v1/etb/search" example="flat_string" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -367,8 +367,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketSearchEtbSymbols } from "finance-dev/funcs/market-search-etb-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketSearchEtbSymbols } from "@ariesdotcom/finance-dev/funcs/market-search-etb-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -401,7 +401,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchEtbSymbols" method="post" path="/v1/etb/search" example="flat_with_codes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -430,8 +430,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketSearchEtbSymbols } from "finance-dev/funcs/market-search-etb-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketSearchEtbSymbols } from "@ariesdotcom/finance-dev/funcs/market-search-etb-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -464,7 +464,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchEtbSymbols" method="post" path="/v1/etb/search" example="invalid_body" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -493,8 +493,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketSearchEtbSymbols } from "finance-dev/funcs/market-search-etb-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketSearchEtbSymbols } from "@ariesdotcom/finance-dev/funcs/market-search-etb-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -527,7 +527,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchEtbSymbols" method="post" path="/v1/etb/search" example="missing_body" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -556,8 +556,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketSearchEtbSymbols } from "finance-dev/funcs/market-search-etb-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketSearchEtbSymbols } from "@ariesdotcom/finance-dev/funcs/market-search-etb-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -590,7 +590,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchEtbSymbols" method="post" path="/v1/etb/search" example="missing_symbols" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -619,8 +619,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketSearchEtbSymbols } from "finance-dev/funcs/market-search-etb-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketSearchEtbSymbols } from "@ariesdotcom/finance-dev/funcs/market-search-etb-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -653,7 +653,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchEtbSymbols" method="post" path="/v1/etb/search" example="mixedCase" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -682,8 +682,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketSearchEtbSymbols } from "finance-dev/funcs/market-search-etb-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketSearchEtbSymbols } from "@ariesdotcom/finance-dev/funcs/market-search-etb-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -716,7 +716,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchEtbSymbols" method="post" path="/v1/etb/search" example="nested" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -745,8 +745,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketSearchEtbSymbols } from "finance-dev/funcs/market-search-etb-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketSearchEtbSymbols } from "@ariesdotcom/finance-dev/funcs/market-search-etb-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -779,7 +779,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchEtbSymbols" method="post" path="/v1/etb/search" example="nested_error_object" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -808,8 +808,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketSearchEtbSymbols } from "finance-dev/funcs/market-search-etb-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketSearchEtbSymbols } from "@ariesdotcom/finance-dev/funcs/market-search-etb-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -842,7 +842,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchEtbSymbols" method="post" path="/v1/etb/search" example="too_many_symbols" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -871,8 +871,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketSearchEtbSymbols } from "finance-dev/funcs/market-search-etb-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketSearchEtbSymbols } from "@ariesdotcom/finance-dev/funcs/market-search-etb-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -936,7 +936,7 @@ Retrieve market holiday schedules showing dates when exchanges are closed for of
 
 <!-- UsageSnippet language="typescript" operationID="getMarketHolidays" method="get" path="/v1/market/holiday" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -959,8 +959,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketGetHolidays } from "finance-dev/funcs/market-get-holidays.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketGetHolidays } from "@ariesdotcom/finance-dev/funcs/market-get-holidays.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1021,7 +1021,7 @@ Retrieve current market status indicating whether exchanges are open, closed, or
 
 <!-- UsageSnippet language="typescript" operationID="getMarketStatus" method="get" path="/v1/market/status" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1044,8 +1044,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketGetStatus } from "finance-dev/funcs/market-get-status.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketGetStatus } from "@ariesdotcom/finance-dev/funcs/market-get-status.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1106,7 +1106,7 @@ Batch option contract details for one or more OSI option symbols. Response inclu
 
 <!-- UsageSnippet language="typescript" operationID="getOptionDetails" method="get" path="/v1/marketdata/options/details" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1131,8 +1131,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketGetOptionDetails } from "finance-dev/funcs/market-get-option-details.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketGetOptionDetails } from "@ariesdotcom/finance-dev/funcs/market-get-option-details.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

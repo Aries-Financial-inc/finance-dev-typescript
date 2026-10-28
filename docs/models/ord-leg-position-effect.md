@@ -5,7 +5,7 @@ Whether this leg opens or closes a position. Use `OPEN` for a new position and `
 ## Example Usage
 
 ```typescript
-import { OrdLegPositionEffect } from "finance-dev/models";
+import { OrdLegPositionEffect } from "@ariesdotcom/finance-dev/models";
 
 let value: OrdLegPositionEffect = "OPEN";
 

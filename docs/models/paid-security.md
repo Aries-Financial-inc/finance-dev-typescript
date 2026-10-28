@@ -5,7 +5,7 @@ Security paid to holders who tender
 ## Example Usage
 
 ```typescript
-import { PaidSecurity } from "finance-dev/models";
+import { PaidSecurity } from "@ariesdotcom/finance-dev/models";
 
 let value: PaidSecurity = {};
 ```

@@ -5,7 +5,7 @@ Paginated response containing dividend events.
 ## Example Usage
 
 ```typescript
-import { DividendsResponse } from "finance-dev/models";
+import { DividendsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: DividendsResponse = {};
 ```

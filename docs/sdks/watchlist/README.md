@@ -18,7 +18,7 @@ Delete one of the user's watchlists by its numeric ID.
 
 <!-- UsageSnippet language="typescript" operationID="deleteConfigWatchlistById" method="delete" path="/v1/config/watchlist/{watchlist_id}" example="deleted" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -43,8 +43,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistDelete } from "finance-dev/funcs/watchlist-delete.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistDelete } from "@ariesdotcom/finance-dev/funcs/watchlist-delete.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -73,7 +73,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="deleteConfigWatchlistById" method="delete" path="/v1/config/watchlist/{watchlist_id}" example="resetToDefault" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -98,8 +98,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistDelete } from "finance-dev/funcs/watchlist-delete.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistDelete } from "@ariesdotcom/finance-dev/funcs/watchlist-delete.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

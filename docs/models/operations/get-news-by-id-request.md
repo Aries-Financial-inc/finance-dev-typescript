@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetNewsByIdRequest } from "finance-dev/models/operations";
+import { GetNewsByIdRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetNewsByIdRequest = {
   id: "123456",

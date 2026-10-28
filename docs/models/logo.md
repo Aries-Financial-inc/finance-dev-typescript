@@ -5,7 +5,7 @@ Company logos for UI display
 ## Example Usage
 
 ```typescript
-import { Logo } from "finance-dev/models";
+import { Logo } from "@ariesdotcom/finance-dev/models";
 
 let value: Logo = {};
 ```

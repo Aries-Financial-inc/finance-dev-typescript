@@ -5,7 +5,7 @@ A single SEC filing with its accession number, form type, dates and document URL
 ## Example Usage
 
 ```typescript
-import { SecFiling } from "finance-dev/models";
+import { SecFiling } from "@ariesdotcom/finance-dev/models";
 
 let value: SecFiling = {};
 ```

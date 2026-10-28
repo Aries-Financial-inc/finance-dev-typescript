@@ -5,7 +5,7 @@ News sentiment and buzz metrics for a company from Finnhub.
 ## Example Usage
 
 ```typescript
-import { NewsSentimentResponse } from "finance-dev/models";
+import { NewsSentimentResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: NewsSentimentResponse = {};
 ```

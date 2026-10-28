@@ -5,7 +5,7 @@ Capabilities returned for the charting API. Use this once at startup to configur
 ## Example Usage
 
 ```typescript
-import { ChartConfig } from "finance-dev/models";
+import { ChartConfig } from "@ariesdotcom/finance-dev/models";
 
 let value: ChartConfig = {
   dailyMultipliers: [

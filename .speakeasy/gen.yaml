@@ -94,7 +94,7 @@ typescript:
   multipartArrayFormat: standard
   numericEnumMemberNames: words
   outputModelSuffix: output
-  packageName: finance-dev
+  packageName: '@ariesdotcom/finance-dev'
   preApplyUnionDiscriminators: true
   preserveModelFieldNames: false
   privateIdentifierPrefix: '#'

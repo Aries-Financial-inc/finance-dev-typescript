@@ -5,7 +5,7 @@ Tender offers found for the requested security and date window.
 ## Example Usage
 
 ```typescript
-import { TenderOffersResponse } from "finance-dev/models";
+import { TenderOffersResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: TenderOffersResponse = {
   tenderOffers: [

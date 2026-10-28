@@ -5,7 +5,7 @@ The binary outcome the order trades. It is never inferred from `side`.
 ## Example Usage
 
 ```typescript
-import { PredOrdersPlaceOrderRequestOutcome } from "finance-dev/models";
+import { PredOrdersPlaceOrderRequestOutcome } from "@ariesdotcom/finance-dev/models";
 
 let value: PredOrdersPlaceOrderRequestOutcome = "YES";
 

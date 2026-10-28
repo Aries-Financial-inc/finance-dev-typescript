@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SearchIndicesRequest } from "finance-dev/models/operations";
+import { SearchIndicesRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: SearchIndicesRequest = {
   indexName: "S&P 500",

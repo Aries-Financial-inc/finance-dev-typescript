@@ -5,7 +5,7 @@ Paginated v2 orders response from **GET /v2/accounts/{id}/orders** and **GET /v2
 ## Example Usage
 
 ```typescript
-import { GetOrdersV2Response } from "finance-dev/models";
+import { GetOrdersV2Response } from "@ariesdotcom/finance-dev/models";
 
 let value: GetOrdersV2Response = {
   orders: null,

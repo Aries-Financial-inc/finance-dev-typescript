@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { TimeInForce } from "finance-dev/models";
+import { TimeInForce } from "@ariesdotcom/finance-dev/models";
 
 let value: TimeInForce = "day";
 

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetInvestmentThemeRequest } from "finance-dev/models/operations";
+import { GetInvestmentThemeRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetInvestmentThemeRequest = {
   theme: "ai",

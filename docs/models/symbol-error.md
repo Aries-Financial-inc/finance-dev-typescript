@@ -5,7 +5,7 @@ Error entry for a symbol that could not be resolved in a details request.
 ## Example Usage
 
 ```typescript
-import { SymbolError } from "finance-dev/models";
+import { SymbolError } from "@ariesdotcom/finance-dev/models";
 
 let value: SymbolError = {
   error: "string",

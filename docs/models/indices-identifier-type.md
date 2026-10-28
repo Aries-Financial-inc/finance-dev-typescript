@@ -13,7 +13,7 @@ Which kind of identifier you are sending in `identifier` / `identifiers`. Provid
 ## Example Usage
 
 ```typescript
-import { IndicesIdentifierType } from "finance-dev/models";
+import { IndicesIdentifierType } from "@ariesdotcom/finance-dev/models";
 
 let value: IndicesIdentifierType = "Symbol";
 

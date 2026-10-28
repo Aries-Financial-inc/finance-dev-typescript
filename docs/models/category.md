@@ -10,7 +10,7 @@ Omitted when the order has not been classified.
 ## Example Usage
 
 ```typescript
-import { Category } from "finance-dev/models";
+import { Category } from "@ariesdotcom/finance-dev/models";
 
 let value: Category = "EQUITY";
 

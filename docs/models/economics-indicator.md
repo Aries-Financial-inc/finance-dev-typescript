@@ -5,7 +5,7 @@ Single historical data point for an economic indicator.
 ## Example Usage
 
 ```typescript
-import { EconomicsIndicator } from "finance-dev/models";
+import { EconomicsIndicator } from "@ariesdotcom/finance-dev/models";
 
 let value: EconomicsIndicator = {
   category: "Employment",

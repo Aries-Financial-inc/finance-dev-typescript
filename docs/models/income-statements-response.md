@@ -5,7 +5,7 @@ Paginated SEC income statements (results, status, requestId, nextUrl).
 ## Example Usage
 
 ```typescript
-import { IncomeStatementsResponse } from "finance-dev/models";
+import { IncomeStatementsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: IncomeStatementsResponse = {};
 ```

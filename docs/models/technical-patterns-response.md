@@ -5,7 +5,7 @@ Chart patterns detected by Finnhub pattern recognition for a symbol and resoluti
 ## Example Usage
 
 ```typescript
-import { TechnicalPatternsResponse } from "finance-dev/models";
+import { TechnicalPatternsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: TechnicalPatternsResponse = {};
 ```

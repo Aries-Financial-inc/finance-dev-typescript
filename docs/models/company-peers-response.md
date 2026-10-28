@@ -5,7 +5,7 @@ Response containing peer company tickers for comparison and competitor research.
 ## Example Usage
 
 ```typescript
-import { CompanyPeersResponse } from "finance-dev/models";
+import { CompanyPeersResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: CompanyPeersResponse = {};
 ```

@@ -14,7 +14,7 @@ Search for trading symbols including stocks, indices, options, and futures. **Pr
 
 <!-- UsageSnippet language="typescript" operationID="searchMarketSymbols" method="get" path="/v1/marketdata/search" example="futures" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -39,8 +39,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketDataSearchSymbols } from "finance-dev/funcs/market-data-search-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketDataSearchSymbols } from "@ariesdotcom/finance-dev/funcs/market-data-search-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -69,7 +69,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchMarketSymbols" method="get" path="/v1/marketdata/search" example="option" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -94,8 +94,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketDataSearchSymbols } from "finance-dev/funcs/market-data-search-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketDataSearchSymbols } from "@ariesdotcom/finance-dev/funcs/market-data-search-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -124,7 +124,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="searchMarketSymbols" method="get" path="/v1/marketdata/search" example="stock" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -149,8 +149,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketDataSearchSymbols } from "finance-dev/funcs/market-data-search-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketDataSearchSymbols } from "@ariesdotcom/finance-dev/funcs/market-data-search-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

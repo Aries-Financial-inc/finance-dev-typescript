@@ -5,7 +5,7 @@ Response body for GET /v2/accounts/{id}/balance. Returned as the **top-level JSO
 ## Example Usage
 
 ```typescript
-import { AccountBalanceV2 } from "finance-dev/models";
+import { AccountBalanceV2 } from "@ariesdotcom/finance-dev/models";
 
 let value: AccountBalanceV2 = {
   accountId: "TEST-ACCOUNT-001",

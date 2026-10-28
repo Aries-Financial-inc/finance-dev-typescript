@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetEtfSectorAllocationRequest } from "finance-dev/models/operations";
+import { GetEtfSectorAllocationRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetEtfSectorAllocationRequest = {
   symbol: "<value>",

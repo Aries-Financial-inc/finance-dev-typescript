@@ -5,7 +5,7 @@ Response returned after requesting an order replacement. Treat it as the replace
 ## Example Usage
 
 ```typescript
-import { ReplaceOrdResponse } from "finance-dev/models";
+import { ReplaceOrdResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: ReplaceOrdResponse = {
   clOrdId: "ORDER-20260115-003",

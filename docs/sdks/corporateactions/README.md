@@ -18,7 +18,7 @@ Retrieve historical dividend payments including declaration dates, ex-dividend d
 
 <!-- UsageSnippet language="typescript" operationID="getDividends" method="get" path="/v1/corporate-actions/dividends" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -63,8 +63,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { corporateActionsGetDividends } from "finance-dev/funcs/corporate-actions-get-dividends.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { corporateActionsGetDividends } from "@ariesdotcom/finance-dev/funcs/corporate-actions-get-dividends.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -147,7 +147,7 @@ Retrieve upcoming and recent initial public offerings (IPOs) including offering 
 
 <!-- UsageSnippet language="typescript" operationID="getIpoCalendar" method="get" path="/v1/corporate-actions/ipo-calendar" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -173,8 +173,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { corporateActionsGetIpoCalendar } from "finance-dev/funcs/corporate-actions-get-ipo-calendar.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { corporateActionsGetIpoCalendar } from "@ariesdotcom/finance-dev/funcs/corporate-actions-get-ipo-calendar.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -238,7 +238,7 @@ Retrieve information about corporate spinoffs including separation dates, distri
 
 <!-- UsageSnippet language="typescript" operationID="getSpinoffs" method="get" path="/v1/corporate-actions/spinoffs" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -266,8 +266,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { corporateActionsGetSpinoffs } from "finance-dev/funcs/corporate-actions-get-spinoffs.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { corporateActionsGetSpinoffs } from "@ariesdotcom/finance-dev/funcs/corporate-actions-get-spinoffs.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -333,7 +333,7 @@ Retrieve information about tender offers including offer prices, expiration date
 
 <!-- UsageSnippet language="typescript" operationID="getTenderOffers" method="get" path="/v1/corporate-actions/tender-offers" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -361,8 +361,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { corporateActionsGetTenderOffers } from "finance-dev/funcs/corporate-actions-get-tender-offers.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { corporateActionsGetTenderOffers } from "@ariesdotcom/finance-dev/funcs/corporate-actions-get-tender-offers.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -428,7 +428,7 @@ Retrieve historical stock split events including split ratios, execution dates, 
 
 <!-- UsageSnippet language="typescript" operationID="getStockSplits" method="get" path="/v1/stock/split" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -468,8 +468,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { corporateActionsGetStockSplit } from "finance-dev/funcs/corporate-actions-get-stock-split.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { corporateActionsGetStockSplit } from "@ariesdotcom/finance-dev/funcs/corporate-actions-get-stock-split.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

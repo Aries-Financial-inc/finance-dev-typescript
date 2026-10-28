@@ -5,7 +5,7 @@ Asset class filter for unified snapshot.
 ## Example Usage
 
 ```typescript
-import { GetUnifiedSnapshotType } from "finance-dev/models/operations";
+import { GetUnifiedSnapshotType } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetUnifiedSnapshotType = "stocks";
 

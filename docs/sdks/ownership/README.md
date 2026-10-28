@@ -18,7 +18,7 @@ Retrieve institutional ownership data showing the percentage of shares held by i
 
 <!-- UsageSnippet language="typescript" operationID="getInstitutionalOwnership" method="get" path="/v1/institutional/ownership" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -46,8 +46,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ownershipGetInstitutional } from "finance-dev/funcs/ownership-get-institutional.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ownershipGetInstitutional } from "@ariesdotcom/finance-dev/funcs/ownership-get-institutional.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -113,7 +113,7 @@ Retrieve portfolio holdings for institutional investors including hedge funds, m
 
 <!-- UsageSnippet language="typescript" operationID="getInstitutionalPortfolio" method="get" path="/v1/institutional/portfolio" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -140,8 +140,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ownershipGetPortfolio } from "finance-dev/funcs/ownership-get-portfolio.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ownershipGetPortfolio } from "@ariesdotcom/finance-dev/funcs/ownership-get-portfolio.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -206,7 +206,7 @@ Retrieve detailed ownership structure showing percentage stakes held by institut
 
 <!-- UsageSnippet language="typescript" operationID="getOwnershipData" method="get" path="/v1/ownership/data" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -231,8 +231,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ownershipGetData } from "finance-dev/funcs/ownership-get-data.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ownershipGetData } from "@ariesdotcom/finance-dev/funcs/ownership-get-data.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -295,7 +295,7 @@ Retrieve mutual fund and ETF ownership data showing which funds hold positions i
 
 <!-- UsageSnippet language="typescript" operationID="getFundOwnership" method="get" path="/v1/ownership/fund" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -320,8 +320,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ownershipGetFundData } from "finance-dev/funcs/ownership-get-fund-data.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ownershipGetFundData } from "@ariesdotcom/finance-dev/funcs/ownership-get-fund-data.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -384,7 +384,7 @@ Retrieve insider trading activity including purchases, sales, and option exercis
 
 <!-- UsageSnippet language="typescript" operationID="getInsiderTransactions" method="get" path="/v1/ownership/insider-transactions" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -409,8 +409,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { ownershipGetInsiderTransactions } from "finance-dev/funcs/ownership-get-insider-transactions.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { ownershipGetInsiderTransactions } from "@ariesdotcom/finance-dev/funcs/ownership-get-insider-transactions.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

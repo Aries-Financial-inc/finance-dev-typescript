@@ -5,7 +5,7 @@ Company executive with position and compensation details.
 ## Example Usage
 
 ```typescript
-import { CompanyExecutive } from "finance-dev/models";
+import { CompanyExecutive } from "@ariesdotcom/finance-dev/models";
 
 let value: CompanyExecutive = {};
 ```

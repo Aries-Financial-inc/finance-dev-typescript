@@ -5,7 +5,7 @@ Single data point of a company metric time series.
 ## Example Usage
 
 ```typescript
-import { MetricSeriesPoint } from "finance-dev/models";
+import { MetricSeriesPoint } from "@ariesdotcom/finance-dev/models";
 
 let value: MetricSeriesPoint = {};
 ```

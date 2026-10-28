@@ -5,7 +5,7 @@ Response containing insider trading transactions.
 ## Example Usage
 
 ```typescript
-import { InsiderTransactionsResponse } from "finance-dev/models";
+import { InsiderTransactionsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: InsiderTransactionsResponse = {};
 ```

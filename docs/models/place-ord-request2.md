@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PlaceOrdRequest2 } from "finance-dev/models";
+import { PlaceOrdRequest2 } from "@ariesdotcom/finance-dev/models";
 
 let value: PlaceOrdRequest2 = {
   clientId: "CLIENT-001",

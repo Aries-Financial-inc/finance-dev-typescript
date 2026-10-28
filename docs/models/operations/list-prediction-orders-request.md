@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ListPredictionOrdersRequest } from "finance-dev/models/operations";
+import { ListPredictionOrdersRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: ListPredictionOrdersRequest = {
   status: "open",

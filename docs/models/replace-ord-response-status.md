@@ -10,7 +10,7 @@ The full FIX OrdStatus enum is supported — see the Place Order response for th
 ## Example Usage
 
 ```typescript
-import { ReplaceOrdResponseStatus } from "finance-dev/models";
+import { ReplaceOrdResponseStatus } from "@ariesdotcom/finance-dev/models";
 
 let value: ReplaceOrdResponseStatus = "REPLACED";
 

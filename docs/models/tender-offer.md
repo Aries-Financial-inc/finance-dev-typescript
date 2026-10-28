@@ -5,7 +5,7 @@ Tender offer record
 ## Example Usage
 
 ```typescript
-import { TenderOffer } from "finance-dev/models";
+import { TenderOffer } from "@ariesdotcom/finance-dev/models";
 
 let value: TenderOffer = {};
 ```

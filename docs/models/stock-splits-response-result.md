@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { StockSplitsResponseResult } from "finance-dev/models";
+import { StockSplitsResponseResult } from "@ariesdotcom/finance-dev/models";
 
 let value: StockSplitsResponseResult = {
   executionDate: new Date("2024-10-24"),

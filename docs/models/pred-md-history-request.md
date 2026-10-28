@@ -5,7 +5,7 @@ Single query within a batch historical-data request.
 ## Example Usage
 
 ```typescript
-import { PredMdHistoryRequest } from "finance-dev/models";
+import { PredMdHistoryRequest } from "@ariesdotcom/finance-dev/models";
 
 let value: PredMdHistoryRequest = {
   from: new Date("2026-04-01T00:00:00Z"),

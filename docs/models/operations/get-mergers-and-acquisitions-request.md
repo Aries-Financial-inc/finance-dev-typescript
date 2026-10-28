@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetMergersAndAcquisitionsRequest } from "finance-dev/models/operations";
+import { GetMergersAndAcquisitionsRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetMergersAndAcquisitionsRequest = {
   dateFrom: new Date("2024-01-01"),

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetUsptoPatentsRequest } from "finance-dev/models/operations";
+import { GetUsptoPatentsRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetUsptoPatentsRequest = {
   symbol: "AAPL",

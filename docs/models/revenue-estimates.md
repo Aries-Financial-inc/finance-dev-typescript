@@ -5,7 +5,7 @@ revenue estimates container for the symbol
 ## Example Usage
 
 ```typescript
-import { RevenueEstimates } from "finance-dev/models";
+import { RevenueEstimates } from "@ariesdotcom/finance-dev/models";
 
 let value: RevenueEstimates = {
   freq: "quarterly",

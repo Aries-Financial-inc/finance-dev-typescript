@@ -5,7 +5,7 @@ Trend strength information.
 ## Example Usage
 
 ```typescript
-import { Trend } from "finance-dev/models";
+import { Trend } from "@ariesdotcom/finance-dev/models";
 
 let value: Trend = {};
 ```

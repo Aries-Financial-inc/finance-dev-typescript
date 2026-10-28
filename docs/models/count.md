@@ -5,7 +5,7 @@ Number of indicators giving each signal.
 ## Example Usage
 
 ```typescript
-import { Count } from "finance-dev/models";
+import { Count } from "@ariesdotcom/finance-dev/models";
 
 let value: Count = {};
 ```

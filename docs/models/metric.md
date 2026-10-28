@@ -5,7 +5,7 @@ Current financial metrics and ratios (dynamic object with various metric keys)
 ## Example Usage
 
 ```typescript
-import { Metric } from "finance-dev/models";
+import { Metric } from "@ariesdotcom/finance-dev/models";
 
 let value: Metric = {};
 ```

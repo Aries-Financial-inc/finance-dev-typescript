@@ -5,7 +5,7 @@ Average percentage move by sector. Use it to compare which sectors are leading o
 ## Example Usage
 
 ```typescript
-import { SectorAvgChange } from "finance-dev/models";
+import { SectorAvgChange } from "@ariesdotcom/finance-dev/models";
 
 let value: SectorAvgChange = {
   avgChange: 1.25,

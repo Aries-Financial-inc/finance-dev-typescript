@@ -5,7 +5,7 @@ Instrument type for the order. EQUITY is stock or ETF; OPTION is an options cont
 ## Example Usage
 
 ```typescript
-import { TradeOrderV2SecurityType } from "finance-dev/models";
+import { TradeOrderV2SecurityType } from "@ariesdotcom/finance-dev/models";
 
 let value: TradeOrderV2SecurityType = "EQUITY";
 

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetStockQuotesRequest } from "finance-dev/models/operations";
+import { GetStockQuotesRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetStockQuotesRequest = {
   ticker: "AAPL",

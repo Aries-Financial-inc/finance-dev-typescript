@@ -7,7 +7,7 @@ Option contract type. Empty for non-option instruments. Accepts long or short fo
 ## Example Usage
 
 ```typescript
-import { EquityDetailsDTOPutCall } from "finance-dev/models";
+import { EquityDetailsDTOPutCall } from "@ariesdotcom/finance-dev/models";
 
 let value: EquityDetailsDTOPutCall = "C";
 

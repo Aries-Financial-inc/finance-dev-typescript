@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetOptionPreviousDayRequest } from "finance-dev/models/operations";
+import { GetOptionPreviousDayRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetOptionPreviousDayRequest = {
   ticker: "<value>",

@@ -5,7 +5,7 @@ Direction for this option leg. Use `BUY` when buying the leg and `SELL` when sel
 ## Example Usage
 
 ```typescript
-import { OrdLegSide } from "finance-dev/models";
+import { OrdLegSide } from "@ariesdotcom/finance-dev/models";
 
 let value: OrdLegSide = "BUY";
 

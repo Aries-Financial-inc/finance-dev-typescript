@@ -5,7 +5,7 @@ Previous day aggregate
 ## Example Usage
 
 ```typescript
-import { PrevDay } from "finance-dev/models";
+import { PrevDay } from "@ariesdotcom/finance-dev/models";
 
 let value: PrevDay = {};
 ```

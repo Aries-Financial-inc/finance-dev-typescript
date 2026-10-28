@@ -5,7 +5,7 @@ Comparison: eq, gt, gte, lt, lte, contains
 ## Example Usage
 
 ```typescript
-import { ScreenClauseOperator } from "finance-dev/models";
+import { ScreenClauseOperator } from "@ariesdotcom/finance-dev/models";
 
 let value: ScreenClauseOperator = "eq";
 

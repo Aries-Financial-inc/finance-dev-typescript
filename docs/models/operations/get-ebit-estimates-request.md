@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetEbitEstimatesRequest } from "finance-dev/models/operations";
+import { GetEbitEstimatesRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetEbitEstimatesRequest = {
   symbol: "AAPL",

@@ -5,7 +5,7 @@ Last NBBO quote object
 ## Example Usage
 
 ```typescript
-import { StockLastQuoteResponseResults } from "finance-dev/models";
+import { StockLastQuoteResponseResults } from "@ariesdotcom/finance-dev/models";
 
 let value: StockLastQuoteResponseResults = {};
 ```

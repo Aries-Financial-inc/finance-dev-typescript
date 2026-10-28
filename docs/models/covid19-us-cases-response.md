@@ -5,7 +5,7 @@ COVID-19 case and death counts for US states, as provided by Finnhub.
 ## Example Usage
 
 ```typescript
-import { Covid19UsCasesResponse } from "finance-dev/models";
+import { Covid19UsCasesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: Covid19UsCasesResponse = {};
 ```

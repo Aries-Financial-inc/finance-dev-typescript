@@ -5,7 +5,7 @@ Total revenue for a reporting period with its breakdown by axis.
 ## Example Usage
 
 ```typescript
-import { RevenueBreakdownInner } from "finance-dev/models";
+import { RevenueBreakdownInner } from "@ariesdotcom/finance-dev/models";
 
 let value: RevenueBreakdownInner = {};
 ```

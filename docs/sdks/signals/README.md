@@ -14,7 +14,7 @@ Retrieve bullish and bearish investment cases including fundamental arguments, t
 
 <!-- UsageSnippet language="typescript" operationID="getBullBearAnalysis" method="get" path="/v1/signals/bull-bear" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -41,8 +41,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { signalsGetBullBear } from "finance-dev/funcs/signals-get-bull-bear.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { signalsGetBullBear } from "@ariesdotcom/finance-dev/funcs/signals-get-bull-bear.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -14,7 +14,7 @@ Retrieves stocks sorted by trading volume in descending order.
 
 <!-- UsageSnippet language="typescript" operationID="getTopMostActive" method="get" path="/v1/equity/top-most-active" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -37,8 +37,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsTopMostActiveList } from "finance-dev/funcs/analytics-top-most-active-list.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsTopMostActiveList } from "@ariesdotcom/finance-dev/funcs/analytics-top-most-active-list.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

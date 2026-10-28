@@ -5,7 +5,7 @@ Realtime OHLC and change fields for an index quote.
 ## Example Usage
 
 ```typescript
-import { IndicesRealtimeIndexValue } from "finance-dev/models";
+import { IndicesRealtimeIndexValue } from "@ariesdotcom/finance-dev/models";
 
 let value: IndicesRealtimeIndexValue = {};
 ```

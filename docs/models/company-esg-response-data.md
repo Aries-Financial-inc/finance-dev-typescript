@@ -5,7 +5,7 @@ Detailed ESG disclosures and metrics.
 ## Example Usage
 
 ```typescript
-import { CompanyEsgResponseData } from "finance-dev/models";
+import { CompanyEsgResponseData } from "@ariesdotcom/finance-dev/models";
 
 let value: CompanyEsgResponseData = {};
 ```

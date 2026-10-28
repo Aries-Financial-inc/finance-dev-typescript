@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetSpinoffsRequest } from "finance-dev/models/operations";
+import { GetSpinoffsRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetSpinoffsRequest = {
   identifier: "AAPL",

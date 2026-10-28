@@ -22,7 +22,7 @@ If `limit` cannot be parsed as a signed 64-bit integer, returns 400 Bad Request 
 
 <!-- UsageSnippet language="typescript" operationID="getEarningsSurprises" method="get" path="/v1/stock/earnings" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -47,8 +47,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockEstimatesGetEarnings } from "finance-dev/funcs/stock-estimates-get-earnings.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockEstimatesGetEarnings } from "@ariesdotcom/finance-dev/funcs/stock-estimates-get-earnings.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -111,7 +111,7 @@ Retrieve analyst EBIT (Earnings Before Interest and Taxes) estimates showing pro
 
 <!-- UsageSnippet language="typescript" operationID="getEbitEstimates" method="get" path="/v1/stock/ebit-estimate" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -137,8 +137,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockEstimatesGetEBITEstimate } from "finance-dev/funcs/stock-estimates-get-ebit-estimate.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockEstimatesGetEBITEstimate } from "@ariesdotcom/finance-dev/funcs/stock-estimates-get-ebit-estimate.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -202,7 +202,7 @@ Retrieve analyst EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amor
 
 <!-- UsageSnippet language="typescript" operationID="getEbitdaEstimates" method="get" path="/v1/stock/ebitda-estimate" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -228,8 +228,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockEstimatesGetEbitdaEstimate } from "finance-dev/funcs/stock-estimates-get-ebitda-estimate.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockEstimatesGetEbitdaEstimate } from "@ariesdotcom/finance-dev/funcs/stock-estimates-get-ebitda-estimate.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -293,7 +293,7 @@ Retrieve analyst earnings per share (EPS) estimates including consensus forecast
 
 <!-- UsageSnippet language="typescript" operationID="getEpsEstimates" method="get" path="/v1/stock/eps-estimate" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -319,8 +319,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockEstimatesGetEpsEstimate } from "finance-dev/funcs/stock-estimates-get-eps-estimate.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockEstimatesGetEpsEstimate } from "@ariesdotcom/finance-dev/funcs/stock-estimates-get-eps-estimate.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -384,7 +384,7 @@ Retrieve analyst price targets including consensus estimates, high/low targets, 
 
 <!-- UsageSnippet language="typescript" operationID="getPriceTarget" method="get" path="/v1/stock/price-target" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -409,8 +409,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockEstimatesGetPriceTarget } from "finance-dev/funcs/stock-estimates-get-price-target.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockEstimatesGetPriceTarget } from "@ariesdotcom/finance-dev/funcs/stock-estimates-get-price-target.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -473,7 +473,7 @@ Retrieve analyst revenue estimates including quarterly and annual projections wi
 
 <!-- UsageSnippet language="typescript" operationID="getRevenueEstimates" method="get" path="/v1/stock/revenue-estimate" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -499,8 +499,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockEstimatesGetRevenueEstimate } from "finance-dev/funcs/stock-estimates-get-revenue-estimate.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockEstimatesGetRevenueEstimate } from "@ariesdotcom/finance-dev/funcs/stock-estimates-get-revenue-estimate.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -564,7 +564,7 @@ Retrieve analyst rating changes including upgrades, downgrades, and reiterations
 
 <!-- UsageSnippet language="typescript" operationID="getUpgradesDowngrades" method="get" path="/v1/stock/upgrade-downgrade" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -590,8 +590,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockEstimatesGetUpgradeDowngrade } from "finance-dev/funcs/stock-estimates-get-upgrade-downgrade.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockEstimatesGetUpgradeDowngrade } from "@ariesdotcom/finance-dev/funcs/stock-estimates-get-upgrade-downgrade.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

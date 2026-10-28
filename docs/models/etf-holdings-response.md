@@ -5,7 +5,7 @@ Constituent holdings of an ETF from Finnhub.
 ## Example Usage
 
 ```typescript
-import { EtfHoldingsResponse } from "finance-dev/models";
+import { EtfHoldingsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: EtfHoldingsResponse = {};
 ```

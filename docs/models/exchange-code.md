@@ -5,7 +5,7 @@ Two-to-three-letter exchange code identifying a global stock exchange (e.g. `US`
 ## Example Usage
 
 ```typescript
-import { ExchangeCode } from "finance-dev/models";
+import { ExchangeCode } from "@ariesdotcom/finance-dev/models";
 
 let value: ExchangeCode = "US";
 

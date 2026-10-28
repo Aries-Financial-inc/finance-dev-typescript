@@ -7,7 +7,7 @@ How often the underlying data is reported:
 ## Example Usage
 
 ```typescript
-import { ReportingFrequency } from "finance-dev/models";
+import { ReportingFrequency } from "@ariesdotcom/finance-dev/models";
 
 let value: ReportingFrequency = "quarterly";
 

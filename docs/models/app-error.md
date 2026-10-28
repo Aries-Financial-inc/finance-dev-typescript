@@ -5,7 +5,7 @@ Structured application error returned inside an `ErrorEnvelope`.
 ## Example Usage
 
 ```typescript
-import { AppError } from "finance-dev/models";
+import { AppError } from "@ariesdotcom/finance-dev/models";
 
 let value: AppError = {
   code: "SYMBOL_REQUIRED",

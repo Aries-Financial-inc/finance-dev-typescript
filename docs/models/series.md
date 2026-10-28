@@ -5,7 +5,7 @@ Time series data for various financial metrics
 ## Example Usage
 
 ```typescript
-import { Series } from "finance-dev/models";
+import { Series } from "@ariesdotcom/finance-dev/models";
 
 let value: Series = {};
 ```

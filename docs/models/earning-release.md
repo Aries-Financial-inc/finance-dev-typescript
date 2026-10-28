@@ -5,7 +5,7 @@ Earnings calendar entry for a company's earnings release, with actual and estima
 ## Example Usage
 
 ```typescript
-import { EarningRelease } from "finance-dev/models";
+import { EarningRelease } from "@ariesdotcom/finance-dev/models";
 
 let value: EarningRelease = {};
 ```

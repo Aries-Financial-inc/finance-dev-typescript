@@ -5,7 +5,7 @@ Level hits come back at. `contracts` (default) returns matching contracts; `even
 ## Example Usage
 
 ```typescript
-import { SearchType } from "finance-dev/models/operations";
+import { SearchType } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: SearchType = "base-events";
 

@@ -5,7 +5,7 @@ OHLCV bar for stock price history. Use values at each bar to render candles or h
 ## Example Usage
 
 ```typescript
-import { StockOhlcBar } from "finance-dev/models";
+import { StockOhlcBar } from "@ariesdotcom/finance-dev/models";
 
 let value: StockOhlcBar = {};
 ```

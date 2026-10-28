@@ -5,7 +5,7 @@ Open, high, low, close, volume and extended-hours prices for a stock on a given 
 ## Example Usage
 
 ```typescript
-import { StockOpenCloseResponse } from "finance-dev/models";
+import { StockOpenCloseResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: StockOpenCloseResponse = {};
 ```

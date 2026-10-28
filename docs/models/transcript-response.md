@@ -5,7 +5,7 @@ Full earnings call transcript with participants and speech segments.
 ## Example Usage
 
 ```typescript
-import { TranscriptResponse } from "finance-dev/models";
+import { TranscriptResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: TranscriptResponse = {};
 ```

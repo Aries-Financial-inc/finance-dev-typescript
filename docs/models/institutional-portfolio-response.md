@@ -5,7 +5,7 @@ Response containing an institutional investor's portfolio holdings.
 ## Example Usage
 
 ```typescript
-import { InstitutionalPortfolioResponse } from "finance-dev/models";
+import { InstitutionalPortfolioResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: InstitutionalPortfolioResponse = {};
 ```

@@ -5,7 +5,7 @@ Tick-based chart data returned as parallel arrays, plus a pagination cursor for 
 ## Example Usage
 
 ```typescript
-import { TickChartBars } from "finance-dev/models";
+import { TickChartBars } from "@ariesdotcom/finance-dev/models";
 
 let value: TickChartBars = {
   s: "no_data",

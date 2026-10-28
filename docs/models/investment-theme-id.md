@@ -5,7 +5,7 @@ Investment theme identifier. Pick a theme to filter or look up stocks tied to th
 ## Example Usage
 
 ```typescript
-import { InvestmentThemeId } from "finance-dev/models";
+import { InvestmentThemeId } from "@ariesdotcom/finance-dev/models";
 
 let value: InvestmentThemeId = "ai";
 

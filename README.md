@@ -143,39 +143,35 @@ Endpoints in this spec: health, OAuth2 (authorize, confirm, mfa, token), users, 
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
-> [!TIP]
-> To finish publishing your SDK to npm and others you must [run your first generation action](https://www.speakeasy.com/docs/github-setup#step-by-step-guide).
-
-
 The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https://pnpm.io/), [bun](https://bun.sh/) or [yarn](https://classic.yarnpkg.com/en/) package managers.
 
 ### NPM
 
 ```bash
-npm add <UNSET>
+npm add @ariesdotcom/finance-dev
 ```
 
 ### PNPM
 
 ```bash
-pnpm add <UNSET>
+pnpm add @ariesdotcom/finance-dev
 ```
 
 ### Bun
 
 ```bash
-bun add <UNSET>
+bun add @ariesdotcom/finance-dev
 ```
 
 ### Yarn
 
 ```bash
-yarn add <UNSET>
+yarn add @ariesdotcom/finance-dev
 ```
 
 > [!NOTE]
 > This package is published as an ES Module (ESM) only. For applications using
-> CommonJS, use `await import()` to import and use this package.
+> CommonJS, use `await import("@ariesdotcom/finance-dev")` to import and use this package.
 <!-- End SDK Installation [installation] -->
 
 <!-- Start Requirements [requirements] -->
@@ -190,7 +186,7 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 ### Example
 
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -225,7 +221,7 @@ This SDK supports the following security scheme globally:
 
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -704,7 +700,7 @@ syntax.
 Here's an example of one such pagination call:
 
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -735,7 +731,7 @@ Some of the endpoints in this SDK support retries.  If you use the SDK without a
 
 To change the default retry strategy for a single API call, simply provide a retryConfig object to the call:
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -769,7 +765,7 @@ run();
 
 If you'd like to override the default retry strategy for all operations that support retries, you can provide a retryConfig at SDK initialization:
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   retryConfig: {
@@ -817,8 +813,8 @@ run();
 
 ### Example
 ```typescript
-import { FinanceDev } from "finance-dev";
-import * as errors from "finance-dev/models/errors";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
+import * as errors from "@ariesdotcom/finance-dev/models/errors";
 
 const financeDev = new FinanceDev({
   security: {
@@ -890,7 +886,7 @@ run();
 
 The default server can be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   serverURL: "https://api.aries.com",
@@ -932,9 +928,9 @@ The following example shows how to:
 - use the `"requestError"` hook to log errors
 
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 import { ProxyAgent } from "undici";
-import { HTTPClient } from "finance-dev/lib/http";
+import { HTTPClient } from "@ariesdotcom/finance-dev/lib/http";
 
 const dispatcher = new ProxyAgent("http://proxy.example.com:8080");
 
@@ -977,7 +973,7 @@ You can pass a logger that matches `console`'s interface as an SDK option.
 > Beware that debug logging will reveal secrets, like API tokens in headers, in log messages printed to a console or files. It's recommended to use this feature only during local development and not in production.
 
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const sdk = new FinanceDev({ debugLogger: console });
 ```

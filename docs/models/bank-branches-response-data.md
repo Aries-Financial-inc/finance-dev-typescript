@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BankBranchesResponseData } from "finance-dev/models";
+import { BankBranchesResponseData } from "@ariesdotcom/finance-dev/models";
 
 let value: BankBranchesResponseData = {};
 ```

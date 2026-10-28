@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetFilingsSimilarityIndexRequest } from "finance-dev/models/operations";
+import { GetFilingsSimilarityIndexRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetFilingsSimilarityIndexRequest = {
   symbol: "MSFT",

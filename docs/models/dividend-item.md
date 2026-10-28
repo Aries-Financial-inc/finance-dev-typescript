@@ -5,7 +5,7 @@ A single dividend event for a ticker.
 ## Example Usage
 
 ```typescript
-import { DividendItem } from "finance-dev/models";
+import { DividendItem } from "@ariesdotcom/finance-dev/models";
 
 let value: DividendItem = {};
 ```

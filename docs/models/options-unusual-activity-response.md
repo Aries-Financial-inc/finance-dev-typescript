@@ -5,7 +5,7 @@ Response for GET /v1/options/unusual_activity/{symbol}. Contains unusual activit
 ## Example Usage
 
 ```typescript
-import { OptionsUnusualActivityResponse } from "finance-dev/models";
+import { OptionsUnusualActivityResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionsUnusualActivityResponse = {
   trades: [

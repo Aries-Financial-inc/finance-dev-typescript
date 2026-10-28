@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetBullBearAnalysisRequest } from "finance-dev/models/operations";
+import { GetBullBearAnalysisRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetBullBearAnalysisRequest = {
   symbols: "AAPL,MSFT",

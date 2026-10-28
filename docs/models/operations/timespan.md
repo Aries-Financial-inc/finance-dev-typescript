@@ -5,7 +5,7 @@ Time span unit for each aggregate bar, such as minute, hour, day, week, month, q
 ## Example Usage
 
 ```typescript
-import { Timespan } from "finance-dev/models/operations";
+import { Timespan } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: Timespan = "day";
 

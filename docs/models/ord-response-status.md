@@ -14,7 +14,7 @@ Current order lifecycle state, mirroring FIX Tag 39 (OrdStatus). Most common val
 ## Example Usage
 
 ```typescript
-import { OrdResponseStatus } from "finance-dev/models";
+import { OrdResponseStatus } from "@ariesdotcom/finance-dev/models";
 
 let value: OrdResponseStatus = "NEW";
 

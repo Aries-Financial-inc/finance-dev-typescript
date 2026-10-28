@@ -12,7 +12,7 @@ Which kind of identifier you are filtering by. Provide the matching value in the
 ## Example Usage
 
 ```typescript
-import { TenderOfferIdentifierType } from "finance-dev/models";
+import { TenderOfferIdentifierType } from "@ariesdotcom/finance-dev/models";
 
 let value: TenderOfferIdentifierType = "Symbol";
 

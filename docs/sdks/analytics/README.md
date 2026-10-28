@@ -25,7 +25,7 @@ Retrieve analyst insights and research data. All query parameters are optional. 
 
 <!-- UsageSnippet language="typescript" operationID="getAnalystInsights" method="get" path="/v1/analytics/insights" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -50,8 +50,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGetInsights } from "finance-dev/funcs/analytics-get-insights.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsGetInsights } from "@ariesdotcom/finance-dev/funcs/analytics-get-insights.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -114,7 +114,7 @@ Retrieve market breadth data showing advancers vs decliners
 
 <!-- UsageSnippet language="typescript" operationID="getMarketBreadth" method="get" path="/v1/analytics/market-breadth" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -137,8 +137,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGetMarketBreadth } from "finance-dev/funcs/analytics-get-market-breadth.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsGetMarketBreadth } from "@ariesdotcom/finance-dev/funcs/analytics-get-market-breadth.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -198,7 +198,7 @@ Retrieve net inflow data for NASDAQ and NYSE
 
 <!-- UsageSnippet language="typescript" operationID="getNetInflow" method="get" path="/v1/analytics/net-inflow" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -221,8 +221,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGetNetInflow } from "finance-dev/funcs/analytics-get-net-inflow.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsGetNetInflow } from "@ariesdotcom/finance-dev/funcs/analytics-get-net-inflow.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -282,7 +282,7 @@ Retrieve analyst ratings for stocks. All query parameters are optional.
 
 <!-- UsageSnippet language="typescript" operationID="getRatings" method="get" path="/v1/analytics/ratings" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -309,8 +309,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGet } from "finance-dev/funcs/analytics-get.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsGet } from "@ariesdotcom/finance-dev/funcs/analytics-get.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -375,7 +375,7 @@ Retrieves all stock symbols within a specified sector, sorted by trading volume.
 
 <!-- UsageSnippet language="typescript" operationID="getSectorTickers" method="get" path="/v1/equity/sector-tickers" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -400,8 +400,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGetSectorTickers } from "finance-dev/funcs/analytics-get-sector-tickers.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsGetSectorTickers } from "@ariesdotcom/finance-dev/funcs/analytics-get-sector-tickers.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -464,7 +464,7 @@ Retrieves the average percentage change for all available sectors, sorted by cha
 
 <!-- UsageSnippet language="typescript" operationID="getSectorWiseChange" method="get" path="/v1/equity/sector-wise-change" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -490,8 +490,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGetSectorWiseChange } from "finance-dev/funcs/analytics-get-sector-wise-change.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsGetSectorWiseChange } from "@ariesdotcom/finance-dev/funcs/analytics-get-sector-wise-change.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -555,7 +555,7 @@ Retrieves stocks with the highest positive percentage changes, sorted by change 
 
 <!-- UsageSnippet language="typescript" operationID="getTopGainers" method="get" path="/v1/equity/top-gainers" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -578,8 +578,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGetTopGainers } from "finance-dev/funcs/analytics-get-top-gainers.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsGetTopGainers } from "@ariesdotcom/finance-dev/funcs/analytics-get-top-gainers.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -640,7 +640,7 @@ Retrieves stocks with the largest negative percentage changes, sorted by change 
 
 <!-- UsageSnippet language="typescript" operationID="getTopLosers" method="get" path="/v1/equity/top-losers" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -663,8 +663,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGetTopLosers } from "finance-dev/funcs/analytics-get-top-losers.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsGetTopLosers } from "@ariesdotcom/finance-dev/funcs/analytics-get-top-losers.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -725,7 +725,7 @@ Retrieve ETF options with the highest trading volume showing the most actively t
 
 <!-- UsageSnippet language="typescript" operationID="getOptionsETFsTopVolume" method="get" path="/v1/options/etfs/top-volume" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -748,8 +748,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGetOptionsEtfsTopVolume } from "finance-dev/funcs/analytics-get-options-etfs-top-volume.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsGetOptionsEtfsTopVolume } from "@ariesdotcom/finance-dev/funcs/analytics-get-options-etfs-top-volume.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -810,7 +810,7 @@ Retrieve stock options with the largest percentage gains showing the best perfor
 
 <!-- UsageSnippet language="typescript" operationID="getOptionsStocksTopGainers" method="get" path="/v1/options/stocks/top-gainers" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -833,8 +833,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGetOptionsStocksTopGainers } from "finance-dev/funcs/analytics-get-options-stocks-top-gainers.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsGetOptionsStocksTopGainers } from "@ariesdotcom/finance-dev/funcs/analytics-get-options-stocks-top-gainers.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -895,7 +895,7 @@ Retrieve stock options with the highest trading volume identifying the most acti
 
 <!-- UsageSnippet language="typescript" operationID="getOptionsStocksTopVolume" method="get" path="/v1/options/stocks/top-volume" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -918,8 +918,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsGetOptionsStocksTopVolume } from "finance-dev/funcs/analytics-get-options-stocks-top-volume.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsGetOptionsStocksTopVolume } from "@ariesdotcom/finance-dev/funcs/analytics-get-options-stocks-top-volume.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -980,7 +980,7 @@ Screen securities by sending a JSON body with operator and clauses (and optional
 
 <!-- UsageSnippet language="typescript" operationID="stockScreener" method="post" path="/v1/stock/screener" example="flat" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1009,8 +1009,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screener.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsStockScreener } from "@ariesdotcom/finance-dev/funcs/analytics-stock-screener.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1043,7 +1043,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="stockScreener" method="post" path="/v1/stock/screener" example="flat_message" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1072,8 +1072,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screener.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsStockScreener } from "@ariesdotcom/finance-dev/funcs/analytics-stock-screener.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1106,7 +1106,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="stockScreener" method="post" path="/v1/stock/screener" example="flat_string" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1135,8 +1135,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screener.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsStockScreener } from "@ariesdotcom/finance-dev/funcs/analytics-stock-screener.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1169,7 +1169,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="stockScreener" method="post" path="/v1/stock/screener" example="flat_with_codes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1198,8 +1198,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screener.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsStockScreener } from "@ariesdotcom/finance-dev/funcs/analytics-stock-screener.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1232,7 +1232,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="stockScreener" method="post" path="/v1/stock/screener" example="marketCapAndPE" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1277,8 +1277,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screener.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsStockScreener } from "@ariesdotcom/finance-dev/funcs/analytics-stock-screener.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1327,7 +1327,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="stockScreener" method="post" path="/v1/stock/screener" example="nested" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1356,8 +1356,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screener.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsStockScreener } from "@ariesdotcom/finance-dev/funcs/analytics-stock-screener.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1390,7 +1390,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="stockScreener" method="post" path="/v1/stock/screener" example="nested_bad_request" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1419,8 +1419,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screener.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsStockScreener } from "@ariesdotcom/finance-dev/funcs/analytics-stock-screener.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1453,7 +1453,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="stockScreener" method="post" path="/v1/stock/screener" example="nested_error_object" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1482,8 +1482,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screener.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsStockScreener } from "@ariesdotcom/finance-dev/funcs/analytics-stock-screener.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1516,7 +1516,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="stockScreener" method="post" path="/v1/stock/screener" example="nested_shared_http_error" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1545,8 +1545,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screener.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsStockScreener } from "@ariesdotcom/finance-dev/funcs/analytics-stock-screener.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1579,7 +1579,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="stockScreener" method="post" path="/v1/stock/screener" example="roeAndEps" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1619,8 +1619,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { analyticsStockScreener } from "finance-dev/funcs/analytics-stock-screener.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { analyticsStockScreener } from "@ariesdotcom/finance-dev/funcs/analytics-stock-screener.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

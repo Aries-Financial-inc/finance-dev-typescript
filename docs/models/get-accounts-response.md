@@ -5,7 +5,7 @@ Response for GET /v2/users/me/accounts
 ## Example Usage
 
 ```typescript
-import { GetAccountsResponse } from "finance-dev/models";
+import { GetAccountsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: GetAccountsResponse = {
   accounts: [],

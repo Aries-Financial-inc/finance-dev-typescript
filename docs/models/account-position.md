@@ -5,7 +5,7 @@ One open position in the account positions list. Field names and types are stabl
 ## Example Usage
 
 ```typescript
-import { AccountPosition } from "finance-dev/models";
+import { AccountPosition } from "@ariesdotcom/finance-dev/models";
 
 let value: AccountPosition = {};
 ```

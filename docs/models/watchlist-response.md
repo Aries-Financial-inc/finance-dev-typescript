@@ -5,7 +5,7 @@ Response body containing the user's saved watchlists.
 ## Example Usage
 
 ```typescript
-import { WatchlistResponse } from "finance-dev/models";
+import { WatchlistResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: WatchlistResponse = {};
 ```

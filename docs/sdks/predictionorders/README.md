@@ -14,7 +14,7 @@
 
 <!-- UsageSnippet language="typescript" operationID="placePredictionOrder" method="post" path="/v1/predictions/orders" example="flat_message" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -51,8 +51,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { predictionOrdersCreate } from "finance-dev/funcs/prediction-orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { predictionOrdersCreate } from "@ariesdotcom/finance-dev/funcs/prediction-orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -93,7 +93,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placePredictionOrder" method="post" path="/v1/predictions/orders" example="flat_with_codes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -130,8 +130,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { predictionOrdersCreate } from "finance-dev/funcs/prediction-orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { predictionOrdersCreate } from "@ariesdotcom/finance-dev/funcs/prediction-orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -172,7 +172,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="placePredictionOrder" method="post" path="/v1/predictions/orders" example="nested_error_object" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -209,8 +209,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { predictionOrdersCreate } from "finance-dev/funcs/prediction-orders-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { predictionOrdersCreate } from "@ariesdotcom/finance-dev/funcs/prediction-orders-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

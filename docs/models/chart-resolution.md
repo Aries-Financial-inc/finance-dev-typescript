@@ -11,7 +11,7 @@ For tick-based bars (bars that close every N trades instead of every N minutes),
 ## Example Usage
 
 ```typescript
-import { ChartResolution } from "finance-dev/models";
+import { ChartResolution } from "@ariesdotcom/finance-dev/models";
 
 let value: ChartResolution = "D";
 

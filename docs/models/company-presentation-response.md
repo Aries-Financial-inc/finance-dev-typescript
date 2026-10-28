@@ -5,7 +5,7 @@ Company presentations and slide decks for a symbol.
 ## Example Usage
 
 ```typescript
-import { CompanyPresentationResponse } from "finance-dev/models";
+import { CompanyPresentationResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: CompanyPresentationResponse = {};
 ```

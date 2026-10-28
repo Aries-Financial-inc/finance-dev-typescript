@@ -5,7 +5,7 @@ Chart symbol metadata, including supported resolutions, trading session and pric
 ## Example Usage
 
 ```typescript
-import { SymbolInfo } from "finance-dev/models";
+import { SymbolInfo } from "@ariesdotcom/finance-dev/models";
 
 let value: SymbolInfo = {
   dailyMultipliers: [

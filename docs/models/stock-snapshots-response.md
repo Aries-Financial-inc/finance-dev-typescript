@@ -5,7 +5,7 @@ Market snapshots for a set of stock tickers, including the current day aggregate
 ## Example Usage
 
 ```typescript
-import { StockSnapshotsResponse } from "finance-dev/models";
+import { StockSnapshotsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: StockSnapshotsResponse = {};
 ```

@@ -12,7 +12,7 @@ How long the order should stay alive before automatically cancelling. Pick one:
 ## Example Usage
 
 ```typescript
-import { OrderRequestTimeInForceEnum } from "finance-dev/models";
+import { OrderRequestTimeInForceEnum } from "@ariesdotcom/finance-dev/models";
 
 let value: OrderRequestTimeInForceEnum = "DAY";
 

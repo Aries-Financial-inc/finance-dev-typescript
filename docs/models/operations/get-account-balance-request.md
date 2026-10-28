@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetAccountBalanceRequest } from "finance-dev/models/operations";
+import { GetAccountBalanceRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetAccountBalanceRequest = {
   id: "TEST-ACCOUNT-001",

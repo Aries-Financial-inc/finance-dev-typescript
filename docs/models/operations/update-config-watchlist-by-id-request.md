@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateConfigWatchlistByIdRequest } from "finance-dev/models/operations";
+import { UpdateConfigWatchlistByIdRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: UpdateConfigWatchlistByIdRequest = {
   watchlistId: 12345,

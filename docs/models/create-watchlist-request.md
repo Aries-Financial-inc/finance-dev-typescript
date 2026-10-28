@@ -5,7 +5,7 @@ Request body for creating a new watchlist.
 ## Example Usage
 
 ```typescript
-import { CreateWatchlistRequest } from "finance-dev/models";
+import { CreateWatchlistRequest } from "@ariesdotcom/finance-dev/models";
 
 let value: CreateWatchlistRequest = {
   name: "<value>",

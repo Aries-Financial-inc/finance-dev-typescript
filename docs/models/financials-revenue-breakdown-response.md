@@ -5,7 +5,7 @@ Response containing revenue breakdown data.
 ## Example Usage
 
 ```typescript
-import { FinancialsRevenueBreakdownResponse } from "finance-dev/models";
+import { FinancialsRevenueBreakdownResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: FinancialsRevenueBreakdownResponse = {};
 ```

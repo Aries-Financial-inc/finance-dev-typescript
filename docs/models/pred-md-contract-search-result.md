@@ -5,8 +5,8 @@ One page of contracts.
 ## Example Usage
 
 ```typescript
-import { PredMdContractSearchResult } from "finance-dev/models";
-import { Decimal } from "finance-dev/types";
+import { PredMdContractSearchResult } from "@ariesdotcom/finance-dev/models";
+import { Decimal } from "@ariesdotcom/finance-dev/types";
 
 let value: PredMdContractSearchResult = {
   found: 160518,

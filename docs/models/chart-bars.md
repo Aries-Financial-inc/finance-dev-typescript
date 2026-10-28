@@ -5,7 +5,7 @@ Historical chart data returned as parallel arrays. Values at the same index belo
 ## Example Usage
 
 ```typescript
-import { ChartBars } from "finance-dev/models";
+import { ChartBars } from "@ariesdotcom/finance-dev/models";
 
 let value: ChartBars = {
   s: "no_data",

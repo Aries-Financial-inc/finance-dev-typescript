@@ -5,7 +5,7 @@ List of US bank branches for a company, as provided by Finnhub.
 ## Example Usage
 
 ```typescript
-import { BankBranchesResponse } from "finance-dev/models";
+import { BankBranchesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: BankBranchesResponse = {};
 ```

@@ -5,7 +5,7 @@ One option contract row in a snapshot response (`OptionContractSnapshotDataDTO`)
 ## Example Usage
 
 ```typescript
-import { OptionContractSnapshotRow } from "finance-dev/models";
+import { OptionContractSnapshotRow } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionContractSnapshotRow = {};
 ```

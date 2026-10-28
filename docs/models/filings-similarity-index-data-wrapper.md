@@ -5,7 +5,7 @@ Similarity index data for a company, identified by CIK and symbol.
 ## Example Usage
 
 ```typescript
-import { FilingsSimilarityIndexDataWrapper } from "finance-dev/models";
+import { FilingsSimilarityIndexDataWrapper } from "@ariesdotcom/finance-dev/models";
 
 let value: FilingsSimilarityIndexDataWrapper = {};
 ```

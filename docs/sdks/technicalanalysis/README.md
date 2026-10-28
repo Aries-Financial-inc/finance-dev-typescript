@@ -19,7 +19,7 @@ If `from` or `to` cannot be parsed as a signed 64-bit integer, returns 400 Bad R
 
 <!-- UsageSnippet language="typescript" operationID="getTechnicalIndicator" method="get" path="/v1/indicator" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -48,8 +48,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { technicalAnalysisGetIndicator } from "finance-dev/funcs/technical-analysis-get-indicator.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { technicalAnalysisGetIndicator } from "@ariesdotcom/finance-dev/funcs/technical-analysis-get-indicator.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -116,7 +116,7 @@ Retrieve identified technical chart patterns including head and shoulders, doubl
 
 <!-- UsageSnippet language="typescript" operationID="getTechnicalPatterns" method="get" path="/v1/scan/pattern" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -142,8 +142,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { technicalAnalysisGetPattern } from "finance-dev/funcs/technical-analysis-get-pattern.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { technicalAnalysisGetPattern } from "@ariesdotcom/finance-dev/funcs/technical-analysis-get-pattern.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -207,7 +207,7 @@ Retrieve calculated support and resistance price levels based on historical pric
 
 <!-- UsageSnippet language="typescript" operationID="getSupportResistanceLevels" method="get" path="/v1/scan/support-resistance" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -233,8 +233,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { technicalAnalysisGetSupportResistance } from "finance-dev/funcs/technical-analysis-get-support-resistance.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { technicalAnalysisGetSupportResistance } from "@ariesdotcom/finance-dev/funcs/technical-analysis-get-support-resistance.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -298,7 +298,7 @@ Retrieve aggregate technical indicator signals combining moving averages, oscill
 
 <!-- UsageSnippet language="typescript" operationID="getAggregateTechnicalIndicators" method="get" path="/v1/scan/technical-indicator" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -324,8 +324,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { technicalAnalysisGetTechnicalIndicator } from "finance-dev/funcs/technical-analysis-get-technical-indicator.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { technicalAnalysisGetTechnicalIndicator } from "@ariesdotcom/finance-dev/funcs/technical-analysis-get-technical-indicator.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

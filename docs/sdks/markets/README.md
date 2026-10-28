@@ -16,7 +16,7 @@ Get a base event with its events and each event's contracts
 
 <!-- UsageSnippet language="typescript" operationID="getBaseEvent" method="get" path="/v1/predictions/base-events/{baseEventId}" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev();
 
@@ -36,8 +36,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { predictionsMarketsGetBaseEvent } from "finance-dev/funcs/predictions-markets-get-base-event.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { predictionsMarketsGetBaseEvent } from "@ariesdotcom/finance-dev/funcs/predictions-markets-get-base-event.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -87,7 +87,7 @@ Get an event and all contracts under it
 
 <!-- UsageSnippet language="typescript" operationID="getEventContracts" method="get" path="/v1/predictions/events/{eventId}/contracts" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev();
 
@@ -107,8 +107,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { predictionsMarketsGetEventContracts } from "finance-dev/funcs/predictions-markets-get-event-contracts.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { predictionsMarketsGetEventContracts } from "@ariesdotcom/finance-dev/funcs/predictions-markets-get-event-contracts.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -158,7 +158,7 @@ Full-text search over one index of event contracts. Filters always apply to cont
 
 <!-- UsageSnippet language="typescript" operationID="search" method="get" path="/v1/predictions/search" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev();
 
@@ -186,8 +186,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { predictionsMarketsSearch } from "finance-dev/funcs/predictions-markets-search.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { predictionsMarketsSearch } from "@ariesdotcom/finance-dev/funcs/predictions-markets-search.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

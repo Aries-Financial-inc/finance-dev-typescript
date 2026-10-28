@@ -5,7 +5,7 @@ Detailed ESG disclosures and metrics for the period.
 ## Example Usage
 
 ```typescript
-import { HistoricalEsgResponseDataData } from "finance-dev/models";
+import { HistoricalEsgResponseDataData } from "@ariesdotcom/finance-dev/models";
 
 let value: HistoricalEsgResponseDataData = {};
 ```
