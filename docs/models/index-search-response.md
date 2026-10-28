@@ -5,7 +5,7 @@ Response containing indices that match a search query.
 ## Example Usage
 
 ```typescript
-import { IndexSearchResponse } from "finance-dev/models";
+import { IndexSearchResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: IndexSearchResponse = {};
 ```

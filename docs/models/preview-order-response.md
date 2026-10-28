@@ -5,7 +5,7 @@ Response schema for order preview (PreviewOrdResponse)
 ## Example Usage
 
 ```typescript
-import { PreviewOrderResponse } from "finance-dev/models";
+import { PreviewOrderResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: PreviewOrderResponse = {
   buyingPowerImpact: "1500.01",

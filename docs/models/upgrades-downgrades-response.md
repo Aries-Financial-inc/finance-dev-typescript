@@ -5,7 +5,7 @@ Analyst rating upgrades and downgrades for a stock, sourced from Finnhub.
 ## Example Usage
 
 ```typescript
-import { UpgradesDowngradesResponse } from "finance-dev/models";
+import { UpgradesDowngradesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: UpgradesDowngradesResponse = {};
 ```

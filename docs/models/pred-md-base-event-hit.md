@@ -5,7 +5,7 @@ One base event with at least one matching contract. The index carries no display
 ## Example Usage
 
 ```typescript
-import { PredMdBaseEventHit } from "finance-dev/models";
+import { PredMdBaseEventHit } from "@ariesdotcom/finance-dev/models";
 
 let value: PredMdBaseEventHit = {
   baseEventId: "<id>",

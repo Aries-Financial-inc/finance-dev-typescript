@@ -5,7 +5,7 @@ Response containing corporate spinoff events.
 ## Example Usage
 
 ```typescript
-import { SpinoffsResponse } from "finance-dev/models";
+import { SpinoffsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: SpinoffsResponse = {};
 ```

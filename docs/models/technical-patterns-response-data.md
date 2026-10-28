@@ -5,7 +5,7 @@ Pattern recognition payload.
 ## Example Usage
 
 ```typescript
-import { TechnicalPatternsResponseData } from "finance-dev/models";
+import { TechnicalPatternsResponseData } from "@ariesdotcom/finance-dev/models";
 
 let value: TechnicalPatternsResponseData = {};
 ```

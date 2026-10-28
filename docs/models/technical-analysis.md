@@ -5,7 +5,7 @@ Aggregate technical analysis summary.
 ## Example Usage
 
 ```typescript
-import { TechnicalAnalysis } from "finance-dev/models";
+import { TechnicalAnalysis } from "@ariesdotcom/finance-dev/models";
 
 let value: TechnicalAnalysis = {};
 ```

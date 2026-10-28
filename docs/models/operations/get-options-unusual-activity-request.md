@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetOptionsUnusualActivityRequest } from "finance-dev/models/operations";
+import { GetOptionsUnusualActivityRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetOptionsUnusualActivityRequest = {
   symbol: "<value>",

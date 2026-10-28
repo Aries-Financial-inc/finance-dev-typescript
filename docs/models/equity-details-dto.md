@@ -5,7 +5,7 @@ One equity detail object from GET /v1/marketdata/equities/details. Populated fro
 ## Example Usage
 
 ```typescript
-import { EquityDetailsDTO } from "finance-dev/models";
+import { EquityDetailsDTO } from "@ariesdotcom/finance-dev/models";
 
 let value: EquityDetailsDTO = {
   type: "ETRADE",

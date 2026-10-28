@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetOptionLastTradeRequest } from "finance-dev/models/operations";
+import { GetOptionLastTradeRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetOptionLastTradeRequest = {
   ticker: "O:AAPL230120C00150000",

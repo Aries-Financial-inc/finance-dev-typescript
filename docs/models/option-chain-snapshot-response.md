@@ -5,7 +5,7 @@ Paginated option chain snapshot for an underlying (`OptionChainSnapshotResponse`
 ## Example Usage
 
 ```typescript
-import { OptionChainSnapshotResponse } from "finance-dev/models";
+import { OptionChainSnapshotResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionChainSnapshotResponse = {};
 ```

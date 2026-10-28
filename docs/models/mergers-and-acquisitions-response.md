@@ -5,7 +5,7 @@ Response containing mergers and acquisitions calendar events.
 ## Example Usage
 
 ```typescript
-import { MergersAndAcquisitionsResponse } from "finance-dev/models";
+import { MergersAndAcquisitionsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: MergersAndAcquisitionsResponse = {};
 ```

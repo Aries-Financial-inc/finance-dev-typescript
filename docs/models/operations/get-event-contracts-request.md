@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetEventContractsRequest } from "finance-dev/models/operations";
+import { GetEventContractsRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetEventContractsRequest = {
   eventId: "HORC_1126",

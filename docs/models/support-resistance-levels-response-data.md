@@ -5,7 +5,7 @@ Support and resistance payload.
 ## Example Usage
 
 ```typescript
-import { SupportResistanceLevelsResponseData } from "finance-dev/models";
+import { SupportResistanceLevelsResponseData } from "@ariesdotcom/finance-dev/models";
 
 let value: SupportResistanceLevelsResponseData = {};
 ```

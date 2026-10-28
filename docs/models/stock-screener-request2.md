@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { StockScreenerRequest2 } from "finance-dev/models";
+import { StockScreenerRequest2 } from "@ariesdotcom/finance-dev/models";
 
 let value: StockScreenerRequest2 = {
   groups: [],

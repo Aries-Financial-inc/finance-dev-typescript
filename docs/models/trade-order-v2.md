@@ -5,7 +5,7 @@ Standard v2 order shape returned by the trading endpoints. Identical across **GE
 ## Example Usage
 
 ```typescript
-import { TradeOrderV2 } from "finance-dev/models";
+import { TradeOrderV2 } from "@ariesdotcom/finance-dev/models";
 
 let value: TradeOrderV2 = {
   exDestination: "MNGD",

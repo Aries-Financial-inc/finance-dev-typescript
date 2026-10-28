@@ -5,7 +5,7 @@ Paginated SEC cash flow statements (results, status, requestId, nextUrl).
 ## Example Usage
 
 ```typescript
-import { CashFlowStatementsResponse } from "finance-dev/models";
+import { CashFlowStatementsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: CashFlowStatementsResponse = {};
 ```

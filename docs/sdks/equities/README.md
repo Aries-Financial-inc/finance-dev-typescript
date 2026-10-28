@@ -14,7 +14,7 @@ Batch equity details from an internal cache with an automatic fallback when cach
 
 <!-- UsageSnippet language="typescript" operationID="getEquityDetails" method="get" path="/v1/marketdata/equities/details" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -39,8 +39,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { marketEquitiesGetDetails } from "finance-dev/funcs/market-equities-get-details.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { marketEquitiesGetDetails } from "@ariesdotcom/finance-dev/funcs/market-equities-get-details.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

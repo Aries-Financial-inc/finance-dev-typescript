@@ -5,7 +5,7 @@ Market holidays and special trading days.
 ## Example Usage
 
 ```typescript
-import { MarketHolidayResponse } from "finance-dev/models";
+import { MarketHolidayResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: MarketHolidayResponse = {};
 ```

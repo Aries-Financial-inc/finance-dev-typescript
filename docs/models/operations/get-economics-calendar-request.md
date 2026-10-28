@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetEconomicsCalendarRequest } from "finance-dev/models/operations";
+import { GetEconomicsCalendarRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetEconomicsCalendarRequest = {
   date: new Date("2024-01-15"),

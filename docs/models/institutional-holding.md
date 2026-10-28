@@ -5,7 +5,7 @@ Single holding in an institutional investor's portfolio or in a security's insti
 ## Example Usage
 
 ```typescript
-import { InstitutionalHolding } from "finance-dev/models";
+import { InstitutionalHolding } from "@ariesdotcom/finance-dev/models";
 
 let value: InstitutionalHolding = {};
 ```

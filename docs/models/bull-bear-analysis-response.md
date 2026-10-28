@@ -5,7 +5,7 @@ Bull and bear investment cases for securities.
 ## Example Usage
 
 ```typescript
-import { BullBearAnalysisResponse } from "finance-dev/models";
+import { BullBearAnalysisResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: BullBearAnalysisResponse = {};
 ```

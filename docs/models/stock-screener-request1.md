@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { StockScreenerRequest1 } from "finance-dev/models";
+import { StockScreenerRequest1 } from "@ariesdotcom/finance-dev/models";
 
 let value: StockScreenerRequest1 = {
   clauses: [],

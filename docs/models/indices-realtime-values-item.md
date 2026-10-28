@@ -5,7 +5,7 @@ One index in the batch realtime values response.
 ## Example Usage
 
 ```typescript
-import { IndicesRealtimeValuesItem } from "finance-dev/models";
+import { IndicesRealtimeValuesItem } from "@ariesdotcom/finance-dev/models";
 
 let value: IndicesRealtimeValuesItem = {
   identifier: "<value>",

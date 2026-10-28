@@ -5,7 +5,7 @@ One symbol search result. Use it to let users choose the exact instrument before
 ## Example Usage
 
 ```typescript
-import { SearchSymbolResponseItem } from "finance-dev/models";
+import { SearchSymbolResponseItem } from "@ariesdotcom/finance-dev/models";
 
 let value: SearchSymbolResponseItem = {
   type: "stock",

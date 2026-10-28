@@ -5,7 +5,7 @@ Response for GET /v1/accounts/{id}/positions. Cached positions for the account. 
 ## Example Usage
 
 ```typescript
-import { GetPositionsResponse } from "finance-dev/models";
+import { GetPositionsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: GetPositionsResponse = {
   positions: [

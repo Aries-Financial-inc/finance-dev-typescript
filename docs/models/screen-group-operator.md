@@ -8,7 +8,7 @@ How the clauses inside this group are combined:
 ## Example Usage
 
 ```typescript
-import { ScreenGroupOperator } from "finance-dev/models";
+import { ScreenGroupOperator } from "@ariesdotcom/finance-dev/models";
 
 let value: ScreenGroupOperator = "AND";
 

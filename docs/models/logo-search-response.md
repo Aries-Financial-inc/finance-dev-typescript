@@ -5,7 +5,7 @@ Response containing logo records that match a search query.
 ## Example Usage
 
 ```typescript
-import { LogoSearchResponse } from "finance-dev/models";
+import { LogoSearchResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: LogoSearchResponse = {};
 ```

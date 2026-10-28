@@ -5,7 +5,7 @@ Account status. **OPEN** = account open for trading; **SUSPENDED** = account sus
 ## Example Usage
 
 ```typescript
-import { AccountItemStatus } from "finance-dev/models";
+import { AccountItemStatus } from "@ariesdotcom/finance-dev/models";
 
 let value: AccountItemStatus = "OPEN";
 

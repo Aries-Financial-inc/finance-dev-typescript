@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetOptionContractSnapshotRequest } from "finance-dev/models/operations";
+import { GetOptionContractSnapshotRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetOptionContractSnapshotRequest = {
   underlyingAsset: "AAPL",

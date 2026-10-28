@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetSectorWiseChangeRequest } from "finance-dev/models/operations";
+import { GetSectorWiseChangeRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetSectorWiseChangeRequest = {
   limit: "15",

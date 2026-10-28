@@ -14,7 +14,7 @@ Retrieve all trading accounts for the currently authenticated user. Returns a li
 
 <!-- UsageSnippet language="typescript" operationID="getUserAccounts" method="get" path="/v2/users/me/accounts" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -37,8 +37,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { usersAccountsList } from "finance-dev/funcs/users-accounts-list.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { usersAccountsList } from "@ariesdotcom/finance-dev/funcs/users-accounts-list.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

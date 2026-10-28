@@ -5,7 +5,7 @@ User account item returned by GET /v2/users/me/accounts. Use `trading_account_id
 ## Example Usage
 
 ```typescript
-import { AccountItem } from "finance-dev/models";
+import { AccountItem } from "@ariesdotcom/finance-dev/models";
 
 let value: AccountItem = {
   accountClass: "<value>",

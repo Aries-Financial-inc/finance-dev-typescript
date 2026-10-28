@@ -5,7 +5,7 @@ Profile information for an ETF from Finnhub.
 ## Example Usage
 
 ```typescript
-import { EtfProfileResponse } from "finance-dev/models";
+import { EtfProfileResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: EtfProfileResponse = {};
 ```

@@ -16,7 +16,7 @@ Retrieve historical Consumer Price Index (CPI) and Personal Consumption Expendit
 
 <!-- UsageSnippet language="typescript" operationID="getInflation" method="get" path="/v1/economy/inflation" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -49,8 +49,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { economyGetInflation } from "finance-dev/funcs/economy-get-inflation.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { economyGetInflation } from "@ariesdotcom/finance-dev/funcs/economy-get-inflation.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -121,7 +121,7 @@ Retrieve historical inflation expectations data from financial markets and surve
 
 <!-- UsageSnippet language="typescript" operationID="getInflationExpectations" method="get" path="/v1/economy/inflation-expectations" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -154,8 +154,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { economyGetInflationExpectations } from "finance-dev/funcs/economy-get-inflation-expectations.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { economyGetInflationExpectations } from "@ariesdotcom/finance-dev/funcs/economy-get-inflation-expectations.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -226,7 +226,7 @@ Retrieve historical U.S. Treasury yields across different maturities including s
 
 <!-- UsageSnippet language="typescript" operationID="getTreasuryYields" method="get" path="/v1/economy/treasury-yields" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -259,8 +259,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { economyGetTreasuryYields } from "finance-dev/funcs/economy-get-treasury-yields.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { economyGetTreasuryYields } from "@ariesdotcom/finance-dev/funcs/economy-get-treasury-yields.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

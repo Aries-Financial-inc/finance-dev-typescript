@@ -5,7 +5,7 @@ Paginated unified snapshots across asset types, including stocks and options, wi
 ## Example Usage
 
 ```typescript
-import { UnifiedSnapshotResponse } from "finance-dev/models";
+import { UnifiedSnapshotResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: UnifiedSnapshotResponse = {};
 ```

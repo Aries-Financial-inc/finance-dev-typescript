@@ -7,7 +7,7 @@ Tells the API how to interpret the value you send in `searchKeys`. Allowed value
 ## Example Usage
 
 ```typescript
-import { GetAnalystInsightsSearchKeysType } from "finance-dev/models/operations";
+import { GetAnalystInsightsSearchKeysType } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetAnalystInsightsSearchKeysType = "firm";
 

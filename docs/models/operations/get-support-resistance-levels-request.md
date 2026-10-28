@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetSupportResistanceLevelsRequest } from "finance-dev/models/operations";
+import { GetSupportResistanceLevelsRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetSupportResistanceLevelsRequest = {
   symbol: "AAPL",

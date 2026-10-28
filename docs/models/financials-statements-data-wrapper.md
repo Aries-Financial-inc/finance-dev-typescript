@@ -5,7 +5,7 @@ Symbol and list of standardized financial statements by period.
 ## Example Usage
 
 ```typescript
-import { FinancialsStatementsDataWrapper } from "finance-dev/models";
+import { FinancialsStatementsDataWrapper } from "@ariesdotcom/finance-dev/models";
 
 let value: FinancialsStatementsDataWrapper = {};
 ```

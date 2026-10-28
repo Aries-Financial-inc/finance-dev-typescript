@@ -16,7 +16,7 @@ Pagination uses an opaque int64 cursor: omit cursor or send 0 for the first page
 
 <!-- UsageSnippet language="typescript" operationID="listActiveOrders" method="get" path="/v2/accounts/{id}/orders" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -43,8 +43,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { accountsOrdersListActive } from "finance-dev/funcs/accounts-orders-list-active.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { accountsOrdersListActive } from "@ariesdotcom/finance-dev/funcs/accounts-orders-list-active.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

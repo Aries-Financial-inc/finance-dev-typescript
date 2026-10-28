@@ -7,7 +7,7 @@ How long each chart bar covers. Pair with `period` to set the exact size. Note t
 ## Example Usage
 
 ```typescript
-import { GetIndexChartBarsPrecision } from "finance-dev/models/operations";
+import { GetIndexChartBarsPrecision } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetIndexChartBarsPrecision = "Minute";
 

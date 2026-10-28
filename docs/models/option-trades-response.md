@@ -5,7 +5,7 @@ Paginated list of historical tick-level trades for an options contract.
 ## Example Usage
 
 ```typescript
-import { OptionTradesResponse } from "finance-dev/models";
+import { OptionTradesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionTradesResponse = {};
 ```

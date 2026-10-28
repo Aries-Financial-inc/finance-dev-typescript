@@ -5,7 +5,7 @@ SEC filing with its reporting period and reported financial data.
 ## Example Usage
 
 ```typescript
-import { ReportedFiling } from "finance-dev/models";
+import { ReportedFiling } from "@ariesdotcom/finance-dev/models";
 
 let value: ReportedFiling = {};
 ```

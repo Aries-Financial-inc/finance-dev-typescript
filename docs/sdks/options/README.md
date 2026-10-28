@@ -24,7 +24,7 @@ Retrieve unusual options activity including large block trades, high volume cont
 
 <!-- UsageSnippet language="typescript" operationID="getOptionsActivity" method="get" path="/v1/options/activity" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -49,8 +49,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { optionsGetActivity } from "finance-dev/funcs/options-get-activity.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { optionsGetActivity } from "@ariesdotcom/finance-dev/funcs/options-get-activity.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -113,7 +113,7 @@ Get the most recent trade for an options contract.
 
 <!-- UsageSnippet language="typescript" operationID="getOptionLastTrade" method="get" path="/v1/options/last-trade" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -138,8 +138,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { optionsGetLastTrade } from "finance-dev/funcs/options-get-last-trade.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { optionsGetLastTrade } from "@ariesdotcom/finance-dev/funcs/options-get-last-trade.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -202,7 +202,7 @@ Retrieve option contract opening and closing prices with intraday trading ranges
 
 <!-- UsageSnippet language="typescript" operationID="getOptionOpenClose" method="get" path="/v1/options/open-close" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -228,8 +228,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { optionsGetOpenCloseData } from "finance-dev/funcs/options-get-open-close-data.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { optionsGetOpenCloseData } from "@ariesdotcom/finance-dev/funcs/options-get-open-close-data.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -293,7 +293,7 @@ Retrieve the previous trading day's OHLC bar (open, high, low, close), volume, v
 
 <!-- UsageSnippet language="typescript" operationID="getOptionPreviousDay" method="get" path="/v1/options/previous-day" example="minimal" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -318,8 +318,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { optionsGetPreviousDay } from "finance-dev/funcs/options-get-previous-day.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { optionsGetPreviousDay } from "@ariesdotcom/finance-dev/funcs/options-get-previous-day.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -348,7 +348,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="getOptionPreviousDay" method="get" path="/v1/options/previous-day" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -373,8 +373,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { optionsGetPreviousDay } from "finance-dev/funcs/options-get-previous-day.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { optionsGetPreviousDay } from "@ariesdotcom/finance-dev/funcs/options-get-previous-day.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -437,7 +437,7 @@ Get quote data for options contracts including bid, ask, and Greeks.
 
 <!-- UsageSnippet language="typescript" operationID="getOptionQuotes" method="get" path="/v1/options/quotes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -470,8 +470,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { optionsGetQuotes } from "finance-dev/funcs/options-get-quotes.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { optionsGetQuotes } from "@ariesdotcom/finance-dev/funcs/options-get-quotes.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -542,7 +542,7 @@ Returns a paginated snapshot of option contracts for an underlying equity. Suppo
 
 <!-- UsageSnippet language="typescript" operationID="getOptionChainSnapshot" method="get" path="/v1/options/snapshot/chain/{underlyingAsset}" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -573,8 +573,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { optionsGetChainSnapshot } from "finance-dev/funcs/options-get-chain-snapshot.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { optionsGetChainSnapshot } from "@ariesdotcom/finance-dev/funcs/options-get-chain-snapshot.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -643,7 +643,7 @@ Returns a point-in-time snapshot for a single option contract: details, day bar,
 
 <!-- UsageSnippet language="typescript" operationID="getOptionContractSnapshot" method="get" path="/v1/options/snapshot/{underlyingAsset}/{optionContract}" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -669,8 +669,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { optionsGetSnapshot } from "finance-dev/funcs/options-get-snapshot.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { optionsGetSnapshot } from "@ariesdotcom/finance-dev/funcs/options-get-snapshot.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -734,7 +734,7 @@ Get tick-level trade data for options contracts with precise timestamps.
 
 <!-- UsageSnippet language="typescript" operationID="getOptionTrades" method="get" path="/v1/options/trades" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -767,8 +767,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { optionsGetTrades } from "finance-dev/funcs/options-get-trades.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { optionsGetTrades } from "@ariesdotcom/finance-dev/funcs/options-get-trades.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -839,7 +839,7 @@ Retrieve options unusual activity for a specific underlying symbol (e.g. AAPL, T
 
 <!-- UsageSnippet language="typescript" operationID="getOptionsUnusualActivity" method="get" path="/v1/options/unusual_activity/{symbol}" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -864,8 +864,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { optionsGetUnusualActivity } from "finance-dev/funcs/options-get-unusual-activity.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { optionsGetUnusualActivity } from "@ariesdotcom/finance-dev/funcs/options-get-unusual-activity.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -928,7 +928,7 @@ Retrieve all option contract symbols (OCC symbols) for a specific underlying tic
 
 <!-- UsageSnippet language="typescript" operationID="listOptionContracts" method="get" path="/v1/options/{symbol}/contracts/{expiryDate}" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -954,8 +954,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { optionsGetContracts } from "finance-dev/funcs/options-get-contracts.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { optionsGetContracts } from "@ariesdotcom/finance-dev/funcs/options-get-contracts.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1019,7 +1019,7 @@ Retrieve all available expiration dates for options contracts of a specific unde
 
 <!-- UsageSnippet language="typescript" operationID="listOptionExpiryDates" method="get" path="/v1/options/{symbol}/expiry-dates" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1044,8 +1044,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { optionsGetExpiryDates } from "finance-dev/funcs/options-get-expiry-dates.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { optionsGetExpiryDates } from "@ariesdotcom/finance-dev/funcs/options-get-expiry-dates.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

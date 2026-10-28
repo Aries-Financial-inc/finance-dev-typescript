@@ -15,7 +15,7 @@ Retrieve all open positions for a specific account. Use this for portfolio scree
 
 <!-- UsageSnippet language="typescript" operationID="getAccountPositions" method="get" path="/v1/accounts/{id}/positions" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -40,8 +40,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { accountsGetPositions } from "finance-dev/funcs/accounts-get-positions.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { accountsGetPositions } from "@ariesdotcom/finance-dev/funcs/accounts-get-positions.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -105,7 +105,7 @@ Retrieve account balance, cash, equity, and buying power for a specific account 
 
 <!-- UsageSnippet language="typescript" operationID="getAccountBalance" method="get" path="/v2/accounts/{id}/balance" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -130,8 +130,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { accountsGetBalance } from "finance-dev/funcs/accounts-get-balance.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { accountsGetBalance } from "@ariesdotcom/finance-dev/funcs/accounts-get-balance.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

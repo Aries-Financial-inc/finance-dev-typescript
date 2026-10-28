@@ -5,7 +5,7 @@ Option contract type for option cancels. Use `CALL` for calls and `PUT` for puts
 ## Example Usage
 
 ```typescript
-import { CancelOrdRequestPutCall1 } from "finance-dev/models";
+import { CancelOrdRequestPutCall1 } from "@ariesdotcom/finance-dev/models";
 
 let value: CancelOrdRequestPutCall1 = "CALL";
 

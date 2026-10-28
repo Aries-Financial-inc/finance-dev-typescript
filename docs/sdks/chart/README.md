@@ -20,7 +20,7 @@ Returns the chart configuration including supported resolutions and charting cap
 
 <!-- UsageSnippet language="typescript" operationID="getChartConfig" method="get" path="/v1/chart/config" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -43,8 +43,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { chartGetConfig } from "finance-dev/funcs/chart-get-config.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { chartGetConfig } from "@ariesdotcom/finance-dev/funcs/chart-get-config.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -104,7 +104,7 @@ Retrieves historical price bars (OHLCV - Open, High, Low, Close, Volume) for a s
 
 <!-- UsageSnippet language="typescript" operationID="getChartHistory" method="get" path="/v1/chart/history" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -132,8 +132,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { chartGetHistory } from "finance-dev/funcs/chart-get-history.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { chartGetHistory } from "@ariesdotcom/finance-dev/funcs/chart-get-history.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -199,7 +199,7 @@ Retrieves quote data for one or multiple symbols. Returns current market data in
 
 <!-- UsageSnippet language="typescript" operationID="getQuotes" method="get" path="/v1/chart/quotes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -224,8 +224,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { chartGetQuotes } from "finance-dev/funcs/chart-get-quotes.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { chartGetQuotes } from "@ariesdotcom/finance-dev/funcs/chart-get-quotes.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -288,7 +288,7 @@ Searches for trading symbols (stocks, indices, options, futures) based on a quer
 
 <!-- UsageSnippet language="typescript" operationID="searchSymbols" method="get" path="/v1/chart/search" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -313,8 +313,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { chartSearchSymbols } from "finance-dev/funcs/chart-search-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { chartSearchSymbols } from "@ariesdotcom/finance-dev/funcs/chart-search-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -377,7 +377,7 @@ Retrieves detailed symbol information for charting: exchange, timezone, session,
 
 <!-- UsageSnippet language="typescript" operationID="getSymbolInfo" method="get" path="/v1/chart/symbols" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -402,8 +402,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { chartGetSymbols } from "finance-dev/funcs/chart-get-symbols.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { chartGetSymbols } from "@ariesdotcom/finance-dev/funcs/chart-get-symbols.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -466,7 +466,7 @@ Retrieves tick-based chart bars for a specific symbol. Unlike time-based candles
 
 <!-- UsageSnippet language="typescript" operationID="getTickHistory" method="get" path="/v1/chart/tick-history" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -493,8 +493,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { chartGetTickHistory } from "finance-dev/funcs/chart-get-tick-history.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { chartGetTickHistory } from "@ariesdotcom/finance-dev/funcs/chart-get-tick-history.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -559,7 +559,7 @@ Returns the current server time as a Unix timestamp in **seconds**. Response is 
 
 <!-- UsageSnippet language="typescript" operationID="getChartTime" method="get" path="/v1/chart/time" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -582,8 +582,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { chartGetTime } from "finance-dev/funcs/chart-get-time.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { chartGetTime } from "@ariesdotcom/finance-dev/funcs/chart-get-time.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

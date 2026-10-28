@@ -5,7 +5,7 @@ U.S. Treasury yield curve observations by maturity for each reference date, sour
 ## Example Usage
 
 ```typescript
-import { TreasuryYieldsResponse } from "finance-dev/models";
+import { TreasuryYieldsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: TreasuryYieldsResponse = {};
 ```

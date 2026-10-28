@@ -5,7 +5,7 @@ Companies belonging to an investment theme.
 ## Example Usage
 
 ```typescript
-import { InvestmentThemeResponse } from "finance-dev/models";
+import { InvestmentThemeResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: InvestmentThemeResponse = {
   theme: "ai",

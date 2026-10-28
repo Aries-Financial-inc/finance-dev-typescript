@@ -23,7 +23,7 @@ Omitted when the broker has not yet reported a status.
 ## Example Usage
 
 ```typescript
-import { OrdStatus } from "finance-dev/models";
+import { OrdStatus } from "@ariesdotcom/finance-dev/models";
 
 let value: OrdStatus = "STOPPED";
 

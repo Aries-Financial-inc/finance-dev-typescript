@@ -9,7 +9,7 @@ How the order is priced. Pick one:
 ## Example Usage
 
 ```typescript
-import { OrderTypeEnum } from "finance-dev/models";
+import { OrderTypeEnum } from "@ariesdotcom/finance-dev/models";
 
 let value: OrderTypeEnum = "LIMIT";
 

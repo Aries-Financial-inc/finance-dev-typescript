@@ -5,7 +5,7 @@ Company profile data for research pages. Use it to explain what the company does
 ## Example Usage
 
 ```typescript
-import { CompanyProfile } from "finance-dev/models";
+import { CompanyProfile } from "@ariesdotcom/finance-dev/models";
 
 let value: CompanyProfile = {};
 ```

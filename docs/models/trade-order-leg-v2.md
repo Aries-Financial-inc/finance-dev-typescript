@@ -5,7 +5,7 @@ Option leg on a v2 order (`order.Leg`). Multi-leg orders carry per-leg `avgPrice
 ## Example Usage
 
 ```typescript
-import { TradeOrderLegV2 } from "finance-dev/models";
+import { TradeOrderLegV2 } from "@ariesdotcom/finance-dev/models";
 
 let value: TradeOrderLegV2 = {
   maturity: "<value>",

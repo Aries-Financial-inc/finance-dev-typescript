@@ -5,7 +5,7 @@ Current day aggregate
 ## Example Usage
 
 ```typescript
-import { Day } from "finance-dev/models";
+import { Day } from "@ariesdotcom/finance-dev/models";
 
 let value: Day = {};
 ```

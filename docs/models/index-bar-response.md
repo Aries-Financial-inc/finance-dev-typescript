@@ -5,7 +5,7 @@ Response containing a single OHLC bar for an index along with the index metadata
 ## Example Usage
 
 ```typescript
-import { IndexBarResponse } from "finance-dev/models";
+import { IndexBarResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: IndexBarResponse = {};
 ```

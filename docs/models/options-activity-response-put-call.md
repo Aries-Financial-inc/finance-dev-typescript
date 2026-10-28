@@ -5,7 +5,7 @@ Option type (PUT or CALL)
 ## Example Usage
 
 ```typescript
-import { OptionsActivityResponsePutCall } from "finance-dev/models";
+import { OptionsActivityResponsePutCall } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionsActivityResponsePutCall = "P";
 

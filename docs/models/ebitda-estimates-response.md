@@ -5,7 +5,7 @@ Analyst consensus EBITDA estimates for a stock by reporting period, sourced from
 ## Example Usage
 
 ```typescript
-import { EbitdaEstimatesResponse } from "finance-dev/models";
+import { EbitdaEstimatesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: EbitdaEstimatesResponse = {
   ebitdaEstimates: {

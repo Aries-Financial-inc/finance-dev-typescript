@@ -7,7 +7,7 @@ How long each bar covers. Pair with `period` to set the exact size (e.g. `precis
 ## Example Usage
 
 ```typescript
-import { GetIndexBarsPrecision } from "finance-dev/models/operations";
+import { GetIndexBarsPrecision } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetIndexBarsPrecision = "Minutes";
 

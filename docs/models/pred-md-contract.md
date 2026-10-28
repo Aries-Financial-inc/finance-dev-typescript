@@ -5,8 +5,8 @@ A single tradable event contract at a specific strike.
 ## Example Usage
 
 ```typescript
-import { PredMdContract } from "finance-dev/models";
-import { Decimal } from "finance-dev/types";
+import { PredMdContract } from "@ariesdotcom/finance-dev/models";
+import { Decimal } from "@ariesdotcom/finance-dev/types";
 
 let value: PredMdContract = {
   baseEventId: "<id>",

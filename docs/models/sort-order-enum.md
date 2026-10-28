@@ -5,7 +5,7 @@ Sort direction for results. Use ascending for oldest or smallest first, descendi
 ## Example Usage
 
 ```typescript
-import { SortOrderEnum } from "finance-dev/models";
+import { SortOrderEnum } from "@ariesdotcom/finance-dev/models";
 
 let value: SortOrderEnum = "asc";
 

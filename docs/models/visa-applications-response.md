@@ -5,7 +5,7 @@ H-1B and permanent visa applications filed by a company, as provided by Finnhub.
 ## Example Usage
 
 ```typescript
-import { VisaApplicationsResponse } from "finance-dev/models";
+import { VisaApplicationsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: VisaApplicationsResponse = {};
 ```

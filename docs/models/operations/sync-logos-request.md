@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SyncLogosRequest } from "finance-dev/models/operations";
+import { SyncLogosRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: SyncLogosRequest = {
   fields: "logo_light,logo_dark,mark_light,mark_dark",

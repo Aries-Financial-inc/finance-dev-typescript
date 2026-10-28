@@ -5,7 +5,7 @@ Standard success envelope used by all success responses. `data` is endpoint-spec
 ## Example Usage
 
 ```typescript
-import { SearchResponseBody } from "finance-dev/models/operations";
+import { SearchResponseBody } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: SearchResponseBody = {
   data: {

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CancelOrdRequest2 } from "finance-dev/models";
+import { CancelOrdRequest2 } from "@ariesdotcom/finance-dev/models";
 
 let value: CancelOrdRequest2 = {
   maturity: new Date("2025-01-17"),

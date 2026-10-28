@@ -5,7 +5,7 @@ Paginated list of historical quotes for an options contract.
 ## Example Usage
 
 ```typescript
-import { OptionQuotesResponse } from "finance-dev/models";
+import { OptionQuotesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionQuotesResponse = {};
 ```

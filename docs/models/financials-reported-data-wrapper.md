@@ -5,7 +5,7 @@ Company identifiers and the list of reported SEC filings.
 ## Example Usage
 
 ```typescript
-import { FinancialsReportedDataWrapper } from "finance-dev/models";
+import { FinancialsReportedDataWrapper } from "@ariesdotcom/finance-dev/models";
 
 let value: FinancialsReportedDataWrapper = {};
 ```

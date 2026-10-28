@@ -5,7 +5,7 @@ Last trade object
 ## Example Usage
 
 ```typescript
-import { StockLastTradeResponseResults } from "finance-dev/models";
+import { StockLastTradeResponseResults } from "@ariesdotcom/finance-dev/models";
 
 let value: StockLastTradeResponseResults = {};
 ```

@@ -5,7 +5,7 @@ Single analyst rating. Fields use snake_case; some fields may be absent when emp
 ## Example Usage
 
 ```typescript
-import { Rating } from "finance-dev/models";
+import { Rating } from "@ariesdotcom/finance-dev/models";
 
 let value: Rating = {};
 ```

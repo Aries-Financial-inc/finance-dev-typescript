@@ -18,7 +18,7 @@ List all watchlists owned by the authenticated user. Users normally always have 
 
 <!-- UsageSnippet language="typescript" operationID="getConfigWatchlists" method="get" path="/v1/config/watchlist" example="watchlists" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -41,8 +41,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsList } from "finance-dev/funcs/watchlists-list.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsList } from "@ariesdotcom/finance-dev/funcs/watchlists-list.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -100,7 +100,7 @@ Create a new watchlist for the authenticated user. Watchlist names must be uniqu
 
 <!-- UsageSnippet language="typescript" operationID="createConfigWatchlist" method="post" path="/v1/config/watchlist" example="createWatchlist" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -130,8 +130,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsCreate } from "finance-dev/funcs/watchlists-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsCreate } from "@ariesdotcom/finance-dev/funcs/watchlists-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -165,7 +165,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="createConfigWatchlist" method="post" path="/v1/config/watchlist" example="created" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -195,8 +195,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsCreate } from "finance-dev/funcs/watchlists-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsCreate } from "@ariesdotcom/finance-dev/funcs/watchlists-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -230,7 +230,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="createConfigWatchlist" method="post" path="/v1/config/watchlist" example="createdWithInvalidSymbols" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -260,8 +260,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsCreate } from "finance-dev/funcs/watchlists-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsCreate } from "@ariesdotcom/finance-dev/funcs/watchlists-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -295,7 +295,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="createConfigWatchlist" method="post" path="/v1/config/watchlist" example="flat" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -325,8 +325,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsCreate } from "finance-dev/funcs/watchlists-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsCreate } from "@ariesdotcom/finance-dev/funcs/watchlists-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -360,7 +360,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="createConfigWatchlist" method="post" path="/v1/config/watchlist" example="flat_message" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -390,8 +390,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsCreate } from "finance-dev/funcs/watchlists-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsCreate } from "@ariesdotcom/finance-dev/funcs/watchlists-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -425,7 +425,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="createConfigWatchlist" method="post" path="/v1/config/watchlist" example="flat_string" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -455,8 +455,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsCreate } from "finance-dev/funcs/watchlists-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsCreate } from "@ariesdotcom/finance-dev/funcs/watchlists-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -490,7 +490,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="createConfigWatchlist" method="post" path="/v1/config/watchlist" example="flat_with_codes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -520,8 +520,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsCreate } from "finance-dev/funcs/watchlists-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsCreate } from "@ariesdotcom/finance-dev/funcs/watchlists-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -555,7 +555,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="createConfigWatchlist" method="post" path="/v1/config/watchlist" example="nested" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -585,8 +585,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsCreate } from "finance-dev/funcs/watchlists-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsCreate } from "@ariesdotcom/finance-dev/funcs/watchlists-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -620,7 +620,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="createConfigWatchlist" method="post" path="/v1/config/watchlist" example="nested_bad_request" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -650,8 +650,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsCreate } from "finance-dev/funcs/watchlists-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsCreate } from "@ariesdotcom/finance-dev/funcs/watchlists-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -685,7 +685,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="createConfigWatchlist" method="post" path="/v1/config/watchlist" example="nested_error_object" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -715,8 +715,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsCreate } from "finance-dev/funcs/watchlists-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsCreate } from "@ariesdotcom/finance-dev/funcs/watchlists-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -750,7 +750,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="createConfigWatchlist" method="post" path="/v1/config/watchlist" example="nested_shared_http_error" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -780,8 +780,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsCreate } from "finance-dev/funcs/watchlists-create.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsCreate } from "@ariesdotcom/finance-dev/funcs/watchlists-create.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -849,7 +849,7 @@ Unlike Create and Update, symbols sent here are stored as-is and are **not** upp
 
 <!-- UsageSnippet language="typescript" operationID="replaceConfigWatchlists" method="put" path="/v1/config/watchlist" example="flat" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -881,8 +881,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsReplaceAll } from "finance-dev/funcs/watchlists-replace-all.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsReplaceAll } from "@ariesdotcom/finance-dev/funcs/watchlists-replace-all.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -918,7 +918,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceConfigWatchlists" method="put" path="/v1/config/watchlist" example="flat_message" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -941,8 +941,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsReplaceAll } from "finance-dev/funcs/watchlists-replace-all.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsReplaceAll } from "@ariesdotcom/finance-dev/funcs/watchlists-replace-all.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -969,7 +969,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceConfigWatchlists" method="put" path="/v1/config/watchlist" example="flat_string" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -992,8 +992,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsReplaceAll } from "finance-dev/funcs/watchlists-replace-all.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsReplaceAll } from "@ariesdotcom/finance-dev/funcs/watchlists-replace-all.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1020,7 +1020,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceConfigWatchlists" method="put" path="/v1/config/watchlist" example="flat_with_codes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1043,8 +1043,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsReplaceAll } from "finance-dev/funcs/watchlists-replace-all.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsReplaceAll } from "@ariesdotcom/finance-dev/funcs/watchlists-replace-all.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1071,7 +1071,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceConfigWatchlists" method="put" path="/v1/config/watchlist" example="nested" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1103,8 +1103,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsReplaceAll } from "finance-dev/funcs/watchlists-replace-all.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsReplaceAll } from "@ariesdotcom/finance-dev/funcs/watchlists-replace-all.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1140,7 +1140,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceConfigWatchlists" method="put" path="/v1/config/watchlist" example="nested_bad_request" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1172,8 +1172,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsReplaceAll } from "finance-dev/funcs/watchlists-replace-all.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsReplaceAll } from "@ariesdotcom/finance-dev/funcs/watchlists-replace-all.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1209,7 +1209,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceConfigWatchlists" method="put" path="/v1/config/watchlist" example="nested_error_object" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1232,8 +1232,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsReplaceAll } from "finance-dev/funcs/watchlists-replace-all.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsReplaceAll } from "@ariesdotcom/finance-dev/funcs/watchlists-replace-all.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1260,7 +1260,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceConfigWatchlists" method="put" path="/v1/config/watchlist" example="nested_shared_http_error" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1283,8 +1283,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsReplaceAll } from "finance-dev/funcs/watchlists-replace-all.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsReplaceAll } from "@ariesdotcom/finance-dev/funcs/watchlists-replace-all.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1311,7 +1311,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceConfigWatchlists" method="put" path="/v1/config/watchlist" example="replaceAll" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1351,8 +1351,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsReplaceAll } from "finance-dev/funcs/watchlists-replace-all.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsReplaceAll } from "@ariesdotcom/finance-dev/funcs/watchlists-replace-all.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1396,7 +1396,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceConfigWatchlists" method="put" path="/v1/config/watchlist" example="replaced" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1428,8 +1428,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsReplaceAll } from "finance-dev/funcs/watchlists-replace-all.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsReplaceAll } from "@ariesdotcom/finance-dev/funcs/watchlists-replace-all.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1465,7 +1465,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceConfigWatchlists" method="put" path="/v1/config/watchlist" example="resetAll" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1488,8 +1488,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsReplaceAll } from "finance-dev/funcs/watchlists-replace-all.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsReplaceAll } from "@ariesdotcom/finance-dev/funcs/watchlists-replace-all.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1516,7 +1516,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="replaceConfigWatchlists" method="put" path="/v1/config/watchlist" example="resetToDefault" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1548,8 +1548,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsReplaceAll } from "finance-dev/funcs/watchlists-replace-all.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsReplaceAll } from "@ariesdotcom/finance-dev/funcs/watchlists-replace-all.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1617,7 +1617,7 @@ Retrieve a single watchlist owned by the authenticated user, identified by its n
 
 <!-- UsageSnippet language="typescript" operationID="getConfigWatchlistById" method="get" path="/v1/config/watchlist/{watchlist_id}" example="found" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1642,8 +1642,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsGet } from "finance-dev/funcs/watchlists-get.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsGet } from "@ariesdotcom/finance-dev/funcs/watchlists-get.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1708,7 +1708,7 @@ Partially update a watchlist owned by the authenticated user: rename it, add sym
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="addAndRemoveSymbols" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1741,8 +1741,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1779,7 +1779,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="flat" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1813,8 +1813,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1852,7 +1852,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="flat_message" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1885,8 +1885,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1923,7 +1923,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="flat_string" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1956,8 +1956,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1994,7 +1994,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="flat_with_codes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2027,8 +2027,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2065,7 +2065,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="nested" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2098,8 +2098,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2136,7 +2136,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="nested_bad_request" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2170,8 +2170,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2209,7 +2209,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="nested_error_object" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2242,8 +2242,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2280,7 +2280,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="nested_shared_http_error" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2314,8 +2314,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2353,7 +2353,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="renameWatchlist" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2381,8 +2381,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2414,7 +2414,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="renamed" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2447,8 +2447,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2485,7 +2485,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="symbolsUpdated" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2518,8 +2518,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2556,7 +2556,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="updateConfigWatchlistById" method="patch" path="/v1/config/watchlist/{watchlist_id}" example="symbolsUpdatedWithInvalid" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -2589,8 +2589,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { watchlistsUpdate } from "finance-dev/funcs/watchlists-update.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { watchlistsUpdate } from "@ariesdotcom/finance-dev/funcs/watchlists-update.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

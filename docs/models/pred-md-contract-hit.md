@@ -5,8 +5,8 @@ One matching contract, with its event's and base event's text flattened in. The 
 ## Example Usage
 
 ```typescript
-import { PredMdContractHit } from "finance-dev/models";
-import { Decimal } from "finance-dev/types";
+import { PredMdContractHit } from "@ariesdotcom/finance-dev/models";
+import { Decimal } from "@ariesdotcom/finance-dev/types";
 
 let value: PredMdContractHit = {
   baseEventId: "<id>",

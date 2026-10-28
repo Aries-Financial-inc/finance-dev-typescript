@@ -5,7 +5,7 @@ One node of the category tree.
 ## Example Usage
 
 ```typescript
-import { PredMdCategory } from "finance-dev/models";
+import { PredMdCategory } from "@ariesdotcom/finance-dev/models";
 
 let value: PredMdCategory = {
   children: [

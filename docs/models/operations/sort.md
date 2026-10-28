@@ -5,7 +5,7 @@ Sort direction for aggregate bars. Use `asc` for oldest first or `desc` for newe
 ## Example Usage
 
 ```typescript
-import { Sort } from "finance-dev/models/operations";
+import { Sort } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: Sort = "asc";
 

@@ -5,7 +5,7 @@ Stock transactions disclosed by members of US Congress for a company, as provide
 ## Example Usage
 
 ```typescript
-import { CongressionalTradingResponse } from "finance-dev/models";
+import { CongressionalTradingResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: CongressionalTradingResponse = {};
 ```

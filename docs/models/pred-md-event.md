@@ -5,7 +5,7 @@ One real-world event under a base event (e.g. HORC_1126).
 ## Example Usage
 
 ```typescript
-import { PredMdEvent } from "finance-dev/models";
+import { PredMdEvent } from "@ariesdotcom/finance-dev/models";
 
 let value: PredMdEvent = {
   baseEventId: "<id>",

@@ -5,7 +5,7 @@ Nested group of clauses with its own operator (AND, OR, NOT).
 ## Example Usage
 
 ```typescript
-import { ScreenGroup } from "finance-dev/models";
+import { ScreenGroup } from "@ariesdotcom/finance-dev/models";
 
 let value: ScreenGroup = {};
 ```

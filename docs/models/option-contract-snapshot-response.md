@@ -5,7 +5,7 @@ Single option contract snapshot (`OptionContractSnapshotResponse`). Responses ma
 ## Example Usage
 
 ```typescript
-import { OptionContractSnapshotResponse } from "finance-dev/models";
+import { OptionContractSnapshotResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionContractSnapshotResponse = {};
 ```

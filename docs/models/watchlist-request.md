@@ -5,7 +5,7 @@ One watchlist entry in a bulk replace request. `name` must be unique among the e
 ## Example Usage
 
 ```typescript
-import { WatchlistRequest } from "finance-dev/models";
+import { WatchlistRequest } from "@ariesdotcom/finance-dev/models";
 
 let value: WatchlistRequest = {
   name: "<value>",

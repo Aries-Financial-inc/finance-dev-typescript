@@ -5,7 +5,7 @@ Paginated response containing inflation expectations data from the upstream data
 ## Example Usage
 
 ```typescript
-import { InflationExpectationsResponse } from "finance-dev/models";
+import { InflationExpectationsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: InflationExpectationsResponse = {};
 ```

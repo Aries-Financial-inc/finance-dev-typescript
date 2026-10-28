@@ -5,7 +5,7 @@ Response containing analyst insights.
 ## Example Usage
 
 ```typescript
-import { AnalystInsightsResponse } from "finance-dev/models";
+import { AnalystInsightsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: AnalystInsightsResponse = {
   insights: [

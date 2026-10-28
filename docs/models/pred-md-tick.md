@@ -3,8 +3,8 @@
 ## Example Usage
 
 ```typescript
-import { PredMdTick } from "finance-dev/models";
-import { Decimal } from "finance-dev/types";
+import { PredMdTick } from "@ariesdotcom/finance-dev/models";
+import { Decimal } from "@ariesdotcom/finance-dev/types";
 
 let value: PredMdTick = {
   noPrice: new Decimal("0.46"),

@@ -5,7 +5,7 @@ Response containing unusual options activity records.
 ## Example Usage
 
 ```typescript
-import { OptionsActivityResponse } from "finance-dev/models";
+import { OptionsActivityResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionsActivityResponse = {};
 ```

@@ -5,7 +5,7 @@ Response returned after requesting an order cancel. Treat it as the cancel resul
 ## Example Usage
 
 ```typescript
-import { CancelOrdResponse } from "finance-dev/models";
+import { CancelOrdResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: CancelOrdResponse = {
   clOrdId: "ORDER-20260115-002",

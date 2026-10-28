@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PlacePredictionOrderRequest } from "finance-dev/models/operations";
+import { PlacePredictionOrderRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: PlacePredictionOrderRequest = {
   idempotencyKey: "7d1c8e0a-4b8f-4e3a-9f43-2a6b1d0c9e11",

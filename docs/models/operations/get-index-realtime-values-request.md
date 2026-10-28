@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetIndexRealtimeValuesRequest } from "finance-dev/models/operations";
+import { GetIndexRealtimeValuesRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetIndexRealtimeValuesRequest = {
   identifiers: "<value>",

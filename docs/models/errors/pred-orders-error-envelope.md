@@ -5,7 +5,7 @@ Invalid request. `INVALID_ORDER` carries the reason in `message`; on placement t
 ## Example Usage
 
 ```typescript
-import { PredOrdersErrorEnvelope } from "finance-dev/models/errors";
+import { PredOrdersErrorEnvelope } from "@ariesdotcom/finance-dev/models/errors";
 
 // No examples available for this model
 ```

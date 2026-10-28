@@ -20,7 +20,7 @@ Retrieve SEC income statement rows per filing period. Filter by CIK, tickers, fi
 
 <!-- UsageSnippet language="typescript" operationID="getIncomeStatements" method="get" path="/v1/financials/income-statements" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -45,8 +45,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { financialsGetIncomeStatements } from "finance-dev/funcs/financials-get-income-statements.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { financialsGetIncomeStatements } from "@ariesdotcom/finance-dev/funcs/financials-get-income-statements.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -109,7 +109,7 @@ Retrieve comprehensive financial ratios including liquidity, profitability, leve
 
 <!-- UsageSnippet language="typescript" operationID="getFinancialRatios" method="get" path="/v1/financials/ratios" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -137,8 +137,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { financialsGetRatios } from "finance-dev/funcs/financials-get-ratios.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { financialsGetRatios } from "@ariesdotcom/finance-dev/funcs/financials-get-ratios.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -206,7 +206,7 @@ At least one of symbol, cik, or accessNumber is required. Multiple identifiers a
 
 <!-- UsageSnippet language="typescript" operationID="getReportedFinancials" method="get" path="/v1/financials/reported" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -231,8 +231,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { financialsGetReported } from "finance-dev/funcs/financials-get-reported.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { financialsGetReported } from "@ariesdotcom/finance-dev/funcs/financials-get-reported.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -297,7 +297,7 @@ At least one of symbol or cik is required; both are accepted.
 
 <!-- UsageSnippet language="typescript" operationID="getRevenueBreakdown" method="get" path="/v1/financials/revenue-breakdown" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -323,8 +323,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { financialsGetRevenueBreakdown } from "finance-dev/funcs/financials-get-revenue-breakdown.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { financialsGetRevenueBreakdown } from "@ariesdotcom/finance-dev/funcs/financials-get-revenue-breakdown.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -388,7 +388,7 @@ Retrieve short interest statistics including short volume, short ratio, and days
 
 <!-- UsageSnippet language="typescript" operationID="getShortInterest" method="get" path="/v1/financials/short-interest" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -416,8 +416,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { financialsGetShortInterest } from "finance-dev/funcs/financials-get-short-interest.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { financialsGetShortInterest } from "@ariesdotcom/finance-dev/funcs/financials-get-short-interest.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -483,7 +483,7 @@ Retrieve daily short volume data showing the number of shares sold short and ove
 
 <!-- UsageSnippet language="typescript" operationID="getShortVolume" method="get" path="/v1/financials/short-volume" example="success" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -511,8 +511,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { financialsGetShortVolume } from "finance-dev/funcs/financials-get-short-volume.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { financialsGetShortVolume } from "@ariesdotcom/finance-dev/funcs/financials-get-short-volume.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -578,7 +578,7 @@ Retrieve standardized financial statements (income, balance sheet, cash flow). *
 
 <!-- UsageSnippet language="typescript" operationID="getFinancialStatements" method="get" path="/v1/financials/statements" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -605,8 +605,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { financialsGetStatements } from "finance-dev/funcs/financials-get-statements.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { financialsGetStatements } from "@ariesdotcom/finance-dev/funcs/financials-get-statements.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

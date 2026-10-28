@@ -14,7 +14,7 @@ Returns prediction-market YES/NO price history for a single symbol. Time range i
 
 <!-- UsageSnippet language="typescript" operationID="getHistory" method="get" path="/v1/predictions/historical-data" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev();
 
@@ -37,8 +37,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { predictionsHistoryGet } from "finance-dev/funcs/predictions-history-get.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { predictionsHistoryGet } from "@ariesdotcom/finance-dev/funcs/predictions-history-get.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

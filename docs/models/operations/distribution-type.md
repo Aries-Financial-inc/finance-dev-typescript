@@ -5,7 +5,7 @@ Exact type: recurring, special, supplemental, irregular, unknown
 ## Example Usage
 
 ```typescript
-import { DistributionType } from "finance-dev/models/operations";
+import { DistributionType } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: DistributionType = "recurring";
 

@@ -5,7 +5,7 @@ Sort order for returned records. Use asc for oldest first or desc for newest fir
 ## Example Usage
 
 ```typescript
-import { GetStockQuotesOrder } from "finance-dev/models/operations";
+import { GetStockQuotesOrder } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetStockQuotesOrder = "desc";
 

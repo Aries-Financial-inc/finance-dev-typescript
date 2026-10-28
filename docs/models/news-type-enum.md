@@ -7,7 +7,7 @@ Source category of the news item. Pick one:
 ## Example Usage
 
 ```typescript
-import { NewsTypeEnum } from "finance-dev/models";
+import { NewsTypeEnum } from "@ariesdotcom/finance-dev/models";
 
 let value: NewsTypeEnum = "news";
 

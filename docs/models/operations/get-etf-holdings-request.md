@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetEtfHoldingsRequest } from "finance-dev/models/operations";
+import { GetEtfHoldingsRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetEtfHoldingsRequest = {
   date: new Date("2024-12-01"),

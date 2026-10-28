@@ -29,7 +29,7 @@ Retrieve bank branch data for a symbol.
 
 <!-- UsageSnippet language="typescript" operationID="getBankBranches" method="get" path="/v1/stock/bank-branch" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -54,8 +54,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetBankBranch } from "finance-dev/funcs/stock-alternative-get-bank-branch.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetBankBranch } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-bank-branch.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -118,7 +118,7 @@ Retrieve congressional trading data for a symbol within a date range.
 
 <!-- UsageSnippet language="typescript" operationID="getCongressionalTrading" method="get" path="/v1/stock/congressional-trading" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -145,8 +145,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetCongressionalTrading } from "finance-dev/funcs/stock-alternative-get-congressional-trading.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetCongressionalTrading } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-congressional-trading.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -211,7 +211,7 @@ Retrieve COVID-19 US data.
 
 <!-- UsageSnippet language="typescript" operationID="getCovid19UsCases" method="get" path="/v1/stock/covid19/us" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -234,8 +234,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetCovid19US } from "finance-dev/funcs/stock-alternative-get-covid19-us.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetCovid19US } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-covid19-us.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -295,7 +295,7 @@ Retrieve live or upcoming earnings call information.
 
 <!-- UsageSnippet language="typescript" operationID="getEarningsCallLive" method="get" path="/v1/stock/earnings-call-live" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -320,8 +320,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetEarningsCallLive } from "finance-dev/funcs/stock-alternative-get-earnings-call-live.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetEarningsCallLive } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-earnings-call-live.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -384,7 +384,7 @@ Retrieve earnings quality score metrics for a company (annual or quarterly).
 
 <!-- UsageSnippet language="typescript" operationID="getEarningsQualityScore" method="get" path="/v1/stock/earnings-quality-score" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -410,8 +410,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetEarningsQualityScore } from "finance-dev/funcs/stock-alternative-get-earnings-quality-score.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetEarningsQualityScore } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-earnings-quality-score.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -475,7 +475,7 @@ Retrieve environmental, social, and governance (ESG) data for a company.
 
 <!-- UsageSnippet language="typescript" operationID="getCompanyEsg" method="get" path="/v1/stock/esg" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -500,8 +500,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetEsg } from "finance-dev/funcs/stock-alternative-get-esg.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetEsg } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-esg.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -564,7 +564,7 @@ Retrieve FDA advisory committee meeting calendar.
 
 <!-- UsageSnippet language="typescript" operationID="getFdaAdvisoryCommitteeCalendar" method="get" path="/v1/stock/fda-advisory-committee-calendar" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -587,8 +587,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetFDAAdvisoryCommitteeCalendar } from "finance-dev/funcs/stock-alternative-get-fda-advisory-committee-calendar.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetFDAAdvisoryCommitteeCalendar } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-fda-advisory-committee-calendar.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -648,7 +648,7 @@ Retrieve historical environmental, social, and governance (ESG) data for a compa
 
 <!-- UsageSnippet language="typescript" operationID="getHistoricalEsg" method="get" path="/v1/stock/historical-esg" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -673,8 +673,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetHistoricalESG } from "finance-dev/funcs/stock-alternative-get-historical-esg.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetHistoricalESG } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-historical-esg.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -737,7 +737,7 @@ Retrieve investment theme data by theme name.
 
 <!-- UsageSnippet language="typescript" operationID="getInvestmentTheme" method="get" path="/v1/stock/investment-theme" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -762,8 +762,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetInvestmentTheme } from "finance-dev/funcs/stock-alternative-get-investment-theme.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetInvestmentTheme } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-investment-theme.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -826,7 +826,7 @@ Retrieve company presentation materials for a symbol.
 
 <!-- UsageSnippet language="typescript" operationID="getCompanyPresentation" method="get" path="/v1/stock/presentation" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -851,8 +851,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetPresentation } from "finance-dev/funcs/stock-alternative-get-presentation.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetPresentation } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-presentation.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -915,7 +915,7 @@ Retrieve social media sentiment metrics for a symbol.
 
 <!-- UsageSnippet language="typescript" operationID="getSocialSentiment" method="get" path="/v1/stock/social-sentiment" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -940,8 +940,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetSocialSentiment } from "finance-dev/funcs/stock-alternative-get-social-sentiment.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetSocialSentiment } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-social-sentiment.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1004,7 +1004,7 @@ Retrieve supply chain data for a symbol.
 
 <!-- UsageSnippet language="typescript" operationID="getSupplyChain" method="get" path="/v1/stock/supply-chain" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1029,8 +1029,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetSupplyChain } from "finance-dev/funcs/stock-alternative-get-supply-chain.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetSupplyChain } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-supply-chain.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1093,7 +1093,7 @@ Retrieve a list of available earnings call transcripts for a symbol.
 
 <!-- UsageSnippet language="typescript" operationID="listTranscripts" method="get" path="/v1/stock/transcripts/list" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1118,8 +1118,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetTranscriptsList } from "finance-dev/funcs/stock-alternative-get-transcripts-list.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetTranscriptsList } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-transcripts-list.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1182,7 +1182,7 @@ Retrieve USA spending data for a symbol within a date range.
 
 <!-- UsageSnippet language="typescript" operationID="getUsaSpending" method="get" path="/v1/stock/usa-spending" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1209,8 +1209,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetUsaSpending } from "finance-dev/funcs/stock-alternative-get-usa-spending.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetUsaSpending } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-usa-spending.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1275,7 +1275,7 @@ Retrieve USPTO patent data for a symbol within a date range.
 
 <!-- UsageSnippet language="typescript" operationID="getUsptoPatents" method="get" path="/v1/stock/uspto-patent" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1302,8 +1302,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetUsptoPatent } from "finance-dev/funcs/stock-alternative-get-uspto-patent.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetUsptoPatent } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-uspto-patent.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1368,7 +1368,7 @@ Retrieve H1-B visa application data for a symbol within a date range.
 
 <!-- UsageSnippet language="typescript" operationID="getVisaApplications" method="get" path="/v1/stock/visa-application" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -1395,8 +1395,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stockAlternativeGetVisaApplication } from "finance-dev/funcs/stock-alternative-get-visa-application.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stockAlternativeGetVisaApplication } from "@ariesdotcom/finance-dev/funcs/stock-alternative-get-visa-application.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

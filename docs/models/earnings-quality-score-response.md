@@ -5,7 +5,7 @@ Earnings quality score history for a company, as provided by Finnhub.
 ## Example Usage
 
 ```typescript
-import { EarningsQualityScoreResponse } from "finance-dev/models";
+import { EarningsQualityScoreResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: EarningsQualityScoreResponse = {
   freq: "quarterly",

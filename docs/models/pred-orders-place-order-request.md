@@ -5,7 +5,7 @@ Unknown fields are rejected with `400`. The user is always the authenticated cal
 ## Example Usage
 
 ```typescript
-import { PredOrdersPlaceOrderRequest } from "finance-dev/models";
+import { PredOrdersPlaceOrderRequest } from "@ariesdotcom/finance-dev/models";
 
 let value: PredOrdersPlaceOrderRequest = {
   accountId: "ACCOUNT-0001",

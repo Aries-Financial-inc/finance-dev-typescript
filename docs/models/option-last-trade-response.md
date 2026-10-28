@@ -5,7 +5,7 @@ Most recent trade for an options contract.
 ## Example Usage
 
 ```typescript
-import { OptionLastTradeResponse } from "finance-dev/models";
+import { OptionLastTradeResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionLastTradeResponse = {};
 ```

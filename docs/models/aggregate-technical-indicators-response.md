@@ -5,7 +5,7 @@ Aggregate technical indicator signal and trend strength for a symbol and resolut
 ## Example Usage
 
 ```typescript
-import { AggregateTechnicalIndicatorsResponse } from "finance-dev/models";
+import { AggregateTechnicalIndicatorsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: AggregateTechnicalIndicatorsResponse = {};
 ```

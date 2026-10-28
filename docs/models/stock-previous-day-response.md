@@ -5,7 +5,7 @@ Previous trading day's aggregate bar for a stock ticker, from the Polygon aggreg
 ## Example Usage
 
 ```typescript
-import { StockPreviousDayResponse } from "finance-dev/models";
+import { StockPreviousDayResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: StockPreviousDayResponse = {};
 ```

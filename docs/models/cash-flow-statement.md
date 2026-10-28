@@ -5,7 +5,7 @@ Single SEC cash flow statement row.
 ## Example Usage
 
 ```typescript
-import { CashFlowStatement } from "finance-dev/models";
+import { CashFlowStatement } from "@ariesdotcom/finance-dev/models";
 
 let value: CashFlowStatement = {};
 ```

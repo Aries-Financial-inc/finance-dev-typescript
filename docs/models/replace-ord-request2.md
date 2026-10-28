@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ReplaceOrdRequest2 } from "finance-dev/models";
+import { ReplaceOrdRequest2 } from "@ariesdotcom/finance-dev/models";
 
 let value: ReplaceOrdRequest2 = {
   currency: "USD",

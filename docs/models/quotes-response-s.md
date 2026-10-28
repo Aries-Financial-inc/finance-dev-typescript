@@ -5,7 +5,7 @@ Overall quote response status. `ok` means quote data was returned; `error` means
 ## Example Usage
 
 ```typescript
-import { QuotesResponseS } from "finance-dev/models";
+import { QuotesResponseS } from "@ariesdotcom/finance-dev/models";
 
 let value: QuotesResponseS = "ok";
 

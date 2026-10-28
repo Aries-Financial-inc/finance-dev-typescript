@@ -5,7 +5,7 @@ Which metric group to return. Currently only `all` is supported — it returns e
 ## Example Usage
 
 ```typescript
-import { Metric } from "finance-dev/models/operations";
+import { Metric } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: Metric = "all";
 ```

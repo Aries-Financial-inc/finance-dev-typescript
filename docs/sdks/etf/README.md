@@ -18,7 +18,7 @@ If `skip` cannot be parsed as a signed 64-bit integer, returns 400 Bad Request w
 
 <!-- UsageSnippet language="typescript" operationID="getEtfHoldings" method="get" path="/v1/etf/holdings" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -43,8 +43,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { etfGetHoldings } from "finance-dev/funcs/etf-get-holdings.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { etfGetHoldings } from "@ariesdotcom/finance-dev/funcs/etf-get-holdings.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -107,7 +107,7 @@ Retrieve comprehensive ETF information including fund name, description, expense
 
 <!-- UsageSnippet language="typescript" operationID="getEtfProfile" method="get" path="/v1/etf/profile" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -132,8 +132,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { etfGetProfile } from "finance-dev/funcs/etf-get-profile.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { etfGetProfile } from "@ariesdotcom/finance-dev/funcs/etf-get-profile.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -196,7 +196,7 @@ Retrieve ETF sector allocation breakdown showing percentage exposure to differen
 
 <!-- UsageSnippet language="typescript" operationID="getEtfSectorAllocation" method="get" path="/v1/etf/sector" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -221,8 +221,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { etfGetSector } from "finance-dev/funcs/etf-get-sector.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { etfGetSector } from "@ariesdotcom/finance-dev/funcs/etf-get-sector.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

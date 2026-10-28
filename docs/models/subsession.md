@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Subsession } from "finance-dev/models";
+import { Subsession } from "@ariesdotcom/finance-dev/models";
 
 let value: Subsession = {
   description: "guide that yum uh-huh phew duh break",

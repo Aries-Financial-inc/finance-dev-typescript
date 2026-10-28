@@ -5,7 +5,7 @@ Last minute aggregate
 ## Example Usage
 
 ```typescript
-import { LastMinute } from "finance-dev/models";
+import { LastMinute } from "@ariesdotcom/finance-dev/models";
 
 let value: LastMinute = {};
 ```

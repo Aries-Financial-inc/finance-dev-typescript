@@ -5,7 +5,7 @@ Economic calendar response for the requested date. Use it to show macroeconomic 
 ## Example Usage
 
 ```typescript
-import { GetEconomicsCalendarResponse } from "finance-dev/models";
+import { GetEconomicsCalendarResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: GetEconomicsCalendarResponse = {
   events: [

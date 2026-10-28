@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { OrderType } from "finance-dev/models";
+import { OrderType } from "@ariesdotcom/finance-dev/models";
 
 let value: OrderType = "limit";
 

@@ -5,7 +5,7 @@ ETF holdings payload.
 ## Example Usage
 
 ```typescript
-import { EtfHoldingsResponseData } from "finance-dev/models";
+import { EtfHoldingsResponseData } from "@ariesdotcom/finance-dev/models";
 
 let value: EtfHoldingsResponseData = {};
 ```

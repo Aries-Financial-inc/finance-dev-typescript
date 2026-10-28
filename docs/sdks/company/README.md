@@ -19,7 +19,7 @@ Returns 404 Not Found with error code `NOT_FOUND` when no executive data is avai
 
 <!-- UsageSnippet language="typescript" operationID="getCompanyExecutives" method="get" path="/v1/company/executive" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -44,8 +44,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { companyGetExecutive } from "finance-dev/funcs/company-get-executive.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { companyGetExecutive } from "@ariesdotcom/finance-dev/funcs/company-get-executive.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -110,7 +110,7 @@ Returns 404 Not Found with error code `NOT_FOUND` when no metrics are available 
 
 <!-- UsageSnippet language="typescript" operationID="getCompanyMetrics" method="get" path="/v1/company/metrics" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -136,8 +136,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { companyGetFinancialMetrics } from "finance-dev/funcs/company-get-financial-metrics.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { companyGetFinancialMetrics } from "@ariesdotcom/finance-dev/funcs/company-get-financial-metrics.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -203,7 +203,7 @@ Returns 404 Not Found with error code `NOT_FOUND` when no peers are available fo
 
 <!-- UsageSnippet language="typescript" operationID="getCompanyPeers" method="get" path="/v1/company/peers" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -228,8 +228,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { companyGetPeers } from "finance-dev/funcs/company-get-peers.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { companyGetPeers } from "@ariesdotcom/finance-dev/funcs/company-get-peers.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -296,7 +296,7 @@ Returns 404 Not Found with error code `NOT_FOUND` when no company profile matche
 
 <!-- UsageSnippet language="typescript" operationID="getCompanyProfile" method="get" path="/v1/company/profile" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -323,8 +323,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { companyGetProfile } from "finance-dev/funcs/company-get-profile.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { companyGetProfile } from "@ariesdotcom/finance-dev/funcs/company-get-profile.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

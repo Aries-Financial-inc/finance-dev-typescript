@@ -5,7 +5,7 @@ Descriptive and fundamental attributes of the ETF.
 ## Example Usage
 
 ```typescript
-import { Profile } from "finance-dev/models";
+import { Profile } from "@ariesdotcom/finance-dev/models";
 
 let value: Profile = {};
 ```

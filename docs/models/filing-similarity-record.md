@@ -5,7 +5,7 @@ Cosine similarity scores between a filing and the prior comparable filing, by 10
 ## Example Usage
 
 ```typescript
-import { FilingSimilarityRecord } from "finance-dev/models";
+import { FilingSimilarityRecord } from "@ariesdotcom/finance-dev/models";
 
 let value: FilingSimilarityRecord = {};
 ```

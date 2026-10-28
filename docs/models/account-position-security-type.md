@@ -7,7 +7,7 @@ Indicates whether the position is an equity/stock position or an option position
 ## Example Usage
 
 ```typescript
-import { AccountPositionSecurityType } from "finance-dev/models";
+import { AccountPositionSecurityType } from "@ariesdotcom/finance-dev/models";
 
 let value: AccountPositionSecurityType = "EQUITY";
 

@@ -5,7 +5,7 @@ Daily short sale volume per ticker, including a breakdown by reporting venue, so
 ## Example Usage
 
 ```typescript
-import { ShortVolumeResponse } from "finance-dev/models";
+import { ShortVolumeResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: ShortVolumeResponse = {};
 ```

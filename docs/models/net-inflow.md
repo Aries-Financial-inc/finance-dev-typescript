@@ -5,7 +5,7 @@ Net market inflow snapshot for Nasdaq and NYSE. Use it to show whether reported 
 ## Example Usage
 
 ```typescript
-import { NetInflow } from "finance-dev/models";
+import { NetInflow } from "@ariesdotcom/finance-dev/models";
 
 let value: NetInflow = {
   nasdaqNetInflow: 125000000.5,

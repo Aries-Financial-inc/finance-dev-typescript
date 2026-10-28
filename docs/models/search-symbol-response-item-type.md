@@ -5,7 +5,7 @@ Instrument class returned by symbol search.
 ## Example Usage
 
 ```typescript
-import { SearchSymbolResponseItemType } from "finance-dev/models";
+import { SearchSymbolResponseItemType } from "@ariesdotcom/finance-dev/models";
 
 let value: SearchSymbolResponseItemType = "stock";
 

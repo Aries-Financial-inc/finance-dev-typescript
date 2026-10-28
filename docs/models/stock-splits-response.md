@@ -5,7 +5,7 @@ Stock split events with ratio and adjustment details, as returned by the upstrea
 ## Example Usage
 
 ```typescript
-import { StockSplitsResponse } from "finance-dev/models";
+import { StockSplitsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: StockSplitsResponse = {
   results: [],

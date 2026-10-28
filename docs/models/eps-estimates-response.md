@@ -5,7 +5,7 @@ Analyst consensus EPS estimates for a stock by reporting period, sourced from Fi
 ## Example Usage
 
 ```typescript
-import { EpsEstimatesResponse } from "finance-dev/models";
+import { EpsEstimatesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: EpsEstimatesResponse = {
   epsEstimates: {

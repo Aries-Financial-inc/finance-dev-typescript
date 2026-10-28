@@ -5,7 +5,7 @@ News buzz metrics for the company.
 ## Example Usage
 
 ```typescript
-import { Buzz } from "finance-dev/models";
+import { Buzz } from "@ariesdotcom/finance-dev/models";
 
 let value: Buzz = {};
 ```

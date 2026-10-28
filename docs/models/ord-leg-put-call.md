@@ -5,7 +5,7 @@ Option contract type. Use `CALL` for call options and `PUT` for put options.
 ## Example Usage
 
 ```typescript
-import { OrdLegPutCall } from "finance-dev/models";
+import { OrdLegPutCall } from "@ariesdotcom/finance-dev/models";
 
 let value: OrdLegPutCall = "CALL";
 

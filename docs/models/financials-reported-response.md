@@ -5,7 +5,7 @@ Response containing company financials as reported in SEC filings.
 ## Example Usage
 
 ```typescript
-import { FinancialsReportedResponse } from "finance-dev/models";
+import { FinancialsReportedResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: FinancialsReportedResponse = {};
 ```

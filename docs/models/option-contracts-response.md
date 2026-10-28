@@ -5,7 +5,7 @@ Response containing the call and put option contracts for an underlying symbol a
 ## Example Usage
 
 ```typescript
-import { OptionContractsResponse } from "finance-dev/models";
+import { OptionContractsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionContractsResponse = {};
 ```

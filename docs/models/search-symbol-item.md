@@ -5,7 +5,7 @@ Symbol search result.
 ## Example Usage
 
 ```typescript
-import { SearchSymbolItem } from "finance-dev/models";
+import { SearchSymbolItem } from "@ariesdotcom/finance-dev/models";
 
 let value: SearchSymbolItem = {
   type: "stock",

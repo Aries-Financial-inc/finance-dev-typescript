@@ -5,7 +5,7 @@ Response containing executive leadership data for a company.
 ## Example Usage
 
 ```typescript
-import { CompanyExecutiveResponse } from "finance-dev/models";
+import { CompanyExecutiveResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: CompanyExecutiveResponse = {};
 ```

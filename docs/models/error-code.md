@@ -5,7 +5,7 @@ A single structured error entry identifying a machine-readable code, a human-rea
 ## Example Usage
 
 ```typescript
-import { ErrorCode } from "finance-dev/models";
+import { ErrorCode } from "@ariesdotcom/finance-dev/models";
 
 let value: ErrorCode = {
   code: "INVALID_PASSWORD",

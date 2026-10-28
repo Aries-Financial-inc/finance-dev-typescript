@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CancelOrdRequest1 } from "finance-dev/models";
+import { CancelOrdRequest1 } from "@ariesdotcom/finance-dev/models";
 
 let value: CancelOrdRequest1 = {
   accountId: "<id>",

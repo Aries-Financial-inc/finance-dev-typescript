@@ -5,7 +5,7 @@ Last quote information
 ## Example Usage
 
 ```typescript
-import { LastQuote } from "finance-dev/models";
+import { LastQuote } from "@ariesdotcom/finance-dev/models";
 
 let value: LastQuote = {};
 ```

@@ -15,7 +15,7 @@ Retrieve Securities and Exchange Commission (SEC) filings including 10-K annual 
 
 <!-- UsageSnippet language="typescript" operationID="getSecFilings" method="get" path="/v1/filings/sec" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -41,8 +41,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { filingsGetSec } from "finance-dev/funcs/filings-get-sec.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { filingsGetSec } from "@ariesdotcom/finance-dev/funcs/filings-get-sec.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -108,7 +108,7 @@ At least one of symbol or cik is required; both are accepted.
 
 <!-- UsageSnippet language="typescript" operationID="getFilingsSimilarityIndex" method="get" path="/v1/filings/similarity-index" example="default" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -134,8 +134,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { filingsGetSimilarityIndex } from "finance-dev/funcs/filings-get-similarity-index.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { filingsGetSimilarityIndex } from "@ariesdotcom/finance-dev/funcs/filings-get-similarity-index.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -5,7 +5,7 @@ OHLC bar data for the requested time period
 ## Example Usage
 
 ```typescript
-import { IndexBarResponseBar } from "finance-dev/models";
+import { IndexBarResponseBar } from "@ariesdotcom/finance-dev/models";
 
 let value: IndexBarResponseBar = {};
 ```

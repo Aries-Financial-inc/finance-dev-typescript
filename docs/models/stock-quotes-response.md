@@ -5,7 +5,7 @@ Paginated list of historical NBBO quotes for a stock ticker.
 ## Example Usage
 
 ```typescript
-import { StockQuotesResponse } from "finance-dev/models";
+import { StockQuotesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: StockQuotesResponse = {};
 ```

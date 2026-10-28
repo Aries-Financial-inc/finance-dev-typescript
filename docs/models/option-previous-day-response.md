@@ -5,7 +5,7 @@ Previous trading session OHLC bar for an option contract.
 ## Example Usage
 
 ```typescript
-import { OptionPreviousDayResponse } from "finance-dev/models";
+import { OptionPreviousDayResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionPreviousDayResponse = {
   close: 6508.35,

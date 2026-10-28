@@ -5,7 +5,7 @@ Live and recorded earnings call events for the requested range or symbol.
 ## Example Usage
 
 ```typescript
-import { EarningsCallLiveResponse } from "finance-dev/models";
+import { EarningsCallLiveResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: EarningsCallLiveResponse = {};
 ```

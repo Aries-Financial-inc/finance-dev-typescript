@@ -5,7 +5,7 @@ Response containing the option expiration dates for an underlying symbol.
 ## Example Usage
 
 ```typescript
-import { OptionExpiryDatesResponse } from "finance-dev/models";
+import { OptionExpiryDatesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionExpiryDatesResponse = {};
 ```

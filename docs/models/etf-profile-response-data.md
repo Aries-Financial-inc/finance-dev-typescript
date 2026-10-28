@@ -5,7 +5,7 @@ ETF profile payload.
 ## Example Usage
 
 ```typescript
-import { EtfProfileResponseData } from "finance-dev/models";
+import { EtfProfileResponseData } from "@ariesdotcom/finance-dev/models";
 
 let value: EtfProfileResponseData = {};
 ```

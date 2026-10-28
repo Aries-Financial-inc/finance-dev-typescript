@@ -5,7 +5,7 @@ One quote record in a quote response. Use `s` to match each record back to the r
 ## Example Usage
 
 ```typescript
-import { QuoteData } from "finance-dev/models";
+import { QuoteData } from "@ariesdotcom/finance-dev/models";
 
 let value: QuoteData = {};
 ```

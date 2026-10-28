@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetEarningsSurprisesRequest } from "finance-dev/models/operations";
+import { GetEarningsSurprisesRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetEarningsSurprisesRequest = {
   symbol: "AAPL",

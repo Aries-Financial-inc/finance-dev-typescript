@@ -5,7 +5,7 @@ Data source. Values are case-insensitive.
 ## Example Usage
 
 ```typescript
-import { Source } from "finance-dev/models/operations";
+import { Source } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: Source = "realtime";
 

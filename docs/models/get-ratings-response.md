@@ -5,7 +5,7 @@ Response for GET /v1/analytics/ratings. Only non-empty fields appear in each rat
 ## Example Usage
 
 ```typescript
-import { GetRatingsResponse } from "finance-dev/models";
+import { GetRatingsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: GetRatingsResponse = {
   ratings: [

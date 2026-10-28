@@ -5,7 +5,7 @@ Response containing the indices that belong to an index group.
 ## Example Usage
 
 ```typescript
-import { IndicesByGroupResponse } from "finance-dev/models";
+import { IndicesByGroupResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: IndicesByGroupResponse = {};
 ```

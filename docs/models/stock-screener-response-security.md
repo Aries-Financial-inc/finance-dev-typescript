@@ -5,7 +5,7 @@ Security identity and metadata
 ## Example Usage
 
 ```typescript
-import { StockScreenerResponseSecurity } from "finance-dev/models";
+import { StockScreenerResponseSecurity } from "@ariesdotcom/finance-dev/models";
 
 let value: StockScreenerResponseSecurity = {};
 ```

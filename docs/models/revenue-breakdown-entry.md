@@ -5,7 +5,7 @@ Revenue breakdown for a single SEC filing.
 ## Example Usage
 
 ```typescript
-import { RevenueBreakdownEntry } from "finance-dev/models";
+import { RevenueBreakdownEntry } from "@ariesdotcom/finance-dev/models";
 
 let value: RevenueBreakdownEntry = {};
 ```

@@ -5,7 +5,7 @@ Single options unusual activity trade
 ## Example Usage
 
 ```typescript
-import { OptionsUnusualActivityTrade } from "finance-dev/models";
+import { OptionsUnusualActivityTrade } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionsUnusualActivityTrade = {
   type: "block",

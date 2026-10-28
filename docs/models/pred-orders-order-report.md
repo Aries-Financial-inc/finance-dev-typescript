@@ -5,7 +5,7 @@ One venue execution report against the order. Quantities and prices are omitted 
 ## Example Usage
 
 ```typescript
-import { PredOrdersOrderReport } from "finance-dev/models";
+import { PredOrdersOrderReport } from "@ariesdotcom/finance-dev/models";
 
 let value: PredOrdersOrderReport = {
   avgPx: "0.54",

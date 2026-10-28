@@ -5,7 +5,7 @@ Technical indicator slug (e.g. `sma`, `ema`, `rsi`, `macd`, `bbands`). Pass this
 ## Example Usage
 
 ```typescript
-import { TechnicalIndicatorType } from "finance-dev/models";
+import { TechnicalIndicatorType } from "@ariesdotcom/finance-dev/models";
 
 let value: TechnicalIndicatorType = "rsi";
 

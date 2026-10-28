@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PredMdEventWithContracts } from "finance-dev/models";
+import { PredMdEventWithContracts } from "@ariesdotcom/finance-dev/models";
 
 let value: PredMdEventWithContracts = {
   contracts: [],

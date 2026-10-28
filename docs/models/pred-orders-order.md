@@ -5,7 +5,7 @@ An order as recorded by order entry. Submitted terms (`quantity`, `price`, …) 
 ## Example Usage
 
 ```typescript
-import { PredOrdersOrder } from "finance-dev/models";
+import { PredOrdersOrder } from "@ariesdotcom/finance-dev/models";
 
 let value: PredOrdersOrder = {
   accountId: "ACCOUNT-0001",

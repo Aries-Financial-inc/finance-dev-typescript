@@ -5,7 +5,7 @@ Single insider trading transaction reported on SEC Form 4.
 ## Example Usage
 
 ```typescript
-import { InsiderTransaction } from "finance-dev/models";
+import { InsiderTransaction } from "@ariesdotcom/finance-dev/models";
 
 let value: InsiderTransaction = {};
 ```

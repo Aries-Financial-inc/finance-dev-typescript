@@ -5,7 +5,7 @@ Standardized income statement figures for a single reporting period.
 ## Example Usage
 
 ```typescript
-import { FinancialStatement } from "finance-dev/models";
+import { FinancialStatement } from "@ariesdotcom/finance-dev/models";
 
 let value: FinancialStatement = {};
 ```

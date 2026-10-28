@@ -5,7 +5,7 @@ EBITDA estimates container for the symbol
 ## Example Usage
 
 ```typescript
-import { EbitdaEstimates } from "finance-dev/models";
+import { EbitdaEstimates } from "@ariesdotcom/finance-dev/models";
 
 let value: EbitdaEstimates = {
   freq: "quarterly",

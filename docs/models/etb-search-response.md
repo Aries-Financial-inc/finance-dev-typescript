@@ -5,7 +5,7 @@ Borrowability answers keyed by normalized (uppercase) symbol.
 ## Example Usage
 
 ```typescript
-import { EtbSearchResponse } from "finance-dev/models";
+import { EtbSearchResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: EtbSearchResponse = {
   results: {

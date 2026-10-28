@@ -5,7 +5,7 @@ Flat error body: an `error` string, with optional structured `codes` and additio
 ## Example Usage
 
 ```typescript
-import { ErrorResponse } from "finance-dev/models/errors";
+import { ErrorResponse } from "@ariesdotcom/finance-dev/models/errors";
 
 // No examples available for this model
 ```

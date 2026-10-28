@@ -5,7 +5,7 @@ Index metadata for a realtime quote item.
 ## Example Usage
 
 ```typescript
-import { IndicesRealtimeIndexInfo } from "finance-dev/models";
+import { IndicesRealtimeIndexInfo } from "@ariesdotcom/finance-dev/models";
 
 let value: IndicesRealtimeIndexInfo = {};
 ```

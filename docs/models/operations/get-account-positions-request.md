@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetAccountPositionsRequest } from "finance-dev/models/operations";
+import { GetAccountPositionsRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetAccountPositionsRequest = {
   id: "TEST-ACCOUNT-001",

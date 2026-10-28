@@ -5,7 +5,7 @@ Social media sentiment time series for a symbol.
 ## Example Usage
 
 ```typescript
-import { SocialSentimentResponse } from "finance-dev/models";
+import { SocialSentimentResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: SocialSentimentResponse = {};
 ```

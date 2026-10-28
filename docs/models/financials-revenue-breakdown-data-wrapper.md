@@ -5,7 +5,7 @@ Company identifiers and revenue breakdown entries from SEC filings.
 ## Example Usage
 
 ```typescript
-import { FinancialsRevenueBreakdownDataWrapper } from "finance-dev/models";
+import { FinancialsRevenueBreakdownDataWrapper } from "@ariesdotcom/finance-dev/models";
 
 let value: FinancialsRevenueBreakdownDataWrapper = {};
 ```

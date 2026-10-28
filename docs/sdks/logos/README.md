@@ -15,7 +15,7 @@ Search for company logos and brand assets by ticker symbol or company name for u
 
 <!-- UsageSnippet language="typescript" operationID="searchLogos" method="get" path="/v1/logos/search" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -42,8 +42,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { logosSearch } from "finance-dev/funcs/logos-search.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { logosSearch } from "@ariesdotcom/finance-dev/funcs/logos-search.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -108,7 +108,7 @@ Synchronize and retrieve the latest company logos ensuring brand assets are up-t
 
 <!-- UsageSnippet language="typescript" operationID="syncLogos" method="get" path="/v1/logos/sync" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -137,8 +137,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { logosSync } from "finance-dev/funcs/logos-sync.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { logosSync } from "@ariesdotcom/finance-dev/funcs/logos-sync.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

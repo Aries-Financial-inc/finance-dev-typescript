@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetEtfProfileRequest } from "finance-dev/models/operations";
+import { GetEtfProfileRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetEtfProfileRequest = {
   symbol: "SPY",

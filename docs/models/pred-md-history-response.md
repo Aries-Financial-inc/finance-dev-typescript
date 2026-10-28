@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PredMdHistoryResponse } from "finance-dev/models";
+import { PredMdHistoryResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: PredMdHistoryResponse = {
   count: 639489,

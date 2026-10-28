@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetSectorTickersRequest } from "finance-dev/models/operations";
+import { GetSectorTickersRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetSectorTickersRequest = {
   sector: "TECHNOLOGY",

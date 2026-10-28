@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetHistoryRequest } from "finance-dev/models/operations";
+import { GetHistoryRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetHistoryRequest = {
   symbol: "HORC_1126_Republican",

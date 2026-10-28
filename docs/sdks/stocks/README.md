@@ -23,7 +23,7 @@ Get aggregate bars for a stock over a time range with customizable time spans (s
 
 <!-- UsageSnippet language="typescript" operationID="getStockAggregates" method="get" path="/v1/stocks/aggs" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -54,8 +54,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stocksGetAggregates } from "finance-dev/funcs/stocks-get-aggregates.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stocksGetAggregates } from "@ariesdotcom/finance-dev/funcs/stocks-get-aggregates.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -124,7 +124,7 @@ Get the daily open, high, low, and close (OHLC) for the entire market on a speci
 
 <!-- UsageSnippet language="typescript" operationID="getDailyMarketSummary" method="get" path="/v1/stocks/grouped" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -151,8 +151,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stocksGetDailySummary } from "finance-dev/funcs/stocks-get-daily-summary.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stocksGetDailySummary } from "@ariesdotcom/finance-dev/funcs/stocks-get-daily-summary.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -217,7 +217,7 @@ Get the most recent NBBO (National Best Bid and Offer) quote for a stock.
 
 <!-- UsageSnippet language="typescript" operationID="getStockLastQuote" method="get" path="/v1/stocks/last-quote" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -242,8 +242,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stocksGetLastQuote } from "finance-dev/funcs/stocks-get-last-quote.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stocksGetLastQuote } from "@ariesdotcom/finance-dev/funcs/stocks-get-last-quote.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -306,7 +306,7 @@ Get the most recent trade for a stock.
 
 <!-- UsageSnippet language="typescript" operationID="getStockLastTrade" method="get" path="/v1/stocks/last-trade" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -331,8 +331,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stocksGetLastTrade } from "finance-dev/funcs/stocks-get-last-trade.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stocksGetLastTrade } from "@ariesdotcom/finance-dev/funcs/stocks-get-last-trade.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -395,7 +395,7 @@ Get the open, close and afterhours prices of a stock on a specific date.
 
 <!-- UsageSnippet language="typescript" operationID="getStockOpenClose" method="get" path="/v1/stocks/open-close" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -422,8 +422,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stocksGetOpenClose } from "finance-dev/funcs/stocks-get-open-close.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stocksGetOpenClose } from "@ariesdotcom/finance-dev/funcs/stocks-get-open-close.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -488,7 +488,7 @@ Get the previous day's OHLCV (Open, High, Low, Close, Volume) data for a stock.
 
 <!-- UsageSnippet language="typescript" operationID="getStockPreviousDay" method="get" path="/v1/stocks/prev" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -514,8 +514,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stocksGetPrevDay } from "finance-dev/funcs/stocks-get-prev-day.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stocksGetPrevDay } from "@ariesdotcom/finance-dev/funcs/stocks-get-prev-day.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -579,7 +579,7 @@ Get NBBO (National Best Bid and Offer) quotes for a stock with historical quote 
 
 <!-- UsageSnippet language="typescript" operationID="getStockQuotes" method="get" path="/v1/stocks/quotes" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -612,8 +612,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stocksGetQuotes } from "finance-dev/funcs/stocks-get-quotes.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stocksGetQuotes } from "@ariesdotcom/finance-dev/funcs/stocks-get-quotes.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -684,7 +684,7 @@ Get snapshot of all tickers or specific tickers with current day data including 
 
 <!-- UsageSnippet language="typescript" operationID="getStockSnapshots" method="get" path="/v1/stocks/snapshot" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -710,8 +710,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stocksGetSnapshot } from "finance-dev/funcs/stocks-get-snapshot.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stocksGetSnapshot } from "@ariesdotcom/finance-dev/funcs/stocks-get-snapshot.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -775,7 +775,7 @@ Get tick-level trade data for a stock with precise timestamps.
 
 <!-- UsageSnippet language="typescript" operationID="getStockTrades" method="get" path="/v1/stocks/trades" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -808,8 +808,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stocksGetTrades } from "finance-dev/funcs/stocks-get-trades.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stocksGetTrades } from "@ariesdotcom/finance-dev/funcs/stocks-get-trades.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -880,7 +880,7 @@ Get unified snapshots across asset classes (`stocks`, `options`, `fx`, `crypto`,
 
 <!-- UsageSnippet language="typescript" operationID="getUnifiedSnapshot" method="get" path="/v1/stocks/unified-snapshot" -->
 ```typescript
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {
@@ -914,8 +914,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { stocksGetUnifiedSnapshot } from "finance-dev/funcs/stocks-get-unified-snapshot.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { stocksGetUnifiedSnapshot } from "@ariesdotcom/finance-dev/funcs/stocks-get-unified-snapshot.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

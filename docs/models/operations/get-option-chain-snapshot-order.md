@@ -5,7 +5,7 @@ Sort order for returned records. Use asc for oldest first or desc for newest fir
 ## Example Usage
 
 ```typescript
-import { GetOptionChainSnapshotOrder } from "finance-dev/models/operations";
+import { GetOptionChainSnapshotOrder } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetOptionChainSnapshotOrder = "asc";
 

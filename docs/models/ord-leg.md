@@ -5,7 +5,7 @@ One option leg inside a single-leg or multi-leg order. Use this only for option 
 ## Example Usage
 
 ```typescript
-import { OrdLeg } from "finance-dev/models";
+import { OrdLeg } from "@ariesdotcom/finance-dev/models";
 
 let value: OrdLeg = {
   maturity: new Date("2025-01-17"),

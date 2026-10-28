@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { IndexSearchResponseIndex } from "finance-dev/models";
+import { IndexSearchResponseIndex } from "@ariesdotcom/finance-dev/models";
 
 let value: IndexSearchResponseIndex = {};
 ```

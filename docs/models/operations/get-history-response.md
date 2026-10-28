@@ -5,7 +5,7 @@ Standard success envelope used by all success responses. `data` is endpoint-spec
 ## Example Usage
 
 ```typescript
-import { GetHistoryResponse } from "finance-dev/models/operations";
+import { GetHistoryResponse } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetHistoryResponse = {
   data: {

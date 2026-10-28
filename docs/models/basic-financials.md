@@ -5,7 +5,7 @@ Basic financial metrics for company research. Use these values for valuation, pr
 ## Example Usage
 
 ```typescript
-import { BasicFinancials } from "finance-dev/models";
+import { BasicFinancials } from "@ariesdotcom/finance-dev/models";
 
 let value: BasicFinancials = {};
 ```

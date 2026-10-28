@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetOptionOpenCloseRequest } from "finance-dev/models/operations";
+import { GetOptionOpenCloseRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetOptionOpenCloseRequest = {
   ticker: "<value>",

@@ -5,7 +5,7 @@ Supply chain relationships (suppliers and customers) for a company.
 ## Example Usage
 
 ```typescript
-import { SupplyChainResponse } from "finance-dev/models";
+import { SupplyChainResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: SupplyChainResponse = {};
 ```

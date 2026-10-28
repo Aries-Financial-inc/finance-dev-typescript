@@ -5,7 +5,7 @@ Short interest records per ticker, including shares sold short, average daily vo
 ## Example Usage
 
 ```typescript
-import { ShortInterestResponse } from "finance-dev/models";
+import { ShortInterestResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: ShortInterestResponse = {};
 ```

@@ -7,7 +7,7 @@ What kind of instrument the order is for. Pick one:
 ## Example Usage
 
 ```typescript
-import { SecurityTypeEnum } from "finance-dev/models";
+import { SecurityTypeEnum } from "@ariesdotcom/finance-dev/models";
 
 let value: SecurityTypeEnum = "CS";
 

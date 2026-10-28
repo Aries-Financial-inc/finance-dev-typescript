@@ -19,8 +19,8 @@ specific category of applications.
 ## Example
 
 ```typescript
-import { FinanceDevCore } from "finance-dev/core.js";
-import { accountsGetPositions } from "finance-dev/funcs/accounts-get-positions.js";
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { accountsGetPositions } from "@ariesdotcom/finance-dev/funcs/accounts-get-positions.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

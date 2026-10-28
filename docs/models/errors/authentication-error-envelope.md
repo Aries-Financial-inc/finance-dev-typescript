@@ -5,7 +5,7 @@ JSON envelope where `error` is a nested object (`type`, `code`, `message`, …).
 ## Example Usage
 
 ```typescript
-import { AuthenticationErrorEnvelope } from "finance-dev/models/errors";
+import { AuthenticationErrorEnvelope } from "@ariesdotcom/finance-dev/models/errors";
 
 // No examples available for this model
 ```

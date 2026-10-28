@@ -5,7 +5,7 @@ EBIT estimates container for the symbol
 ## Example Usage
 
 ```typescript
-import { EbitEstimates } from "finance-dev/models";
+import { EbitEstimates } from "@ariesdotcom/finance-dev/models";
 
 let value: EbitEstimates = {
   freq: "quarterly",

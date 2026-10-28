@@ -5,7 +5,7 @@ Wrapper for GET /v1/marketdata/equities/details: `data` for successful symbols, 
 ## Example Usage
 
 ```typescript
-import { GetEquityDetailsResponse } from "finance-dev/models";
+import { GetEquityDetailsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: GetEquityDetailsResponse = {
   data: [

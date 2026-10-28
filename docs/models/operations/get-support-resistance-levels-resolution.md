@@ -5,7 +5,7 @@ How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `6
 ## Example Usage
 
 ```typescript
-import { GetSupportResistanceLevelsResolution } from "finance-dev/models/operations";
+import { GetSupportResistanceLevelsResolution } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetSupportResistanceLevelsResolution = "30";
 

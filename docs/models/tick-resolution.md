@@ -5,7 +5,7 @@ Tick bar size: the number of trades that make up one bar. For example, `100T` cl
 ## Example Usage
 
 ```typescript
-import { TickResolution } from "finance-dev/models";
+import { TickResolution } from "@ariesdotcom/finance-dev/models";
 
 let value: TickResolution = "100T";
 

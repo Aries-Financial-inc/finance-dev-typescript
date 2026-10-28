@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetInstitutionalOwnershipRequest } from "finance-dev/models/operations";
+import { GetInstitutionalOwnershipRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetInstitutionalOwnershipRequest = {
   cusip: "023135106",

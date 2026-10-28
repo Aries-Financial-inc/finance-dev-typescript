@@ -5,7 +5,7 @@ Revenue for a single segment along a breakdown axis.
 ## Example Usage
 
 ```typescript
-import { RevenueBreakdownDataPoint } from "finance-dev/models";
+import { RevenueBreakdownDataPoint } from "@ariesdotcom/finance-dev/models";
 
 let value: RevenueBreakdownDataPoint = {};
 ```

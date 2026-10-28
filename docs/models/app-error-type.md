@@ -14,7 +14,7 @@ Categorical error type. Use this for branching error-handling logic; the values 
 ## Example Usage
 
 ```typescript
-import { AppErrorType } from "finance-dev/models";
+import { AppErrorType } from "@ariesdotcom/finance-dev/models";
 
 let value: AppErrorType = "DATABASE";
 

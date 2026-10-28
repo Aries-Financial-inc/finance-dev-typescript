@@ -5,7 +5,7 @@ Compact symbol summary returned by top movers and activity endpoints. Use it for
 ## Example Usage
 
 ```typescript
-import { SymbolDetails } from "finance-dev/models";
+import { SymbolDetails } from "@ariesdotcom/finance-dev/models";
 
 let value: SymbolDetails = {
   change: 1.25,

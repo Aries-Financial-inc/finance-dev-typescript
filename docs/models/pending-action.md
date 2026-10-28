@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PendingAction } from "finance-dev/models";
+import { PendingAction } from "@ariesdotcom/finance-dev/models";
 
 let value: PendingAction = "none";
 

@@ -5,7 +5,7 @@ Analyst ratings summary
 ## Example Usage
 
 ```typescript
-import { AnalystRating } from "finance-dev/models";
+import { AnalystRating } from "@ariesdotcom/finance-dev/models";
 
 let value: AnalystRating = {};
 ```

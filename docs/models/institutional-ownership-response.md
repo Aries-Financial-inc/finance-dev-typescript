@@ -5,7 +5,7 @@ Response containing institutional ownership records for a security.
 ## Example Usage
 
 ```typescript
-import { InstitutionalOwnershipResponse } from "finance-dev/models";
+import { InstitutionalOwnershipResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: InstitutionalOwnershipResponse = {};
 ```

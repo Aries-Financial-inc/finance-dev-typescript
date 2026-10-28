@@ -5,7 +5,7 @@ Direction for this leg. BUY purchases the instrument; SELL sells it.
 ## Example Usage
 
 ```typescript
-import { TradeOrderLegV2Side } from "finance-dev/models";
+import { TradeOrderLegV2Side } from "@ariesdotcom/finance-dev/models";
 
 let value: TradeOrderLegV2Side = "BUY";
 

@@ -5,7 +5,7 @@ USPTO patent filings associated with a company, as provided by Finnhub.
 ## Example Usage
 
 ```typescript
-import { UsptoPatentsResponse } from "finance-dev/models";
+import { UsptoPatentsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: UsptoPatentsResponse = {};
 ```

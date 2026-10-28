@@ -5,7 +5,7 @@ Ownership record of an institutional investor or fund in a security.
 ## Example Usage
 
 ```typescript
-import { OwnershipRecord } from "finance-dev/models";
+import { OwnershipRecord } from "@ariesdotcom/finance-dev/models";
 
 let value: OwnershipRecord = {};
 ```

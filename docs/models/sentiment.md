@@ -5,7 +5,7 @@ News sentiment breakdown.
 ## Example Usage
 
 ```typescript
-import { Sentiment } from "finance-dev/models";
+import { Sentiment } from "@ariesdotcom/finance-dev/models";
 
 let value: Sentiment = {};
 ```

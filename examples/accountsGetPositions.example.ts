@@ -6,13 +6,13 @@
 import dotenv from "dotenv";
 dotenv.config();
 /**
- * Example usage of the finance-dev SDK
+ * Example usage of the @ariesdotcom/finance-dev SDK
  *
  * To run this example from the examples directory:
  * npm run build && npx tsx accountsGetPositions.example.ts
  */
 
-import { FinanceDev } from "finance-dev";
+import { FinanceDev } from "@ariesdotcom/finance-dev";
 
 const financeDev = new FinanceDev({
   security: {

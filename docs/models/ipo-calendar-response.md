@@ -5,7 +5,7 @@ Response containing IPO calendar entries.
 ## Example Usage
 
 ```typescript
-import { IpoCalendarResponse } from "finance-dev/models";
+import { IpoCalendarResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: IpoCalendarResponse = {};
 ```

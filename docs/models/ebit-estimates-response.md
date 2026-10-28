@@ -5,7 +5,7 @@ Analyst consensus EBIT estimates for a stock by reporting period, sourced from F
 ## Example Usage
 
 ```typescript
-import { EbitEstimatesResponse } from "finance-dev/models";
+import { EbitEstimatesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: EbitEstimatesResponse = {
   ebitEstimates: {

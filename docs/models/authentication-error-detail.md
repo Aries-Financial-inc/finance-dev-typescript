@@ -5,7 +5,7 @@ Structured payload for the nested `error` object. Services using the shared Go e
 ## Example Usage
 
 ```typescript
-import { AuthenticationErrorDetail } from "finance-dev/models";
+import { AuthenticationErrorDetail } from "@ariesdotcom/finance-dev/models";
 
 let value: AuthenticationErrorDetail = {
   code: "INVALID_TOKEN",

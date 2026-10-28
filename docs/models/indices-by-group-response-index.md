@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { IndicesByGroupResponseIndex } from "finance-dev/models";
+import { IndicesByGroupResponseIndex } from "@ariesdotcom/finance-dev/models";
 
 let value: IndicesByGroupResponseIndex = {};
 ```

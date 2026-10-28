@@ -5,7 +5,7 @@ Financial statements reported within a filing.
 ## Example Usage
 
 ```typescript
-import { ReportedReport } from "finance-dev/models";
+import { ReportedReport } from "@ariesdotcom/finance-dev/models";
 
 let value: ReportedReport = {};
 ```

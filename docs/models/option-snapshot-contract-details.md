@@ -5,7 +5,7 @@ Static contract metadata (`OptionSnapshotDetailsDTO`).
 ## Example Usage
 
 ```typescript
-import { OptionSnapshotContractDetails } from "finance-dev/models";
+import { OptionSnapshotContractDetails } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionSnapshotContractDetails = {};
 ```

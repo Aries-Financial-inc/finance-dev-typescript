@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetBaseEventRequest } from "finance-dev/models/operations";
+import { GetBaseEventRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetBaseEventRequest = {
   baseEventId: "UNR",

@@ -5,7 +5,7 @@ Analyst consensus revenue estimates for a stock by reporting period, sourced fro
 ## Example Usage
 
 ```typescript
-import { RevenueEstimatesResponse } from "finance-dev/models";
+import { RevenueEstimatesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: RevenueEstimatesResponse = {
   revenueEstimates: {

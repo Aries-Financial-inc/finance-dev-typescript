@@ -5,7 +5,7 @@ An order and every venue report against it, read from one snapshot.
 ## Example Usage
 
 ```typescript
-import { PredOrdersOrderDetail } from "finance-dev/models";
+import { PredOrdersOrderDetail } from "@ariesdotcom/finance-dev/models";
 
 let value: PredOrdersOrderDetail = {
   order: {

@@ -5,7 +5,7 @@ Latest NBBO quote when included (`OptionSnapshotLastQuoteDTO`).
 ## Example Usage
 
 ```typescript
-import { OptionSnapshotLastQuote } from "finance-dev/models";
+import { OptionSnapshotLastQuote } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionSnapshotLastQuote = {};
 ```

@@ -5,7 +5,7 @@ Most recent daily OHLCV bar for the contract (`OptionSnapshotDayBarDTO`).
 ## Example Usage
 
 ```typescript
-import { OptionSnapshotDayBar } from "finance-dev/models";
+import { OptionSnapshotDayBar } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionSnapshotDayBar = {};
 ```

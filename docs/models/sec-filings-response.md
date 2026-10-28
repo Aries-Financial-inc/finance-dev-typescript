@@ -5,7 +5,7 @@ Response containing SEC filings for a symbol.
 ## Example Usage
 
 ```typescript
-import { SecFilingsResponse } from "finance-dev/models";
+import { SecFilingsResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: SecFilingsResponse = {};
 ```

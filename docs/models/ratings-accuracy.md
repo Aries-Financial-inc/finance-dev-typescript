@@ -5,7 +5,7 @@ Analyst accuracy metrics. Fields use snake_case; some fields may be absent when 
 ## Example Usage
 
 ```typescript
-import { RatingsAccuracy } from "finance-dev/models";
+import { RatingsAccuracy } from "@ariesdotcom/finance-dev/models";
 
 let value: RatingsAccuracy = {};
 ```

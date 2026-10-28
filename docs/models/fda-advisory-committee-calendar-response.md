@@ -5,7 +5,7 @@ Upcoming FDA advisory committee meetings, as provided by Finnhub.
 ## Example Usage
 
 ```typescript
-import { FdaAdvisoryCommitteeCalendarResponse } from "finance-dev/models";
+import { FdaAdvisoryCommitteeCalendarResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: FdaAdvisoryCommitteeCalendarResponse = {};
 ```

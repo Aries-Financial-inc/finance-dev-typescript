@@ -5,7 +5,7 @@ Response body for quote requests. Use it to render current market prices for one
 ## Example Usage
 
 ```typescript
-import { QuotesResponse } from "finance-dev/models";
+import { QuotesResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: QuotesResponse = {};
 ```

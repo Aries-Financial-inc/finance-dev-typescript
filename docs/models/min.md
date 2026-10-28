@@ -5,7 +5,7 @@ Latest minute aggregate
 ## Example Usage
 
 ```typescript
-import { Min } from "finance-dev/models";
+import { Min } from "@ariesdotcom/finance-dev/models";
 
 let value: Min = {};
 ```

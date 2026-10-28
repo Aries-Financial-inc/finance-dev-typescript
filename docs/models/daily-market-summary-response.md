@@ -5,7 +5,7 @@ Daily OHLC bars for all stocks on a given trading date, as returned by the upstr
 ## Example Usage
 
 ```typescript
-import { DailyMarketSummaryResponse } from "finance-dev/models";
+import { DailyMarketSummaryResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: DailyMarketSummaryResponse = {};
 ```

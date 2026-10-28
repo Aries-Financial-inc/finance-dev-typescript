@@ -5,7 +5,7 @@ Response returned after submitting an order request. Treat it as acknowledgement
 ## Example Usage
 
 ```typescript
-import { OrdResponse } from "finance-dev/models";
+import { OrdResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: OrdResponse = {
   avgPrice: "0",

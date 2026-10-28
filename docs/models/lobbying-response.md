@@ -5,7 +5,7 @@ US Senate and House lobbying activity reported for a company, as provided by Fin
 ## Example Usage
 
 ```typescript
-import { LobbyingResponse } from "finance-dev/models";
+import { LobbyingResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: LobbyingResponse = {};
 ```

@@ -5,7 +5,7 @@ One option contract's pricing snapshot from GET /v1/marketdata/options/details. 
 ## Example Usage
 
 ```typescript
-import { OptionDetailsDTO } from "finance-dev/models";
+import { OptionDetailsDTO } from "@ariesdotcom/finance-dev/models";
 
 let value: OptionDetailsDTO = {
   askPrice: 80.9,

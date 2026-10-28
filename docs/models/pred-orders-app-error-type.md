@@ -5,7 +5,7 @@ Categorical error type, in lowercase.
 ## Example Usage
 
 ```typescript
-import { PredOrdersAppErrorType } from "finance-dev/models";
+import { PredOrdersAppErrorType } from "@ariesdotcom/finance-dev/models";
 
 let value: PredOrdersAppErrorType = "bad_request";
 

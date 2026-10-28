@@ -5,7 +5,7 @@ EPS estimates container for the symbol
 ## Example Usage
 
 ```typescript
-import { EpsEstimates } from "finance-dev/models";
+import { EpsEstimates } from "@ariesdotcom/finance-dev/models";
 
 let value: EpsEstimates = {
   freq: "quarterly",

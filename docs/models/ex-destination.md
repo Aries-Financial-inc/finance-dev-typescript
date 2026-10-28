@@ -7,7 +7,7 @@ Where the order was routed for execution. Useful for support diagnostics and adv
 ## Example Usage
 
 ```typescript
-import { ExDestination } from "finance-dev/models";
+import { ExDestination } from "@ariesdotcom/finance-dev/models";
 
 let value: ExDestination = "MNGD";
 

@@ -5,7 +5,7 @@ Aggregate indicators payload.
 ## Example Usage
 
 ```typescript
-import { AggregateTechnicalIndicatorsResponseData } from "finance-dev/models";
+import { AggregateTechnicalIndicatorsResponseData } from "@ariesdotcom/finance-dev/models";
 
 let value: AggregateTechnicalIndicatorsResponseData = {};
 ```

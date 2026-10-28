@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetOptionChainSnapshotRequest } from "finance-dev/models/operations";
+import { GetOptionChainSnapshotRequest } from "@ariesdotcom/finance-dev/models/operations";
 
 let value: GetOptionChainSnapshotRequest = {
   underlyingAsset: "AAPL",

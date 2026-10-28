@@ -5,7 +5,7 @@ Single analyst insight (GET /v1/analytics/insights).
 ## Example Usage
 
 ```typescript
-import { AnalystInsightItem } from "finance-dev/models";
+import { AnalystInsightItem } from "@ariesdotcom/finance-dev/models";
 
 let value: AnalystInsightItem = {
   action: "Upgrade",

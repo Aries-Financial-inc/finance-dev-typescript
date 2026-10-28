@@ -5,7 +5,7 @@ Most recent NBBO quote for a stock ticker.
 ## Example Usage
 
 ```typescript
-import { StockLastQuoteResponse } from "finance-dev/models";
+import { StockLastQuoteResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: StockLastQuoteResponse = {};
 ```

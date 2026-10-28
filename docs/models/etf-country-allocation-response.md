@@ -5,7 +5,7 @@ Country exposure breakdown of an ETF from Finnhub.
 ## Example Usage
 
 ```typescript
-import { EtfCountryAllocationResponse } from "finance-dev/models";
+import { EtfCountryAllocationResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: EtfCountryAllocationResponse = {};
 ```

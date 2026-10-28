@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { IndexGroup } from "finance-dev/models";
+import { IndexGroup } from "@ariesdotcom/finance-dev/models";
 
 let value: IndexGroup = {
   description: "CBOE Data Services CMSI - Crypto Fee",

@@ -5,7 +5,7 @@ Security the tender offers relate to
 ## Example Usage
 
 ```typescript
-import { TenderOffersResponseSecurity } from "finance-dev/models";
+import { TenderOffersResponseSecurity } from "@ariesdotcom/finance-dev/models";
 
 let value: TenderOffersResponseSecurity = {};
 ```

@@ -5,7 +5,7 @@ Response envelope for the net inflow endpoint.
 ## Example Usage
 
 ```typescript
-import { NetInflowResponse } from "finance-dev/models";
+import { NetInflowResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: NetInflowResponse = {
   data: {

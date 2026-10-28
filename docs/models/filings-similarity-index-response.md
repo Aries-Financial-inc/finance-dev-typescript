@@ -5,7 +5,7 @@ Response containing the SEC filings similarity index for a company.
 ## Example Usage
 
 ```typescript
-import { FilingsSimilarityIndexResponse } from "finance-dev/models";
+import { FilingsSimilarityIndexResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: FilingsSimilarityIndexResponse = {};
 ```

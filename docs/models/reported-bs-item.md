@@ -5,7 +5,7 @@ Single balance sheet line item from a reported filing.
 ## Example Usage
 
 ```typescript
-import { ReportedBSItem } from "finance-dev/models";
+import { ReportedBSItem } from "@ariesdotcom/finance-dev/models";
 
 let value: ReportedBSItem = {};
 ```

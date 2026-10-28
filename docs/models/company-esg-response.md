@@ -5,7 +5,7 @@ Latest ESG (environmental, social, governance) scores and disclosures for a comp
 ## Example Usage
 
 ```typescript
-import { CompanyEsgResponse } from "finance-dev/models";
+import { CompanyEsgResponse } from "@ariesdotcom/finance-dev/models";
 
 let value: CompanyEsgResponse = {};
 ```
