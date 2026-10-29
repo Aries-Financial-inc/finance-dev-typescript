@@ -1,7 +1,9 @@
 {
   "name": "@ariesdotcom/finance-dev",
   "version": "0.1.0",
-  "author": "Speakeasy",
+  "author": "Aries Financial",
+  "description": "Official TypeScript SDK for the finance.dev API by Aries Financial.",
+  "homepage": "https://finance.dev",
   "type": "module",
   "main": "./esm/index.js",
   "exports": {
@@ -43,16 +45,20 @@
     }
   },
   "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aries-Financial-inc/finance-dev-typescript"
+  },
   "scripts": {
     "test": "npm run build && npm run test:types && npm run test:websocket && npm run test:generated",
     "check": "npm run test && npm run lint",
     "lint": "oxlint --max-warnings=0 --deny-warnings --no-error-on-unmatched-pattern src",
     "build": "tsgo",
     "prepublishOnly": "npm run build",
-    "test:websocket": "node --test tests/websocket/*.test.mjs",
     "test:contract": "speakeasy test",
     "test:generated": "vitest run",
-    "test:types": "tsgo --project tests/types/tsconfig.json"
+    "test:types": "tsgo --project tests/types/tsconfig.json",
+    "test:websocket": "node --test tests/websocket/*.test.mjs"
   },
   "peerDependencies": {
     
