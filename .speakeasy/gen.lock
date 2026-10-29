@@ -6,12 +6,14 @@ management:
   speakeasyVersion: 1.805.0
   generationVersion: 2.954.8
   releaseVersion: 0.1.0
-  configChecksum: ebe0b90e68815911120f6239b5ae252e
+  configChecksum: f373f2caec75c7c24d87dc7d81a86092
+  repoURL: https://github.com/Aries-Financial-inc/finance-dev-typescript
+  installationURL: https://github.com/Aries-Financial-inc/finance-dev-typescript
   published: true
 persistentEdits:
-  generation_id: 90f9bd0b-30e5-4a2c-9f7a-5c17c46ac0f9
-  pristine_commit_hash: ea69aa2b09f73e6100d4b169d537aecb0946d141
-  pristine_tree_hash: 2a7cb488b1ae3f8e22b550cbc4d2f330d743b300
+  generation_id: dde8622c-254d-4029-975a-5a3d8a1c81f3
+  pristine_commit_hash: dbd5454318ded27a22f09bb82aadd9d0d5568e1f
+  pristine_tree_hash: 4217cfe135b504d6c2064d91b9c9805889ffe140
 features:
   typescript:
     additionalDependencies: 0.1.0
@@ -45,8 +47,8 @@ features:
 trackedFiles:
   .devcontainer/README.md:
     id: b170c0f184ac
-    last_write_checksum: sha1:b6564d2a7c8ae764fff6d1b4666dcd787210a000
-    pristine_git_object: cdef18c30e383534a868742e1b9148f2670606f9
+    last_write_checksum: sha1:2a8c32083478f84af489cb1b440572398aad8c91
+    pristine_git_object: ffccb5f314596910bb7df19a521d008d5e392f5a
   .devcontainer/devcontainer.json:
     id: b34062a34eb1
     last_write_checksum: sha1:d0b15193202c961e7d1875864ddb15f9d17c84dd
@@ -2645,8 +2647,8 @@ trackedFiles:
     pristine_git_object: e6832f3f1ae7159fe3eb8dcc03ada7d0c177c87f
   package.json:
     id: 7030d0b2f71b
-    last_write_checksum: sha1:09814cc22b8322c9b5537c56b4b88e18474ca928
-    pristine_git_object: 90f56eabc421ae722f4eeb251e8b4ddaf209d127
+    last_write_checksum: sha1:ad00d3cfaa06678b88bc5a863e5cfd547f494dae
+    pristine_git_object: 6afb202c7c9ae3ca6de0eaf1cff11d0a01311ec4
   src/__tests__/accounts-orders.test.ts:
     id: 1f7a43861e65
     last_write_checksum: sha1:dbff0928d26f4328cbe3549412c1fc21759045dc
