@@ -21,7 +21,7 @@ targets:
         sourceRevisionDigest: sha256:2c5667e8e20fa98aef73dedfd63b57f540346274cb2dee7cbcaa76a6125a3f27
         sourceBlobDigest: sha256:b35614ab0956090979306b3cac25b6ee814276b894505aca7bbf35c159b48762
         codeSamplesNamespace: aries-prod-spec-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:c80c9e9e206c379948ed0650dc4c38dda4ed4bf5d43170dd03467575a9059cd0
+        codeSamplesRevisionDigest: sha256:6ddb2e6a8f1c4423c25b77621e59a620e755898b8cdea246a18606815e73303b
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas

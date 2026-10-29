@@ -35,6 +35,7 @@ generation:
     generateTests: true
     generateNewTests: true
     skipResponseBodyAssertions: false
+  repoUrl: https://github.com/Aries-Financial-inc/finance-dev-typescript
 typescript:
   version: 0.1.0
   acceptHeaderEnum: false
@@ -45,7 +46,9 @@ typescript:
       vitest: ^5.0.5
       ws: ^8.18.0
     peerDependencies: {}
-  additionalPackageJSON: {}
+  additionalPackageJSON:
+    description: Official TypeScript SDK for the finance.dev API by Aries Financial.
+    homepage: https://finance.dev
   additionalScripts:
     test: npm run build && npm run test:types && npm run test:websocket && npm run test:generated
     test:contract: speakeasy test
@@ -54,7 +57,7 @@ typescript:
     test:websocket: node --test tests/websocket/*.test.mjs
   alwaysIncludeInboundAndOutbound: false
   apiPromiseHelpers: false
-  author: Speakeasy
+  author: Aries Financial
   baseErrorName: FinanceDevAPIError
   clientServerStatusCodesAsErrors: true
   constFieldsAlwaysOptional: false
