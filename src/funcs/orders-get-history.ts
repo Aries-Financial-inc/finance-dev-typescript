@@ -44,7 +44,7 @@ import {
  *
  * Set `exclude_today=true` to narrow `to` to just before midnight **America/New_York**, omitting today's activity (already returned by **GET /v2/accounts/{id}/orders**).
  *
- * **Pagination:** Same opaque `int64` cursor contract as active orders when reading from DB — `cursor=0` first, then `nextCursor`; `0` means exhausted.
+ * **Pagination:** Same opaque `int64` cursor contract as active orders when reading from DB — `cursor=0` first, then `nextCursor` while it is present. The final page omits `nextCursor`.
  *
  * If set, this operation will use {@link Security.clientID} from the global security.
  */
@@ -263,7 +263,7 @@ async function $do(
     if (typeof nextCursor !== "number") {
       return { next: () => null };
     }
-    const results = (responseData as { orders?: unknown | null }).orders;
+    const results = (responseData as { orders: unknown | null }).orders;
     if (!Array.isArray(results) || !results.length) {
       return { next: () => null };
     }

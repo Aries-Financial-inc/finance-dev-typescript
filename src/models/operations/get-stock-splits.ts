@@ -27,11 +27,11 @@ export type AdjustmentType = OpenEnum<typeof AdjustmentType>;
 
 export type GetStockSplitsRequest = {
   /**
-   * Single ticker symbol only, such as AAPL. Do not send a comma-separated list here; if you need multiple symbols, use `tickersAnyOf` instead.
+   * Single ticker symbol only, such as AAPL. Do not send a comma-separated list here; if you need multiple symbols, use `tickersAnyOf` instead. Multiple comma-separated values return HTTP 400: "Multiple tickers are not supported. Please provide a single ticker." Cannot be combined with `tickersAnyOf`; sending both returns HTTP 400: "Cannot specify both ticker and tickersAnyOf. Use ticker for a single symbol or tickersAnyOf for multiple."
    */
   ticker?: string | undefined;
   /**
-   * Comma-separated list of ticker symbols.
+   * Comma-separated list of ticker symbols. Cannot be combined with `ticker`; sending both returns HTTP 400: "Cannot specify both ticker and tickersAnyOf. Use ticker for a single symbol or tickersAnyOf for multiple."
    */
   tickersAnyOf?: string | undefined;
   /**

@@ -20,7 +20,7 @@ let value: GetEconomicsCalendarResponse = {
       lastUpdate: "2026-03-03T10:49:26.58",
       previous: "1833K",
       reference: "Feb/21",
-      referenceDate: new Date("2026-02-21T00:00:00Z"),
+      referenceDate: new Date("2026-02-21T00:00:00"),
       source: "U.S. Department of Labor",
       sourceUrl: "http://www.dol.gov",
       symbol: "UNITEDSTACONJOBCLA",

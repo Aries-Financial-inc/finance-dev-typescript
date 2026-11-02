@@ -5,23 +5,13 @@
 
 import * as z from "zod/v4-mini";
 import { safeParse } from "../lib/schemas.js";
-import * as openEnums from "../types/enums.js";
-import { OpenEnum } from "../types/enums.js";
 import { Result as SafeParseResult } from "../types/fp.js";
 import * as types from "../types/primitives.js";
 import { SDKValidationError } from "./errors/sdk-validation-error.js";
-
-/**
- * Instrument class returned by symbol search.
- */
-export const SearchSymbolItemType = {
-  Stock: "stock",
-  Option: "option",
-} as const;
-/**
- * Instrument class returned by symbol search.
- */
-export type SearchSymbolItemType = OpenEnum<typeof SearchSymbolItemType>;
+import {
+  InstrumentType,
+  InstrumentType$inboundSchema,
+} from "./instrument-type.js";
 
 /**
  * Symbol search result.
@@ -46,14 +36,8 @@ export type SearchSymbolItem = {
   /**
    * Instrument class returned by symbol search.
    */
-  type?: SearchSymbolItemType | undefined;
+  type?: InstrumentType | undefined;
 };
-
-/** @internal */
-export const SearchSymbolItemType$inboundSchema: z.ZodMiniType<
-  SearchSymbolItemType,
-  unknown
-> = openEnums.inboundSchema(SearchSymbolItemType);
 
 /** @internal */
 export const SearchSymbolItem$inboundSchema: z.ZodMiniType<
@@ -64,7 +48,7 @@ export const SearchSymbolItem$inboundSchema: z.ZodMiniType<
   exchange: types.optional(types.string()),
   symbol: types.optional(types.string()),
   ticker: types.optional(types.string()),
-  type: types.optional(SearchSymbolItemType$inboundSchema),
+  type: types.optional(InstrumentType$inboundSchema),
 });
 
 export function searchSymbolItemFromJSON(

@@ -9,7 +9,7 @@
 * [getQuotes](#getquotes) - Get Real-Time Quotes
 * [searchSymbols](#searchsymbols) - Search Symbols
 * [getSymbols](#getsymbols) - Get Symbol Information
-* [getTickHistory](#gettickhistory) - Get Tick-Based Chart Data
+* [getTickBased](#gettickbased) - Get Tick-Based Chart Data
 * [getTime](#gettime) - Get Server Time
 
 ## getConfig
@@ -458,7 +458,7 @@ run();
 | errors.AuthenticationErrorEnvelope | 500                                | application/json                   |
 | errors.PetstoreDefaultError        | 4XX, 5XX                           | \*/\*                              |
 
-## getTickHistory
+## getTickBased
 
 Retrieves tick-based chart bars for a specific symbol. Unlike time-based candles (which close every fixed number of minutes, hours, or days), a tick bar closes every time a fixed number of trades has occurred — for example, a `100T` bar closes after every 100 trades, whether that takes two seconds in a busy market or two minutes in a quiet one. This makes tick charts useful for visualizing market *activity* rather than the *passage of time*, which many traders use to spot momentum and unusual volume. Tick resolutions cannot be derived from time-based bars, so they are served from this dedicated endpoint rather than `/v1/chart/history`. Bar timestamps are returned in Unix milliseconds and are always strictly increasing, even for very actively traded symbols. Because tick bars are built from live trade activity rather than fixed calendar periods, older bars are loaded using the `cursor` pagination token instead of a date range — see the `cursor` and `nextTo` fields below.
 
@@ -476,7 +476,7 @@ const financeDev = new FinanceDev({
 });
 
 async function run() {
-  const result = await financeDev.chart.getTickHistory({
+  const result = await financeDev.chart.getTickBased({
     symbol: "AAPL",
     resolution: "100T",
     cursor: "1784677563966606471",
@@ -494,7 +494,7 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
-import { chartGetTickHistory } from "@ariesdotcom/finance-dev/funcs/chart-get-tick-history.js";
+import { chartGetTickBased } from "@ariesdotcom/finance-dev/funcs/chart-get-tick-based.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -506,7 +506,7 @@ const financeDev = new FinanceDevCore({
 });
 
 async function run() {
-  const res = await chartGetTickHistory(financeDev, {
+  const res = await chartGetTickBased(financeDev, {
     symbol: "AAPL",
     resolution: "100T",
     cursor: "1784677563966606471",
@@ -515,7 +515,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("chartGetTickHistory failed:", res.error);
+    console.log("chartGetTickBased failed:", res.error);
   }
 }
 

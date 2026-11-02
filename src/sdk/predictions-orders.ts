@@ -3,23 +3,114 @@
  * @generated-id: ec77375158c0
  */
 
-import { predictionsOrdersGet } from "../funcs/predictions-orders-get.js";
+import { predictionsOrdersCancelPredictionOrder } from "../funcs/predictions-orders-cancel-prediction-order.js";
+import { predictionsOrdersGetPredictionMassCancel } from "../funcs/predictions-orders-get-prediction-mass-cancel.js";
+import { predictionsOrdersListPredictionMassCancels } from "../funcs/predictions-orders-list-prediction-mass-cancels.js";
+import { predictionsOrdersListPredictionOrderHistory } from "../funcs/predictions-orders-list-prediction-order-history.js";
+import { predictionsOrdersMassCancelPredictionOrders } from "../funcs/predictions-orders-mass-cancel-prediction-orders.js";
+import { predictionsOrdersReplacePredictionOrder } from "../funcs/predictions-orders-replace-prediction-order.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
+import * as models from "../models/index.js";
 import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class PredictionsOrders extends ClientSDK {
   /**
-   * Get prediction order
+   * List prediction order history
    *
    * @remarks
-   * **Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Returns one of the authenticated user's prediction-market orders together with every venue execution report against it.
+   * **Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Returns every order on the account, newest first, one page at a time, optionally bounded by creation time.
    */
-  async get(
-    request: operations.GetPredictionOrderRequest,
+  async listPredictionOrderHistory(
+    request: operations.ListPredictionOrderHistoryRequest,
     options?: RequestOptions,
-  ): Promise<operations.GetPredictionOrderResponse> {
-    return unwrapAsync(predictionsOrdersGet(
+  ): Promise<operations.ListPredictionOrderHistoryResponse> {
+    return unwrapAsync(predictionsOrdersListPredictionOrderHistory(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  /**
+   * List prediction mass cancels
+   *
+   * @remarks
+   * **Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Returns the account's mass cancels, newest first, one page at a time.
+   */
+  async listPredictionMassCancels(
+    request: operations.ListPredictionMassCancelsRequest,
+    options?: RequestOptions,
+  ): Promise<operations.ListPredictionMassCancelsResponse> {
+    return unwrapAsync(predictionsOrdersListPredictionMassCancels(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  /**
+   * Mass cancel prediction orders
+   *
+   * @remarks
+   * **Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Cancels every working order on an account, or only those in one contract, in one request to the venue. Returns `202` with the request, normally `pending`. A `202` does not mean any order is canceled: each order the venue cancels arrives as an ordinary order update.
+   */
+  async massCancelPredictionOrders(
+    request: models.PredOrdersMassCancelRequest,
+    options?: RequestOptions,
+  ): Promise<operations.MassCancelPredictionOrdersResponse> {
+    return unwrapAsync(predictionsOrdersMassCancelPredictionOrders(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  /**
+   * Get prediction mass cancel
+   *
+   * @remarks
+   * **Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Returns one mass cancel and the venue's answer to it. The orders it canceled carry its `massCancelId` in their events.
+   */
+  async getPredictionMassCancel(
+    request: operations.GetPredictionMassCancelRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetPredictionMassCancelResponse> {
+    return unwrapAsync(predictionsOrdersGetPredictionMassCancel(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  /**
+   * Replace prediction order
+   *
+   * @remarks
+   * **Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Amends a working order's terms. Returns `202` with the order and its amend outstanding (`pendingAction` `replace`). The order keeps its working terms until the venue confirms; if the venue refuses, they stay as they were and the reason is on the order.
+   */
+  async replacePredictionOrder(
+    request: operations.ReplacePredictionOrderRequest,
+    options?: RequestOptions,
+  ): Promise<operations.ReplacePredictionOrderResponse> {
+    return unwrapAsync(predictionsOrdersReplacePredictionOrder(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  /**
+   * Cancel prediction order
+   *
+   * @remarks
+   * **Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Cancels a working order in full; the venue has no partial cancel. Returns `202` with the order and its cancel outstanding (`pendingAction` `cancel`). Whether the venue canceled it arrives as an order update.
+   */
+  async cancelPredictionOrder(
+    request: operations.CancelPredictionOrderRequest,
+    options?: RequestOptions,
+  ): Promise<operations.CancelPredictionOrderResponse> {
+    return unwrapAsync(predictionsOrdersCancelPredictionOrder(
       this,
       request,
       options,

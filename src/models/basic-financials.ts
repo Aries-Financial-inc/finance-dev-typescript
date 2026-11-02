@@ -11,14 +11,11 @@ import {
 } from "../lib/schemas.js";
 import { Result as SafeParseResult } from "../types/fp.js";
 import * as types from "../types/primitives.js";
-import { smartUnion } from "../types/smart-union.js";
 import { SDKValidationError } from "./errors/sdk-validation-error.js";
 import {
   MetricSeriesPoint,
   MetricSeriesPoint$inboundSchema,
 } from "./metric-series-point.js";
-
-export type MetricUnion = number | string;
 
 /**
  * Current financial metrics and ratios (dynamic object with various metric keys)
@@ -48,11 +45,7 @@ export type Metric = {
    * Stock's beta coefficient measuring volatility relative to the market
    */
   beta?: number | undefined;
-  /**
-   * Date when the 52-week high was reached
-   */
-  fiftyTwoWeekHighDate?: string | undefined;
-  additionalProperties?: { [k: string]: number | string | null } | undefined;
+  additionalProperties?: { [k: string]: number } | undefined;
 };
 
 /**
@@ -106,20 +99,6 @@ export type BasicFinancials = {
 };
 
 /** @internal */
-export const MetricUnion$inboundSchema: z.ZodMiniType<MetricUnion, unknown> =
-  smartUnion([types.number(), types.string()]);
-
-export function metricUnionFromJSON(
-  jsonString: string,
-): SafeParseResult<MetricUnion, SDKValidationError> {
-  return safeParse(
-    jsonString,
-    (x) => MetricUnion$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'MetricUnion' from JSON`,
-  );
-}
-
-/** @internal */
 export const Metric$inboundSchema: z.ZodMiniType<Metric, unknown> = z.pipe(
   collectExtraKeys$(
     z.catchall(
@@ -130,9 +109,8 @@ export const Metric$inboundSchema: z.ZodMiniType<Metric, unknown> = z.pipe(
         "52WeekLowDate": types.optional(types.string()),
         "52WeekPriceReturnDaily": types.optional(types.number()),
         beta: types.optional(types.number()),
-        "52WeekHighDate": types.optional(types.string()),
       }),
-      smartUnion([types.number(), types.string()]),
+      types.number(),
     ),
     "additionalProperties",
     true,
@@ -144,7 +122,6 @@ export const Metric$inboundSchema: z.ZodMiniType<Metric, unknown> = z.pipe(
       "52WeekLow": "fiftyTwoWeekLow",
       "52WeekLowDate": "fiftyTwoWeekLowDate",
       "52WeekPriceReturnDaily": "fiftyTwoWeekPriceReturnDaily",
-      "52WeekHighDate": "fiftyTwoWeekHighDate",
     });
   }),
 );
