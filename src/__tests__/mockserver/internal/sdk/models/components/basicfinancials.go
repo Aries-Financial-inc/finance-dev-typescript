@@ -4,8 +4,73 @@
 package components
 
 import (
+	"errors"
+	"fmt"
 	"mockserver/internal/sdk/utils"
 )
+
+type MetricUnionType string
+
+const (
+	MetricUnionTypeNumber MetricUnionType = "number"
+	MetricUnionTypeStr    MetricUnionType = "str"
+)
+
+type MetricUnion struct {
+	Number *float64 `queryParam:"inline"`
+	Str    *string  `queryParam:"inline"`
+
+	Type MetricUnionType
+}
+
+func CreateMetricUnionNumber(number float64) MetricUnion {
+	typ := MetricUnionTypeNumber
+
+	return MetricUnion{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateMetricUnionStr(str string) MetricUnion {
+	typ := MetricUnionTypeStr
+
+	return MetricUnion{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func (u *MetricUnion) UnmarshalJSON(data []byte) error {
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
+		u.Number = &number
+		u.Type = MetricUnionTypeNumber
+		return nil
+	}
+
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
+		u.Str = &str
+		u.Type = MetricUnionTypeStr
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for MetricUnion", string(data))
+}
+
+func (u MetricUnion) MarshalJSON() ([]byte, error) {
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type MetricUnion: all fields are null")
+}
 
 // Metric - Current financial metrics and ratios (dynamic object with various metric keys)
 type Metric struct {
@@ -20,8 +85,10 @@ type Metric struct {
 	// Price return over the last 52 weeks (daily calculation)
 	FiftyTwoWeekPriceReturnDaily *float64 `json:"52WeekPriceReturnDaily,omitempty"`
 	// Stock's beta coefficient measuring volatility relative to the market
-	Beta                 *float64           `json:"beta,omitempty"`
-	AdditionalProperties map[string]float64 `additionalProperties:"true" json:"-"`
+	Beta *float64 `json:"beta,omitempty"`
+	// Date when the 52-week high was reached
+	FiftyTwoWeekHighDate *string                 `json:"52WeekHighDate,omitempty"`
+	AdditionalProperties map[string]*MetricUnion `additionalProperties:"true" json:"-"`
 }
 
 func (m Metric) MarshalJSON() ([]byte, error) {
@@ -77,7 +144,14 @@ func (o *Metric) GetBeta() *float64 {
 	return o.Beta
 }
 
-func (o *Metric) GetAdditionalProperties() map[string]float64 {
+func (o *Metric) GetFiftyTwoWeekHighDate() *string {
+	if o == nil {
+		return nil
+	}
+	return o.FiftyTwoWeekHighDate
+}
+
+func (o *Metric) GetAdditionalProperties() map[string]*MetricUnion {
 	if o == nil {
 		return nil
 	}
