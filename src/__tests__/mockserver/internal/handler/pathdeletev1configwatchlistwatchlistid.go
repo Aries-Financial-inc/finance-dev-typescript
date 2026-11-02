@@ -24,54 +24,14 @@ func pathDeleteV1ConfigWatchlistWatchlistID(dir *logging.HTTPFileDirectory, rt *
 		count := rt.GetRequestCount(test, instanceID)
 
 		switch fmt.Sprintf("%s[%d]", test, count) {
-		case "deleteConfigWatchlistById-resetToDefault[0]":
-			dir.HandlerFunc("deleteConfigWatchlistById", testDeleteConfigWatchlistByIDDeleteConfigWatchlistByIDResetToDefault0)(w, req)
 		case "deleteConfigWatchlistById-deleted[0]":
 			dir.HandlerFunc("deleteConfigWatchlistById", testDeleteConfigWatchlistByIDDeleteConfigWatchlistByIDDeleted0)(w, req)
+		case "deleteConfigWatchlistById-resetToDefault[0]":
+			dir.HandlerFunc("deleteConfigWatchlistById", testDeleteConfigWatchlistByIDDeleteConfigWatchlistByIDResetToDefault0)(w, req)
 		default:
 			http.Error(w, fmt.Sprintf("Unknown test: %s[%d]", test, count), http.StatusBadRequest)
 		}
 	}
-}
-
-func testDeleteConfigWatchlistByIDDeleteConfigWatchlistByIDResetToDefault0(w http.ResponseWriter, req *http.Request) {
-	if err := assert.SecurityAuthorizationHeader(req, true, "Bearer"); err != nil {
-		log.Printf("assertion error: %s\n", err)
-		http.Error(w, err.Error(), http.StatusUnauthorized)
-		return
-	}
-	if err := assert.AcceptHeader(req, []string{"application/json"}); err != nil {
-		log.Printf("assertion error: %s\n", err)
-		http.Error(w, err.Error(), http.StatusBadRequest)
-		return
-	}
-	if err := assert.HeaderExists(req, "User-Agent"); err != nil {
-		log.Printf("assertion error: %s\n", err)
-		http.Error(w, err.Error(), http.StatusBadRequest)
-		return
-	}
-	var respBody *components.Watchlist = &components.Watchlist{
-		ID:   types.Int64(12345),
-		Name: types.String("Default"),
-		Symbols: optionalnullable.From(types.Pointer([]string{
-			"AAPL",
-			"GOOGL",
-			"MSFT",
-		})),
-	}
-	respBodyBytes, err := utils.MarshalJSON(respBody, "", true)
-
-	if err != nil {
-		http.Error(
-			w,
-			"Unable to encode response body as JSON: "+err.Error(),
-			http.StatusInternalServerError,
-		)
-		return
-	}
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	_, _ = w.Write(respBodyBytes)
 }
 
 func testDeleteConfigWatchlistByIDDeleteConfigWatchlistByIDDeleted0(w http.ResponseWriter, req *http.Request) {
@@ -93,6 +53,46 @@ func testDeleteConfigWatchlistByIDDeleteConfigWatchlistByIDDeleted0(w http.Respo
 	var respBody *components.Watchlist = &components.Watchlist{
 		ID:   types.Int64(12345),
 		Name: types.String("Tech Stocks"),
+		Symbols: optionalnullable.From(types.Pointer([]string{
+			"AAPL",
+			"GOOGL",
+			"MSFT",
+		})),
+	}
+	respBodyBytes, err := utils.MarshalJSON(respBody, "", true)
+
+	if err != nil {
+		http.Error(
+			w,
+			"Unable to encode response body as JSON: "+err.Error(),
+			http.StatusInternalServerError,
+		)
+		return
+	}
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	_, _ = w.Write(respBodyBytes)
+}
+
+func testDeleteConfigWatchlistByIDDeleteConfigWatchlistByIDResetToDefault0(w http.ResponseWriter, req *http.Request) {
+	if err := assert.SecurityAuthorizationHeader(req, true, "Bearer"); err != nil {
+		log.Printf("assertion error: %s\n", err)
+		http.Error(w, err.Error(), http.StatusUnauthorized)
+		return
+	}
+	if err := assert.AcceptHeader(req, []string{"application/json"}); err != nil {
+		log.Printf("assertion error: %s\n", err)
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	if err := assert.HeaderExists(req, "User-Agent"); err != nil {
+		log.Printf("assertion error: %s\n", err)
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	var respBody *components.Watchlist = &components.Watchlist{
+		ID:   types.Int64(12345),
+		Name: types.String("Default"),
 		Symbols: optionalnullable.From(types.Pointer([]string{
 			"AAPL",
 			"GOOGL",

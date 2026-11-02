@@ -1,6 +1,6 @@
 {
   "name": "@ariesdotcom/finance-dev",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Aries Financial",
   "description": "Official TypeScript SDK for the finance.dev API by Aries Financial.",
   "homepage": "https://finance.dev",
