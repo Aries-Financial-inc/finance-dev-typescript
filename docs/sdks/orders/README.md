@@ -1275,6 +1275,8 @@ run();
 
 Cancel an existing order by original client order ID. For option cancels, you can provide the option fields directly or send an OSI option symbol in `symbol` and let the backend derive the option instrument fields.
 
+**Order ownership:** `origClOrdId` must be an order on `accountId`. If it is not (an unknown ID, or an order on another account), the request is not sent to the broker and returns `400` with `error.code` `INVALID_ORIG_CL_ORD_ID`. An order placed or replaced moments earlier may not be recognized yet; the API waits briefly for it before rejecting. If ownership cannot be verified, the request returns `503` (`SERVICE_UNAVAILABLE`) and is not sent; retry later.
+
 ### Example Usage: cancelEquity
 
 <!-- UsageSnippet language="typescript" operationID="cancelOrder" method="post" path="/v1/orders/cancel" example="cancelEquity" -->
@@ -3523,6 +3525,8 @@ Price precision validation:
 - `STOP_LIMIT` validates both
 - Decimal inputs support up to 5 digits after the decimal point.
 
+**Order ownership:** `origClOrdId` must be an order on `accountId`. If it is not (an unknown ID, or an order on another account), the request is not sent to the broker and returns `400` with `error.code` `INVALID_ORIG_CL_ORD_ID`. An order placed or replaced moments earlier may not be recognized yet; the API waits briefly for it before rejecting. If ownership cannot be verified, the request returns `503` (`SERVICE_UNAVAILABLE`) and is not sent; retry later.
+
 ### Example Usage: changePrice
 
 <!-- UsageSnippet language="typescript" operationID="replaceOrder" method="post" path="/v1/orders/replace" example="changePrice" -->
@@ -4585,7 +4589,7 @@ Results are ordered and filtered by `order_created_at` (keyset pagination uses t
 
 Set `exclude_today=true` to narrow `to` to just before midnight **America/New_York**, omitting today's activity (already returned by **GET /v2/accounts/{id}/orders**).
 
-**Pagination:** Same opaque `int64` cursor contract as active orders when reading from DB — `cursor=0` first, then `nextCursor`; `0` means exhausted.
+**Pagination:** Same opaque `int64` cursor contract as active orders when reading from DB — `cursor=0` first, then `nextCursor` while it is present. The final page omits `nextCursor`.
 
 ### Example Usage
 

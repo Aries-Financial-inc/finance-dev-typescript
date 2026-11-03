@@ -20,7 +20,7 @@ export type ListActiveOrdersRequest = {
    */
   limit?: number | undefined;
   /**
-   * Opaque pagination cursor. Send `0` (or omit) for the first page; pass the previous response's `nextCursor` for subsequent pages. Stop when `nextCursor` is `0`.
+   * Opaque pagination cursor. Send `0` (or omit) for the first page; pass the previous response's `nextCursor` for subsequent pages. Stop when `nextCursor` is absent.
    */
   cursor?: number | undefined;
 };

@@ -67,10 +67,6 @@ export type EquityDetailsDTO = {
    */
   pe?: number | undefined;
   /**
-   * Market breadth advancers (if present)
-   */
-  advancers?: number | undefined;
-  /**
    * Annual yield, typically dividend yield when provided. Use it for income-oriented displays.
    */
   annualYield?: number | undefined;
@@ -118,10 +114,6 @@ export type EquityDetailsDTO = {
    * Previous or latest close price from the feed. Use it as the baseline for daily change calculations.
    */
   closePrice?: number | undefined;
-  /**
-   * Number of symbols declining in the related market-breadth snapshot.
-   */
-  decliners?: number | undefined;
   /**
    * Dividend amount when provided. Use it in income and yield displays.
    */
@@ -191,33 +183,9 @@ export type EquityDetailsDTO = {
    */
   name?: string | undefined;
   /**
-   * Reported Nasdaq buy-side volume. Use it only for advanced market-flow displays.
-   */
-  nasdaqBuyVolume?: number | undefined;
-  /**
-   * Net buy versus sell flow for Nasdaq-listed activity when provided by the feed.
-   */
-  nasdaqNetInFlow?: number | undefined;
-  /**
-   * Reported Nasdaq sell-side volume. Use it only for advanced market-flow displays.
-   */
-  nasdaqSellVolume?: number | undefined;
-  /**
    * Price change versus the previous close. Use it for daily gain/loss displays.
    */
   netChange?: number | undefined;
-  /**
-   * Reported NYSE buy-side volume. Use it only for advanced market-flow displays.
-   */
-  nyseBuyVolume?: number | undefined;
-  /**
-   * Net buy versus sell flow for NYSE-listed activity when provided by the feed.
-   */
-  nyseNetInflow?: number | undefined;
-  /**
-   * Reported NYSE sell-side volume. Use it only for advanced market-flow displays.
-   */
-  nyseSellVolume?: number | undefined;
   /**
    * Number of outstanding option contracts for this contract. Use it to gauge options liquidity.
    */
@@ -283,10 +251,6 @@ export type EquityDetailsDTO = {
    */
   tick?: number | undefined;
   /**
-   * Total symbols counted in the market-breadth snapshot.
-   */
-  totalSymbols?: number | undefined;
-  /**
    * Total shares or contracts traded during the current session. Use it to show liquidity and activity.
    */
   totalVolume?: number | undefined;
@@ -306,10 +270,6 @@ export type EquityDetailsDTO = {
    * Provider-supplied market data type for this snapshot. Treat this as a feed classification string rather than an order type.
    */
   type?: string | undefined;
-  /**
-   * Number of symbols unchanged in the related market-breadth snapshot.
-   */
-  unchanged?: number | undefined;
   /**
    * Underlying symbol (options)
    */
@@ -355,7 +315,6 @@ export const EquityDetailsDTO$inboundSchema: z.ZodMiniType<
     EPSDiluted: types.optional(types.number()),
     EPSLatest12Month: types.optional(types.number()),
     PE: types.optional(types.number()),
-    advancers: types.optional(types.number()),
     annualYield: types.optional(types.number()),
     askExchange: types.optional(types.string()),
     askPrice: types.optional(types.number()),
@@ -368,7 +327,6 @@ export const EquityDetailsDTO$inboundSchema: z.ZodMiniType<
     bidSize: types.optional(types.number()),
     changeStatus: types.optional(types.string()),
     closePrice: types.optional(types.number()),
-    decliners: types.optional(types.number()),
     dividend: types.optional(types.number()),
     expirationDate: types.optional(types.string()),
     hasOptions: types.optional(types.boolean()),
@@ -386,13 +344,7 @@ export const EquityDetailsDTO$inboundSchema: z.ZodMiniType<
     marketCap: types.optional(types.number()),
     midPrice: types.optional(types.number()),
     name: types.optional(types.string()),
-    nasdaqBuyVolume: types.optional(types.number()),
-    nasdaqNetInFlow: types.optional(types.number()),
-    nasdaqSellVolume: types.optional(types.number()),
     netChange: types.optional(types.number()),
-    nyseBuyVolume: types.optional(types.number()),
-    nyseNetInflow: types.optional(types.number()),
-    nyseSellVolume: types.optional(types.number()),
     openInterest: types.optional(types.number()),
     openPrice: types.optional(types.number()),
     pctHeldByInstitution: types.optional(types.number()),
@@ -408,13 +360,11 @@ export const EquityDetailsDTO$inboundSchema: z.ZodMiniType<
     strikePrice: types.optional(types.number()),
     symbol: types.optional(types.string()),
     tick: types.optional(types.number()),
-    totalSymbols: types.optional(types.number()),
     totalVolume: types.optional(types.number()),
     tradeExchange: types.optional(types.string()),
     tradeSeq: types.optional(types.number()),
     tradeTimestamp: types.optional(types.date()),
     type: types.optional(types.string()),
-    unchanged: types.optional(types.number()),
     underlyingSymbol: types.optional(types.string()),
     yearEndClose: types.optional(types.number()),
     ytdHigh: types.optional(types.number()),

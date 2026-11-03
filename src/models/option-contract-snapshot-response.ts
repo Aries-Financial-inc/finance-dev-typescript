@@ -14,13 +14,9 @@ import {
 } from "./option-contract-snapshot-row.js";
 
 /**
- * Single option contract snapshot (`OptionContractSnapshotResponse`). Responses may be cached for about five minutes.
+ * Single option contract snapshot (`OptionContractSnapshotResponse`) without pagination. Responses may be cached for about five minutes.
  */
 export type OptionContractSnapshotResponse = {
-  /**
-   * Pagination URL when applicable; omitted when not used.
-   */
-  nextUrl?: string | undefined;
   /**
    * Request identifier from upstream data.
    */
@@ -40,7 +36,6 @@ export const OptionContractSnapshotResponse$inboundSchema: z.ZodMiniType<
   OptionContractSnapshotResponse,
   unknown
 > = z.object({
-  nextUrl: types.optional(types.string()),
   requestId: types.optional(types.string()),
   results: types.optional(OptionContractSnapshotRow$inboundSchema),
   status: types.optional(types.string()),

@@ -7,14 +7,7 @@ import { ListOrderHistoryResponse } from "@ariesdotcom/finance-dev/models/operat
 
 let value: ListOrderHistoryResponse = {
   result: {
-    orders: [
-      {
-        exDestination: "MNGD",
-        side: "BUY",
-        timeInForce: "DAY",
-        type: "LIMIT",
-      },
-    ],
+    orders: [],
   },
 };
 ```

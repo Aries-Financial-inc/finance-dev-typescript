@@ -13,16 +13,25 @@ let value: GetEventContractsResponse = {
     contracts: [
       {
         baseEventId: "<id>",
+        candidateStatus: "C",
         eventId: "<id>",
-        lastSyncedAt: new Date("2026-04-29T00:02:23.516Z"),
-        nonTradable: true,
-        state: "Pennsylvania",
+        frontRunner: true,
+        incumbent: true,
+        lastSyncedAt: new Date("2025-10-07T21:12:53.667Z"),
+        nonTradable: false,
+        party: "R",
+        photo: {
+          credit: "Gage Skidmore",
+          license: "CC BY-SA 4.0",
+          licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+          sourceUrl: "https://commons.wikimedia.org/wiki/File:K_Paxton.jpg",
+          url: "https://vain-bonnet.org/",
+        },
+        state: "Vermont",
         symbol: "<value>",
-        symbolSubTypes: [
-          "<value 1>",
-        ],
+        symbolSubTypes: [],
         tickSize: new Decimal("0.01"),
-        tradable: false,
+        tradable: true,
       },
     ],
     event: {

@@ -24,11 +24,11 @@ export type GetConferenceCallsRequest = {
    */
   tickers?: string | undefined;
   /**
-   * Page number for pagination (0-indexed, max 100000)
+   * Zero-based page number (default: 0). page × pageSize must be less than 100,000; otherwise the API returns HTTP 400 with error code PAGINATION_LIMIT_EXCEEDED. To retrieve larger histories, narrow dateFrom and dateTo and restart at page 0 for each date window.
    */
   page?: number | undefined;
   /**
-   * Number of results per page. Use this to control pagination size in list views. Enter a value from 1 to 1000 depending on how much data your UI can display.
+   * Number of results per page (default: 100, maximum: 1000). page × pageSize must be less than 100,000.
    */
   pageSize?: number | undefined;
 };
@@ -42,8 +42,8 @@ export type GetConferenceCallsRequest$Outbound = {
   dateFrom?: string | undefined;
   dateTo?: string | undefined;
   tickers?: string | undefined;
-  page?: number | undefined;
-  pageSize?: number | undefined;
+  page: number;
+  pageSize: number;
 };
 
 /** @internal */
@@ -64,8 +64,8 @@ export const GetConferenceCallsRequest$outboundSchema: z.ZodMiniType<
     ),
   ),
   tickers: z.optional(z.string()),
-  page: z.optional(z.int()),
-  pageSize: z.optional(z.int()),
+  page: z._default(z.int(), 0),
+  pageSize: z._default(z.int(), 100),
 });
 
 export function getConferenceCallsRequestToJSON(

@@ -270,20 +270,20 @@ run();
 * [getTopLosers](docs/sdks/analytics/README.md#gettoplosers) - Get Top Losing Stocks
 * [getOptionsEtfsTopVolume](docs/sdks/analytics/README.md#getoptionsetfstopvolume) - Get Top ETF Options by Volume
 * [getOptionsStocksTopGainers](docs/sdks/analytics/README.md#getoptionsstockstopgainers) - Get Top Stock Options by Gains
-* [getOptionsStocksTopVolume](docs/sdks/analytics/README.md#getoptionsstockstopvolume) - Get Top Stock Options by Volume
+* [getTopVolumeOptions](docs/sdks/analytics/README.md#gettopvolumeoptions) - Get Top Stock Options by Volume
 * [stockScreener](docs/sdks/analytics/README.md#stockscreener) - Stock Screener
 
 #### [Analytics.TopMostActive](docs/sdks/topmostactive/README.md)
 
 * [list](docs/sdks/topmostactive/README.md#list) - Get Most Active Stocks
 
-### [Calendar](docs/sdks/calendar/README.md)
+### [Calendars](docs/sdks/calendars/README.md)
 
-* [getConferenceCalls](docs/sdks/calendar/README.md#getconferencecalls) - Get Conference Calls
-* [getEarnings](docs/sdks/calendar/README.md#getearnings) - Get Earnings Calendar
-* [getEconomics](docs/sdks/calendar/README.md#geteconomics) - Get Economics Calendar
-* [getHistoricalData](docs/sdks/calendar/README.md#gethistoricaldata) - Get Historical Economic Data
-* [getMergersAndAcquisitions](docs/sdks/calendar/README.md#getmergersandacquisitions) - Get Mergers & Acquisitions
+* [getConferenceCalls](docs/sdks/calendars/README.md#getconferencecalls) - Get Conference Calls
+* [getEarnings](docs/sdks/calendars/README.md#getearnings) - Get Earnings Calendar
+* [getEconomics](docs/sdks/calendars/README.md#geteconomics) - Get Economics Calendar
+* [getHistoricalData](docs/sdks/calendars/README.md#gethistoricaldata) - Get Historical Economic Data
+* [getMergersAndAcquisitions](docs/sdks/calendars/README.md#getmergersandacquisitions) - Get Mergers & Acquisitions
 
 ### [Chart](docs/sdks/chart/README.md)
 
@@ -292,14 +292,17 @@ run();
 * [getQuotes](docs/sdks/chart/README.md#getquotes) - Get Real-Time Quotes
 * [searchSymbols](docs/sdks/chart/README.md#searchsymbols) - Search Symbols
 * [getSymbols](docs/sdks/chart/README.md#getsymbols) - Get Symbol Information
-* [getTickHistory](docs/sdks/chart/README.md#gettickhistory) - Get Tick-Based Chart Data
+* [getTickBased](docs/sdks/chart/README.md#gettickbased) - Get Tick-Based Chart Data
 * [getTime](docs/sdks/chart/README.md#gettime) - Get Server Time
+
+### [Companies](docs/sdks/companies/README.md)
+
+* [getPeers](docs/sdks/companies/README.md#getpeers) - Get Company Peers
 
 ### [Company](docs/sdks/company/README.md)
 
 * [getExecutive](docs/sdks/company/README.md#getexecutive) - Get Company Executives
 * [getFinancialMetrics](docs/sdks/company/README.md#getfinancialmetrics) - Get Company Financial Metrics
-* [getPeers](docs/sdks/company/README.md#getpeers) - Get Company Peers
 * [getProfile](docs/sdks/company/README.md#getprofile) - Get Company Profile
 
 ### [CorporateActions](docs/sdks/corporateactions/README.md)
@@ -364,10 +367,8 @@ run();
 ### [Market](docs/sdks/market/README.md)
 
 * [getEtbList](docs/sdks/market/README.md#getetblist) - Get Easy-to-Borrow List
-* [searchEtbSymbols](docs/sdks/market/README.md#searchetbsymbols) - Search Easy-to-Borrow Symbols
 * [getHolidays](docs/sdks/market/README.md#getholidays) - Get Market Holidays
 * [getStatus](docs/sdks/market/README.md#getstatus) - Get Market Status
-* [getOptionDetails](docs/sdks/market/README.md#getoptiondetails) - Get option details
 
 #### [Market.Equities](docs/sdks/equities/README.md)
 
@@ -375,6 +376,8 @@ run();
 
 ### [MarketData](docs/sdks/marketdata/README.md)
 
+* [searchEtbSymbols](docs/sdks/marketdata/README.md#searchetbsymbols) - Search Easy-to-Borrow Symbols
+* [getOptionDetails](docs/sdks/marketdata/README.md#getoptiondetails) - Get option details
 * [searchSymbols](docs/sdks/marketdata/README.md#searchsymbols) - Search Symbols
 
 ### [News](docs/sdks/news/README.md)
@@ -413,32 +416,45 @@ run();
 * [getFundData](docs/sdks/ownership/README.md#getfunddata) - Get Fund Ownership Data
 * [getInsiderTransactions](docs/sdks/ownership/README.md#getinsidertransactions) - Get Insider Transactions
 
+### [PredictionHistoricalData](docs/sdks/predictionhistoricaldata/README.md)
+
+* [get](docs/sdks/predictionhistoricaldata/README.md#get) - Get historical ticks for a single symbol
+
 ### [PredictionMarketCategories](docs/sdks/predictionmarketcategories/README.md)
 
 * [list](docs/sdks/predictionmarketcategories/README.md#list) - List prediction market categories
 
+### [PredictionMarkets](docs/sdks/predictionmarkets/README.md)
+
+* [getBaseEvent](docs/sdks/predictionmarkets/README.md#getbaseevent) - Get a base event with its events and each event's contracts
+* [getEventContracts](docs/sdks/predictionmarkets/README.md#geteventcontracts) - Get an event and all contracts under it
+
 ### [PredictionOrders](docs/sdks/predictionorders/README.md)
 
 * [create](docs/sdks/predictionorders/README.md#create) - Place prediction order
+* [get](docs/sdks/predictionorders/README.md#get) - Get prediction order
 
 ### [Predictions](docs/sdks/predictions/README.md)
 
-* [getHistoryBatch](docs/sdks/predictions/README.md#gethistorybatch) - Batch historical ticks for up to 5 symbols
-* [listOrders](docs/sdks/predictions/README.md#listorders) - List prediction orders
-
-#### [Predictions.History](docs/sdks/history/README.md)
-
-* [get](docs/sdks/history/README.md#get) - Get historical ticks for a single symbol
+* [batchGet](docs/sdks/predictions/README.md#batchget) - Batch historical ticks for up to 5 symbols
+* [listOrders](docs/sdks/predictions/README.md#listorders) - List current prediction orders
 
 #### [Predictions.Markets](docs/sdks/markets/README.md)
 
-* [getBaseEvent](docs/sdks/markets/README.md#getbaseevent) - Get a base event with its events and each event's contracts
-* [getEventContracts](docs/sdks/markets/README.md#geteventcontracts) - Get an event and all contracts under it
-* [search](docs/sdks/markets/README.md#search) - Search contracts, events or base events
+* [getElectionMap](docs/sdks/markets/README.md#getelectionmap) - Get every race of an election cycle with its candidates' prices
 
 #### [Predictions.Orders](docs/sdks/predictionsorders/README.md)
 
-* [get](docs/sdks/predictionsorders/README.md#get) - Get prediction order
+* [listPredictionOrderHistory](docs/sdks/predictionsorders/README.md#listpredictionorderhistory) - List prediction order history
+* [listPredictionMassCancels](docs/sdks/predictionsorders/README.md#listpredictionmasscancels) - List prediction mass cancels
+* [massCancelPredictionOrders](docs/sdks/predictionsorders/README.md#masscancelpredictionorders) - Mass cancel prediction orders
+* [getPredictionMassCancel](docs/sdks/predictionsorders/README.md#getpredictionmasscancel) - Get prediction mass cancel
+* [replacePredictionOrder](docs/sdks/predictionsorders/README.md#replacepredictionorder) - Replace prediction order
+* [cancelPredictionOrder](docs/sdks/predictionsorders/README.md#cancelpredictionorder) - Cancel prediction order
+
+### [PredictionsMarkets](docs/sdks/predictionsmarkets/README.md)
+
+* [search](docs/sdks/predictionsmarkets/README.md#search) - Search contracts, events or base events
 
 ### [Signals](docs/sdks/signals/README.md)
 
@@ -498,19 +514,20 @@ run();
 * [getSupportResistance](docs/sdks/technicalanalysis/README.md#getsupportresistance) - Get Support & Resistance Levels
 * [getTechnicalIndicator](docs/sdks/technicalanalysis/README.md#gettechnicalindicator) - Get Aggregate Technical Indicators
 
+### [Users](docs/sdks/users/README.md)
+
+* [getUserInfo](docs/sdks/users/README.md#getuserinfo) - Get User Info
+
 ### [Users.Accounts](docs/sdks/usersaccounts/README.md)
 
 * [list](docs/sdks/usersaccounts/README.md#list) - Get User Accounts
-
-### [Watchlist](docs/sdks/watchlist/README.md)
-
-* [delete](docs/sdks/watchlist/README.md#delete) - Delete Watchlist
 
 ### [Watchlists](docs/sdks/watchlists/README.md)
 
 * [list](docs/sdks/watchlists/README.md#list) - List Watchlists
 * [create](docs/sdks/watchlists/README.md#create) - Create Watchlist
 * [replaceAll](docs/sdks/watchlists/README.md#replaceall) - Replace All Watchlists
+* [delete](docs/sdks/watchlists/README.md#delete) - Delete Watchlist
 * [get](docs/sdks/watchlists/README.md#get) - Get Watchlist
 * [update](docs/sdks/watchlists/README.md#update) - Update Watchlist
 
@@ -541,28 +558,28 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`analyticsGetNetInflow`](docs/sdks/analytics/README.md#getnetinflow) - Get Net Inflow
 - [`analyticsGetOptionsEtfsTopVolume`](docs/sdks/analytics/README.md#getoptionsetfstopvolume) - Get Top ETF Options by Volume
 - [`analyticsGetOptionsStocksTopGainers`](docs/sdks/analytics/README.md#getoptionsstockstopgainers) - Get Top Stock Options by Gains
-- [`analyticsGetOptionsStocksTopVolume`](docs/sdks/analytics/README.md#getoptionsstockstopvolume) - Get Top Stock Options by Volume
 - [`analyticsGetSectorTickers`](docs/sdks/analytics/README.md#getsectortickers) - Get Sector Tickers
 - [`analyticsGetSectorWiseChange`](docs/sdks/analytics/README.md#getsectorwisechange) - Get Sector-wise Change
 - [`analyticsGetTopGainers`](docs/sdks/analytics/README.md#gettopgainers) - Get Top Gaining Stocks
 - [`analyticsGetTopLosers`](docs/sdks/analytics/README.md#gettoplosers) - Get Top Losing Stocks
+- [`analyticsGetTopVolumeOptions`](docs/sdks/analytics/README.md#gettopvolumeoptions) - Get Top Stock Options by Volume
 - [`analyticsStockScreener`](docs/sdks/analytics/README.md#stockscreener) - Stock Screener
 - [`analyticsTopMostActiveList`](docs/sdks/topmostactive/README.md#list) - Get Most Active Stocks
-- [`calendarGetConferenceCalls`](docs/sdks/calendar/README.md#getconferencecalls) - Get Conference Calls
-- [`calendarGetEarnings`](docs/sdks/calendar/README.md#getearnings) - Get Earnings Calendar
-- [`calendarGetEconomics`](docs/sdks/calendar/README.md#geteconomics) - Get Economics Calendar
-- [`calendarGetHistoricalData`](docs/sdks/calendar/README.md#gethistoricaldata) - Get Historical Economic Data
-- [`calendarGetMergersAndAcquisitions`](docs/sdks/calendar/README.md#getmergersandacquisitions) - Get Mergers & Acquisitions
+- [`calendarsGetConferenceCalls`](docs/sdks/calendars/README.md#getconferencecalls) - Get Conference Calls
+- [`calendarsGetEarnings`](docs/sdks/calendars/README.md#getearnings) - Get Earnings Calendar
+- [`calendarsGetEconomics`](docs/sdks/calendars/README.md#geteconomics) - Get Economics Calendar
+- [`calendarsGetHistoricalData`](docs/sdks/calendars/README.md#gethistoricaldata) - Get Historical Economic Data
+- [`calendarsGetMergersAndAcquisitions`](docs/sdks/calendars/README.md#getmergersandacquisitions) - Get Mergers & Acquisitions
 - [`chartGetConfig`](docs/sdks/chart/README.md#getconfig) - Get Chart Configuration
 - [`chartGetHistory`](docs/sdks/chart/README.md#gethistory) - Get Historical Chart Data
 - [`chartGetQuotes`](docs/sdks/chart/README.md#getquotes) - Get Real-Time Quotes
 - [`chartGetSymbols`](docs/sdks/chart/README.md#getsymbols) - Get Symbol Information
-- [`chartGetTickHistory`](docs/sdks/chart/README.md#gettickhistory) - Get Tick-Based Chart Data
+- [`chartGetTickBased`](docs/sdks/chart/README.md#gettickbased) - Get Tick-Based Chart Data
 - [`chartGetTime`](docs/sdks/chart/README.md#gettime) - Get Server Time
 - [`chartSearchSymbols`](docs/sdks/chart/README.md#searchsymbols) - Search Symbols
+- [`companiesGetPeers`](docs/sdks/companies/README.md#getpeers) - Get Company Peers
 - [`companyGetExecutive`](docs/sdks/company/README.md#getexecutive) - Get Company Executives
 - [`companyGetFinancialMetrics`](docs/sdks/company/README.md#getfinancialmetrics) - Get Company Financial Metrics
-- [`companyGetPeers`](docs/sdks/company/README.md#getpeers) - Get Company Peers
 - [`companyGetProfile`](docs/sdks/company/README.md#getprofile) - Get Company Profile
 - [`corporateActionsGetDividends`](docs/sdks/corporateactions/README.md#getdividends) - Get Dividend History
 - [`corporateActionsGetIpoCalendar`](docs/sdks/corporateactions/README.md#getipocalendar) - Get IPO Calendar
@@ -596,13 +613,13 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`indicesSearch`](docs/sdks/indices/README.md#search) - Search Indices
 - [`logosSearch`](docs/sdks/logos/README.md#search) - Search Company Logos
 - [`logosSync`](docs/sdks/logos/README.md#sync) - Sync Company Logos
+- [`marketDataGetOptionDetails`](docs/sdks/marketdata/README.md#getoptiondetails) - Get option details
+- [`marketDataSearchEtbSymbols`](docs/sdks/marketdata/README.md#searchetbsymbols) - Search Easy-to-Borrow Symbols
 - [`marketDataSearchSymbols`](docs/sdks/marketdata/README.md#searchsymbols) - Search Symbols
 - [`marketEquitiesGetDetails`](docs/sdks/equities/README.md#getdetails) - Get equity details
 - [`marketGetEtbList`](docs/sdks/market/README.md#getetblist) - Get Easy-to-Borrow List
 - [`marketGetHolidays`](docs/sdks/market/README.md#getholidays) - Get Market Holidays
-- [`marketGetOptionDetails`](docs/sdks/market/README.md#getoptiondetails) - Get option details
 - [`marketGetStatus`](docs/sdks/market/README.md#getstatus) - Get Market Status
-- [`marketSearchEtbSymbols`](docs/sdks/market/README.md#searchetbsymbols) - Search Easy-to-Borrow Symbols
 - [`newsGetById`](docs/sdks/news/README.md#getbyid) - Get News by ID
 - [`newsGetSentiment`](docs/sdks/news/README.md#getsentiment) - Get News Sentiment
 - [`newsList`](docs/sdks/news/README.md#list) - Get Market News
@@ -627,15 +644,22 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`ownershipGetInsiderTransactions`](docs/sdks/ownership/README.md#getinsidertransactions) - Get Insider Transactions
 - [`ownershipGetInstitutional`](docs/sdks/ownership/README.md#getinstitutional) - Get Institutional Ownership
 - [`ownershipGetPortfolio`](docs/sdks/ownership/README.md#getportfolio) - Get Institutional Portfolio
+- [`predictionHistoricalDataGet`](docs/sdks/predictionhistoricaldata/README.md#get) - Get historical ticks for a single symbol
 - [`predictionMarketCategoriesList`](docs/sdks/predictionmarketcategories/README.md#list) - List prediction market categories
+- [`predictionMarketsGetBaseEvent`](docs/sdks/predictionmarkets/README.md#getbaseevent) - Get a base event with its events and each event's contracts
+- [`predictionMarketsGetEventContracts`](docs/sdks/predictionmarkets/README.md#geteventcontracts) - Get an event and all contracts under it
 - [`predictionOrdersCreate`](docs/sdks/predictionorders/README.md#create) - Place prediction order
-- [`predictionsGetHistoryBatch`](docs/sdks/predictions/README.md#gethistorybatch) - Batch historical ticks for up to 5 symbols
-- [`predictionsHistoryGet`](docs/sdks/history/README.md#get) - Get historical ticks for a single symbol
-- [`predictionsListOrders`](docs/sdks/predictions/README.md#listorders) - List prediction orders
-- [`predictionsMarketsGetBaseEvent`](docs/sdks/markets/README.md#getbaseevent) - Get a base event with its events and each event's contracts
-- [`predictionsMarketsGetEventContracts`](docs/sdks/markets/README.md#geteventcontracts) - Get an event and all contracts under it
-- [`predictionsMarketsSearch`](docs/sdks/markets/README.md#search) - Search contracts, events or base events
-- [`predictionsOrdersGet`](docs/sdks/predictionsorders/README.md#get) - Get prediction order
+- [`predictionOrdersGet`](docs/sdks/predictionorders/README.md#get) - Get prediction order
+- [`predictionsBatchGet`](docs/sdks/predictions/README.md#batchget) - Batch historical ticks for up to 5 symbols
+- [`predictionsListOrders`](docs/sdks/predictions/README.md#listorders) - List current prediction orders
+- [`predictionsMarketsGetElectionMap`](docs/sdks/markets/README.md#getelectionmap) - Get every race of an election cycle with its candidates' prices
+- [`predictionsMarketsSearch`](docs/sdks/predictionsmarkets/README.md#search) - Search contracts, events or base events
+- [`predictionsOrdersCancelPredictionOrder`](docs/sdks/predictionsorders/README.md#cancelpredictionorder) - Cancel prediction order
+- [`predictionsOrdersGetPredictionMassCancel`](docs/sdks/predictionsorders/README.md#getpredictionmasscancel) - Get prediction mass cancel
+- [`predictionsOrdersListPredictionMassCancels`](docs/sdks/predictionsorders/README.md#listpredictionmasscancels) - List prediction mass cancels
+- [`predictionsOrdersListPredictionOrderHistory`](docs/sdks/predictionsorders/README.md#listpredictionorderhistory) - List prediction order history
+- [`predictionsOrdersMassCancelPredictionOrders`](docs/sdks/predictionsorders/README.md#masscancelpredictionorders) - Mass cancel prediction orders
+- [`predictionsOrdersReplacePredictionOrder`](docs/sdks/predictionsorders/README.md#replacepredictionorder) - Replace prediction order
 - [`signalsGetBullBear`](docs/sdks/signals/README.md#getbullbear) - Get Bull & Bear Analysis
 - [`stockAlternativeGetBankBranch`](docs/sdks/stockalternative/README.md#getbankbranch) - Get Bank Branch
 - [`stockAlternativeGetCongressionalTrading`](docs/sdks/stockalternative/README.md#getcongressionaltrading) - Get Congressional Trading
@@ -677,8 +701,9 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`technicalAnalysisGetSupportResistance`](docs/sdks/technicalanalysis/README.md#getsupportresistance) - Get Support & Resistance Levels
 - [`technicalAnalysisGetTechnicalIndicator`](docs/sdks/technicalanalysis/README.md#gettechnicalindicator) - Get Aggregate Technical Indicators
 - [`usersAccountsList`](docs/sdks/usersaccounts/README.md#list) - Get User Accounts
-- [`watchlistDelete`](docs/sdks/watchlist/README.md#delete) - Delete Watchlist
+- [`usersGetUserInfo`](docs/sdks/users/README.md#getuserinfo) - Get User Info
 - [`watchlistsCreate`](docs/sdks/watchlists/README.md#create) - Create Watchlist
+- [`watchlistsDelete`](docs/sdks/watchlists/README.md#delete) - Delete Watchlist
 - [`watchlistsGet`](docs/sdks/watchlists/README.md#get) - Get Watchlist
 - [`watchlistsList`](docs/sdks/watchlists/README.md#list) - List Watchlists
 - [`watchlistsReplaceAll`](docs/sdks/watchlists/README.md#replaceall) - Replace All Watchlists
@@ -870,8 +895,8 @@ run();
 
 
 **Inherit from [`FinanceDevAPIError`](./src/models/errors/finance-dev-api-error.ts)**:
-* [`ErrorEnvelope`](./src/models/errors/error-envelope.ts): Prediction-market error envelope. Returned by historical-data and prediction-market reference endpoints on 400/404/500/502. Applicable to 6 of 151 methods.*
-* [`PredOrdersErrorEnvelope`](./src/models/errors/pred-orders-error-envelope.ts): Invalid request. `INVALID_ORDER` carries the reason in `message`; on placement this includes refusals from order entry and the venue (price, tick size, account setup). Applicable to 3 of 151 methods.*
+* [`PredOrdersErrorEnvelope`](./src/models/errors/pred-orders-error-envelope.ts): Invalid request. `INVALID_ORDER` carries the reason in `message`; on placement this includes refusals from order entry and the venue (price, tick size, account setup). Applicable to 9 of 159 methods.*
+* [`ErrorEnvelope`](./src/models/errors/error-envelope.ts): Prediction-market error envelope. Returned by historical-data and prediction-market reference endpoints on 400/404/500/502. Applicable to 7 of 159 methods.*
 * [`ResponseValidationError`](./src/models/errors/response-validation-error.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
 
 </details>

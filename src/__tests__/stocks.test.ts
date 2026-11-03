@@ -27,6 +27,7 @@ test("Stocks Get Stock Aggregates", async () => {
     from: "2024-01-01",
     to: "2024-01-31",
     adjusted: true,
+    sort: "asc",
     limit: 1000,
   });
   expect(result).toBeDefined();

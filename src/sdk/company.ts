@@ -5,7 +5,6 @@
 
 import { companyGetExecutive } from "../funcs/company-get-executive.js";
 import { companyGetFinancialMetrics } from "../funcs/company-get-financial-metrics.js";
-import { companyGetPeers } from "../funcs/company-get-peers.js";
 import { companyGetProfile } from "../funcs/company-get-profile.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as models from "../models/index.js";
@@ -45,25 +44,6 @@ export class Company extends ClientSDK {
     options?: RequestOptions,
   ): Promise<models.BasicFinancials> {
     return unwrapAsync(companyGetFinancialMetrics(
-      this,
-      request,
-      options,
-    ));
-  }
-
-  /**
-   * Get Company Peers
-   *
-   * @remarks
-   * Retrieve a list of peer companies within the same industry or sector that are comparable in size and business model.
-   *
-   * Returns 404 Not Found with error code `NOT_FOUND` when no peers are available for the specified symbol.
-   */
-  async getPeers(
-    request: operations.GetCompanyPeersRequest,
-    options?: RequestOptions,
-  ): Promise<models.CompanyPeersResponse> {
-    return unwrapAsync(companyGetPeers(
       this,
       request,
       options,
