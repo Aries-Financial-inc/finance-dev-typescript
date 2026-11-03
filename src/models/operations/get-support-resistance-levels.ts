@@ -4,28 +4,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import * as openEnums from "../../types/enums.js";
-import { OpenEnum } from "../../types/enums.js";
-
-/**
- * How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `60`) or daily/weekly/monthly (`D`, `W`, `M`). Other values return 400 Bad Request with error code `VALIDATION_ERROR`.
- */
-export const GetSupportResistanceLevelsResolution = {
-  One: "1",
-  Five: "5",
-  Fifteen: "15",
-  Thirty: "30",
-  Sixty: "60",
-  D: "D",
-  W: "W",
-  M: "M",
-} as const;
-/**
- * How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `60`) or daily/weekly/monthly (`D`, `W`, `M`). Other values return 400 Bad Request with error code `VALIDATION_ERROR`.
- */
-export type GetSupportResistanceLevelsResolution = OpenEnum<
-  typeof GetSupportResistanceLevelsResolution
->;
+import * as models from "../index.js";
 
 export type GetSupportResistanceLevelsRequest = {
   /**
@@ -35,14 +14,8 @@ export type GetSupportResistanceLevelsRequest = {
   /**
    * How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `60`) or daily/weekly/monthly (`D`, `W`, `M`). Other values return 400 Bad Request with error code `VALIDATION_ERROR`.
    */
-  resolution: GetSupportResistanceLevelsResolution;
+  resolution: models.BarResolution;
 };
-
-/** @internal */
-export const GetSupportResistanceLevelsResolution$outboundSchema: z.ZodMiniType<
-  string,
-  GetSupportResistanceLevelsResolution
-> = openEnums.outboundSchema(GetSupportResistanceLevelsResolution);
 
 /** @internal */
 export type GetSupportResistanceLevelsRequest$Outbound = {
@@ -56,7 +29,7 @@ export const GetSupportResistanceLevelsRequest$outboundSchema: z.ZodMiniType<
   GetSupportResistanceLevelsRequest
 > = z.object({
   symbol: z.string(),
-  resolution: GetSupportResistanceLevelsResolution$outboundSchema,
+  resolution: models.BarResolution$outboundSchema,
 });
 
 export function getSupportResistanceLevelsRequestToJSON(

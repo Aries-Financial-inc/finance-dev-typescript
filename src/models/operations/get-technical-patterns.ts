@@ -4,28 +4,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import * as openEnums from "../../types/enums.js";
-import { OpenEnum } from "../../types/enums.js";
-
-/**
- * How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `60`) or daily/weekly/monthly (`D`, `W`, `M`). Other values return 400 Bad Request with error code `VALIDATION_ERROR`.
- */
-export const GetTechnicalPatternsResolution = {
-  One: "1",
-  Five: "5",
-  Fifteen: "15",
-  Thirty: "30",
-  Sixty: "60",
-  D: "D",
-  W: "W",
-  M: "M",
-} as const;
-/**
- * How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `60`) or daily/weekly/monthly (`D`, `W`, `M`). Other values return 400 Bad Request with error code `VALIDATION_ERROR`.
- */
-export type GetTechnicalPatternsResolution = OpenEnum<
-  typeof GetTechnicalPatternsResolution
->;
+import * as models from "../index.js";
 
 export type GetTechnicalPatternsRequest = {
   /**
@@ -35,14 +14,8 @@ export type GetTechnicalPatternsRequest = {
   /**
    * How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `60`) or daily/weekly/monthly (`D`, `W`, `M`). Other values return 400 Bad Request with error code `VALIDATION_ERROR`.
    */
-  resolution: GetTechnicalPatternsResolution;
+  resolution: models.BarResolution;
 };
-
-/** @internal */
-export const GetTechnicalPatternsResolution$outboundSchema: z.ZodMiniType<
-  string,
-  GetTechnicalPatternsResolution
-> = openEnums.outboundSchema(GetTechnicalPatternsResolution);
 
 /** @internal */
 export type GetTechnicalPatternsRequest$Outbound = {
@@ -56,7 +29,7 @@ export const GetTechnicalPatternsRequest$outboundSchema: z.ZodMiniType<
   GetTechnicalPatternsRequest
 > = z.object({
   symbol: z.string(),
-  resolution: GetTechnicalPatternsResolution$outboundSchema,
+  resolution: models.BarResolution$outboundSchema,
 });
 
 export function getTechnicalPatternsRequestToJSON(

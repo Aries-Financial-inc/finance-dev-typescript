@@ -33,7 +33,7 @@ import { Result } from "../types/fp.js";
  * Get Index Chart Data
  *
  * @remarks
- * Retrieve historical chart data for indices including price history, volume, and returns for creating index performance charts.
+ * Retrieve intraday chart bars for indices.
  *
  * If set, this operation will use {@link Security.clientID} from the global security.
  */

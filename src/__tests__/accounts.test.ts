@@ -62,7 +62,6 @@ test("Accounts Get Account Balance", async () => {
     accountId: "TEST-ACCOUNT-001",
     amountAvailableToWithdraw: "100000",
     balance: "248874.14377781",
-    cashBalance: "105000",
     costOfPositions: "180000",
     credit: "0",
     creditRemaining: "0",
@@ -71,11 +70,138 @@ test("Accounts Get Account Balance", async () => {
     dayTotalPnl: "549.64",
     dayTradeBuyingPower: "50000",
     dayTradeOvernightRegTBuyingPower: "48000",
-    fundsAvailableForWithdrawal: "98500",
+    freestockFrozenCash: "0",
     grossMargin: "120000",
     heldBackFunds: "0",
     intradayMarginBalance: "7000",
     maintReq: "75000",
+    marketValue: "180836.64377781",
+    netBuyingPower: "125000.5",
+    openPnl: "836.64377781",
+    optionBuyingPower: "25000",
+    pdt: "0",
+    pdtCreditRemaining: "0",
+    pendingOrdersCount: 0,
+    pendingOrdersMarginRequirements: "0",
+    realizedPl: "37.5",
+    settledFunds: "100000",
+    sma: "0",
+    smaCreditRemaining: "0",
+    sodFundsAvailableDate: new Date("2026-01-14"),
+    sodGrossFundsAvailable: "100000",
+    sodMarginTradeBalance: "-40000",
+    sodNetFundsAvailable: "98500",
+    sodPositionsMarketValue: "180000",
+    sodTtlEquity: "248000",
+    sodTtlEquityUpdatedAt: new Date("2026-01-15T09:30:00Z"),
+    startOfDayCash: "95000",
+    stockBuyingPower: "125000.5",
+    unrealizedPl: "836.64377781",
+    unsettledFunds: "5000",
+    valueBought: "45000",
+    valueSold: "12000",
+  });
+});
+
+test("Accounts Get Account Balance Cash Account", async () => {
+  const testHttpClient = createTestHTTPClient("getAccountBalance-cashAccount");
+
+  const financeDev = new FinanceDev({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    security: {
+      clientID: "<YOUR_CLIENT_ID_HERE>",
+      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+      tokenURL: "/_mockserver/oauth2/token",
+    },
+  });
+
+  const result = await financeDev.accounts.getBalance({
+    id: "TEST-ACCOUNT-001",
+  });
+  expect(result).toBeDefined();
+  expect(result).toEqual({
+    accountId: "TEST-ACCOUNT-001",
+    amountAvailableToWithdraw: "266.06",
+    balance: "298.5939",
+    cashBalance: "266.96",
+    costOfPositions: "37.885",
+    credit: "267",
+    creditRemaining: "265.9",
+    dayOpenPnl: "-1.0061",
+    dayRealizedPnl: "0",
+    dayTotalPnl: "-1.0061",
+    dayTradeBuyingPower: "1063.7",
+    dayTradeOvernightRegTBuyingPower: "265.9",
+    freestockFrozenCash: "0",
+    grossMargin: "0",
+    heldBackFunds: "0",
+    maintReq: "0",
+    marketValue: "32.537",
+    netBuyingPower: "267",
+    openPnl: "-5.348",
+    optionBuyingPower: "265.9",
+    pdt: "0",
+    pdtCreditRemaining: "0",
+    pendingOrdersCount: 1,
+    pendingOrdersMarginRequirements: "0",
+    realizedPl: "0",
+    settledFunds: "266.96",
+    sma: "0",
+    smaCreditRemaining: "0",
+    sodFundsAvailableDate: new Date("2026-10-29"),
+    sodGrossFundsAvailable: "266.06",
+    sodMarginTradeBalance: "0.9",
+    sodNetFundsAvailable: "266.06",
+    sodPositionsMarketValue: "0",
+    sodTtlEquity: "299.6",
+    sodTtlEquityUpdatedAt: new Date("2026-10-30T11:00:02.353449Z"),
+    startOfDayCash: "0",
+    stockBuyingPower: "265.9",
+    unrealizedPl: "-5.348",
+    unsettledFunds: "0",
+    valueBought: "0",
+    valueSold: "0",
+  });
+});
+
+test("Accounts Get Account Balance Margin Account", async () => {
+  const testHttpClient = createTestHTTPClient(
+    "getAccountBalance-marginAccount",
+  );
+
+  const financeDev = new FinanceDev({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    security: {
+      clientID: "<YOUR_CLIENT_ID_HERE>",
+      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+      tokenURL: "/_mockserver/oauth2/token",
+    },
+  });
+
+  const result = await financeDev.accounts.getBalance({
+    id: "TEST-ACCOUNT-001",
+  });
+  expect(result).toBeDefined();
+  expect(result).toEqual({
+    accountId: "TEST-ACCOUNT-001",
+    amountAvailableToWithdraw: "100000",
+    balance: "248874.14377781",
+    costOfPositions: "180000",
+    credit: "0",
+    creditRemaining: "0",
+    dayOpenPnl: "512.14",
+    dayRealizedPnl: "37.5",
+    dayTotalPnl: "549.64",
+    dayTradeBuyingPower: "50000",
+    dayTradeOvernightRegTBuyingPower: "48000",
+    freestockFrozenCash: "0",
+    grossMargin: "120000",
+    heldBackFunds: "0",
+    intradayMarginBalance: "7000",
+    maintReq: "75000",
+    marketValue: "180836.64377781",
     netBuyingPower: "125000.5",
     openPnl: "836.64377781",
     optionBuyingPower: "25000",

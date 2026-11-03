@@ -18,7 +18,7 @@ export type AccountBalanceV2 = {
    */
   accountId?: string | undefined;
   /**
-   * Cash currently available to withdraw from the account, returned as a decimal string.
+   * Cash available to withdraw from the account, returned as a decimal string. This is cash only: it does not include buying power or margin. Show this figure to a user asking how much they can take out. Any frozen free-stock sale proceeds (`freestockFrozenCash`) have already been deducted.
    */
   amountAvailableToWithdraw?: string | undefined;
   /**
@@ -26,7 +26,7 @@ export type AccountBalanceV2 = {
    */
   balance?: string | undefined;
   /**
-   * Current cash balance in the account, returned as a decimal string. Can be negative on a margin account.
+   * Current cash balance in the account, returned as a decimal string. Returned only for cash accounts (`account_class` `CASH` on `GET /v2/users/me/accounts`). Omitted for margin accounts and for any account whose type is not `CASH` or `MARGIN` or cannot be determined.
    */
   cashBalance?: string | undefined;
   /**
@@ -62,9 +62,9 @@ export type AccountBalanceV2 = {
    */
   dayTradeOvernightRegTBuyingPower?: string | undefined;
   /**
-   * Cash available to withdraw right now, returned as a decimal string. The lower of `creditRemaining` and `smaCreditRemaining`, adjusted by the clearing firm's previous-close haircut (`sodNetFundsAvailable` minus `sodGrossFundsAvailable`) and floored at zero. Derived at read time. Until the start-of-day funds data has loaded (see `sodFundsAvailableDate`) the haircut is zero and this equals the lower of the two credit figures.
+   * Cash from free-stock sales that is currently frozen and cannot be withdrawn, returned as a decimal string. Already deducted from `amountAvailableToWithdraw`. Omitted when the frozen amount is not available.
    */
-  fundsAvailableForWithdrawal?: string | undefined;
+  freestockFrozenCash?: string | undefined;
   /**
    * Total amount currently borrowed from the broker on margin (before offsets). Use this in risk and account-health displays. Decimal string.
    */
@@ -74,13 +74,17 @@ export type AccountBalanceV2 = {
    */
   heldBackFunds?: string | undefined;
   /**
-   * Margin loan currently outstanding, returned as a positive decimal string and rolled forward through today's trading: the start-of-day margin trade balance (sign-inverted) plus `valueSold` minus `valueBought`. Derived at read time, not stored.
+   * Margin loan currently outstanding, returned as a positive decimal string and rolled forward through today's trading: the start-of-day margin trade balance (sign-inverted) plus `valueSold` minus `valueBought`. Derived at read time, not stored. Returned only for margin accounts (`account_class` `MARGIN` on `GET /v2/users/me/accounts`). Omitted for cash accounts and for any account whose type is not `CASH` or `MARGIN` or cannot be determined.
    */
   intradayMarginBalance?: string | undefined;
   /**
    * **Maintenance requirement** — the minimum equity that must be held to support current positions. Drop below this and the account may receive a margin call. Decimal string.
    */
   maintReq?: string | undefined;
+  /**
+   * Current market value of all open positions, returned as a decimal string: `unrealizedPl` plus `costOfPositions`. Omitted while any open position has no price yet.
+   */
+  marketValue?: string | undefined;
   /**
    * Total purchasing power available right now across all instruments — the main number to show as 'Buying Power' in a trading UI. Decimal string.
    */
@@ -138,7 +142,7 @@ export type AccountBalanceV2 = {
    */
   sodMarginTradeBalance?: string | undefined;
   /**
-   * Net funds available to withdraw at the previous close, as reported by the clearing firm, returned as a decimal string. Previous-close only; for the live figure use `fundsAvailableForWithdrawal`. `"0"` until the start-of-day load has run.
+   * Net funds available to withdraw at the previous close, as reported by the clearing firm, returned as a decimal string. Previous-close only; for the live figure use `amountAvailableToWithdraw`. `"0"` until the start-of-day load has run.
    */
   sodNetFundsAvailable?: string | undefined;
   /**
@@ -196,11 +200,12 @@ export const AccountBalanceV2$inboundSchema: z.ZodMiniType<
   dayTotalPnl: types.optional(types.string()),
   dayTradeBuyingPower: types.optional(types.string()),
   dayTradeOvernightRegTBuyingPower: types.optional(types.string()),
-  fundsAvailableForWithdrawal: types.optional(types.string()),
+  freestockFrozenCash: types.optional(types.string()),
   grossMargin: types.optional(types.string()),
   heldBackFunds: types.optional(types.string()),
   intradayMarginBalance: types.optional(types.string()),
   maintReq: types.optional(types.string()),
+  marketValue: types.optional(types.string()),
   netBuyingPower: types.optional(types.string()),
   openPnl: types.optional(types.string()),
   optionBuyingPower: types.optional(types.string()),

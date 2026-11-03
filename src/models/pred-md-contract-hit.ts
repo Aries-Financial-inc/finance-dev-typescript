@@ -6,15 +6,49 @@
 import * as z from "zod/v4-mini";
 import { safeParse } from "../lib/schemas.js";
 import { Decimal as Decimal$ } from "../types/decimal.js";
+import * as openEnums from "../types/enums.js";
+import { OpenEnum } from "../types/enums.js";
 import { Result as SafeParseResult } from "../types/fp.js";
 import * as types from "../types/primitives.js";
 import { SDKValidationError } from "./errors/sdk-validation-error.js";
+
+/**
+ * The candidate's party from the venue: `D` Democratic, `R` Republican, `I` independent, `O` any other. `null` on a contract that is not a candidate.
+ */
+export const PredMdContractHitParty = {
+  D: "D",
+  R: "R",
+  I: "I",
+  O: "O",
+} as const;
+/**
+ * The candidate's party from the venue: `D` Democratic, `R` Republican, `I` independent, `O` any other. `null` on a contract that is not a candidate.
+ */
+export type PredMdContractHitParty = OpenEnum<typeof PredMdContractHitParty>;
+
+/**
+ * The candidate's portrait, for an election contract that has one. `null` for every other contract.
+ */
+export type PredMdContractHitPhoto = {
+  credit: string;
+  license: string;
+  licenseUrl: string | null;
+  sourceUrl: string;
+  /**
+   * 256×256 webp.
+   */
+  url: string;
+};
 
 /**
  * One matching contract, with its event's and base event's text flattened in. The index trails the catalogue by seconds; read the contract through /events/{eventId}/contracts when it must be current.
  */
 export type PredMdContractHit = {
   baseEventId: string;
+  /**
+   * FEC-style status from the venue: `I` incumbent, `C` challenger, `O` open seat, `N` not running. `null` on a contract that is not a candidate.
+   */
+  candidateStatus: string | null;
   evaluationType?: string | undefined;
   eventDisplayName?: string | undefined;
   eventId: string;
@@ -24,9 +58,29 @@ export type PredMdContractHit = {
    */
   expirationDate?: Date | null | undefined;
   /**
+   * `true` for a nominee, a candidate who advanced, or a significant independent; `false` for one no longer in the race, such as a primary loser. `null` on a contract that is not a candidate.
+   */
+  frontRunner: boolean | null;
+  /**
+   * Whether the candidate holds the seat. `null` on a contract that is not a candidate.
+   */
+  incumbent: boolean | null;
+  /**
    * Calendar date, at midnight UTC.
    */
   lastTradeDate?: Date | null | undefined;
+  /**
+   * Contracts held open, as of the venue's last daily prices file. Absent when the file did not name the contract; 0 is a real value. Live prices are on /v1/predictions/stream.
+   */
+  openInterest?: number | undefined;
+  /**
+   * The candidate's party from the venue: `D` Democratic, `R` Republican, `I` independent, `O` any other. `null` on a contract that is not a candidate.
+   */
+  party: PredMdContractHitParty | null;
+  /**
+   * The candidate's portrait, for an election contract that has one. `null` for every other contract.
+   */
+  photo: PredMdContractHitPhoto | null;
   question?: string | undefined;
   /**
    * Calendar date, at midnight UTC.
@@ -49,17 +103,51 @@ export type PredMdContractHit = {
 };
 
 /** @internal */
+export const PredMdContractHitParty$inboundSchema: z.ZodMiniType<
+  PredMdContractHitParty,
+  unknown
+> = openEnums.inboundSchema(PredMdContractHitParty);
+
+/** @internal */
+export const PredMdContractHitPhoto$inboundSchema: z.ZodMiniType<
+  PredMdContractHitPhoto,
+  unknown
+> = z.object({
+  credit: types.string(),
+  license: types.string(),
+  licenseUrl: types.nullable(types.string()),
+  sourceUrl: types.string(),
+  url: types.string(),
+});
+
+export function predMdContractHitPhotoFromJSON(
+  jsonString: string,
+): SafeParseResult<PredMdContractHitPhoto, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PredMdContractHitPhoto$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PredMdContractHitPhoto' from JSON`,
+  );
+}
+
+/** @internal */
 export const PredMdContractHit$inboundSchema: z.ZodMiniType<
   PredMdContractHit,
   unknown
 > = z.object({
   baseEventId: types.string(),
+  candidateStatus: types.nullable(types.string()),
   evaluationType: types.optional(types.string()),
   eventDisplayName: types.optional(types.string()),
   eventId: types.string(),
   eventQuestion: types.optional(types.string()),
   expirationDate: z.optional(z.nullable(types.date())),
+  frontRunner: types.nullable(types.boolean()),
+  incumbent: types.nullable(types.boolean()),
   lastTradeDate: z.optional(z.nullable(types.date())),
+  openInterest: types.optional(types.number()),
+  party: types.nullable(PredMdContractHitParty$inboundSchema),
+  photo: types.nullable(z.lazy(() => PredMdContractHitPhoto$inboundSchema)),
   question: types.optional(types.string()),
   startDate: z.optional(z.nullable(types.date())),
   state: types.string(),

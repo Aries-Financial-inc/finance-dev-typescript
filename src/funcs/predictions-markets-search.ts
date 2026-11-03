@@ -37,7 +37,7 @@ import {
  * Search contracts, events or base events
  *
  * @remarks
- * Full-text search over one index of event contracts. Filters always apply to contracts, so with type=events or type=base-events an event or base event is found through its matching contracts: one with none (for example, only DELETED contracts under the default state) is not returned. The index trails the catalogue by seconds.
+ * Full-text search over one index of event contracts. Filters always apply to contracts, so with type=events or type=base-events an event or base event is found through its matching contracts: one with none (for example, only DELETED contracts under the default state) is not returned. Contracts under the venue's Conditional category are never returned. The index trails the catalogue by seconds. sortBy picks the order. With `none`, the default, a q match comes first, then symbol ascending, at every level. With `openInterest`, results are ordered by open interest, as of the venue's last daily prices file, each type by its own: type=contracts by the contract's, type=events by the event's total and type=base-events by the base event's total, then each hit's contracts by their own, ties broken by symbol. With q, relevance comes first and open interest breaks ties. Anything the file did not name comes last.
  */
 export function predictionsMarketsSearch(
   client: FinanceDevCore,
@@ -108,10 +108,12 @@ async function $do(
   const query = encodeFormQuery({
     "baseEventId": payload?.baseEventId,
     "category": payload?.category,
+    "contractsPerHit": payload?.contractsPerHit,
     "eventId": payload?.eventId,
     "page": payload?.page,
     "perPage": payload?.perPage,
     "q": payload?.q,
+    "sortBy": payload?.sortBy,
     "state": payload?.state,
     "tradable": payload?.tradable,
     "type": payload?.type,

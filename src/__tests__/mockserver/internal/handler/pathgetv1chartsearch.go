@@ -48,7 +48,7 @@ func testSearchSymbolsSearchSymbols0(w http.ResponseWriter, req *http.Request) {
 	}
 	var respBody []components.SearchSymbolItem = []components.SearchSymbolItem{
 		components.SearchSymbolItem{
-			Type: components.SearchSymbolItemTypeStock.ToPointer(),
+			Type: components.InstrumentTypeStock.ToPointer(),
 		},
 	}
 	respBodyBytes, err := utils.MarshalJSON(respBody, "", true)
