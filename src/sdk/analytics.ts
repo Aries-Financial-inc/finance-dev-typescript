@@ -8,11 +8,11 @@ import { analyticsGetMarketBreadth } from "../funcs/analytics-get-market-breadth
 import { analyticsGetNetInflow } from "../funcs/analytics-get-net-inflow.js";
 import { analyticsGetOptionsEtfsTopVolume } from "../funcs/analytics-get-options-etfs-top-volume.js";
 import { analyticsGetOptionsStocksTopGainers } from "../funcs/analytics-get-options-stocks-top-gainers.js";
-import { analyticsGetOptionsStocksTopVolume } from "../funcs/analytics-get-options-stocks-top-volume.js";
 import { analyticsGetSectorTickers } from "../funcs/analytics-get-sector-tickers.js";
 import { analyticsGetSectorWiseChange } from "../funcs/analytics-get-sector-wise-change.js";
 import { analyticsGetTopGainers } from "../funcs/analytics-get-top-gainers.js";
 import { analyticsGetTopLosers } from "../funcs/analytics-get-top-losers.js";
+import { analyticsGetTopVolumeOptions } from "../funcs/analytics-get-top-volume-options.js";
 import { analyticsGet } from "../funcs/analytics-get.js";
 import { analyticsStockScreener } from "../funcs/analytics-stock-screener.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
@@ -202,11 +202,11 @@ export class Analytics extends ClientSDK {
    * @remarks
    * Retrieve stock options with the highest trading volume identifying the most actively traded equity options contracts.
    */
-  async getOptionsStocksTopVolume(
+  async getTopVolumeOptions(
     request?: operations.GetOptionsStocksTopVolumeRequest | undefined,
     options?: RequestOptions,
   ): Promise<Array<models.OptionsScreenerItem>> {
-    return unwrapAsync(analyticsGetOptionsStocksTopVolume(
+    return unwrapAsync(analyticsGetTopVolumeOptions(
       this,
       request,
       options,

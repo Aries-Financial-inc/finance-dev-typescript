@@ -8,19 +8,31 @@ import { safeParse } from "../lib/schemas.js";
 import { Result as SafeParseResult } from "../types/fp.js";
 import * as types from "../types/primitives.js";
 import { SDKValidationError } from "./errors/sdk-validation-error.js";
+import {
+  PredMdContractHit,
+  PredMdContractHit$inboundSchema,
+} from "./pred-md-contract-hit.js";
 
 /**
- * One event with at least one matching contract.
+ * One event with at least one matching contract. With sortBy=openInterest, ranked by its total open interest.
  */
 export type PredMdEventHit = {
   baseEventId: string;
   /**
-   * Every matching contract under this hit. Read them with type=contracts and eventId or baseEventId.
+   * This event's first matching contracts in the sortBy order, up to contractsPerHit. Empty, never null. Prices are not included; stream them from /v1/predictions/stream.
+   */
+  contracts: Array<PredMdContractHit>;
+  /**
+   * Every matching contract under this hit. contracts holds the first contractsPerHit of them; read the rest with type=contracts and eventId or baseEventId.
    */
   contractsFound: number;
   eventDisplayName?: string | undefined;
   eventId: string;
   eventQuestion?: string | undefined;
+  /**
+   * Sum of open interest over the event's active contracts, matching or not, as of the venue's last daily prices file. Absent when the file named none of them.
+   */
+  openInterest?: number | undefined;
   timeSpecifier?: string | undefined;
   underlyingSpec?: string | undefined;
 };
@@ -31,10 +43,12 @@ export const PredMdEventHit$inboundSchema: z.ZodMiniType<
   unknown
 > = z.object({
   baseEventId: types.string(),
+  contracts: z.array(PredMdContractHit$inboundSchema),
   contractsFound: types.number(),
   eventDisplayName: types.optional(types.string()),
   eventId: types.string(),
   eventQuestion: types.optional(types.string()),
+  openInterest: types.optional(types.number()),
   timeSpecifier: types.optional(types.string()),
   underlyingSpec: types.optional(types.string()),
 });

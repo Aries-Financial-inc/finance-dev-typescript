@@ -9,26 +9,18 @@ import { OpenEnum } from "../../types/enums.js";
 import * as models from "../index.js";
 
 /**
- * How long each chart bar covers. Pair with `period` to set the exact size. Note the singular form (different from `/v1/indices/bar` and `/v1/indices/bars`). Allowed values:
- *
- * @remarks
- * - `Minute` — minute bars (intraday).
- * - `Hour` — hour bars.
+ * How long each chart bar covers. Pair with `period` to set the exact size. Allowed values: `Minute` or `Minutes` for minute bars; `Hour` or `Hours` for hour bars. Other nonempty values, including `Daily`, `Day`, `Days`, and `Week`, return HTTP 400 with code `VALIDATION_ERROR` and precision error: "field 'precision' must be one of: Minute Minutes Hour Hours".
  */
-export const GetIndexChartBarsPrecision = {
+export const Precision = {
   Minute: "Minute",
+  Minutes: "Minutes",
   Hour: "Hour",
+  Hours: "Hours",
 } as const;
 /**
- * How long each chart bar covers. Pair with `period` to set the exact size. Note the singular form (different from `/v1/indices/bar` and `/v1/indices/bars`). Allowed values:
- *
- * @remarks
- * - `Minute` — minute bars (intraday).
- * - `Hour` — hour bars.
+ * How long each chart bar covers. Pair with `period` to set the exact size. Allowed values: `Minute` or `Minutes` for minute bars; `Hour` or `Hours` for hour bars. Other nonempty values, including `Daily`, `Day`, `Days`, and `Week`, return HTTP 400 with code `VALIDATION_ERROR` and precision error: "field 'precision' must be one of: Minute Minutes Hour Hours".
  */
-export type GetIndexChartBarsPrecision = OpenEnum<
-  typeof GetIndexChartBarsPrecision
->;
+export type Precision = OpenEnum<typeof Precision>;
 
 export type GetIndexChartBarsRequest = {
   /**
@@ -48,13 +40,9 @@ export type GetIndexChartBarsRequest = {
    */
   endTime: string;
   /**
-   * How long each chart bar covers. Pair with `period` to set the exact size. Note the singular form (different from `/v1/indices/bar` and `/v1/indices/bars`). Allowed values:
-   *
-   * @remarks
-   * - `Minute` — minute bars (intraday).
-   * - `Hour` — hour bars.
+   * How long each chart bar covers. Pair with `period` to set the exact size. Allowed values: `Minute` or `Minutes` for minute bars; `Hour` or `Hours` for hour bars. Other nonempty values, including `Daily`, `Day`, `Days`, and `Week`, return HTTP 400 with code `VALIDATION_ERROR` and precision error: "field 'precision' must be one of: Minute Minutes Hour Hours".
    */
-  precision?: GetIndexChartBarsPrecision | undefined;
+  precision?: Precision | undefined;
   /**
    * Multiplier on `precision` to set the bar size. Defaults to `1`. Example: `precision=Minute` + `period=15` = 15-minute bars.
    */
@@ -70,10 +58,8 @@ export type GetIndexChartBarsRequest = {
 };
 
 /** @internal */
-export const GetIndexChartBarsPrecision$outboundSchema: z.ZodMiniType<
-  string,
-  GetIndexChartBarsPrecision
-> = openEnums.outboundSchema(GetIndexChartBarsPrecision);
+export const Precision$outboundSchema: z.ZodMiniType<string, Precision> =
+  openEnums.outboundSchema(Precision);
 
 /** @internal */
 export type GetIndexChartBarsRequest$Outbound = {
@@ -99,7 +85,7 @@ export const GetIndexChartBarsRequest$outboundSchema: z.ZodMiniType<
   ),
   startTime: z.string(),
   endTime: z.string(),
-  precision: z.optional(GetIndexChartBarsPrecision$outboundSchema),
+  precision: z.optional(Precision$outboundSchema),
   period: z.optional(z.int()),
   adjustmentMethod: z.optional(z.string()),
   includeExtended: z._default(z.boolean(), false),

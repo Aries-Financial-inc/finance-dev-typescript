@@ -8,6 +8,16 @@ info:
     before: ""
     type: speakeasy-modifications
 actions:
+  # date-time examples must include a timezone for the generated Go mock server.
+  - target: $.components.schemas.EconomicsCalendarEvent.properties.referenceDate
+    update:
+      example: "2026-02-21T00:00:00Z"
+  - target: $.components.schemas.GetEconomicsCalendarResponse.example.events[*]
+    update:
+      referenceDate: "2026-02-21T00:00:00Z"
+  - target: $.paths['/v1/calendars/economics'].get.responses['200'].content['application/json'].example.events[*]
+    update:
+      referenceDate: "2026-02-21T00:00:00Z"
   - target: $["paths"]["/v1/stock/price-target"]["get"]
     update:
       x-speakeasy-group: stockEstimates
