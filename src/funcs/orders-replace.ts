@@ -42,6 +42,8 @@ import { Result } from "../types/fp.js";
  * - `STOP_LIMIT` validates both
  * - Decimal inputs support up to 5 digits after the decimal point.
  *
+ * **Order ownership:** `origClOrdId` must be an order on `accountId`. If it is not (an unknown ID, or an order on another account), the request is not sent to the broker and returns `400` with `error.code` `INVALID_ORIG_CL_ORD_ID`. An order placed or replaced moments earlier may not be recognized yet; the API waits briefly for it before rejecting. If ownership cannot be verified, the request returns `503` (`SERVICE_UNAVAILABLE`) and is not sent; retry later.
+ *
  * If set, this operation will use {@link Security.clientID} from the global security.
  */
 export function ordersReplace(
