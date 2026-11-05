@@ -1,13 +1,13 @@
 # GetStockQuotesOrder
 
-Sort order for returned records. Use asc for oldest first or desc for newest first when supported.
+Sort direction for results. Use ascending for oldest or smallest first, descending for newest or largest first.
 
 ## Example Usage
 
 ```typescript
 import { GetStockQuotesOrder } from "@ariesdotcom/finance-dev/models/operations";
 
-let value: GetStockQuotesOrder = "desc";
+let value: GetStockQuotesOrder = "asc";
 
 // Open enum: unrecognized values are captured as Unrecognized<string>
 ```

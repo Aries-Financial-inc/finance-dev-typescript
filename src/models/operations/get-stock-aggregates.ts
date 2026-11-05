@@ -6,6 +6,7 @@
 import * as z from "zod/v4-mini";
 import * as openEnums from "../../types/enums.js";
 import { OpenEnum } from "../../types/enums.js";
+import * as models from "../index.js";
 
 /**
  * Time span unit for each aggregate bar, such as minute, hour, day, week, month, quarter, or year when supported.
@@ -24,18 +25,6 @@ export const Timespan = {
  * Time span unit for each aggregate bar, such as minute, hour, day, week, month, quarter, or year when supported.
  */
 export type Timespan = OpenEnum<typeof Timespan>;
-
-/**
- * Sort direction for aggregate bars. Use `asc` for oldest first or `desc` for newest first.
- */
-export const Sort = {
-  Asc: "asc",
-  Desc: "desc",
-} as const;
-/**
- * Sort direction for aggregate bars. Use `asc` for oldest first or `desc` for newest first.
- */
-export type Sort = OpenEnum<typeof Sort>;
 
 export type GetStockAggregatesRequest = {
   /**
@@ -65,13 +54,13 @@ export type GetStockAggregatesRequest = {
   /**
    * Sort direction for aggregate bars. Use `asc` for oldest first or `desc` for newest first.
    */
-  sort?: Sort | undefined;
+  sort?: models.SortOrderEnum | undefined;
   /**
    * Maximum number of results to return. Use smaller values for UI pages and larger values for exports within API limits.
    */
   limit?: number | undefined;
   /**
-   * Pagination cursor from the previous response. Omit it on the first request, then send the returned cursor to fetch the next page.
+   * Pagination cursor included in the returned nextUrl. Follow the entire nextUrl to fetch the next page; it also contains updated from/to bounds required to advance through the results.
    */
   next?: string | undefined;
 };
@@ -79,10 +68,6 @@ export type GetStockAggregatesRequest = {
 /** @internal */
 export const Timespan$outboundSchema: z.ZodMiniType<string, Timespan> =
   openEnums.outboundSchema(Timespan);
-
-/** @internal */
-export const Sort$outboundSchema: z.ZodMiniType<string, Sort> = openEnums
-  .outboundSchema(Sort);
 
 /** @internal */
 export type GetStockAggregatesRequest$Outbound = {
@@ -108,7 +93,7 @@ export const GetStockAggregatesRequest$outboundSchema: z.ZodMiniType<
   from: z.string(),
   to: z.string(),
   adjusted: z.optional(z.boolean()),
-  sort: z.optional(Sort$outboundSchema),
+  sort: z.optional(models.SortOrderEnum$outboundSchema),
   limit: z.optional(z.int()),
   next: z.optional(z.string()),
 });

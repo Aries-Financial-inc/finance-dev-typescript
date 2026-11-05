@@ -87,7 +87,7 @@ export class CorporateActions extends ClientSDK {
    * Get Stock Split History
    *
    * @remarks
-   * Retrieve historical stock split events including split ratios, execution dates, and pre/post-split price adjustments. `ticker` accepts a single symbol only. Use `tickersAnyOf` for multiple symbols. If `ticker` contains multiple comma-separated values, the API returns 400: "Multiple tickers are not supported. Please provide a single ticker." If both `ticker` and `tickersAnyOf` are set, the API returns 400: "Cannot specify both ticker and tickersAnyOf. Use ticker for a single symbol or tickersAnyOf for multiple."
+   * Retrieve historical stock split events including split ratios, execution dates, and pre/post-split price adjustments.
    */
   async getStockSplit(
     request?: operations.GetStockSplitsRequest | undefined,

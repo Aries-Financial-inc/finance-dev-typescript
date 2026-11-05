@@ -7,6 +7,80 @@ import { expect, test } from "vitest";
 import { FinanceDev } from "../index.js";
 import { createTestHTTPClient } from "./test-client.js";
 
+test("Predictionorders Get Prediction Order", async () => {
+  const testHttpClient = createTestHTTPClient("getPredictionOrder");
+
+  const financeDev = new FinanceDev({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    security: {
+      clientID: "<YOUR_CLIENT_ID_HERE>",
+      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+      tokenURL: "/_mockserver/oauth2/token",
+    },
+  });
+
+  const result = await financeDev.predictionOrders.get({
+    orderId: "3e3ab03f-d246-4072-b29f-8558498115de",
+    accountId: "ACCOUNT-0001",
+  });
+  expect(result).toBeDefined();
+  expect(result).toEqual({
+    data: {
+      events: [
+        {
+          kind: "cancel_requested",
+        },
+      ],
+      order: {
+        accountId: "ACCOUNT-0001",
+        avgPx: "0",
+        clientOrderRef: "7d1c8e0a-4b8f-4e3a-9f43-2a6b1d0c9e11",
+        contract: {
+          description: "Shelley Moore Capito",
+          eventDisplayName:
+            "West Virginia Senate General Election November 3 2026",
+          eventId: "AXXWV_110326",
+          question:
+            "Will Shelley Moore Capito win the West Virginia general election for US Senate in 2026?",
+          settlementValue: "1",
+          state: "CLOSED",
+        },
+        createdAt: new Date("2024-05-18T17:00:40.400Z"),
+        cumQty: "0",
+        leavesQty: "10",
+        orderId: "0b9f3c2e-5d6a-4f1b-8e7c-9a0d1e2f3a4b",
+        orderType: "limit",
+        outcome: "YES",
+        price: "0.54",
+        quantity: "10",
+        side: "buy",
+        state: "pending_new",
+        stopPx: "0.50",
+        symbol: "HORC_1126_Republican",
+        timeInForce: "day",
+        updatedAt: new Date("2026-06-01T14:19:20.151Z"),
+        workingPrice: "0.54",
+        workingQuantity: "10",
+      },
+      reports: [
+        {
+          avgPx: "0.54",
+          cumQty: "10",
+          execId: "<id>",
+          execType: "trade",
+          lastPx: "0.54",
+          lastQty: "10",
+          leavesQty: "0",
+          status: "filled",
+          transactTime: new Date("2025-08-27T21:08:04.489Z"),
+        },
+      ],
+    },
+    success: true,
+  });
+});
+
 test("Predictionorders Place Prediction Order", async () => {
   const testHttpClient = createTestHTTPClient("placePredictionOrder");
 
@@ -41,6 +115,16 @@ test("Predictionorders Place Prediction Order", async () => {
       accountId: "ACCOUNT-0001",
       avgPx: "0",
       clientOrderRef: "7d1c8e0a-4b8f-4e3a-9f43-2a6b1d0c9e11",
+      contract: {
+        description: "Shelley Moore Capito",
+        eventDisplayName:
+          "West Virginia Senate General Election November 3 2026",
+        eventId: "AXXWV_110326",
+        question:
+          "Will Shelley Moore Capito win the West Virginia general election for US Senate in 2026?",
+        settlementValue: "1",
+        state: "DELETED",
+      },
       createdAt: new Date("2024-06-25T22:58:46.837Z"),
       cumQty: "0",
       leavesQty: "10",

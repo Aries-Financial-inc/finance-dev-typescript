@@ -25,6 +25,70 @@ export const Certainty = {
  */
 export type Certainty = OpenEnum<typeof Certainty>;
 
+/**
+ * The winning outcome, when `settlementValue` is `1` or `0`. Only when `SETTLED`.
+ */
+export const ResultOutcome = {
+  Yes: "YES",
+  No: "NO",
+} as const;
+/**
+ * The winning outcome, when `settlementValue` is `1` or `0`. Only when `SETTLED`.
+ */
+export type ResultOutcome = OpenEnum<typeof ResultOutcome>;
+
+/**
+ * `ACTIVE` while it trades, `CLOSED` once trading has ended and the result is not yet known, `SETTLED` once it is, and `DELETED` if the venue withdrew it. `CLOSED` and `SETTLED` are never left.
+ */
+export const ContractState = {
+  Active: "ACTIVE",
+  Closed: "CLOSED",
+  Settled: "SETTLED",
+  Deleted: "DELETED",
+} as const;
+/**
+ * `ACTIVE` while it trades, `CLOSED` once trading has ended and the result is not yet known, `SETTLED` once it is, and `DELETED` if the venue withdrew it. `CLOSED` and `SETTLED` are never left.
+ */
+export type ContractState = OpenEnum<typeof ContractState>;
+
+/**
+ * The contract's event, label, question and lifecycle. `null` when the event catalogue does not know `symbol`, or cannot be read; it never fails the request.
+ */
+export type Contract = {
+  /**
+   * The contract's short readable label: its display name, else the venue's strike description, else its strike.
+   */
+  description: string;
+  /**
+   * The event's readable title, for cards and position details.
+   */
+  eventDisplayName: string;
+  /**
+   * The event the contract belongs to, for navigation and grouping.
+   */
+  eventId: string;
+  /**
+   * The contract's full question.
+   */
+  question: string;
+  /**
+   * The winning outcome, when `settlementValue` is `1` or `0`. Only when `SETTLED`.
+   */
+  resultOutcome?: ResultOutcome | undefined;
+  /**
+   * When the contract settled. Only when `SETTLED`.
+   */
+  settledAt?: Date | undefined;
+  /**
+   * What one YES contract pays, from 0 to 1, as an exact decimal string. One NO pays 1 less it. Only when `SETTLED`.
+   */
+  settlementValue?: string | undefined;
+  /**
+   * `ACTIVE` while it trades, `CLOSED` once trading has ended and the result is not yet known, `SETTLED` once it is, and `DELETED` if the venue withdrew it. `CLOSED` and `SETTLED` are never left.
+   */
+  state: ContractState;
+};
+
 export const PredOrdersOrderOutcome = {
   Yes: "YES",
   No: "NO",
@@ -77,6 +141,10 @@ export type PredOrdersOrder = {
   clOrdId?: string | undefined;
   clientOrderRef?: string | undefined;
   closedAt?: Date | undefined;
+  /**
+   * The contract's event, label, question and lifecycle. `null` when the event catalogue does not know `symbol`, or cannot be read; it never fails the request.
+   */
+  contract: Contract | null;
   createdAt: Date;
   /**
    * Quantity filled so far. Exact decimal as a string.
@@ -95,6 +163,10 @@ export type PredOrdersOrder = {
   orderType: string;
   outcome: PredOrdersOrderOutcome;
   pendingAction?: PendingAction | undefined;
+  /**
+   * The user who placed the order.
+   */
+  placedBy?: string | undefined;
   /**
    * Exact decimal as a string.
    */
@@ -125,6 +197,10 @@ export type PredOrdersOrder = {
    * Assigned by the venue on acknowledgement.
    */
   venueOrderId?: string | undefined;
+  /**
+   * Rises with every change to the order. On the order stream, keep the highest version seen per orderId and ignore anything at or below it.
+   */
+  version?: number | undefined;
   workingOrderType?: string | undefined;
   /**
    * Exact decimal as a string.
@@ -139,6 +215,41 @@ export type PredOrdersOrder = {
 /** @internal */
 export const Certainty$inboundSchema: z.ZodMiniType<Certainty, unknown> =
   openEnums.inboundSchema(Certainty);
+
+/** @internal */
+export const ResultOutcome$inboundSchema: z.ZodMiniType<
+  ResultOutcome,
+  unknown
+> = openEnums.inboundSchema(ResultOutcome);
+
+/** @internal */
+export const ContractState$inboundSchema: z.ZodMiniType<
+  ContractState,
+  unknown
+> = openEnums.inboundSchema(ContractState);
+
+/** @internal */
+export const Contract$inboundSchema: z.ZodMiniType<Contract, unknown> = z
+  .object({
+    description: types.string(),
+    eventDisplayName: types.string(),
+    eventId: types.string(),
+    question: types.string(),
+    resultOutcome: types.optional(ResultOutcome$inboundSchema),
+    settledAt: types.optional(types.date()),
+    settlementValue: types.optional(types.string()),
+    state: ContractState$inboundSchema,
+  });
+
+export function contractFromJSON(
+  jsonString: string,
+): SafeParseResult<Contract, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Contract$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Contract' from JSON`,
+  );
+}
 
 /** @internal */
 export const PredOrdersOrderOutcome$inboundSchema: z.ZodMiniType<
@@ -168,6 +279,7 @@ export const PredOrdersOrder$inboundSchema: z.ZodMiniType<
   clOrdId: types.optional(types.string()),
   clientOrderRef: types.optional(types.string()),
   closedAt: types.optional(types.date()),
+  contract: types.nullable(z.lazy(() => Contract$inboundSchema)),
   createdAt: types.date(),
   cumQty: types.string(),
   expireTime: types.optional(types.date()),
@@ -177,6 +289,7 @@ export const PredOrdersOrder$inboundSchema: z.ZodMiniType<
   orderType: types.string(),
   outcome: PredOrdersOrderOutcome$inboundSchema,
   pendingAction: types.optional(PendingAction$inboundSchema),
+  placedBy: types.optional(types.string()),
   price: types.optional(types.string()),
   quantity: types.string(),
   rejectReason: types.optional(types.string()),
@@ -189,6 +302,7 @@ export const PredOrdersOrder$inboundSchema: z.ZodMiniType<
   timeInForce: types.string(),
   updatedAt: types.date(),
   venueOrderId: types.optional(types.string()),
+  version: types.optional(types.number()),
   workingOrderType: types.optional(types.string()),
   workingPrice: types.optional(types.string()),
   workingQuantity: types.string(),

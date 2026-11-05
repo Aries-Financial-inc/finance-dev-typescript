@@ -3,12 +3,30 @@
  * @generated-id: 2df5828eed03
  */
 
-import { ClientSDK } from "../lib/sdks.js";
+import { usersGetUserInfo } from "../funcs/users-get-user-info.js";
+import { ClientSDK, RequestOptions } from "../lib/sdks.js";
+import * as operations from "../models/operations/index.js";
+import { unwrapAsync } from "../types/fp.js";
 import { UsersAccounts } from "./users-accounts.js";
 
 export class Users extends ClientSDK {
   private _accounts?: UsersAccounts;
   get accounts(): UsersAccounts {
     return (this._accounts ??= new UsersAccounts(this._options));
+  }
+
+  /**
+   * Get User Info
+   *
+   * @remarks
+   * Return only the authenticated user's numeric ID and current email address from the user record. Accepts the same Bearer access tokens as GET /v1/users/me and does not load application or onboarding data. Responses are not cached.
+   */
+  async getUserInfo(
+    options?: RequestOptions,
+  ): Promise<operations.GetUserInfoResponse> {
+    return unwrapAsync(usersGetUserInfo(
+      this,
+      options,
+    ));
   }
 }

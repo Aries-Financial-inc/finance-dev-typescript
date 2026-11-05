@@ -1,0 +1,26 @@
+# PredOrdersReplaceOrderRequest
+
+Send only the terms to change; a term left out keeps the working order's value. `symbol`, `outcome`, `side` and `orderType` cannot change, and `quantity` cannot go below what has executed. Unknown fields are rejected with `400`.
+
+## Example Usage
+
+```typescript
+import { PredOrdersReplaceOrderRequest } from "@ariesdotcom/finance-dev/models";
+
+let value: PredOrdersReplaceOrderRequest = {
+  accountId: "ACCOUNT-0001",
+  price: "0.45",
+  quantity: "20",
+};
+```
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     | Example                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `accountId`                                                                                                     | *string*                                                                                                        | :heavy_check_mark:                                                                                              | The account the order is on.                                                                                    | ACCOUNT-0001                                                                                                    |
+| `expireTime`                                                                                                    | [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)                   | :heavy_minus_sign:                                                                                              | New expiry, for `gtd` orders.                                                                                   |                                                                                                                 |
+| `price`                                                                                                         | *string*                                                                                                        | :heavy_minus_sign:                                                                                              | New limit price as an exact decimal string.                                                                     | 0.45                                                                                                            |
+| `quantity`                                                                                                      | *string*                                                                                                        | :heavy_minus_sign:                                                                                              | New total quantity as an exact decimal string. Must be greater than zero.                                       | 20                                                                                                              |
+| `stopPx`                                                                                                        | *string*                                                                                                        | :heavy_minus_sign:                                                                                              | New stop price as an exact decimal string, for an order that has not triggered.                                 |                                                                                                                 |
+| `timeInForce`                                                                                                   | [models.PredOrdersReplaceOrderRequestTimeInForce](../models/pred-orders-replace-order-request-time-in-force.md) | :heavy_minus_sign:                                                                                              | N/A                                                                                                             |                                                                                                                 |

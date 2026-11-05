@@ -14,7 +14,7 @@
 * [getTopLosers](#gettoplosers) - Get Top Losing Stocks
 * [getOptionsEtfsTopVolume](#getoptionsetfstopvolume) - Get Top ETF Options by Volume
 * [getOptionsStocksTopGainers](#getoptionsstockstopgainers) - Get Top Stock Options by Gains
-* [getOptionsStocksTopVolume](#getoptionsstockstopvolume) - Get Top Stock Options by Volume
+* [getTopVolumeOptions](#gettopvolumeoptions) - Get Top Stock Options by Volume
 * [stockScreener](#stockscreener) - Stock Screener
 
 ## getInsights
@@ -887,7 +887,7 @@ run();
 | errors.AuthenticationErrorEnvelope | 500                                | application/json                   |
 | errors.PetstoreDefaultError        | 4XX, 5XX                           | \*/\*                              |
 
-## getOptionsStocksTopVolume
+## getTopVolumeOptions
 
 Retrieve stock options with the highest trading volume identifying the most actively traded equity options contracts.
 
@@ -905,7 +905,7 @@ const financeDev = new FinanceDev({
 });
 
 async function run() {
-  const result = await financeDev.analytics.getOptionsStocksTopVolume({});
+  const result = await financeDev.analytics.getTopVolumeOptions({});
 
   console.log(result);
 }
@@ -919,7 +919,7 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
-import { analyticsGetOptionsStocksTopVolume } from "@ariesdotcom/finance-dev/funcs/analytics-get-options-stocks-top-volume.js";
+import { analyticsGetTopVolumeOptions } from "@ariesdotcom/finance-dev/funcs/analytics-get-top-volume-options.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -931,12 +931,12 @@ const financeDev = new FinanceDevCore({
 });
 
 async function run() {
-  const res = await analyticsGetOptionsStocksTopVolume(financeDev, {});
+  const res = await analyticsGetTopVolumeOptions(financeDev, {});
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("analyticsGetOptionsStocksTopVolume failed:", res.error);
+    console.log("analyticsGetTopVolumeOptions failed:", res.error);
   }
 }
 

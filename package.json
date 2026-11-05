@@ -1,6 +1,6 @@
 {
   "name": "@ariesdotcom/finance-dev",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Aries Financial",
   "description": "Official TypeScript SDK for the finance.dev API by Aries Financial.",
   "homepage": "https://finance.dev",
@@ -55,10 +55,10 @@
     "lint": "oxlint --max-warnings=0 --deny-warnings --no-error-on-unmatched-pattern src",
     "build": "tsgo",
     "prepublishOnly": "npm run build",
-    "test:contract": "speakeasy test",
     "test:generated": "vitest run",
     "test:types": "tsgo --project tests/types/tsconfig.json",
-    "test:websocket": "node --test tests/websocket/*.test.mjs"
+    "test:websocket": "node --test tests/websocket/*.test.mjs",
+    "test:contract": "speakeasy test"
   },
   "peerDependencies": {
     
