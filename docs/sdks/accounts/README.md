@@ -101,9 +101,66 @@ run();
 
 Retrieve account balance, cash, equity, and buying power for a specific account (v2). Use this before showing an order ticket or checking whether the account can support a trade. Sterling and the stored balance are read concurrently. The stored read uses Dragonfly, then PostgreSQL on a full cache miss. Sterling supplies the balance when available, enriched with stored Apex fields; otherwise the stored balance is used.
 
-### Example Usage
+Two fields depend on the account type. `cashBalance` is returned only for cash accounts and `intradayMarginBalance` only for margin accounts; the other field is omitted from the response, not returned as `null` or `"0"`. Neither is returned for any other account type. Read `account_class` from `GET /v2/users/me/accounts` to know which applies.
 
-<!-- UsageSnippet language="typescript" operationID="getAccountBalance" method="get" path="/v2/accounts/{id}/balance" -->
+### Example Usage: cashAccount
+
+<!-- UsageSnippet language="typescript" operationID="getAccountBalance" method="get" path="/v2/accounts/{id}/balance" example="cashAccount" -->
+```typescript
+import { FinanceDev } from "@ariesdotcom/finance-dev";
+
+const financeDev = new FinanceDev({
+  security: {
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+  },
+});
+
+async function run() {
+  const result = await financeDev.accounts.getBalance({
+    id: "TEST-ACCOUNT-001",
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
+import { accountsGetBalance } from "@ariesdotcom/finance-dev/funcs/accounts-get-balance.js";
+
+// Use `FinanceDevCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const financeDev = new FinanceDevCore({
+  security: {
+    clientID: "<YOUR_CLIENT_ID_HERE>",
+    clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+  },
+});
+
+async function run() {
+  const res = await accountsGetBalance(financeDev, {
+    id: "TEST-ACCOUNT-001",
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("accountsGetBalance failed:", res.error);
+  }
+}
+
+run();
+```
+### Example Usage: marginAccount
+
+<!-- UsageSnippet language="typescript" operationID="getAccountBalance" method="get" path="/v2/accounts/{id}/balance" example="marginAccount" -->
 ```typescript
 import { FinanceDev } from "@ariesdotcom/finance-dev";
 

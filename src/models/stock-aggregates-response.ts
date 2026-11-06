@@ -19,7 +19,7 @@ export type StockAggregatesResponse = {
    */
   adjusted?: boolean | undefined;
   /**
-   * URL for next page of results
+   * URL for the next page of results, including the continuation cursor and updated time bounds. Follow this URL unchanged. Omitted when there are no more pages.
    */
   nextUrl?: string | undefined;
   /**

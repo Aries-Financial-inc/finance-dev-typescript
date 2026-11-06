@@ -4,6 +4,7 @@
  */
 
 import { predictionOrdersCreate } from "../funcs/prediction-orders-create.js";
+import { predictionOrdersGet } from "../funcs/prediction-orders-get.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
@@ -20,6 +21,23 @@ export class PredictionOrders extends ClientSDK {
     options?: RequestOptions,
   ): Promise<operations.PlacePredictionOrderResponse> {
     return unwrapAsync(predictionOrdersCreate(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  /**
+   * Get prediction order
+   *
+   * @remarks
+   * **Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Returns one order on the account together with every fill against it and every step of its history.
+   */
+  async get(
+    request: operations.GetPredictionOrderRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetPredictionOrderResponse> {
+    return unwrapAsync(predictionOrdersGet(
       this,
       request,
       options,

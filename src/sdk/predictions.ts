@@ -3,13 +3,12 @@
  * @generated-id: ed6107478d28
  */
 
-import { predictionsGetHistoryBatch } from "../funcs/predictions-get-history-batch.js";
+import { predictionsBatchGet } from "../funcs/predictions-batch-get.js";
 import { predictionsListOrders } from "../funcs/predictions-list-orders.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as models from "../models/index.js";
 import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
-import { History } from "./history.js";
 import { Markets } from "./markets.js";
 import { PredictionsOrders } from "./predictions-orders.js";
 
@@ -17,11 +16,6 @@ export class Predictions extends ClientSDK {
   private _markets?: Markets;
   get markets(): Markets {
     return (this._markets ??= new Markets(this._options));
-  }
-
-  private _history?: History;
-  get history(): History {
-    return (this._history ??= new History(this._options));
   }
 
   private _orders?: PredictionsOrders;
@@ -35,11 +29,11 @@ export class Predictions extends ClientSDK {
    * @remarks
    * Returns historical ticks for multiple symbols in one request. Each query may carry its own optional `from`/`to`/`limit`. Maximum 5 queries per call.
    */
-  async getHistoryBatch(
+  async batchGet(
     request: models.PredMdBatchHistoryRequest,
     options?: RequestOptions,
   ): Promise<operations.GetHistoryBatchResponse> {
-    return unwrapAsync(predictionsGetHistoryBatch(
+    return unwrapAsync(predictionsBatchGet(
       this,
       request,
       options,
@@ -47,13 +41,13 @@ export class Predictions extends ClientSDK {
   }
 
   /**
-   * List prediction orders
+   * List current prediction orders
    *
    * @remarks
-   * **Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Returns the authenticated user's prediction-market orders, newest first, one page at a time.
+   * **Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Returns the account's current orders, newest first, one page at a time: every order still open, however old (a GTC order), plus every order created or closed since the trading day rolled over at 17:00 America/Chicago. Older orders are read with List Prediction Order History.
    */
   async listOrders(
-    request?: operations.ListPredictionOrdersRequest | undefined,
+    request: operations.ListPredictionOrdersRequest,
     options?: RequestOptions,
   ): Promise<operations.ListPredictionOrdersResponse> {
     return unwrapAsync(predictionsListOrders(

@@ -16,11 +16,11 @@ export type GetRatingsRequest = {
    */
   tickers?: string | undefined;
   /**
-   * Page number for pagination (0-based)
+   * Zero-based page number (default: 0). page × pageSize must be less than 100,000; otherwise the API returns HTTP 400 with error code PAGINATION_LIMIT_EXCEEDED. To retrieve larger histories, narrow dateFrom and dateTo and restart at page 0 for each date window.
    */
   page?: number | undefined;
   /**
-   * Number of results per page. Use this to control pagination size in list views.
+   * Number of results per page (default: 100, maximum: 1000). page × pageSize must be less than 100,000.
    */
   pageSize?: number | undefined;
   /**
@@ -60,8 +60,8 @@ export type GetRatingsResponse = {
 /** @internal */
 export type GetRatingsRequest$Outbound = {
   tickers?: string | undefined;
-  page?: number | undefined;
-  pageSize?: number | undefined;
+  page: number;
+  pageSize: number;
   date?: string | undefined;
   dateFrom?: string | undefined;
   dateTo?: string | undefined;
@@ -77,8 +77,8 @@ export const GetRatingsRequest$outboundSchema: z.ZodMiniType<
   GetRatingsRequest
 > = z.object({
   tickers: z.optional(z.string()),
-  page: z.optional(z.int()),
-  pageSize: z.optional(z.int()),
+  page: z._default(z.int(), 0),
+  pageSize: z._default(z.int(), 100),
   date: z.optional(
     z.pipe(
       z.date(),
