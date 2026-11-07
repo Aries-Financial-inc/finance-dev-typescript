@@ -35,6 +35,8 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Retrieve account balance, cash, equity, and buying power for a specific account (v2). Use this before showing an order ticket or checking whether the account can support a trade. Sterling and the stored balance are read concurrently. The stored read uses Dragonfly, then PostgreSQL on a full cache miss. Sterling supplies the balance when available, enriched with stored Apex fields; otherwise the stored balance is used.
  *
+ * Two fields depend on the account type. `cashBalance` is returned only for cash accounts and `intradayMarginBalance` only for margin accounts; the other field is omitted from the response, not returned as `null` or `"0"`. Neither is returned for any other account type. Read `account_class` from `GET /v2/users/me/accounts` to know which applies.
+ *
  * If set, this operation will use {@link Security.clientID} from the global security.
  */
 export function accountsGetBalance(

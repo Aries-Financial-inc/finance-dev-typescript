@@ -4,29 +4,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import * as openEnums from "../../types/enums.js";
-import { OpenEnum } from "../../types/enums.js";
 import * as models from "../index.js";
-
-/**
- * How long each bar covers. Pair with `period` to set the exact size (e.g. `precision=Minutes`, `period=5` = 5-minute bars). Allowed values:
- *
- * @remarks
- * - `Minutes` — minute bars (combine with `period` for 1, 5, 15, 30-minute candles).
- * - `Hours` — hour bars (combine with `period` for 1, 2, 4-hour candles).
- */
-export const GetIndexBarPrecision = {
-  Minutes: "Minutes",
-  Hours: "Hours",
-} as const;
-/**
- * How long each bar covers. Pair with `period` to set the exact size (e.g. `precision=Minutes`, `period=5` = 5-minute bars). Allowed values:
- *
- * @remarks
- * - `Minutes` — minute bars (combine with `period` for 1, 5, 15, 30-minute candles).
- * - `Hours` — hour bars (combine with `period` for 1, 2, 4-hour candles).
- */
-export type GetIndexBarPrecision = OpenEnum<typeof GetIndexBarPrecision>;
 
 export type GetIndexBarRequest = {
   /**
@@ -48,18 +26,12 @@ export type GetIndexBarRequest = {
    * - `Minutes` — minute bars (combine with `period` for 1, 5, 15, 30-minute candles).
    * - `Hours` — hour bars (combine with `period` for 1, 2, 4-hour candles).
    */
-  precision?: GetIndexBarPrecision | undefined;
+  precision?: models.BarPrecision | undefined;
   /**
    * Multiplier on `precision` to set the bar size. Defaults to `1`. Examples: `precision=Minutes` + `period=5` = 5-minute bars; `precision=Hours` + `period=4` = 4-hour bars.
    */
   period?: number | undefined;
 };
-
-/** @internal */
-export const GetIndexBarPrecision$outboundSchema: z.ZodMiniType<
-  string,
-  GetIndexBarPrecision
-> = openEnums.outboundSchema(GetIndexBarPrecision);
 
 /** @internal */
 export type GetIndexBarRequest$Outbound = {
@@ -81,7 +53,7 @@ export const GetIndexBarRequest$outboundSchema: z.ZodMiniType<
     "Symbol",
   ),
   endTime: z.string(),
-  precision: z.optional(GetIndexBarPrecision$outboundSchema),
+  precision: z.optional(models.BarPrecision$outboundSchema),
   period: z.optional(z.int()),
 });
 

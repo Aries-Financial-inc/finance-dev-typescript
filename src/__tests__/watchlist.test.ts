@@ -7,36 +7,6 @@ import { expect, test } from "vitest";
 import { FinanceDev } from "../index.js";
 import { createTestHTTPClient } from "./test-client.js";
 
-test("Watchlist Delete Config Watchlist By Id Deleted", async () => {
-  const testHttpClient = createTestHTTPClient(
-    "deleteConfigWatchlistById-deleted",
-  );
-
-  const financeDev = new FinanceDev({
-    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: testHttpClient,
-    security: {
-      clientID: "<YOUR_CLIENT_ID_HERE>",
-      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
-      tokenURL: "/_mockserver/oauth2/token",
-    },
-  });
-
-  const result = await financeDev.watchlist.delete({
-    watchlistId: 12345,
-  });
-  expect(result).toBeDefined();
-  expect(result).toEqual({
-    id: 12345,
-    name: "Tech Stocks",
-    symbols: [
-      "AAPL",
-      "GOOGL",
-      "MSFT",
-    ],
-  });
-});
-
 test("Watchlist Delete Config Watchlist By Id Reset To Default", async () => {
   const testHttpClient = createTestHTTPClient(
     "deleteConfigWatchlistById-resetToDefault",
@@ -52,7 +22,7 @@ test("Watchlist Delete Config Watchlist By Id Reset To Default", async () => {
     },
   });
 
-  const result = await financeDev.watchlist.delete({
+  const result = await financeDev.watchlists.delete({
     watchlistId: 12345,
   });
   expect(result).toBeDefined();

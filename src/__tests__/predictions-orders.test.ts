@@ -7,8 +7,8 @@ import { expect, test } from "vitest";
 import { FinanceDev } from "../index.js";
 import { createTestHTTPClient } from "./test-client.js";
 
-test("Predictions Orders Get Prediction Order", async () => {
-  const testHttpClient = createTestHTTPClient("getPredictionOrder");
+test("Predictions Orders List Prediction Order History", async () => {
+  const testHttpClient = createTestHTTPClient("listPredictionOrderHistory");
 
   const financeDev = new FinanceDev({
     serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
@@ -20,46 +20,214 @@ test("Predictions Orders Get Prediction Order", async () => {
     },
   });
 
-  const result = await financeDev.predictions.orders.get({
-    orderId: "3e3ab03f-d246-4072-b29f-8558498115de",
+  const result = await financeDev.predictions.orders.listPredictionOrderHistory(
+    {
+      status: "open",
+      accountId: "ACCOUNT-0001",
+    },
+  );
+  expect(result).toBeDefined();
+  expect(result).toEqual({
+    data: {
+      orders: [
+        {
+          accountId: "ACCOUNT-0001",
+          avgPx: "0",
+          clientOrderRef: "7d1c8e0a-4b8f-4e3a-9f43-2a6b1d0c9e11",
+          contract: null,
+          createdAt: new Date("2026-01-17T08:03:25.683Z"),
+          cumQty: "0",
+          leavesQty: "10",
+          orderId: "0b9f3c2e-5d6a-4f1b-8e7c-9a0d1e2f3a4b",
+          orderType: "limit",
+          outcome: "YES",
+          price: "0.54",
+          quantity: "10",
+          side: "buy",
+          state: "pending_new",
+          stopPx: "0.50",
+          symbol: "HORC_1126_Republican",
+          timeInForce: "day",
+          updatedAt: new Date("2025-12-28T06:02:36.586Z"),
+          workingPrice: "0.54",
+          workingQuantity: "10",
+        },
+      ],
+    },
+    success: true,
+  });
+});
+
+test("Predictions Orders List Prediction Mass Cancels", async () => {
+  const testHttpClient = createTestHTTPClient("listPredictionMassCancels");
+
+  const financeDev = new FinanceDev({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    security: {
+      clientID: "<YOUR_CLIENT_ID_HERE>",
+      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+      tokenURL: "/_mockserver/oauth2/token",
+    },
+  });
+
+  const result = await financeDev.predictions.orders.listPredictionMassCancels({
+    accountId: "ACCOUNT-0001",
+  });
+  expect(result).toBeDefined();
+  expect(result).toEqual({
+    success: true,
+  });
+});
+
+test("Predictions Orders Mass Cancel Prediction Orders", async () => {
+  const testHttpClient = createTestHTTPClient("massCancelPredictionOrders");
+
+  const financeDev = new FinanceDev({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    security: {
+      clientID: "<YOUR_CLIENT_ID_HERE>",
+      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+      tokenURL: "/_mockserver/oauth2/token",
+    },
+  });
+
+  const result = await financeDev.predictions.orders.massCancelPredictionOrders(
+    {
+      accountId: "ACCOUNT-0001",
+      symbol: "HORC_1126_Republican",
+    },
+  );
+  expect(result).toBeDefined();
+  expect(result).toEqual({
+    success: true,
+  });
+});
+
+test("Predictions Orders Get Prediction Mass Cancel", async () => {
+  const testHttpClient = createTestHTTPClient("getPredictionMassCancel");
+
+  const financeDev = new FinanceDev({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    security: {
+      clientID: "<YOUR_CLIENT_ID_HERE>",
+      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+      tokenURL: "/_mockserver/oauth2/token",
+    },
+  });
+
+  const result = await financeDev.predictions.orders.getPredictionMassCancel({
+    massCancelId: "97599149-c654-4879-ab4b-aaac771b2949",
+    accountId: "ACCOUNT-0001",
+  });
+  expect(result).toBeDefined();
+  expect(result).toEqual({
+    success: true,
+  });
+});
+
+test("Predictions Orders Replace Prediction Order", async () => {
+  const testHttpClient = createTestHTTPClient("replacePredictionOrder");
+
+  const financeDev = new FinanceDev({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    security: {
+      clientID: "<YOUR_CLIENT_ID_HERE>",
+      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+      tokenURL: "/_mockserver/oauth2/token",
+    },
+  });
+
+  const result = await financeDev.predictions.orders.replacePredictionOrder({
+    orderId: "2a410d83-6352-4c2f-b168-8300471c5472",
+    body: {
+      accountId: "ACCOUNT-0001",
+      price: "0.45",
+      quantity: "20",
+    },
   });
   expect(result).toBeDefined();
   expect(result).toEqual({
     data: {
-      order: {
-        accountId: "ACCOUNT-0001",
-        avgPx: "0",
-        clientOrderRef: "7d1c8e0a-4b8f-4e3a-9f43-2a6b1d0c9e11",
-        createdAt: new Date("2024-05-18T17:00:40.400Z"),
-        cumQty: "0",
-        leavesQty: "10",
-        orderId: "0b9f3c2e-5d6a-4f1b-8e7c-9a0d1e2f3a4b",
-        orderType: "limit",
-        outcome: "YES",
-        price: "0.54",
-        quantity: "10",
-        side: "buy",
-        state: "pending_new",
-        stopPx: "0.50",
-        symbol: "HORC_1126_Republican",
-        timeInForce: "day",
-        updatedAt: new Date("2026-06-01T14:19:20.151Z"),
-        workingPrice: "0.54",
-        workingQuantity: "10",
+      accountId: "ACCOUNT-0001",
+      avgPx: "0",
+      clientOrderRef: "7d1c8e0a-4b8f-4e3a-9f43-2a6b1d0c9e11",
+      contract: null,
+      createdAt: new Date("2024-01-23T14:06:02.854Z"),
+      cumQty: "0",
+      leavesQty: "10",
+      orderId: "0b9f3c2e-5d6a-4f1b-8e7c-9a0d1e2f3a4b",
+      orderType: "limit",
+      outcome: "YES",
+      price: "0.54",
+      quantity: "10",
+      side: "buy",
+      state: "pending_new",
+      stopPx: "0.50",
+      symbol: "HORC_1126_Republican",
+      timeInForce: "day",
+      updatedAt: new Date("2024-12-27T23:26:21.261Z"),
+      workingPrice: "0.54",
+      workingQuantity: "10",
+    },
+    success: true,
+  });
+});
+
+test("Predictions Orders Cancel Prediction Order", async () => {
+  const testHttpClient = createTestHTTPClient("cancelPredictionOrder");
+
+  const financeDev = new FinanceDev({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    security: {
+      clientID: "<YOUR_CLIENT_ID_HERE>",
+      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+      tokenURL: "/_mockserver/oauth2/token",
+    },
+  });
+
+  const result = await financeDev.predictions.orders.cancelPredictionOrder({
+    orderId: "912e51a0-6057-4c55-8263-982a49f2808d",
+    body: {
+      accountId: "ACCOUNT-0001",
+    },
+  });
+  expect(result).toBeDefined();
+  expect(result).toEqual({
+    data: {
+      accountId: "ACCOUNT-0001",
+      avgPx: "0",
+      clientOrderRef: "7d1c8e0a-4b8f-4e3a-9f43-2a6b1d0c9e11",
+      contract: {
+        description: "Shelley Moore Capito",
+        eventDisplayName:
+          "West Virginia Senate General Election November 3 2026",
+        eventId: "AXXWV_110326",
+        question:
+          "Will Shelley Moore Capito win the West Virginia general election for US Senate in 2026?",
+        settlementValue: "1",
+        state: "ACTIVE",
       },
-      reports: [
-        {
-          avgPx: "0.54",
-          cumQty: "10",
-          execId: "<id>",
-          execType: "trade",
-          lastPx: "0.54",
-          lastQty: "10",
-          leavesQty: "0",
-          status: "filled",
-          transactTime: new Date("2025-08-27T21:08:04.489Z"),
-        },
-      ],
+      createdAt: new Date("2025-09-18T05:57:34.478Z"),
+      cumQty: "0",
+      leavesQty: "10",
+      orderId: "0b9f3c2e-5d6a-4f1b-8e7c-9a0d1e2f3a4b",
+      orderType: "limit",
+      outcome: "YES",
+      price: "0.54",
+      quantity: "10",
+      side: "buy",
+      state: "pending_new",
+      stopPx: "0.50",
+      symbol: "HORC_1126_Republican",
+      timeInForce: "day",
+      updatedAt: new Date("2024-02-18T11:17:56.767Z"),
+      workingPrice: "0.54",
+      workingQuantity: "10",
     },
     success: true,
   });

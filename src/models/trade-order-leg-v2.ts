@@ -115,6 +115,10 @@ export type TradeOrderLegV2 = {
    * Symbol for this leg. For options, use the exact contract symbol from search or the order response.
    */
   symbol: string;
+  /**
+   * Full OCC contract symbol for an option leg (for example `AAPL261023C00340000`). Equity legs carry the plain symbol. Omitted on orders stored before this field existed.
+   */
+  tickerSymbol?: string | undefined;
 };
 
 /** @internal */
@@ -155,6 +159,7 @@ export const TradeOrderLegV2$inboundSchema: z.ZodMiniType<
   side: TradeOrderLegV2Side$inboundSchema,
   strikePrice: types.string(),
   symbol: types.string(),
+  tickerSymbol: types.optional(types.string()),
 });
 
 export function tradeOrderLegV2FromJSON(
