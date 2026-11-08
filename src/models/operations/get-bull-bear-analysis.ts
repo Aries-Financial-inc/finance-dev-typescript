@@ -16,11 +16,11 @@ export type GetBullBearAnalysisRequest = {
    */
   symbols: string;
   /**
-   * Page number for pagination (0-based)
+   * Zero-based page number (default: 0). page × pageSize must be less than 100,000; otherwise the API returns HTTP 400 with error code PAGINATION_LIMIT_EXCEEDED. Narrow symbols and restart at page 0 to reduce the result set.
    */
   page?: number | undefined;
   /**
-   * Number of results per page. Use this to control pagination size in list views. (1-200)
+   * Number of results per page (default: 100, maximum: 200). page × pageSize must be less than 100,000.
    */
   pageSize?: number | undefined;
 };

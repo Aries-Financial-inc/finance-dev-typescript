@@ -6,9 +6,39 @@
 import * as z from "zod/v4-mini";
 import { safeParse } from "../lib/schemas.js";
 import { Decimal as Decimal$ } from "../types/decimal.js";
+import * as openEnums from "../types/enums.js";
+import { OpenEnum } from "../types/enums.js";
 import { Result as SafeParseResult } from "../types/fp.js";
 import * as types from "../types/primitives.js";
 import { SDKValidationError } from "./errors/sdk-validation-error.js";
+
+/**
+ * The candidate's party from the venue: `D` Democratic, `R` Republican, `I` independent, `O` any other. `null` on a contract that is not a candidate.
+ */
+export const PredMdContractParty = {
+  D: "D",
+  R: "R",
+  I: "I",
+  O: "O",
+} as const;
+/**
+ * The candidate's party from the venue: `D` Democratic, `R` Republican, `I` independent, `O` any other. `null` on a contract that is not a candidate.
+ */
+export type PredMdContractParty = OpenEnum<typeof PredMdContractParty>;
+
+/**
+ * The candidate's portrait, for an election contract that has one. `null` for every other contract.
+ */
+export type PredMdContractPhoto = {
+  credit: string;
+  license: string;
+  licenseUrl: string | null;
+  sourceUrl: string;
+  /**
+   * 256×256 webp.
+   */
+  url: string;
+};
 
 /**
  * A single tradable event contract at a specific strike.
@@ -16,15 +46,35 @@ import { SDKValidationError } from "./errors/sdk-validation-error.js";
 export type PredMdContract = {
   baseCurrency?: string | undefined;
   baseEventId: string;
+  /**
+   * FEC-style status from the venue: `I` incumbent, `C` challenger, `O` open seat, `N` not running. `null` on a contract that is not a candidate.
+   */
+  candidateStatus: string | null;
   description?: string | undefined;
   evaluationType?: string | undefined;
   eventId: string;
   expirationDate?: Date | null | undefined;
+  /**
+   * `true` for a nominee, a candidate who advanced, or a significant independent; `false` for one no longer in the race, such as a primary loser. `null` on a contract that is not a candidate.
+   */
+  frontRunner: boolean | null;
+  /**
+   * Whether the candidate holds the seat. `null` on a contract that is not a candidate.
+   */
+  incumbent: boolean | null;
   lastSyncedAt: Date;
   lastTradeDate?: Date | null | undefined;
   minTradeQty?: string | undefined;
   multiplier?: number | undefined;
   nonTradable: boolean;
+  /**
+   * The candidate's party from the venue: `D` Democratic, `R` Republican, `I` independent, `O` any other. `null` on a contract that is not a candidate.
+   */
+  party: PredMdContractParty | null;
+  /**
+   * The candidate's portrait, for an election contract that has one. `null` for every other contract.
+   */
+  photo: PredMdContractPhoto | null;
   /**
    * Venue JSON payload (passthrough).
    */
@@ -50,21 +100,54 @@ export type PredMdContract = {
 };
 
 /** @internal */
+export const PredMdContractParty$inboundSchema: z.ZodMiniType<
+  PredMdContractParty,
+  unknown
+> = openEnums.inboundSchema(PredMdContractParty);
+
+/** @internal */
+export const PredMdContractPhoto$inboundSchema: z.ZodMiniType<
+  PredMdContractPhoto,
+  unknown
+> = z.object({
+  credit: types.string(),
+  license: types.string(),
+  licenseUrl: types.nullable(types.string()),
+  sourceUrl: types.string(),
+  url: types.string(),
+});
+
+export function predMdContractPhotoFromJSON(
+  jsonString: string,
+): SafeParseResult<PredMdContractPhoto, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PredMdContractPhoto$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PredMdContractPhoto' from JSON`,
+  );
+}
+
+/** @internal */
 export const PredMdContract$inboundSchema: z.ZodMiniType<
   PredMdContract,
   unknown
 > = z.object({
   baseCurrency: types.optional(types.string()),
   baseEventId: types.string(),
+  candidateStatus: types.nullable(types.string()),
   description: types.optional(types.string()),
   evaluationType: types.optional(types.string()),
   eventId: types.string(),
   expirationDate: z.optional(z.nullable(types.date())),
+  frontRunner: types.nullable(types.boolean()),
+  incumbent: types.nullable(types.boolean()),
   lastSyncedAt: types.date(),
   lastTradeDate: z.optional(z.nullable(types.date())),
   minTradeQty: types.optional(types.string()),
   multiplier: types.optional(types.number()),
   nonTradable: types.boolean(),
+  party: types.nullable(PredMdContractParty$inboundSchema),
+  photo: types.nullable(z.lazy(() => PredMdContractPhoto$inboundSchema)),
   priceLimit: types.optional(z.any()),
   priceScale: types.optional(types.string()),
   question: types.optional(types.string()),

@@ -36,11 +36,11 @@ export type GetAnalystInsightsSearchKeysType = OpenEnum<
 
 export type GetAnalystInsightsRequest = {
   /**
-   * Zero-based page number. Enter 0 for the first page, 1 for the second page, and so on.
+   * Zero-based page number (default: 0). page × pageSize must be less than 100,000; otherwise the API returns HTTP 400 with error code PAGINATION_LIMIT_EXCEEDED. Narrow the query filters and restart at page 0 to reduce the result set. Within this limit, pages beyond the available results return HTTP 200 with an empty insights array.
    */
   page?: number | undefined;
   /**
-   * Number of results per page. Use this to control pagination size in list views. Use this to control page size; default is 10.
+   * Number of results per page (default: 10, maximum: 1000). page × pageSize must be less than 100,000.
    */
   pageSize?: number | undefined;
   /**
