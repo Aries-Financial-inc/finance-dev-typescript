@@ -4,6 +4,7 @@
  */
 
 import { watchlistsCreate } from "../funcs/watchlists-create.js";
+import { watchlistsDelete } from "../funcs/watchlists-delete.js";
 import { watchlistsGet } from "../funcs/watchlists-get.js";
 import { watchlistsList } from "../funcs/watchlists-list.js";
 import { watchlistsReplaceAll } from "../funcs/watchlists-replace-all.js";
@@ -61,6 +62,27 @@ export class Watchlists extends ClientSDK {
     options?: RequestOptions,
   ): Promise<models.WatchlistResponse> {
     return unwrapAsync(watchlistsReplaceAll(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  /**
+   * Delete Watchlist
+   *
+   * @remarks
+   * Delete one of the user's watchlists by its numeric ID.
+   *
+   * **Important — last-watchlist rule:** If this is the user's *only remaining* watchlist, the server does not actually delete it. Instead it **resets it to a default empty state** (name set to `"Default"`, `symbols` cleared) so the user always has at least one watchlist available in the UI.
+   *
+   * **Tip:** The response body returns the affected watchlist — whether it was actually deleted or reset — so you can update your local store without making a follow-up GET request. Compare `name` and `symbols` in the response to decide whether to render the 'reset to default' state.
+   */
+  async delete(
+    request: operations.DeleteConfigWatchlistByIdRequest,
+    options?: RequestOptions,
+  ): Promise<models.Watchlist> {
+    return unwrapAsync(watchlistsDelete(
       this,
       request,
       options,

@@ -5,9 +5,7 @@
 
 import { marketGetEtbList } from "../funcs/market-get-etb-list.js";
 import { marketGetHolidays } from "../funcs/market-get-holidays.js";
-import { marketGetOptionDetails } from "../funcs/market-get-option-details.js";
 import { marketGetStatus } from "../funcs/market-get-status.js";
-import { marketSearchEtbSymbols } from "../funcs/market-search-etb-symbols.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as models from "../models/index.js";
 import * as operations from "../models/operations/index.js";
@@ -31,23 +29,6 @@ export class Market extends ClientSDK {
   ): Promise<models.EtbListResponse> {
     return unwrapAsync(marketGetEtbList(
       this,
-      options,
-    ));
-  }
-
-  /**
-   * Search Easy-to-Borrow Symbols
-   *
-   * @remarks
-   * Answers borrowability for a batch of symbols. Use this instead of fetching the whole list when you only care about a handful — for example, deciding whether to show a short-sell option on a ticker page. This is a POST rather than a GET because a symbol list has no practical URL-length limit. Symbols are uppercased and trimmed before the lookup and duplicates collapse, so `count` can be lower than the number of symbols you sent; always read answers out of `results` by uppercase key rather than matching them against your request array by index. Reads the same underlying set as GET /v1/etb, so the two endpoints can never disagree.
-   */
-  async searchEtbSymbols(
-    request: models.EtbSearchRequest,
-    options?: RequestOptions,
-  ): Promise<models.EtbSearchResponse> {
-    return unwrapAsync(marketSearchEtbSymbols(
-      this,
-      request,
       options,
     ));
   }
@@ -80,23 +61,6 @@ export class Market extends ClientSDK {
     options?: RequestOptions,
   ): Promise<models.MarketStatus> {
     return unwrapAsync(marketGetStatus(
-      this,
-      request,
-      options,
-    ));
-  }
-
-  /**
-   * Get option details
-   *
-   * @remarks
-   * Batch option contract details for one or more OSI option symbols. Response includes `data` with per-symbol pricing fields (`lastPrice`, `bidPrice`, `askPrice`, `midPrice`, `closePrice`) and an `errors` array for symbols that cannot be returned. At least one symbol is required.
-   */
-  async getOptionDetails(
-    request: operations.GetOptionDetailsRequest,
-    options?: RequestOptions,
-  ): Promise<models.GetOptionDetailsResponse> {
-    return unwrapAsync(marketGetOptionDetails(
       this,
       request,
       options,

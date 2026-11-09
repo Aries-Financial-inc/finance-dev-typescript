@@ -48,7 +48,6 @@ export function watchlistsReplaceAll(
     | errors.BadRequest
     | errors.Unauthorized
     | errors.Forbidden
-    | errors.InternalServerError
     | FinanceDevAPIError
     | ResponseValidationError
     | ConnectionError
@@ -77,7 +76,6 @@ async function $do(
       | errors.BadRequest
       | errors.Unauthorized
       | errors.Forbidden
-      | errors.InternalServerError
       | FinanceDevAPIError
       | ResponseValidationError
       | ConnectionError
@@ -172,7 +170,6 @@ async function $do(
     | errors.BadRequest
     | errors.Unauthorized
     | errors.Forbidden
-    | errors.InternalServerError
     | FinanceDevAPIError
     | ResponseValidationError
     | ConnectionError
@@ -186,9 +183,8 @@ async function $do(
     M.jsonErr(400, errors.BadRequest$inboundSchema),
     M.jsonErr(401, errors.Unauthorized$inboundSchema),
     M.jsonErr(403, errors.Forbidden$inboundSchema),
-    M.jsonErr(500, errors.InternalServerError$inboundSchema),
     M.fail("4XX"),
-    M.fail("5XX"),
+    M.fail([500, "5XX"]),
   )(response, req, { extraFields: responseFields });
   if (!result.ok) {
     return [result, { status: "complete", request: req, response }];
