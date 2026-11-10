@@ -6,7 +6,12 @@
 import * as z from "zod/v4-mini";
 import { safeParse } from "../lib/schemas.js";
 import { Result as SafeParseResult } from "../types/fp.js";
+import * as types from "../types/primitives.js";
 import { SDKValidationError } from "./errors/sdk-validation-error.js";
+import {
+  PredOrdersOrderEvent,
+  PredOrdersOrderEvent$inboundSchema,
+} from "./pred-orders-order-event.js";
 import {
   PredOrdersOrderReport,
   PredOrdersOrderReport$inboundSchema,
@@ -21,6 +26,10 @@ import {
  */
 export type PredOrdersOrderDetail = {
   /**
+   * Every step of the order's history, in version order.
+   */
+  events?: Array<PredOrdersOrderEvent> | undefined;
+  /**
    * An order as recorded by order entry. Submitted terms (`quantity`, `price`, …) never change; working terms (`workingQuantity`, `workingPrice`, …) are the venue's answer. Optional decimals and timestamps are omitted when absent, never zero.
    */
   order: PredOrdersOrder;
@@ -32,6 +41,7 @@ export const PredOrdersOrderDetail$inboundSchema: z.ZodMiniType<
   PredOrdersOrderDetail,
   unknown
 > = z.object({
+  events: types.optional(z.array(PredOrdersOrderEvent$inboundSchema)),
   order: PredOrdersOrder$inboundSchema,
   reports: z.array(PredOrdersOrderReport$inboundSchema),
 });

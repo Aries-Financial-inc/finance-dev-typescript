@@ -28,6 +28,66 @@ import {
 } from "./trade-order-leg-v2.js";
 
 /**
+ * The order's role within its advanced-order list.
+ *
+ * @remarks
+ * - `SIBLING` — An OCO order.
+ * - `ENTRY`, `PROFIT_TARGET`, `STOP_LOSS` — Bracket orders.
+ * - `PARENT`, `CHILD` — OTO and OTOCO orders.
+ *
+ * Omitted for ordinary orders.
+ */
+export const AdvancedOrderRole = {
+  Sibling: "SIBLING",
+  Entry: "ENTRY",
+  ProfitTarget: "PROFIT_TARGET",
+  StopLoss: "STOP_LOSS",
+  Parent: "PARENT",
+  Child: "CHILD",
+} as const;
+/**
+ * The order's role within its advanced-order list.
+ *
+ * @remarks
+ * - `SIBLING` — An OCO order.
+ * - `ENTRY`, `PROFIT_TARGET`, `STOP_LOSS` — Bracket orders.
+ * - `PARENT`, `CHILD` — OTO and OTOCO orders.
+ *
+ * Omitted for ordinary orders.
+ */
+export type AdvancedOrderRole = OpenEnum<typeof AdvancedOrderRole>;
+
+/**
+ * Kind of advanced-order list the order was placed in.
+ *
+ * @remarks
+ * - `OCO` — One-cancels-other siblings.
+ * - `BRACKET` — Entry with a profit target and/or stop loss.
+ * - `OTO` — Parent whose fill releases its children.
+ * - `OTOCO` — Parent whose fill releases a one-cancels-other group.
+ *
+ * Omitted for ordinary orders.
+ */
+export const AdvancedOrderType = {
+  Oco: "OCO",
+  Bracket: "BRACKET",
+  Oto: "OTO",
+  Otoco: "OTOCO",
+} as const;
+/**
+ * Kind of advanced-order list the order was placed in.
+ *
+ * @remarks
+ * - `OCO` — One-cancels-other siblings.
+ * - `BRACKET` — Entry with a profit target and/or stop loss.
+ * - `OTO` — Parent whose fill releases its children.
+ * - `OTOCO` — Parent whose fill releases a one-cancels-other group.
+ *
+ * Omitted for ordinary orders.
+ */
+export type AdvancedOrderType = OpenEnum<typeof AdvancedOrderType>;
+
+/**
  * What kind of trade this order represents.
  *
  * @remarks
@@ -163,6 +223,29 @@ export type TradeOrderV2 = {
    */
   accountId?: string | undefined;
   /**
+   * The order's role within its advanced-order list.
+   *
+   * @remarks
+   * - `SIBLING` — An OCO order.
+   * - `ENTRY`, `PROFIT_TARGET`, `STOP_LOSS` — Bracket orders.
+   * - `PARENT`, `CHILD` — OTO and OTOCO orders.
+   *
+   * Omitted for ordinary orders.
+   */
+  advancedOrderRole?: AdvancedOrderRole | undefined;
+  /**
+   * Kind of advanced-order list the order was placed in.
+   *
+   * @remarks
+   * - `OCO` — One-cancels-other siblings.
+   * - `BRACKET` — Entry with a profit target and/or stop loss.
+   * - `OTO` — Parent whose fill releases its children.
+   * - `OTOCO` — Parent whose fill releases a one-cancels-other group.
+   *
+   * Omitted for ordinary orders.
+   */
+  advancedOrderType?: AdvancedOrderType | undefined;
+  /**
    * Average fill price at the order level. For multi-leg orders this may be zero; use each leg's `avgPrice` instead.
    */
   avgPrice?: string | undefined;
@@ -214,6 +297,10 @@ export type TradeOrderV2 = {
    */
   legs?: Array<TradeOrderLegV2> | undefined;
   /**
+   * ID of the advanced-order list (OCO, bracket, OTO or OTOCO) this order was placed in, shared by every order in the list. Kept on the order's cancel and replace records. Omitted for ordinary orders.
+   */
+  listId?: string | undefined;
+  /**
    * Broker order ID. Always serialized; may be an empty string for cancel-rejects or before the broker accepts the order.
    */
   ordId?: string | undefined;
@@ -249,6 +336,10 @@ export type TradeOrderV2 = {
    * Original client order ID for replace/cancel chains. Omitted when not part of a chain.
    */
   origClOrdId?: string | undefined;
+  /**
+   * Client order ID the parent order was placed with, on a child of a bracket, OTO or OTOCO. Unchanged when the child is replaced or cancelled, and when the parent is replaced — follow the parent's `origClOrdId` chain for that. Omitted for parents, OCO orders and ordinary orders.
+   */
+  parentClOrdId?: string | undefined;
   /**
    * Limit or reference price as a decimal string. Required for limit-style orders and empty or zero for pure market orders.
    */
@@ -313,6 +404,18 @@ export type TradeOrderV2 = {
 };
 
 /** @internal */
+export const AdvancedOrderRole$inboundSchema: z.ZodMiniType<
+  AdvancedOrderRole,
+  unknown
+> = openEnums.inboundSchema(AdvancedOrderRole);
+
+/** @internal */
+export const AdvancedOrderType$inboundSchema: z.ZodMiniType<
+  AdvancedOrderType,
+  unknown
+> = openEnums.inboundSchema(AdvancedOrderType);
+
+/** @internal */
 export const Category$inboundSchema: z.ZodMiniType<Category, unknown> =
   openEnums.inboundSchema(Category);
 
@@ -336,6 +439,8 @@ export const TradeOrderV2SecurityType$inboundSchema: z.ZodMiniType<
 export const TradeOrderV2$inboundSchema: z.ZodMiniType<TradeOrderV2, unknown> =
   z.object({
     accountId: types.optional(types.string()),
+    advancedOrderRole: types.optional(AdvancedOrderRole$inboundSchema),
+    advancedOrderType: types.optional(AdvancedOrderType$inboundSchema),
     avgPrice: types.optional(types.string()),
     category: types.optional(Category$inboundSchema),
     clOrdId: types.optional(types.string()),
@@ -346,10 +451,12 @@ export const TradeOrderV2$inboundSchema: z.ZodMiniType<TradeOrderV2, unknown> =
     exDestination: types.optional(ExDestination$inboundSchema),
     leavesQty: types.optional(types.string()),
     legs: types.optional(z.array(TradeOrderLegV2$inboundSchema)),
+    listId: types.optional(types.string()),
     ordId: types.optional(types.string()),
     ordRejReason: types.optional(types.string()),
     ordStatus: types.optional(OrdStatus$inboundSchema),
     origClOrdId: types.optional(types.string()),
+    parentClOrdId: types.optional(types.string()),
     price: types.optional(types.string()),
     qty: types.optional(types.string()),
     securityType: types.optional(TradeOrderV2SecurityType$inboundSchema),

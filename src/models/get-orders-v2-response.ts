@@ -11,17 +11,17 @@ import { SDKValidationError } from "./errors/sdk-validation-error.js";
 import { TradeOrderV2, TradeOrderV2$inboundSchema } from "./trade-order-v2.js";
 
 /**
- * Paginated v2 orders response from **GET /v2/accounts/{id}/orders** and **GET /v2/accounts/{id}/orders/history**. Both fields are always present.
+ * Paginated v2 orders response from **GET /v2/accounts/{id}/orders** and **GET /v2/accounts/{id}/orders/history**. `orders` is always present; `nextCursor` is present only when another page exists.
  */
 export type GetOrdersV2Response = {
   /**
-   * Opaque pagination cursor. Pass as `cursor` on the next request. Value `0` means the walk is exhausted.
+   * Opaque pagination cursor. Pass as `cursor` on the next request. This field is omitted on the final page.
    */
   nextCursor?: number | undefined;
   /**
    * Page of orders in v2 domain shape (`TradeOrderV2`). `null` from **GET /v2/accounts/{id}/orders** when the account has no active orders; an empty array from the history endpoint when there are no matches.
    */
-  orders?: Array<TradeOrderV2> | null | undefined;
+  orders: Array<TradeOrderV2> | null;
 };
 
 /** @internal */
@@ -30,7 +30,7 @@ export const GetOrdersV2Response$inboundSchema: z.ZodMiniType<
   unknown
 > = z.object({
   nextCursor: types.optional(types.number()),
-  orders: z.optional(z.nullable(z.array(TradeOrderV2$inboundSchema))),
+  orders: types.nullable(z.array(TradeOrderV2$inboundSchema)),
 });
 
 export function getOrdersV2ResponseFromJSON(
