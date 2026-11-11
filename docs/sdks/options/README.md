@@ -34,7 +34,7 @@ const financeDev = new FinanceDev({
 });
 
 async function run() {
-  const result = await financeDev.options.getActivity();
+  const result = await financeDev.options.getActivity({});
 
   for await (const page of result) {
     console.log(page);
@@ -62,7 +62,7 @@ const financeDev = new FinanceDevCore({
 });
 
 async function run() {
-  const res = await optionsGetActivity(financeDev);
+  const res = await optionsGetActivity(financeDev, {});
   if (res.ok) {
     const { value: result } = res;
     for await (const page of result) {
@@ -637,7 +637,7 @@ run();
 
 ## getSnapshot
 
-Returns a point-in-time snapshot for a single option contract: details, day bar, last quote, last trade, Greeks, implied volatility, and underlying context when available. Responses may be cached for approximately five minutes. Uses the upstream contract snapshot data source.
+Returns a point-in-time snapshot for a single option contract: details, day bar, last quote, last trade, Greeks, implied volatility, and underlying context when available. This endpoint does not paginate. Responses may be cached for approximately five minutes. Uses the upstream contract snapshot data source.
 
 ### Example Usage
 

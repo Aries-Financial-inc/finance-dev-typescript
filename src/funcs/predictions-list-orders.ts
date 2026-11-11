@@ -29,16 +29,16 @@ import { APICall, APIPromise } from "../types/async.js";
 import { Result } from "../types/fp.js";
 
 /**
- * List prediction orders
+ * List current prediction orders
  *
  * @remarks
- * **Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Returns the authenticated user's prediction-market orders, newest first, one page at a time.
+ * **Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Returns the account's current orders, newest first, one page at a time: every order still open, however old (a GTC order), plus every order created or closed since the trading day rolled over at 17:00 America/Chicago. Older orders are read with List Prediction Order History.
  *
  * If set, this operation will use {@link Security.clientID} from the global security.
  */
 export function predictionsListOrders(
   client: FinanceDevCore,
-  request?: operations.ListPredictionOrdersRequest | undefined,
+  request: operations.ListPredictionOrdersRequest,
   options?: RequestOptions,
 ): APIPromise<
   Result<
@@ -64,7 +64,7 @@ export function predictionsListOrders(
 
 async function $do(
   client: FinanceDevCore,
-  request?: operations.ListPredictionOrdersRequest | undefined,
+  request: operations.ListPredictionOrdersRequest,
   options?: RequestOptions,
 ): Promise<
   [
@@ -87,10 +87,7 @@ async function $do(
   const parsed = safeParse(
     request,
     (value) =>
-      z.parse(
-        z.optional(operations.ListPredictionOrdersRequest$outboundSchema),
-        value,
-      ),
+      z.parse(operations.ListPredictionOrdersRequest$outboundSchema, value),
     "Input validation failed",
   );
   if (!parsed.ok) {
@@ -102,11 +99,12 @@ async function $do(
   const path = pathToFunc("/v1/predictions/orders")();
 
   const query = encodeFormQuery({
-    "accountId": payload?.accountId,
-    "cursor": payload?.cursor,
-    "limit": payload?.limit,
-    "status": payload?.status,
-    "symbol": payload?.symbol,
+    "accountId": payload.accountId,
+    "cursor": payload.cursor,
+    "limit": payload.limit,
+    "placedBy": payload.placedBy,
+    "status": payload.status,
+    "symbol": payload.symbol,
   });
 
   const headers = new Headers(compactMap({
