@@ -7,12 +7,16 @@ import * as z from "zod/v4-mini";
 import * as openEnums from "../types/enums.js";
 import { OpenEnum } from "../types/enums.js";
 
+/**
+ * ForecastEx does not support `stop` or `market_to_limit` orders.
+ */
 export const OrderType = {
   Limit: "limit",
-  Stop: "stop",
   StopLimit: "stop_limit",
-  MarketToLimit: "market_to_limit",
 } as const;
+/**
+ * ForecastEx does not support `stop` or `market_to_limit` orders.
+ */
 export type OrderType = OpenEnum<typeof OrderType>;
 
 /**
@@ -37,14 +41,16 @@ export type PredOrdersPlaceOrderRequestSide = OpenEnum<
   typeof PredOrdersPlaceOrderRequestSide
 >;
 
-export const TimeInForce = {
+export const PredOrdersPlaceOrderRequestTimeInForce = {
   Day: "day",
   Gtc: "gtc",
   Ioc: "ioc",
   Fok: "fok",
   Gtd: "gtd",
 } as const;
-export type TimeInForce = OpenEnum<typeof TimeInForce>;
+export type PredOrdersPlaceOrderRequestTimeInForce = OpenEnum<
+  typeof PredOrdersPlaceOrderRequestTimeInForce
+>;
 
 /**
  * Unknown fields are rejected with `400`. The user is always the authenticated caller and cannot be named in the body.
@@ -62,6 +68,9 @@ export type PredOrdersPlaceOrderRequest = {
    * Required when `timeInForce` is `gtd`.
    */
   expireTime?: Date | undefined;
+  /**
+   * ForecastEx does not support `stop` or `market_to_limit` orders.
+   */
   orderType: OrderType;
   /**
    * The binary outcome the order trades. It is never inferred from `side`.
@@ -77,14 +86,14 @@ export type PredOrdersPlaceOrderRequest = {
   quantity: string;
   side: PredOrdersPlaceOrderRequestSide;
   /**
-   * Stop price as an exact decimal string. Required for `stop` and `stop_limit`.
+   * Stop price as an exact decimal string. Required for `stop_limit`.
    */
   stopPx?: string | undefined;
   /**
    * Prediction-market contract symbol, as returned by search or Get Event Contracts.
    */
   symbol: string;
-  timeInForce: TimeInForce;
+  timeInForce: PredOrdersPlaceOrderRequestTimeInForce;
 };
 
 /** @internal */
@@ -104,8 +113,9 @@ export const PredOrdersPlaceOrderRequestSide$outboundSchema: z.ZodMiniType<
 > = openEnums.outboundSchema(PredOrdersPlaceOrderRequestSide);
 
 /** @internal */
-export const TimeInForce$outboundSchema: z.ZodMiniType<string, TimeInForce> =
-  openEnums.outboundSchema(TimeInForce);
+export const PredOrdersPlaceOrderRequestTimeInForce$outboundSchema:
+  z.ZodMiniType<string, PredOrdersPlaceOrderRequestTimeInForce> = openEnums
+    .outboundSchema(PredOrdersPlaceOrderRequestTimeInForce);
 
 /** @internal */
 export type PredOrdersPlaceOrderRequest$Outbound = {
@@ -137,7 +147,7 @@ export const PredOrdersPlaceOrderRequest$outboundSchema: z.ZodMiniType<
   side: PredOrdersPlaceOrderRequestSide$outboundSchema,
   stopPx: z.optional(z.string()),
   symbol: z.string(),
-  timeInForce: TimeInForce$outboundSchema,
+  timeInForce: PredOrdersPlaceOrderRequestTimeInForce$outboundSchema,
 });
 
 export function predOrdersPlaceOrderRequestToJSON(

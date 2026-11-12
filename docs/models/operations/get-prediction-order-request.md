@@ -7,11 +7,13 @@ import { GetPredictionOrderRequest } from "@ariesdotcom/finance-dev/models/opera
 
 let value: GetPredictionOrderRequest = {
   orderId: "d149e539-20c7-46c4-b31e-9e8fe27fb67e",
+  accountId: "ACCOUNT-0001",
 };
 ```
 
 ## Fields
 
-| Field                                                                   | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `orderId`                                                               | *string*                                                                | :heavy_check_mark:                                                      | `orderId` returned by Place Prediction Order or List Prediction Orders. |
+| Field                                                                   | Type                                                                    | Required                                                                | Description                                                             | Example                                                                 |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `orderId`                                                               | *string*                                                                | :heavy_check_mark:                                                      | `orderId` returned by Place Prediction Order or List Prediction Orders. |                                                                         |
+| `accountId`                                                             | *string*                                                                | :heavy_check_mark:                                                      | The account the order is on.                                            | ACCOUNT-0001                                                            |

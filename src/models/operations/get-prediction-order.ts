@@ -15,6 +15,10 @@ export type GetPredictionOrderRequest = {
    * `orderId` returned by Place Prediction Order or List Prediction Orders.
    */
   orderId: string;
+  /**
+   * The account the order is on.
+   */
+  accountId: string;
 };
 
 /**
@@ -31,6 +35,7 @@ export type GetPredictionOrderResponse = {
 /** @internal */
 export type GetPredictionOrderRequest$Outbound = {
   orderId: string;
+  accountId: string;
 };
 
 /** @internal */
@@ -39,6 +44,7 @@ export const GetPredictionOrderRequest$outboundSchema: z.ZodMiniType<
   GetPredictionOrderRequest
 > = z.object({
   orderId: z.string(),
+  accountId: z.string(),
 });
 
 export function getPredictionOrderRequestToJSON(
