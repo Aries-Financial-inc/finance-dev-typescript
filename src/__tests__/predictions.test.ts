@@ -15,7 +15,7 @@ test("Predictions Get History Batch", async () => {
     httpClient: testHttpClient,
   });
 
-  const result = await financeDev.predictions.getHistoryBatch({
+  const result = await financeDev.predictions.batchGet({
     queries: [
       {
         from: new Date("2026-04-01T00:00:00Z"),
@@ -49,6 +49,7 @@ test("Predictions List Prediction Orders", async () => {
 
   const result = await financeDev.predictions.listOrders({
     status: "open",
+    accountId: "ACCOUNT-0001",
   });
   expect(result).toBeDefined();
   expect(result).toEqual({
@@ -58,6 +59,16 @@ test("Predictions List Prediction Orders", async () => {
           accountId: "ACCOUNT-0001",
           avgPx: "0",
           clientOrderRef: "7d1c8e0a-4b8f-4e3a-9f43-2a6b1d0c9e11",
+          contract: {
+            description: "Shelley Moore Capito",
+            eventDisplayName:
+              "West Virginia Senate General Election November 3 2026",
+            eventId: "AXXWV_110326",
+            question:
+              "Will Shelley Moore Capito win the West Virginia general election for US Senate in 2026?",
+            settlementValue: "1",
+            state: "SETTLED",
+          },
           createdAt: new Date("2026-02-03T23:48:41.308Z"),
           cumQty: "0",
           leavesQty: "10",

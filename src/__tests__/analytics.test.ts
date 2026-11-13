@@ -389,7 +389,7 @@ test("Analytics Get Options Stocks Top Volume", async () => {
     },
   });
 
-  const result = await financeDev.analytics.getOptionsStocksTopVolume({});
+  const result = await financeDev.analytics.getTopVolumeOptions({});
   expect(result).toBeDefined();
   expect(result).toEqual([
     {

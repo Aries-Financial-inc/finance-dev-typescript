@@ -40,6 +40,7 @@ async function run() {
     from: "2024-01-01",
     to: "2024-01-31",
     adjusted: true,
+    sort: "asc",
     limit: 1000,
   });
 
@@ -74,6 +75,7 @@ async function run() {
     from: "2024-01-01",
     to: "2024-01-31",
     adjusted: true,
+    sort: "asc",
     limit: 1000,
   });
   if (res.ok) {
