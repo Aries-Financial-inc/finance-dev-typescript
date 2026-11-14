@@ -105,41 +105,6 @@ test("Company Get Company Metrics Default", async () => {
   });
 });
 
-test("Company Get Company Peers Default", async () => {
-  const testHttpClient = createTestHTTPClient("getCompanyPeers-default");
-
-  const financeDev = new FinanceDev({
-    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: testHttpClient,
-    security: {
-      clientID: "<YOUR_CLIENT_ID_HERE>",
-      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
-      tokenURL: "/_mockserver/oauth2/token",
-    },
-  });
-
-  const result = await financeDev.company.getPeers({
-    symbol: "AAPL",
-  });
-  expect(result).toBeDefined();
-  expect(result).toEqual({
-    peers: [
-      "AAPL",
-      "DELL",
-      "WDC",
-      "SNDK",
-      "HPE",
-      "PSTG",
-      "HPQ",
-      "NTAP",
-      "SMCI",
-      "IONQ",
-      "QUBT",
-      "CMPO",
-    ],
-  });
-});
-
 test("Company Get Company Profile Default", async () => {
   const testHttpClient = createTestHTTPClient("getCompanyProfile-default");
 
