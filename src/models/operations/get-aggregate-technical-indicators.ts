@@ -4,28 +4,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import * as openEnums from "../../types/enums.js";
-import { OpenEnum } from "../../types/enums.js";
-
-/**
- * How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `60`) or daily/weekly/monthly (`D`, `W`, `M`). Other values return 400 Bad Request with error code `VALIDATION_ERROR`.
- */
-export const GetAggregateTechnicalIndicatorsResolution = {
-  One: "1",
-  Five: "5",
-  Fifteen: "15",
-  Thirty: "30",
-  Sixty: "60",
-  D: "D",
-  W: "W",
-  M: "M",
-} as const;
-/**
- * How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `60`) or daily/weekly/monthly (`D`, `W`, `M`). Other values return 400 Bad Request with error code `VALIDATION_ERROR`.
- */
-export type GetAggregateTechnicalIndicatorsResolution = OpenEnum<
-  typeof GetAggregateTechnicalIndicatorsResolution
->;
+import * as models from "../index.js";
 
 export type GetAggregateTechnicalIndicatorsRequest = {
   /**
@@ -35,13 +14,8 @@ export type GetAggregateTechnicalIndicatorsRequest = {
   /**
    * How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `60`) or daily/weekly/monthly (`D`, `W`, `M`). Other values return 400 Bad Request with error code `VALIDATION_ERROR`.
    */
-  resolution: GetAggregateTechnicalIndicatorsResolution;
+  resolution: models.BarResolution;
 };
-
-/** @internal */
-export const GetAggregateTechnicalIndicatorsResolution$outboundSchema:
-  z.ZodMiniType<string, GetAggregateTechnicalIndicatorsResolution> = openEnums
-    .outboundSchema(GetAggregateTechnicalIndicatorsResolution);
 
 /** @internal */
 export type GetAggregateTechnicalIndicatorsRequest$Outbound = {
@@ -56,7 +30,7 @@ export const GetAggregateTechnicalIndicatorsRequest$outboundSchema:
     GetAggregateTechnicalIndicatorsRequest
   > = z.object({
     symbol: z.string(),
-    resolution: GetAggregateTechnicalIndicatorsResolution$outboundSchema,
+    resolution: models.BarResolution$outboundSchema,
   });
 
 export function getAggregateTechnicalIndicatorsRequestToJSON(

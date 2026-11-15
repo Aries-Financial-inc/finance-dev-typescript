@@ -10,7 +10,7 @@
 
 Returns active orders (open orders plus today's terminal activity) from the orders v2 cache only. There is no database fallback.
 
-Pagination uses an opaque int64 cursor: omit cursor or send 0 for the first page, then send nextCursor; 0 means exhausted. Each order uses the same domain shape as WebSocket account updates.
+Pagination uses an opaque int64 cursor: omit cursor or send 0 for the first page, then send nextCursor while it is present. The final page omits nextCursor. Each order uses the same domain shape as WebSocket account updates.
 
 ### Example Usage
 

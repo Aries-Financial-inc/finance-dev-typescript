@@ -6,8 +6,9 @@
 import { ClientSDK } from "../lib/sdks.js";
 import { Accounts } from "./accounts.js";
 import { Analytics } from "./analytics.js";
-import { Calendar } from "./calendar.js";
+import { Calendars } from "./calendars.js";
 import { Chart } from "./chart.js";
+import { Companies } from "./companies.js";
 import { Company } from "./company.js";
 import { CorporateActions } from "./corporate-actions.js";
 import { Economy } from "./economy.js";
@@ -23,8 +24,11 @@ import { News } from "./news.js";
 import { Options } from "./options.js";
 import { Orders } from "./orders.js";
 import { Ownership } from "./ownership.js";
+import { PredictionHistoricalData } from "./prediction-historical-data.js";
 import { PredictionMarketCategories } from "./prediction-market-categories.js";
+import { PredictionMarkets } from "./prediction-markets.js";
 import { PredictionOrders } from "./prediction-orders.js";
+import { PredictionsMarkets } from "./predictions-markets.js";
 import { Predictions } from "./predictions.js";
 import { Signals } from "./signals.js";
 import { StockAlternative } from "./stock-alternative.js";
@@ -33,7 +37,6 @@ import { StockEstimates } from "./stock-estimates.js";
 import { Stocks } from "./stocks.js";
 import { TechnicalAnalysis } from "./technical-analysis.js";
 import { Users } from "./users.js";
-import { Watchlist } from "./watchlist.js";
 import { Watchlists } from "./watchlists.js";
 
 export class FinanceDev extends ClientSDK {
@@ -47,9 +50,9 @@ export class FinanceDev extends ClientSDK {
     return (this._analytics ??= new Analytics(this._options));
   }
 
-  private _calendar?: Calendar;
-  get calendar(): Calendar {
-    return (this._calendar ??= new Calendar(this._options));
+  private _calendars?: Calendars;
+  get calendars(): Calendars {
+    return (this._calendars ??= new Calendars(this._options));
   }
 
   private _chart?: Chart;
@@ -62,14 +65,14 @@ export class FinanceDev extends ClientSDK {
     return (this._company ??= new Company(this._options));
   }
 
+  private _companies?: Companies;
+  get companies(): Companies {
+    return (this._companies ??= new Companies(this._options));
+  }
+
   private _watchlists?: Watchlists;
   get watchlists(): Watchlists {
     return (this._watchlists ??= new Watchlists(this._options));
-  }
-
-  private _watchlist?: Watchlist;
-  get watchlist(): Watchlist {
-    return (this._watchlist ??= new Watchlist(this._options));
   }
 
   private _corporateActions?: CorporateActions;
@@ -85,6 +88,11 @@ export class FinanceDev extends ClientSDK {
   private _market?: Market;
   get market(): Market {
     return (this._market ??= new Market(this._options));
+  }
+
+  private _marketData?: MarketData;
+  get marketData(): MarketData {
+    return (this._marketData ??= new MarketData(this._options));
   }
 
   private _etfs?: Etfs;
@@ -127,11 +135,6 @@ export class FinanceDev extends ClientSDK {
     return (this._logos ??= new Logos(this._options));
   }
 
-  private _marketData?: MarketData;
-  get marketData(): MarketData {
-    return (this._marketData ??= new MarketData(this._options));
-  }
-
   private _news?: News;
   get news(): News {
     return (this._news ??= new News(this._options));
@@ -147,9 +150,9 @@ export class FinanceDev extends ClientSDK {
     return (this._orders ??= new Orders(this._options));
   }
 
-  private _predictions?: Predictions;
-  get predictions(): Predictions {
-    return (this._predictions ??= new Predictions(this._options));
+  private _predictionMarkets?: PredictionMarkets;
+  get predictionMarkets(): PredictionMarkets {
+    return (this._predictionMarkets ??= new PredictionMarkets(this._options));
   }
 
   private _predictionMarketCategories?: PredictionMarketCategories;
@@ -159,9 +162,26 @@ export class FinanceDev extends ClientSDK {
     ));
   }
 
+  private _predictions?: Predictions;
+  get predictions(): Predictions {
+    return (this._predictions ??= new Predictions(this._options));
+  }
+
+  private _predictionHistoricalData?: PredictionHistoricalData;
+  get predictionHistoricalData(): PredictionHistoricalData {
+    return (this._predictionHistoricalData ??= new PredictionHistoricalData(
+      this._options,
+    ));
+  }
+
   private _predictionOrders?: PredictionOrders;
   get predictionOrders(): PredictionOrders {
     return (this._predictionOrders ??= new PredictionOrders(this._options));
+  }
+
+  private _predictionsMarkets?: PredictionsMarkets;
+  get predictionsMarkets(): PredictionsMarkets {
+    return (this._predictionsMarkets ??= new PredictionsMarkets(this._options));
   }
 
   private _signals?: Signals;

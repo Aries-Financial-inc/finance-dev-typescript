@@ -50,7 +50,7 @@ export type ListOrderHistoryRequest = {
    */
   limit?: number | undefined;
   /**
-   * Opaque pagination cursor for the database history walk. Send `0` (or omit) for the first page; pass the previous `nextCursor` until it returns `0`.
+   * Opaque pagination cursor for the database history walk. Send `0` (or omit) for the first page; pass the previous `nextCursor` until it is absent.
    */
   cursor?: number | undefined;
 };

@@ -133,7 +133,7 @@ export class Options extends ClientSDK {
    * Get option contract snapshot
    *
    * @remarks
-   * Returns a point-in-time snapshot for a single option contract: details, day bar, last quote, last trade, Greeks, implied volatility, and underlying context when available. Responses may be cached for approximately five minutes. Uses the upstream contract snapshot data source.
+   * Returns a point-in-time snapshot for a single option contract: details, day bar, last quote, last trade, Greeks, implied volatility, and underlying context when available. This endpoint does not paginate. Responses may be cached for approximately five minutes. Uses the upstream contract snapshot data source.
    */
   async getSnapshot(
     request: operations.GetOptionContractSnapshotRequest,

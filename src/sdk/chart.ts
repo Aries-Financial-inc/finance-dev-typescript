@@ -7,7 +7,7 @@ import { chartGetConfig } from "../funcs/chart-get-config.js";
 import { chartGetHistory } from "../funcs/chart-get-history.js";
 import { chartGetQuotes } from "../funcs/chart-get-quotes.js";
 import { chartGetSymbols } from "../funcs/chart-get-symbols.js";
-import { chartGetTickHistory } from "../funcs/chart-get-tick-history.js";
+import { chartGetTickBased } from "../funcs/chart-get-tick-based.js";
 import { chartGetTime } from "../funcs/chart-get-time.js";
 import { chartSearchSymbols } from "../funcs/chart-search-symbols.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
@@ -105,11 +105,11 @@ export class Chart extends ClientSDK {
    * @remarks
    * Retrieves tick-based chart bars for a specific symbol. Unlike time-based candles (which close every fixed number of minutes, hours, or days), a tick bar closes every time a fixed number of trades has occurred — for example, a `100T` bar closes after every 100 trades, whether that takes two seconds in a busy market or two minutes in a quiet one. This makes tick charts useful for visualizing market *activity* rather than the *passage of time*, which many traders use to spot momentum and unusual volume. Tick resolutions cannot be derived from time-based bars, so they are served from this dedicated endpoint rather than `/v1/chart/history`. Bar timestamps are returned in Unix milliseconds and are always strictly increasing, even for very actively traded symbols. Because tick bars are built from live trade activity rather than fixed calendar periods, older bars are loaded using the `cursor` pagination token instead of a date range — see the `cursor` and `nextTo` fields below.
    */
-  async getTickHistory(
+  async getTickBased(
     request: operations.GetTickHistoryRequest,
     options?: RequestOptions,
   ): Promise<models.TickChartBars> {
-    return unwrapAsync(chartGetTickHistory(
+    return unwrapAsync(chartGetTickBased(
       this,
       request,
       options,

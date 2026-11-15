@@ -272,7 +272,7 @@ test("Chart Get Tick History", async () => {
     },
   });
 
-  const result = await financeDev.chart.getTickHistory({
+  const result = await financeDev.chart.getTickBased({
     symbol: "AAPL",
     resolution: "100T",
     cursor: "1784677563966606471",
@@ -296,7 +296,7 @@ test("Chart Get Tick History Success", async () => {
     },
   });
 
-  const result = await financeDev.chart.getTickHistory({
+  const result = await financeDev.chart.getTickBased({
     symbol: "AAPL",
     resolution: "100T",
     cursor: "1784677563966606471",

@@ -13,14 +13,14 @@ import { SDKValidationError } from "../errors/sdk-validation-error.js";
 import * as models from "../index.js";
 
 /**
- * Sort order for returned records. Use asc for oldest first or desc for newest first when supported.
+ * Sort direction for results. Use ascending for oldest or smallest first, descending for newest or largest first.
  */
 export const GetStockTradesOrder = {
   Asc: "asc",
   Desc: "desc",
 } as const;
 /**
- * Sort order for returned records. Use asc for oldest first or desc for newest first when supported.
+ * Sort direction for results. Use ascending for oldest or smallest first, descending for newest or largest first.
  */
 export type GetStockTradesOrder = OpenEnum<typeof GetStockTradesOrder>;
 

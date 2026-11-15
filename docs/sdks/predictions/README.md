@@ -4,10 +4,10 @@
 
 ### Available Operations
 
-* [getHistoryBatch](#gethistorybatch) - Batch historical ticks for up to 5 symbols
-* [listOrders](#listorders) - List prediction orders
+* [batchGet](#batchget) - Batch historical ticks for up to 5 symbols
+* [listOrders](#listorders) - List current prediction orders
 
-## getHistoryBatch
+## batchGet
 
 Returns historical ticks for multiple symbols in one request. Each query may carry its own optional `from`/`to`/`limit`. Maximum 5 queries per call.
 
@@ -20,7 +20,7 @@ import { FinanceDev } from "@ariesdotcom/finance-dev";
 const financeDev = new FinanceDev();
 
 async function run() {
-  const result = await financeDev.predictions.getHistoryBatch({
+  const result = await financeDev.predictions.batchGet({
     queries: [
       {
         from: new Date("2026-04-01T00:00:00Z"),
@@ -43,14 +43,14 @@ The standalone function version of this method:
 
 ```typescript
 import { FinanceDevCore } from "@ariesdotcom/finance-dev/core.js";
-import { predictionsGetHistoryBatch } from "@ariesdotcom/finance-dev/funcs/predictions-get-history-batch.js";
+import { predictionsBatchGet } from "@ariesdotcom/finance-dev/funcs/predictions-batch-get.js";
 
 // Use `FinanceDevCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const financeDev = new FinanceDevCore();
 
 async function run() {
-  const res = await predictionsGetHistoryBatch(financeDev, {
+  const res = await predictionsBatchGet(financeDev, {
     queries: [
       {
         from: new Date("2026-04-01T00:00:00Z"),
@@ -64,7 +64,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("predictionsGetHistoryBatch failed:", res.error);
+    console.log("predictionsBatchGet failed:", res.error);
   }
 }
 
@@ -94,7 +94,7 @@ run();
 
 ## listOrders
 
-**Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Returns the authenticated user's prediction-market orders, newest first, one page at a time.
+**Closed beta.** Available only to accounts enrolled in the prediction-market orders closed beta. Returns the account's current orders, newest first, one page at a time: every order still open, however old (a GTC order), plus every order created or closed since the trading day rolled over at 17:00 America/Chicago. Older orders are read with List Prediction Order History.
 
 ### Example Usage
 
@@ -112,6 +112,7 @@ const financeDev = new FinanceDev({
 async function run() {
   const result = await financeDev.predictions.listOrders({
     status: "open",
+    accountId: "ACCOUNT-0001",
   });
 
   console.log(result);
@@ -140,6 +141,7 @@ const financeDev = new FinanceDevCore({
 async function run() {
   const res = await predictionsListOrders(financeDev, {
     status: "open",
+    accountId: "ACCOUNT-0001",
   });
   if (res.ok) {
     const { value: result } = res;
