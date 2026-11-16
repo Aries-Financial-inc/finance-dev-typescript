@@ -20,7 +20,7 @@ test("Options Get Options Activity Success", async () => {
     },
   });
 
-  const result = await financeDev.options.getActivity();
+  const result = await financeDev.options.getActivity({});
   expect(result).toBeDefined();
   expect(result!.result).toBeDefined();
   expect(result!.result).toEqual({

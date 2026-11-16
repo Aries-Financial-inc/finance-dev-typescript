@@ -5,25 +5,13 @@
 
 import * as z from "zod/v4-mini";
 import { safeParse } from "../lib/schemas.js";
-import * as openEnums from "../types/enums.js";
-import { OpenEnum } from "../types/enums.js";
 import { Result as SafeParseResult } from "../types/fp.js";
 import * as types from "../types/primitives.js";
 import { SDKValidationError } from "./errors/sdk-validation-error.js";
-
-/**
- * Instrument class returned by symbol search.
- */
-export const SearchSymbolResponseItemType = {
-  Stock: "stock",
-  Option: "option",
-} as const;
-/**
- * Instrument class returned by symbol search.
- */
-export type SearchSymbolResponseItemType = OpenEnum<
-  typeof SearchSymbolResponseItemType
->;
+import {
+  InstrumentType,
+  InstrumentType$inboundSchema,
+} from "./instrument-type.js";
 
 /**
  * One symbol search result. Use it to let users choose the exact instrument before fetching quotes, research data, or placing orders.
@@ -44,14 +32,8 @@ export type SearchSymbolResponseItem = {
   /**
    * Instrument class returned by symbol search.
    */
-  type?: SearchSymbolResponseItemType | undefined;
+  type?: InstrumentType | undefined;
 };
-
-/** @internal */
-export const SearchSymbolResponseItemType$inboundSchema: z.ZodMiniType<
-  SearchSymbolResponseItemType,
-  unknown
-> = openEnums.inboundSchema(SearchSymbolResponseItemType);
 
 /** @internal */
 export const SearchSymbolResponseItem$inboundSchema: z.ZodMiniType<
@@ -61,7 +43,7 @@ export const SearchSymbolResponseItem$inboundSchema: z.ZodMiniType<
   description: types.optional(types.string()),
   symbol: types.optional(types.string()),
   tag: types.optional(types.string()),
-  type: types.optional(SearchSymbolResponseItemType$inboundSchema),
+  type: types.optional(InstrumentType$inboundSchema),
 });
 
 export function searchSymbolResponseItemFromJSON(

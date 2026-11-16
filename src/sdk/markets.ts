@@ -3,54 +3,23 @@
  * @generated-id: ab585bdbed8b
  */
 
-import { predictionsMarketsGetBaseEvent } from "../funcs/predictions-markets-get-base-event.js";
-import { predictionsMarketsGetEventContracts } from "../funcs/predictions-markets-get-event-contracts.js";
-import { predictionsMarketsSearch } from "../funcs/predictions-markets-search.js";
+import { predictionsMarketsGetElectionMap } from "../funcs/predictions-markets-get-election-map.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
-import { PageIterator, unwrapResultIterator } from "../types/operations.js";
 
 export class Markets extends ClientSDK {
   /**
-   * Get a base event with its events and each event's contracts
-   */
-  async getBaseEvent(
-    request: operations.GetBaseEventRequest,
-    options?: RequestOptions,
-  ): Promise<operations.GetBaseEventResponse> {
-    return unwrapAsync(predictionsMarketsGetBaseEvent(
-      this,
-      request,
-      options,
-    ));
-  }
-
-  /**
-   * Get an event and all contracts under it
-   */
-  async getEventContracts(
-    request: operations.GetEventContractsRequest,
-    options?: RequestOptions,
-  ): Promise<operations.GetEventContractsResponse> {
-    return unwrapAsync(predictionsMarketsGetEventContracts(
-      this,
-      request,
-      options,
-    ));
-  }
-
-  /**
-   * Search contracts, events or base events
+   * Get every race of an election cycle with its candidates' prices
    *
    * @remarks
-   * Full-text search over one index of event contracts. Filters always apply to contracts, so with type=events or type=base-events an event or base event is found through its matching contracts: one with none (for example, only DELETED contracts under the default state) is not returned. The index trails the catalogue by seconds.
+   * Every Senate, House and governor race of the cycle in all 50 states, with each candidate's latest price and 24-hour change, plus the House-control, Senate-majority and balance-of-power markets, in one response. Built for an election map: poll it with `If-None-Match`.
    */
-  async search(
-    request?: operations.SearchRequest | undefined,
+  async getElectionMap(
+    request: operations.GetElectionMapRequest,
     options?: RequestOptions,
-  ): Promise<PageIterator<operations.SearchResponse, { page: number }>> {
-    return unwrapResultIterator(predictionsMarketsSearch(
+  ): Promise<operations.GetElectionMapResponse | undefined> {
+    return unwrapAsync(predictionsMarketsGetElectionMap(
       this,
       request,
       options,

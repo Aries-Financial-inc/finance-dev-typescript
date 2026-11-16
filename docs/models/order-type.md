@@ -1,5 +1,7 @@
 # OrderType
 
+ForecastEx does not support `stop` or `market_to_limit` orders.
+
 ## Example Usage
 
 ```typescript
@@ -13,5 +15,5 @@ let value: OrderType = "limit";
 ## Values
 
 ```typescript
-"limit" | "stop" | "stop_limit" | "market_to_limit" | Unrecognized<string>
+"limit" | "stop_limit" | Unrecognized<string>
 ```

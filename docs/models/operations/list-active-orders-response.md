@@ -7,14 +7,7 @@ import { ListActiveOrdersResponse } from "@ariesdotcom/finance-dev/models/operat
 
 let value: ListActiveOrdersResponse = {
   result: {
-    orders: [
-      {
-        exDestination: "MNGD",
-        side: "BUY",
-        timeInForce: "DAY",
-        type: "LIMIT",
-      },
-    ],
+    orders: [],
   },
 };
 ```

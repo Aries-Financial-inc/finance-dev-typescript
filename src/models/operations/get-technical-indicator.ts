@@ -5,29 +5,7 @@
 
 import * as z from "zod/v4-mini";
 import { remap as remap$ } from "../../lib/primitives.js";
-import * as openEnums from "../../types/enums.js";
-import { OpenEnum } from "../../types/enums.js";
 import * as models from "../index.js";
-
-/**
- * How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `60`) or daily/weekly/monthly (`D`, `W`, `M`). Other values return 400 Bad Request with error code `VALIDATION_ERROR`.
- */
-export const GetTechnicalIndicatorResolution = {
-  One: "1",
-  Five: "5",
-  Fifteen: "15",
-  Thirty: "30",
-  Sixty: "60",
-  D: "D",
-  W: "W",
-  M: "M",
-} as const;
-/**
- * How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `60`) or daily/weekly/monthly (`D`, `W`, `M`). Other values return 400 Bad Request with error code `VALIDATION_ERROR`.
- */
-export type GetTechnicalIndicatorResolution = OpenEnum<
-  typeof GetTechnicalIndicatorResolution
->;
 
 export type GetTechnicalIndicatorRequest = {
   /**
@@ -37,7 +15,7 @@ export type GetTechnicalIndicatorRequest = {
   /**
    * How long each bar covers. Supported values are minutes (`1`, `5`, `15`, `30`, `60`) or daily/weekly/monthly (`D`, `W`, `M`). Other values return 400 Bad Request with error code `VALIDATION_ERROR`.
    */
-  resolution: GetTechnicalIndicatorResolution;
+  resolution: models.BarResolution;
   /**
    * Which technical indicator to compute. Common picks: `sma` (simple moving average), `ema` (exponential moving average), `rsi` (relative strength index), `macd` (moving-average convergence-divergence), `bbands` (Bollinger Bands). See `TechnicalIndicatorType` for the full list of supported slugs.
    */
@@ -69,12 +47,6 @@ export type GetTechnicalIndicatorRequest = {
 };
 
 /** @internal */
-export const GetTechnicalIndicatorResolution$outboundSchema: z.ZodMiniType<
-  string,
-  GetTechnicalIndicatorResolution
-> = openEnums.outboundSchema(GetTechnicalIndicatorResolution);
-
-/** @internal */
 export type GetTechnicalIndicatorRequest$Outbound = {
   symbol: string;
   resolution: string;
@@ -94,7 +66,7 @@ export const GetTechnicalIndicatorRequest$outboundSchema: z.ZodMiniType<
 > = z.pipe(
   z.object({
     symbol: z.string(),
-    resolution: GetTechnicalIndicatorResolution$outboundSchema,
+    resolution: models.BarResolution$outboundSchema,
     indicator: models.TechnicalIndicatorType$outboundSchema,
     from: z.int(),
     to: z.int(),

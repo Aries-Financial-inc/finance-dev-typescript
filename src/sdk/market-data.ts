@@ -3,6 +3,8 @@
  * @generated-id: 5e0f80221eec
  */
 
+import { marketDataGetOptionDetails } from "../funcs/market-data-get-option-details.js";
+import { marketDataSearchEtbSymbols } from "../funcs/market-data-search-etb-symbols.js";
 import { marketDataSearchSymbols } from "../funcs/market-data-search-symbols.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as models from "../models/index.js";
@@ -10,6 +12,40 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class MarketData extends ClientSDK {
+  /**
+   * Search Easy-to-Borrow Symbols
+   *
+   * @remarks
+   * Answers borrowability for a batch of symbols. Use this instead of fetching the whole list when you only care about a handful — for example, deciding whether to show a short-sell option on a ticker page. This is a POST rather than a GET because a symbol list has no practical URL-length limit. Symbols are uppercased and trimmed before the lookup and duplicates collapse, so `count` can be lower than the number of symbols you sent; always read answers out of `results` by uppercase key rather than matching them against your request array by index. Reads the same underlying set as GET /v1/etb, so the two endpoints can never disagree.
+   */
+  async searchEtbSymbols(
+    request: models.EtbSearchRequest,
+    options?: RequestOptions,
+  ): Promise<models.EtbSearchResponse> {
+    return unwrapAsync(marketDataSearchEtbSymbols(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  /**
+   * Get option details
+   *
+   * @remarks
+   * Batch option contract details for one or more OSI option symbols. Response includes `data` with per-symbol pricing fields (`lastPrice`, `bidPrice`, `askPrice`, `midPrice`, `closePrice`) and an `errors` array for symbols that cannot be returned. At least one symbol is required.
+   */
+  async getOptionDetails(
+    request: operations.GetOptionDetailsRequest,
+    options?: RequestOptions,
+  ): Promise<models.GetOptionDetailsResponse> {
+    return unwrapAsync(marketDataGetOptionDetails(
+      this,
+      request,
+      options,
+    ));
+  }
+
   /**
    * Search Symbols
    *
