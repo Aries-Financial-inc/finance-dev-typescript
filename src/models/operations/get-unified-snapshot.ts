@@ -28,14 +28,14 @@ export const GetUnifiedSnapshotType = {
 export type GetUnifiedSnapshotType = OpenEnum<typeof GetUnifiedSnapshotType>;
 
 /**
- * Sort order for returned records. Use asc for oldest first or desc for newest first when supported.
+ * Sort direction for results. Use ascending for oldest or smallest first, descending for newest or largest first.
  */
 export const GetUnifiedSnapshotOrder = {
   Asc: "asc",
   Desc: "desc",
 } as const;
 /**
- * Sort order for returned records. Use asc for oldest first or desc for newest first when supported.
+ * Sort direction for results. Use ascending for oldest or smallest first, descending for newest or largest first.
  */
 export type GetUnifiedSnapshotOrder = OpenEnum<typeof GetUnifiedSnapshotOrder>;
 

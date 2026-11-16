@@ -1,13 +1,13 @@
 # GetOptionQuotesOrder
 
-Sort order for returned records. Use asc for oldest first or desc for newest first when supported.
+Sort direction for results. Use ascending for oldest or smallest first, descending for newest or largest first.
 
 ## Example Usage
 
 ```typescript
 import { GetOptionQuotesOrder } from "@ariesdotcom/finance-dev/models/operations";
 
-let value: GetOptionQuotesOrder = "desc";
+let value: GetOptionQuotesOrder = "asc";
 
 // Open enum: unrecognized values are captured as Unrecognized<string>
 ```

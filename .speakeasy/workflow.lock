@@ -2,8 +2,8 @@ speakeasyVersion: 1.805.0
 sources:
     aries-prod-spec:
         sourceNamespace: aries-prod-spec
-        sourceRevisionDigest: sha256:2c5667e8e20fa98aef73dedfd63b57f540346274cb2dee7cbcaa76a6125a3f27
-        sourceBlobDigest: sha256:b35614ab0956090979306b3cac25b6ee814276b894505aca7bbf35c159b48762
+        sourceRevisionDigest: sha256:b93b77117dea8388ca974f84654fc6e28b0a2e5046c1504cc85ae618d8b955a6
+        sourceBlobDigest: sha256:ee5d775a43722eeafac72ebb8321cf53cea68fd998f40970b1c671ac531d6238
         tags:
             - latest
             - 1.0.0
@@ -18,10 +18,10 @@ targets:
     finance-dev:
         source: aries-prod-spec
         sourceNamespace: aries-prod-spec
-        sourceRevisionDigest: sha256:2c5667e8e20fa98aef73dedfd63b57f540346274cb2dee7cbcaa76a6125a3f27
-        sourceBlobDigest: sha256:b35614ab0956090979306b3cac25b6ee814276b894505aca7bbf35c159b48762
+        sourceRevisionDigest: sha256:b93b77117dea8388ca974f84654fc6e28b0a2e5046c1504cc85ae618d8b955a6
+        sourceBlobDigest: sha256:ee5d775a43722eeafac72ebb8321cf53cea68fd998f40970b1c671ac531d6238
         codeSamplesNamespace: aries-prod-spec-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:6ddb2e6a8f1c4423c25b77621e59a620e755898b8cdea246a18606815e73303b
+        codeSamplesRevisionDigest: sha256:8ccf03233f9dfd309eb3e2f1672d96fc77cf1d77bf6cefd66f2b384e5e3ea824
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas

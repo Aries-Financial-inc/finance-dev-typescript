@@ -294,7 +294,7 @@ run();
 
 ## getChartBars
 
-Retrieve historical chart data for indices including price history, volume, and returns for creating index performance charts.
+Retrieve intraday chart bars for indices.
 
 ### Example Usage
 

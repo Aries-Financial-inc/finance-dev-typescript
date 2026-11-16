@@ -16,7 +16,7 @@ import { SDKValidationError } from "../errors/sdk-validation-error.js";
 import * as models from "../index.js";
 
 /**
- * Level hits come back at. `contracts` (default) returns matching contracts; `events` returns one hit per event and `base-events` one per base event, each ranked by its best-matching contract and carrying only its own fields and a count of matching contracts. Echoed in the response.
+ * Level hits come back at. `contracts` (default) returns matching contracts; `events` returns one hit per event and `base-events` one per base event, each with its own fields, a count of matching contracts and the first contractsPerHit of them in the sortBy order. Echoed in the response.
  */
 export const SearchType = {
   Contracts: "contracts",
@@ -24,17 +24,29 @@ export const SearchType = {
   BaseEvents: "base-events",
 } as const;
 /**
- * Level hits come back at. `contracts` (default) returns matching contracts; `events` returns one hit per event and `base-events` one per base event, each ranked by its best-matching contract and carrying only its own fields and a count of matching contracts. Echoed in the response.
+ * Level hits come back at. `contracts` (default) returns matching contracts; `events` returns one hit per event and `base-events` one per base event, each with its own fields, a count of matching contracts and the first contractsPerHit of them in the sortBy order. Echoed in the response.
  */
 export type SearchType = OpenEnum<typeof SearchType>;
 
+/**
+ * Result order. `none` (default): a q match first, then symbol ascending, at every level, so pages are stable. `openInterest`: by open interest from the venue's last daily prices file, each type by its own total, with a q match first; contracts with no open interest come last. Any other value returns 400 INVALID_SORT_BY.
+ */
+export const SortBy = {
+  None: "none",
+  OpenInterest: "openInterest",
+} as const;
+/**
+ * Result order. `none` (default): a q match first, then symbol ascending, at every level, so pages are stable. `openInterest`: by open interest from the venue's last daily prices file, each type by its own total, with a q match first; contracts with no open interest come last. Any other value returns 400 INVALID_SORT_BY.
+ */
+export type SortBy = OpenEnum<typeof SortBy>;
+
 export type SearchRequest = {
   /**
-   * Level hits come back at. `contracts` (default) returns matching contracts; `events` returns one hit per event and `base-events` one per base event, each ranked by its best-matching contract and carrying only its own fields and a count of matching contracts. Echoed in the response.
+   * Level hits come back at. `contracts` (default) returns matching contracts; `events` returns one hit per event and `base-events` one per base event, each with its own fields, a count of matching contracts and the first contractsPerHit of them in the sortBy order. Echoed in the response.
    */
   type?: SearchType | undefined;
   /**
-   * Full-text query over symbols, questions, event names and base-event specifications. Symbols split on _, - and . so `BPM 0822` finds `BPM_0822_1750`. Omit to browse, soonest last-trade date first.
+   * Full-text query over symbols, questions, event names and base-event specifications. Symbols split on _, - and . so `BPM 0822` finds `BPM_0822_1750`. Omit to browse, in the sortBy order.
    */
   q?: string | undefined;
   /**
@@ -58,6 +70,10 @@ export type SearchRequest = {
    */
   tradable?: boolean | undefined;
   /**
+   * Result order. `none` (default): a q match first, then symbol ascending, at every level, so pages are stable. `openInterest`: by open interest from the venue's last daily prices file, each type by its own total, with a q match first; contracts with no open interest come last. Any other value returns 400 INVALID_SORT_BY.
+   */
+  sortBy?: SortBy | undefined;
+  /**
    * 1-based page number; 0 or omitted means 1.
    */
   page?: number | undefined;
@@ -65,6 +81,10 @@ export type SearchRequest = {
    * Hits per page, counting whatever type returns; 0 or omitted means 20, values above 100 are clamped to 100.
    */
   perPage?: number | undefined;
+  /**
+   * With type=events or type=base-events, how many of each hit's matching contracts to return in contracts, in the sortBy order. 0 or omitted means 2; values above 10 are clamped to 10. A negative or non-integer value returns 400 INVALID_CONTRACTS_PER_HIT. Ignored by type=contracts.
+   */
+  contractsPerHit?: number | undefined;
 };
 
 export type SearchData =
@@ -95,6 +115,10 @@ export const SearchType$outboundSchema: z.ZodMiniType<string, SearchType> =
   openEnums.outboundSchema(SearchType);
 
 /** @internal */
+export const SortBy$outboundSchema: z.ZodMiniType<string, SortBy> = openEnums
+  .outboundSchema(SortBy);
+
+/** @internal */
 export type SearchRequest$Outbound = {
   type: string;
   q?: string | undefined;
@@ -103,8 +127,10 @@ export type SearchRequest$Outbound = {
   eventId?: string | undefined;
   category?: string | undefined;
   tradable?: boolean | undefined;
+  sortBy: string;
   page?: number | undefined;
   perPage?: number | undefined;
+  contractsPerHit: number;
 };
 
 /** @internal */
@@ -119,8 +145,10 @@ export const SearchRequest$outboundSchema: z.ZodMiniType<
   eventId: z.optional(z.string()),
   category: z.optional(z.string()),
   tradable: z.optional(z.boolean()),
+  sortBy: z._default(SortBy$outboundSchema, "none"),
   page: z.optional(z.int()),
   perPage: z.optional(z.int()),
+  contractsPerHit: z._default(z.int(), 2),
 });
 
 export function searchRequestToJSON(searchRequest: SearchRequest): string {

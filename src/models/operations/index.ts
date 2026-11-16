@@ -3,6 +3,7 @@
  * @generated-id: 0d9ffaf774d2
  */
 
+export * from "./cancel-prediction-order.js";
 export * from "./delete-config-watchlist-by-id.js";
 export * from "./get-account-balance.js";
 export * from "./get-account-positions.js";
@@ -31,6 +32,7 @@ export * from "./get-earnings-surprises.js";
 export * from "./get-ebit-estimates.js";
 export * from "./get-ebitda-estimates.js";
 export * from "./get-economics-calendar.js";
+export * from "./get-election-map.js";
 export * from "./get-eps-estimates.js";
 export * from "./get-equity-details.js";
 export * from "./get-etf-country-allocation.js";
@@ -79,6 +81,7 @@ export * from "./get-options-stocks-top-gainers.js";
 export * from "./get-options-stocks-top-volume.js";
 export * from "./get-options-unusual-activity.js";
 export * from "./get-ownership-data.js";
+export * from "./get-prediction-mass-cancel.js";
 export * from "./get-prediction-order.js";
 export * from "./get-price-target.js";
 export * from "./get-quotes.js";
@@ -117,6 +120,7 @@ export * from "./get-treasury-yields.js";
 export * from "./get-unified-snapshot.js";
 export * from "./get-upgrades-downgrades.js";
 export * from "./get-usa-spending.js";
+export * from "./get-user-info.js";
 export * from "./get-uspto-patents.js";
 export * from "./get-visa-applications.js";
 export * from "./list-active-orders.js";
@@ -126,9 +130,13 @@ export * from "./list-indices.js";
 export * from "./list-option-contracts.js";
 export * from "./list-option-expiry-dates.js";
 export * from "./list-order-history.js";
+export * from "./list-prediction-mass-cancels.js";
+export * from "./list-prediction-order-history.js";
 export * from "./list-prediction-orders.js";
 export * from "./list-transcripts.js";
+export * from "./mass-cancel-prediction-orders.js";
 export * from "./place-prediction-order.js";
+export * from "./replace-prediction-order.js";
 export * from "./search-indices.js";
 export * from "./search-logos.js";
 export * from "./search-market-symbols.js";

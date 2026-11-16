@@ -18,7 +18,7 @@ function client(method: string, path: string, response: unknown): FinanceDev {
 }
 test('watchlist deletion retains the empty symbols array', async () => {
   const response = { id: 12345, name: 'Default', symbols: [] };
-  const result = await client('DELETE', '/v1/config/watchlist/12345', response).watchlist.delete({ watchlistId: 12345 });
+  const result = await client('DELETE', '/v1/config/watchlist/12345', response).watchlists.delete({ watchlistId: 12345 });
   expect(result).toEqual(response);
 });
 test('replacing watchlists retains the empty default symbols array', async () => {

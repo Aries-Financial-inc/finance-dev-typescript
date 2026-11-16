@@ -16,9 +16,13 @@ export type ListPredictionOrdersRequest = {
    */
   status?: string | undefined;
   /**
-   * Only orders on this account.
+   * The account. Every order on it is covered, whoever placed it.
    */
-  accountId?: string | undefined;
+  accountId: string;
+  /**
+   * Only orders this user placed.
+   */
+  placedBy?: string | undefined;
   /**
    * Only orders on this contract symbol.
    */
@@ -44,7 +48,8 @@ export type ListPredictionOrdersResponse = {
 /** @internal */
 export type ListPredictionOrdersRequest$Outbound = {
   status?: string | undefined;
-  accountId?: string | undefined;
+  accountId: string;
+  placedBy?: string | undefined;
   symbol?: string | undefined;
   limit: number;
   cursor?: string | undefined;
@@ -56,7 +61,8 @@ export const ListPredictionOrdersRequest$outboundSchema: z.ZodMiniType<
   ListPredictionOrdersRequest
 > = z.object({
   status: z.optional(z.string()),
-  accountId: z.optional(z.string()),
+  accountId: z.string(),
+  placedBy: z.optional(z.string()),
   symbol: z.optional(z.string()),
   limit: z._default(z.int(), 50),
   cursor: z.optional(z.string()),

@@ -8,107 +8,83 @@ import { FinanceDev } from "../index.js";
 import { Decimal } from "../types/index.js";
 import { createTestHTTPClient } from "./test-client.js";
 
-test("Markets Get Base Event", async () => {
-  const testHttpClient = createTestHTTPClient("getBaseEvent");
+test("Markets Get Election Map", async () => {
+  const testHttpClient = createTestHTTPClient("getElectionMap");
 
   const financeDev = new FinanceDev({
     serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
     httpClient: testHttpClient,
   });
 
-  const result = await financeDev.predictions.markets.getBaseEvent({
-    baseEventId: "UNR",
-  });
-  expect(result).toBeDefined();
-  expect(result).toEqual({
-    data: {
-      baseEvent: {
-        baseEventId: "<id>",
-        categoryLevels: [
-          "Economic Indicators",
-          "Labor",
-          "United States",
-        ],
-        displayName: "US Unemployment Rate",
-        firstSeenAt: new Date("2024-09-06T05:59:28.906Z"),
-        lastSyncedAt: new Date("2025-10-02T11:47:14.927Z"),
-      },
-      events: [],
-    },
-    success: true,
-  });
-});
-
-test("Markets Get Event Contracts", async () => {
-  const testHttpClient = createTestHTTPClient("getEventContracts");
-
-  const financeDev = new FinanceDev({
-    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: testHttpClient,
-  });
-
-  const result = await financeDev.predictions.markets.getEventContracts({
-    eventId: "HORC_1126",
-  });
-  expect(result).toBeDefined();
-  expect(result).toEqual({
-    data: {
-      contracts: [
-        {
-          baseEventId: "<id>",
-          eventId: "<id>",
-          lastSyncedAt: new Date("2024-08-22T02:52:07.818Z"),
-          nonTradable: true,
-          state: "Pennsylvania",
-          symbol: "<value>",
-          symbolSubTypes: [],
-          tickSize: new Decimal("0.01"),
-          tradable: false,
-        },
-      ],
-      event: {
-        baseEventId: "<id>",
-        eventId: "<id>",
-        lastSyncedAt: new Date("2025-09-06T06:35:19.053Z"),
-        timeSpecifier: "2026.06",
-      },
-    },
-    success: true,
-  });
-});
-
-test("Markets Search", async () => {
-  const testHttpClient = createTestHTTPClient("search");
-
-  const financeDev = new FinanceDev({
-    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: testHttpClient,
-  });
-
-  const result = await financeDev.predictions.markets.search({
-    q: "unemployment june",
-    state: "ACTIVE",
-    baseEventId: "UNR",
-    eventId: "UNR_0822",
-    category: "Elections > United States House",
-    page: 1,
-    perPage: 20,
+  const result = await financeDev.predictions.markets.getElectionMap({
+    cycle: 2026,
+    state: "TX",
+    office: "senate,house",
+    raceType: "general,special",
   });
   expect(result).toBeDefined();
   expect(result!.result).toBeDefined();
   expect(result!.result).toEqual({
     data: {
-      found: 161806,
-      hits: [
+      asOf: new Date("2026-10-22T17:32:50.815Z"),
+      cycle: 2026,
+      electionDate: new Date("2026-11-03"),
+      national: {
+        balanceOfPower: {
+          eventId: "HORC_1126",
+          outcomes: [],
+        },
+        houseControl: {
+          eventId: "HORC_1126",
+          outcomes: [],
+        },
+        senateControl: {
+          eventId: "HORC_1126",
+          outcomes: [
+            {
+              party: "D",
+              symbol: "HORC_1126_Democratic",
+              yesPrice: new Decimal("0.55"),
+              yesPriceChange24h: new Decimal("0.01"),
+            },
+          ],
+        },
+      },
+      states: [
         {
-          baseEventId: "<id>",
-          contractsFound: 596463,
-          eventId: "<id>",
+          code: "TX",
+          governor: [],
+          house: [],
+          houseSeats: 38,
+          name: "Texas",
+          senate: [
+            {
+              atLarge: false,
+              baseEventId: "AXXTX",
+              district: 7,
+              electionDate: new Date("2026-11-03"),
+              eventId: "AXXTX_110326",
+              heldBy: "D",
+              lastTradeDate: new Date("2026-12-06"),
+              leader: {
+                party: "O",
+                symbol: "AXXTX_110326_JT",
+                yesPrice: new Decimal("0.66"),
+              },
+              outcomes: [],
+              partyMarket: {
+                eventId: "HORC_1126",
+                outcomes: [],
+              },
+              raceType: "general",
+              resolvedAt: null,
+              status: "open",
+              title: "Texas Senate",
+              winningSymbol: "<value>",
+            },
+          ],
         },
       ],
-      page: 337360,
-      perPage: 440776,
-      type: "events",
     },
     success: true,
   });

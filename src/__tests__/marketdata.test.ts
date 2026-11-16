@@ -7,6 +7,99 @@ import { expect, test } from "vitest";
 import { FinanceDev } from "../index.js";
 import { createTestHTTPClient } from "./test-client.js";
 
+test("Marketdata Search Etb Symbols Duplicates Collapse", async () => {
+  const testHttpClient = createTestHTTPClient(
+    "searchEtbSymbols-duplicatesCollapse",
+  );
+
+  const financeDev = new FinanceDev({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    security: {
+      clientID: "<YOUR_CLIENT_ID_HERE>",
+      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+      tokenURL: "/_mockserver/oauth2/token",
+    },
+  });
+
+  const result = await financeDev.marketData.searchEtbSymbols({
+    symbols: [
+      "aapl",
+      " AAPL ",
+      "AAPL",
+    ],
+  });
+  expect(result).toBeDefined();
+  expect(result).toEqual({
+    count: 1,
+    results: {
+      "AAPL": true,
+    },
+  });
+});
+
+test("Marketdata Search Etb Symbols Mixed Case", async () => {
+  const testHttpClient = createTestHTTPClient("searchEtbSymbols-mixedCase");
+
+  const financeDev = new FinanceDev({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    security: {
+      clientID: "<YOUR_CLIENT_ID_HERE>",
+      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+      tokenURL: "/_mockserver/oauth2/token",
+    },
+  });
+
+  const result = await financeDev.marketData.searchEtbSymbols({
+    symbols: [
+      "AAPL",
+      "GME",
+      "msft",
+    ],
+  });
+  expect(result).toBeDefined();
+  expect(result).toEqual({
+    count: 3,
+    results: {
+      "AAPL": true,
+      "GME": false,
+      "MSFT": true,
+    },
+  });
+});
+
+test("Marketdata Get Option Details", async () => {
+  const testHttpClient = createTestHTTPClient("getOptionDetails");
+
+  const financeDev = new FinanceDev({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    security: {
+      clientID: "<YOUR_CLIENT_ID_HERE>",
+      clientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+      tokenURL: "/_mockserver/oauth2/token",
+    },
+  });
+
+  const result = await financeDev.marketData.getOptionDetails({
+    symbols: "GOOG270115C00285000",
+  });
+  expect(result).toBeDefined();
+  expect(result).toEqual({
+    data: [
+      {
+        askPrice: 80.9,
+        bidPrice: 78.05,
+        closePrice: 93.5,
+        lastPrice: 79.76,
+        midPrice: 79.475,
+        symbol: "GOOG270115C00285000",
+      },
+    ],
+  });
+});
+
 test("Marketdata Search Market Symbols Futures", async () => {
   const testHttpClient = createTestHTTPClient("searchMarketSymbols-futures");
 

@@ -24,11 +24,11 @@ export type GetOptionsActivityRequest = {
    */
   tickers?: string | undefined;
   /**
-   * Page number for pagination (zero-based)
+   * Zero-based page number (default: 0). page × pageSize must be less than 100,000; otherwise the API returns HTTP 400 with error code PAGINATION_LIMIT_EXCEEDED. To retrieve larger histories, narrow dateFrom and dateTo and restart at page 0 for each date window.
    */
   page?: number | undefined;
   /**
-   * Number of results per page. Use this to control pagination size in list views. (default: 100, max: 1000)
+   * Number of results per page (default: 100, maximum: 1000). page × pageSize must be less than 100,000.
    */
   pageSize?: number | undefined;
 };
@@ -42,8 +42,8 @@ export type GetOptionsActivityRequest$Outbound = {
   dateFrom?: string | undefined;
   dateTo?: string | undefined;
   tickers?: string | undefined;
-  page?: number | undefined;
-  pageSize?: number | undefined;
+  page: number;
+  pageSize: number;
 };
 
 /** @internal */
@@ -64,8 +64,8 @@ export const GetOptionsActivityRequest$outboundSchema: z.ZodMiniType<
     ),
   ),
   tickers: z.optional(z.string()),
-  page: z.optional(z.int()),
-  pageSize: z.optional(z.int()),
+  page: z._default(z.int(), 0),
+  pageSize: z._default(z.int(), 100),
 });
 
 export function getOptionsActivityRequestToJSON(
